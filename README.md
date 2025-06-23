@@ -8,7 +8,7 @@ Instalar a través del archivo `pubspec.yaml` añadiendo la dependencia:
 
 ```yaml
 dependencies:
-  remote_datasource:
+  remote_database:
     git:
       url: https://gitlab.com/nballari/remote_database.git
       ref: main
