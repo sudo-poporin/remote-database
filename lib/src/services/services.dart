@@ -1,1 +1,1 @@
-export 'package:remote_database/src/services/services.dart';
+export 'remote_database_service.dart';
