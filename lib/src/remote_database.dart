@@ -1,11 +1,17 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:remote_database/remote_database.dart';
 
-/// Repositorio con acceso a la base de datos remota.
-class RemoteDatabase implements IRemoteDatabase {
+/// Repositorio de base de datos remota.
+class RemoteDatabase extends _RemoteDatabaseImpl {
+  /// Crea una instancia de [RemoteDatabase] con un cliente de Supabase.
+  RemoteDatabase({required super.client});
+}
+
+/// Implentación de la interfaz [IRemoteDatabase].
+class _RemoteDatabaseImpl implements IRemoteDatabase {
   /// Implementación de la base de datos remota.
   /// Crea una instancia de [RemoteDatabase] con un cliente de Supabase.
-  RemoteDatabase({required SupabaseClient client}) : _client = client;
+  _RemoteDatabaseImpl({required SupabaseClient client}) : _client = client;
 
   final SupabaseClient _client;
 
