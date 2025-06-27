@@ -29,15 +29,17 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .select(columns)
           .match(data)
           .onError((error, stackTrace) {
+            if (error is PostgrestException &&
+                error.code == ErrorCodes.noDataFound) {
+              throw const RemoteDatabaseExceptions.noDataFound();
+            }
             throw Exception(error);
           });
 
       return Right(result);
+    } on RemoteDatabaseExceptions catch (e) {
+      return Left(e);
     } on Exception catch (e) {
-      if (e is PostgrestException && e.code == ErrorCodes.noDataFound) {
-        return const Left(RemoteDatabaseExceptions.noDataFound());
-      }
-
       return Left(RemoteDatabaseExceptions.selectFailure(e));
     }
   }
@@ -55,15 +57,16 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .match(data)
           .single()
           .onError((error, stackTrace) {
+            if (error is PostgrestException && error.code == 'PGRST116') {
+              throw const RemoteDatabaseExceptions.noDataFound();
+            }
             throw Exception(error);
           });
 
       return Right(result);
+    } on RemoteDatabaseExceptions catch (e) {
+      return Left(e);
     } on Exception catch (e) {
-      if (e is PostgrestException && e.code == ErrorCodes.noDataFound) {
-        return const Left(RemoteDatabaseExceptions.noDataFound());
-      }
-
       return Left(RemoteDatabaseExceptions.selectSingleFailure(e));
     }
   }
