@@ -469,4 +469,70 @@ as dynamic,
 
 }
 
+/// @nodoc
+
+
+class _RemoteDatabaseNoDataFound implements RemoteDatabaseExceptions {
+  const _RemoteDatabaseNoDataFound([this.error]);
+  
+
+@override final  dynamic error;
+
+/// Create a copy of RemoteDatabaseExceptions
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$RemoteDatabaseNoDataFoundCopyWith<_RemoteDatabaseNoDataFound> get copyWith => __$RemoteDatabaseNoDataFoundCopyWithImpl<_RemoteDatabaseNoDataFound>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseNoDataFound&&const DeepCollectionEquality().equals(other.error, error));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+
+@override
+String toString() {
+  return 'RemoteDatabaseExceptions.noDataFound(error: $error)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class _$RemoteDatabaseNoDataFoundCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
+  factory _$RemoteDatabaseNoDataFoundCopyWith(_RemoteDatabaseNoDataFound value, $Res Function(_RemoteDatabaseNoDataFound) _then) = __$RemoteDatabaseNoDataFoundCopyWithImpl;
+@override @useResult
+$Res call({
+ dynamic error
+});
+
+
+
+
+}
+/// @nodoc
+class __$RemoteDatabaseNoDataFoundCopyWithImpl<$Res>
+    implements _$RemoteDatabaseNoDataFoundCopyWith<$Res> {
+  __$RemoteDatabaseNoDataFoundCopyWithImpl(this._self, this._then);
+
+  final _RemoteDatabaseNoDataFound _self;
+  final $Res Function(_RemoteDatabaseNoDataFound) _then;
+
+/// Create a copy of RemoteDatabaseExceptions
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+  return _then(_RemoteDatabaseNoDataFound(
+freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
+as dynamic,
+  ));
+}
+
+
+}
+
 // dart format on

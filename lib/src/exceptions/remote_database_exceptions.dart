@@ -30,4 +30,8 @@ abstract class RemoteDatabaseExceptions
   /// Error al seleccionar un registro de la base de datos remota.
   const factory RemoteDatabaseExceptions.selectSingleFailure([dynamic error]) =
       _RemoteDatabaseSelectSingleFailure;
+
+  /// Error no se encuentra el registro en la base de datos remota.
+  const factory RemoteDatabaseExceptions.noDataFound([dynamic error]) =
+      _RemoteDatabaseNoDataFound;
 }

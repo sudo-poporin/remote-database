@@ -27,9 +27,17 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .from(table)
           .select(columns)
           .match(data)
-          .onError((error, stackTrace) => []);
+          .onError((error, stackTrace) {
+            if (error is PostgrestException && error.code == 'PGRST116') {
+              throw RemoteDatabaseExceptions.noDataFound(error);
+            }
+
+            throw Exception(error);
+          });
 
       return Right(result);
+    } on RemoteDatabaseExceptions catch (e) {
+      return Left(e);
     } on Exception catch (e) {
       return Left(RemoteDatabaseExceptions.selectFailure(e));
     }
@@ -47,9 +55,17 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .select(columns)
           .match(data)
           .single()
-          .onError((error, stackTrace) => throw Exception(error));
+          .onError((error, stackTrace) {
+            if (error is PostgrestException && error.code == 'PGRST116') {
+              throw RemoteDatabaseExceptions.noDataFound(error);
+            }
+
+            throw Exception(error);
+          });
 
       return Right(result);
+    } on RemoteDatabaseExceptions catch (e) {
+      return Left(e);
     } on Exception catch (e) {
       return Left(RemoteDatabaseExceptions.selectSingleFailure(e));
     }
