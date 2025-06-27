@@ -1,5 +1,6 @@
 import 'package:fpdart/fpdart.dart';
 import 'package:remote_database/remote_database.dart';
+import 'package:remote_database/src/const/const.dart';
 
 /// Repositorio de base de datos remota.
 class RemoteDatabase extends _RemoteDatabaseImpl {
@@ -28,17 +29,15 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .select(columns)
           .match(data)
           .onError((error, stackTrace) {
-            if (error is PostgrestException && error.code == 'PGRST116') {
-              throw RemoteDatabaseExceptions.noDataFound(error);
-            }
-
             throw Exception(error);
           });
 
       return Right(result);
-    } on RemoteDatabaseExceptions catch (e) {
-      return Left(e);
     } on Exception catch (e) {
+      if (e is PostgrestException && e.code == ErrorCodes.noDataFound) {
+        return const Left(RemoteDatabaseExceptions.noDataFound());
+      }
+
       return Left(RemoteDatabaseExceptions.selectFailure(e));
     }
   }
@@ -56,17 +55,15 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .match(data)
           .single()
           .onError((error, stackTrace) {
-            if (error is PostgrestException && error.code == 'PGRST116') {
-              throw RemoteDatabaseExceptions.noDataFound(error);
-            }
-
             throw Exception(error);
           });
 
       return Right(result);
-    } on RemoteDatabaseExceptions catch (e) {
-      return Left(e);
     } on Exception catch (e) {
+      if (e is PostgrestException && e.code == ErrorCodes.noDataFound) {
+        return const Left(RemoteDatabaseExceptions.noDataFound());
+      }
+
       return Left(RemoteDatabaseExceptions.selectSingleFailure(e));
     }
   }
