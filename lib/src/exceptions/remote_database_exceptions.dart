@@ -33,5 +33,5 @@ abstract class RemoteDatabaseExceptions
 
   /// Error no se encuentra el registro en la base de datos remota.
   const factory RemoteDatabaseExceptions.noDataFound() =
-      _RemoteDatabaseNoDataFound;
+      RemoteDatabaseNoDataFound;
 }

@@ -37,10 +37,10 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           });
 
       return Right(result);
-    } on RemoteDatabaseExceptions catch (e) {
-      return Left(e);
     } on Exception catch (e) {
-      return Left(RemoteDatabaseExceptions.selectFailure(e));
+      return e is RemoteDatabaseNoDataFound
+          ? const Right([])
+          : Left(RemoteDatabaseExceptions.selectFailure(e));
     }
   }
 
@@ -64,10 +64,10 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           });
 
       return Right(result);
-    } on RemoteDatabaseExceptions catch (e) {
-      return Left(e);
     } on Exception catch (e) {
-      return Left(RemoteDatabaseExceptions.selectSingleFailure(e));
+      return e is RemoteDatabaseNoDataFound
+          ? const Right({})
+          : Left(RemoteDatabaseExceptions.selectSingleFailure(e));
     }
   }
 

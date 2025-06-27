@@ -15,61 +15,30 @@ T _$identity<T>(T value) => value;
 /// @nodoc
 mixin _$RemoteDatabaseExceptions {
 
- dynamic get error;
-/// Create a copy of RemoteDatabaseExceptions
-/// with the given fields replaced by the non-null parameter values.
-@JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-$RemoteDatabaseExceptionsCopyWith<RemoteDatabaseExceptions> get copyWith => _$RemoteDatabaseExceptionsCopyWithImpl<RemoteDatabaseExceptions>(this as RemoteDatabaseExceptions, _$identity);
+
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseExceptions&&const DeepCollectionEquality().equals(other.error, error));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseExceptions);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions(error: $error)';
+  return 'RemoteDatabaseExceptions()';
 }
 
 
 }
 
 /// @nodoc
-abstract mixin class $RemoteDatabaseExceptionsCopyWith<$Res>  {
-  factory $RemoteDatabaseExceptionsCopyWith(RemoteDatabaseExceptions value, $Res Function(RemoteDatabaseExceptions) _then) = _$RemoteDatabaseExceptionsCopyWithImpl;
-@useResult
-$Res call({
- dynamic error
-});
-
-
-
-
-}
-/// @nodoc
-class _$RemoteDatabaseExceptionsCopyWithImpl<$Res>
-    implements $RemoteDatabaseExceptionsCopyWith<$Res> {
-  _$RemoteDatabaseExceptionsCopyWithImpl(this._self, this._then);
-
-  final RemoteDatabaseExceptions _self;
-  final $Res Function(RemoteDatabaseExceptions) _then;
-
-/// Create a copy of RemoteDatabaseExceptions
-/// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') @override $Res call({Object? error = freezed,}) {
-  return _then(_self.copyWith(
-error: freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
-as dynamic,
-  ));
-}
-
+class $RemoteDatabaseExceptionsCopyWith<$Res>  {
+$RemoteDatabaseExceptionsCopyWith(RemoteDatabaseExceptions _, $Res Function(RemoteDatabaseExceptions) __);
 }
 
 
@@ -80,11 +49,11 @@ class _RemoteDatabaseInsertFailure implements RemoteDatabaseExceptions {
   const _RemoteDatabaseInsertFailure([this.error]);
   
 
-@override final  dynamic error;
+ final  dynamic error;
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$RemoteDatabaseInsertFailureCopyWith<_RemoteDatabaseInsertFailure> get copyWith => __$RemoteDatabaseInsertFailureCopyWithImpl<_RemoteDatabaseInsertFailure>(this, _$identity);
 
@@ -110,7 +79,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$RemoteDatabaseInsertFailureCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
   factory _$RemoteDatabaseInsertFailureCopyWith(_RemoteDatabaseInsertFailure value, $Res Function(_RemoteDatabaseInsertFailure) _then) = __$RemoteDatabaseInsertFailureCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  dynamic error
 });
@@ -129,7 +98,7 @@ class __$RemoteDatabaseInsertFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
   return _then(_RemoteDatabaseInsertFailure(
 freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -146,11 +115,11 @@ class _RemoteDatabaseUpdateFailure implements RemoteDatabaseExceptions {
   const _RemoteDatabaseUpdateFailure([this.error]);
   
 
-@override final  dynamic error;
+ final  dynamic error;
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$RemoteDatabaseUpdateFailureCopyWith<_RemoteDatabaseUpdateFailure> get copyWith => __$RemoteDatabaseUpdateFailureCopyWithImpl<_RemoteDatabaseUpdateFailure>(this, _$identity);
 
@@ -176,7 +145,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$RemoteDatabaseUpdateFailureCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
   factory _$RemoteDatabaseUpdateFailureCopyWith(_RemoteDatabaseUpdateFailure value, $Res Function(_RemoteDatabaseUpdateFailure) _then) = __$RemoteDatabaseUpdateFailureCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  dynamic error
 });
@@ -195,7 +164,7 @@ class __$RemoteDatabaseUpdateFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
   return _then(_RemoteDatabaseUpdateFailure(
 freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -212,11 +181,11 @@ class _RemoteDatabaseUpsertFailure implements RemoteDatabaseExceptions {
   const _RemoteDatabaseUpsertFailure([this.error]);
   
 
-@override final  dynamic error;
+ final  dynamic error;
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$RemoteDatabaseUpsertFailureCopyWith<_RemoteDatabaseUpsertFailure> get copyWith => __$RemoteDatabaseUpsertFailureCopyWithImpl<_RemoteDatabaseUpsertFailure>(this, _$identity);
 
@@ -242,7 +211,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$RemoteDatabaseUpsertFailureCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
   factory _$RemoteDatabaseUpsertFailureCopyWith(_RemoteDatabaseUpsertFailure value, $Res Function(_RemoteDatabaseUpsertFailure) _then) = __$RemoteDatabaseUpsertFailureCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  dynamic error
 });
@@ -261,7 +230,7 @@ class __$RemoteDatabaseUpsertFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
   return _then(_RemoteDatabaseUpsertFailure(
 freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -278,11 +247,11 @@ class _RemoteDatabaseDeleteFailure implements RemoteDatabaseExceptions {
   const _RemoteDatabaseDeleteFailure([this.error]);
   
 
-@override final  dynamic error;
+ final  dynamic error;
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$RemoteDatabaseDeleteFailureCopyWith<_RemoteDatabaseDeleteFailure> get copyWith => __$RemoteDatabaseDeleteFailureCopyWithImpl<_RemoteDatabaseDeleteFailure>(this, _$identity);
 
@@ -308,7 +277,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$RemoteDatabaseDeleteFailureCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
   factory _$RemoteDatabaseDeleteFailureCopyWith(_RemoteDatabaseDeleteFailure value, $Res Function(_RemoteDatabaseDeleteFailure) _then) = __$RemoteDatabaseDeleteFailureCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  dynamic error
 });
@@ -327,7 +296,7 @@ class __$RemoteDatabaseDeleteFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
   return _then(_RemoteDatabaseDeleteFailure(
 freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -344,11 +313,11 @@ class _RemoteDatabaseSelectFailure implements RemoteDatabaseExceptions {
   const _RemoteDatabaseSelectFailure([this.error]);
   
 
-@override final  dynamic error;
+ final  dynamic error;
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$RemoteDatabaseSelectFailureCopyWith<_RemoteDatabaseSelectFailure> get copyWith => __$RemoteDatabaseSelectFailureCopyWithImpl<_RemoteDatabaseSelectFailure>(this, _$identity);
 
@@ -374,7 +343,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$RemoteDatabaseSelectFailureCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
   factory _$RemoteDatabaseSelectFailureCopyWith(_RemoteDatabaseSelectFailure value, $Res Function(_RemoteDatabaseSelectFailure) _then) = __$RemoteDatabaseSelectFailureCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  dynamic error
 });
@@ -393,7 +362,7 @@ class __$RemoteDatabaseSelectFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
   return _then(_RemoteDatabaseSelectFailure(
 freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -410,11 +379,11 @@ class _RemoteDatabaseSelectSingleFailure implements RemoteDatabaseExceptions {
   const _RemoteDatabaseSelectSingleFailure([this.error]);
   
 
-@override final  dynamic error;
+ final  dynamic error;
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
+@JsonKey(includeFromJson: false, includeToJson: false)
 @pragma('vm:prefer-inline')
 _$RemoteDatabaseSelectSingleFailureCopyWith<_RemoteDatabaseSelectSingleFailure> get copyWith => __$RemoteDatabaseSelectSingleFailureCopyWithImpl<_RemoteDatabaseSelectSingleFailure>(this, _$identity);
 
@@ -440,7 +409,7 @@ String toString() {
 /// @nodoc
 abstract mixin class _$RemoteDatabaseSelectSingleFailureCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
   factory _$RemoteDatabaseSelectSingleFailureCopyWith(_RemoteDatabaseSelectSingleFailure value, $Res Function(_RemoteDatabaseSelectSingleFailure) _then) = __$RemoteDatabaseSelectSingleFailureCopyWithImpl;
-@override @useResult
+@useResult
 $Res call({
  dynamic error
 });
@@ -459,7 +428,7 @@ class __$RemoteDatabaseSelectSingleFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteDatabaseExceptions
 /// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
+@pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
   return _then(_RemoteDatabaseSelectSingleFailure(
 freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
 as dynamic,
@@ -472,67 +441,33 @@ as dynamic,
 /// @nodoc
 
 
-class _RemoteDatabaseNoDataFound implements RemoteDatabaseExceptions {
-  const _RemoteDatabaseNoDataFound([this.error]);
+class RemoteDatabaseNoDataFound implements RemoteDatabaseExceptions {
+  const RemoteDatabaseNoDataFound();
   
 
-@override final  dynamic error;
 
-/// Create a copy of RemoteDatabaseExceptions
-/// with the given fields replaced by the non-null parameter values.
-@override @JsonKey(includeFromJson: false, includeToJson: false)
-@pragma('vm:prefer-inline')
-_$RemoteDatabaseNoDataFoundCopyWith<_RemoteDatabaseNoDataFound> get copyWith => __$RemoteDatabaseNoDataFoundCopyWithImpl<_RemoteDatabaseNoDataFound>(this, _$identity);
+
 
 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseNoDataFound&&const DeepCollectionEquality().equals(other.error, error));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseNoDataFound);
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.noDataFound(error: $error)';
+  return 'RemoteDatabaseExceptions.noDataFound()';
 }
 
 
 }
 
-/// @nodoc
-abstract mixin class _$RemoteDatabaseNoDataFoundCopyWith<$Res> implements $RemoteDatabaseExceptionsCopyWith<$Res> {
-  factory _$RemoteDatabaseNoDataFoundCopyWith(_RemoteDatabaseNoDataFound value, $Res Function(_RemoteDatabaseNoDataFound) _then) = __$RemoteDatabaseNoDataFoundCopyWithImpl;
-@override @useResult
-$Res call({
- dynamic error
-});
 
 
-
-
-}
-/// @nodoc
-class __$RemoteDatabaseNoDataFoundCopyWithImpl<$Res>
-    implements _$RemoteDatabaseNoDataFoundCopyWith<$Res> {
-  __$RemoteDatabaseNoDataFoundCopyWithImpl(this._self, this._then);
-
-  final _RemoteDatabaseNoDataFound _self;
-  final $Res Function(_RemoteDatabaseNoDataFound) _then;
-
-/// Create a copy of RemoteDatabaseExceptions
-/// with the given fields replaced by the non-null parameter values.
-@override @pragma('vm:prefer-inline') $Res call({Object? error = freezed,}) {
-  return _then(_RemoteDatabaseNoDataFound(
-freezed == error ? _self.error : error // ignore: cast_nullable_to_non_nullable
-as dynamic,
-  ));
-}
-
-
-}
 
 // dart format on
