@@ -1,6 +1,5 @@
-// dart format width=80
-// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// coverage:ignore-file
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
@@ -41,6 +40,172 @@ class $RemoteDatabaseExceptionsCopyWith<$Res>  {
 $RemoteDatabaseExceptionsCopyWith(RemoteDatabaseExceptions _, $Res Function(RemoteDatabaseExceptions) __);
 }
 
+
+/// Adds pattern-matching-related methods to [RemoteDatabaseExceptions].
+extension RemoteDatabaseExceptionsPatterns on RemoteDatabaseExceptions {
+/// A variant of `map` that fallback to returning `orElse`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( _RemoteDatabaseInsertFailure value)?  insertFailure,TResult Function( _RemoteDatabaseUpdateFailure value)?  updateFailure,TResult Function( _RemoteDatabaseUpsertFailure value)?  upsertFailure,TResult Function( _RemoteDatabaseDeleteFailure value)?  deleteFailure,TResult Function( _RemoteDatabaseSelectFailure value)?  selectFailure,TResult Function( _RemoteDatabaseSelectSingleFailure value)?  selectSingleFailure,TResult Function( RemoteDatabaseNoDataFound value)?  noDataFound,required TResult orElse(),}){
+final _that = this;
+switch (_that) {
+case _RemoteDatabaseInsertFailure() when insertFailure != null:
+return insertFailure(_that);case _RemoteDatabaseUpdateFailure() when updateFailure != null:
+return updateFailure(_that);case _RemoteDatabaseUpsertFailure() when upsertFailure != null:
+return upsertFailure(_that);case _RemoteDatabaseDeleteFailure() when deleteFailure != null:
+return deleteFailure(_that);case _RemoteDatabaseSelectFailure() when selectFailure != null:
+return selectFailure(_that);case _RemoteDatabaseSelectSingleFailure() when selectSingleFailure != null:
+return selectSingleFailure(_that);case RemoteDatabaseNoDataFound() when noDataFound != null:
+return noDataFound(_that);case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// Callbacks receives the raw object, upcasted.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case final Subclass2 value:
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( _RemoteDatabaseInsertFailure value)  insertFailure,required TResult Function( _RemoteDatabaseUpdateFailure value)  updateFailure,required TResult Function( _RemoteDatabaseUpsertFailure value)  upsertFailure,required TResult Function( _RemoteDatabaseDeleteFailure value)  deleteFailure,required TResult Function( _RemoteDatabaseSelectFailure value)  selectFailure,required TResult Function( _RemoteDatabaseSelectSingleFailure value)  selectSingleFailure,required TResult Function( RemoteDatabaseNoDataFound value)  noDataFound,}){
+final _that = this;
+switch (_that) {
+case _RemoteDatabaseInsertFailure():
+return insertFailure(_that);case _RemoteDatabaseUpdateFailure():
+return updateFailure(_that);case _RemoteDatabaseUpsertFailure():
+return upsertFailure(_that);case _RemoteDatabaseDeleteFailure():
+return deleteFailure(_that);case _RemoteDatabaseSelectFailure():
+return selectFailure(_that);case _RemoteDatabaseSelectSingleFailure():
+return selectSingleFailure(_that);case RemoteDatabaseNoDataFound():
+return noDataFound(_that);case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `map` that fallback to returning `null`.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case final Subclass value:
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( _RemoteDatabaseInsertFailure value)?  insertFailure,TResult? Function( _RemoteDatabaseUpdateFailure value)?  updateFailure,TResult? Function( _RemoteDatabaseUpsertFailure value)?  upsertFailure,TResult? Function( _RemoteDatabaseDeleteFailure value)?  deleteFailure,TResult? Function( _RemoteDatabaseSelectFailure value)?  selectFailure,TResult? Function( _RemoteDatabaseSelectSingleFailure value)?  selectSingleFailure,TResult? Function( RemoteDatabaseNoDataFound value)?  noDataFound,}){
+final _that = this;
+switch (_that) {
+case _RemoteDatabaseInsertFailure() when insertFailure != null:
+return insertFailure(_that);case _RemoteDatabaseUpdateFailure() when updateFailure != null:
+return updateFailure(_that);case _RemoteDatabaseUpsertFailure() when upsertFailure != null:
+return upsertFailure(_that);case _RemoteDatabaseDeleteFailure() when deleteFailure != null:
+return deleteFailure(_that);case _RemoteDatabaseSelectFailure() when selectFailure != null:
+return selectFailure(_that);case _RemoteDatabaseSelectSingleFailure() when selectSingleFailure != null:
+return selectSingleFailure(_that);case RemoteDatabaseNoDataFound() when noDataFound != null:
+return noDataFound(_that);case _:
+  return null;
+
+}
+}
+/// A variant of `when` that fallback to an `orElse` callback.
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return orElse();
+/// }
+/// ```
+
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( dynamic error)?  insertFailure,TResult Function( dynamic error)?  updateFailure,TResult Function( dynamic error)?  upsertFailure,TResult Function( dynamic error)?  deleteFailure,TResult Function( dynamic error)?  selectFailure,TResult Function( dynamic error)?  selectSingleFailure,TResult Function()?  noDataFound,required TResult orElse(),}) {final _that = this;
+switch (_that) {
+case _RemoteDatabaseInsertFailure() when insertFailure != null:
+return insertFailure(_that.error);case _RemoteDatabaseUpdateFailure() when updateFailure != null:
+return updateFailure(_that.error);case _RemoteDatabaseUpsertFailure() when upsertFailure != null:
+return upsertFailure(_that.error);case _RemoteDatabaseDeleteFailure() when deleteFailure != null:
+return deleteFailure(_that.error);case _RemoteDatabaseSelectFailure() when selectFailure != null:
+return selectFailure(_that.error);case _RemoteDatabaseSelectSingleFailure() when selectSingleFailure != null:
+return selectSingleFailure(_that.error);case RemoteDatabaseNoDataFound() when noDataFound != null:
+return noDataFound();case _:
+  return orElse();
+
+}
+}
+/// A `switch`-like method, using callbacks.
+///
+/// As opposed to `map`, this offers destructuring.
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case Subclass2(:final field2):
+///     return ...;
+/// }
+/// ```
+
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( dynamic error)  insertFailure,required TResult Function( dynamic error)  updateFailure,required TResult Function( dynamic error)  upsertFailure,required TResult Function( dynamic error)  deleteFailure,required TResult Function( dynamic error)  selectFailure,required TResult Function( dynamic error)  selectSingleFailure,required TResult Function()  noDataFound,}) {final _that = this;
+switch (_that) {
+case _RemoteDatabaseInsertFailure():
+return insertFailure(_that.error);case _RemoteDatabaseUpdateFailure():
+return updateFailure(_that.error);case _RemoteDatabaseUpsertFailure():
+return upsertFailure(_that.error);case _RemoteDatabaseDeleteFailure():
+return deleteFailure(_that.error);case _RemoteDatabaseSelectFailure():
+return selectFailure(_that.error);case _RemoteDatabaseSelectSingleFailure():
+return selectSingleFailure(_that.error);case RemoteDatabaseNoDataFound():
+return noDataFound();case _:
+  throw StateError('Unexpected subclass');
+
+}
+}
+/// A variant of `when` that fallback to returning `null`
+///
+/// It is equivalent to doing:
+/// ```dart
+/// switch (sealedClass) {
+///   case Subclass(:final field):
+///     return ...;
+///   case _:
+///     return null;
+/// }
+/// ```
+
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( dynamic error)?  insertFailure,TResult? Function( dynamic error)?  updateFailure,TResult? Function( dynamic error)?  upsertFailure,TResult? Function( dynamic error)?  deleteFailure,TResult? Function( dynamic error)?  selectFailure,TResult? Function( dynamic error)?  selectSingleFailure,TResult? Function()?  noDataFound,}) {final _that = this;
+switch (_that) {
+case _RemoteDatabaseInsertFailure() when insertFailure != null:
+return insertFailure(_that.error);case _RemoteDatabaseUpdateFailure() when updateFailure != null:
+return updateFailure(_that.error);case _RemoteDatabaseUpsertFailure() when upsertFailure != null:
+return upsertFailure(_that.error);case _RemoteDatabaseDeleteFailure() when deleteFailure != null:
+return deleteFailure(_that.error);case _RemoteDatabaseSelectFailure() when selectFailure != null:
+return selectFailure(_that.error);case _RemoteDatabaseSelectSingleFailure() when selectSingleFailure != null:
+return selectSingleFailure(_that.error);case RemoteDatabaseNoDataFound() when noDataFound != null:
+return noDataFound();case _:
+  return null;
+
+}
+}
+
+}
 
 /// @nodoc
 
