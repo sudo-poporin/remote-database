@@ -10,7 +10,7 @@ Instalar a través del archivo `pubspec.yaml` añadiendo la dependencia:
 dependencies:
   remote_database:
     git:
-      url: https://gitlab.com/nballari/remote_database.git
+      url: https://github.com/sudo-poporin/remote-database
       ref: main
 ```
 
