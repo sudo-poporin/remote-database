@@ -22,9 +22,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
     required String table,
     required Map<String, Object> data,
     String columns = '*',
+    String? schema,
   }) async {
     try {
       final result = await _client
+          .schema(schema ?? 'public')
           .from(table)
           .select(columns)
           .match(data)
@@ -49,9 +51,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
     required String table,
     required Map<String, Object> data,
     String columns = '*',
+    String? schema,
   }) async {
     try {
       final result = await _client
+          .schema(schema ?? 'public')
           .from(table)
           .select(columns)
           .match(data)
@@ -76,9 +80,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
     required String table,
     required Map<String, dynamic> data,
     String? onConflict,
+    String? schema,
   }) async {
     try {
       await _client
+          .schema(schema ?? 'public')
           .from(table)
           .upsert(data, onConflict: onConflict)
           .onError((error, stackTrace) => throw Exception(error));
@@ -94,9 +100,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
     required String table,
     required Map<String, dynamic> data,
     String resultIdColumn = 'id',
+    String? schema,
   }) async {
     try {
       final result = await _client
+          .schema(schema ?? 'public')
           .from(table)
           .insert(data)
           .select()
@@ -115,9 +123,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
     required Map<dynamic, dynamic> values,
     required Map<String, Object> where,
     String resultIdColumn = 'id',
+    String? schema,
   }) async {
     try {
       final result = await _client
+          .schema(schema ?? 'public')
           .from(table)
           .update(values)
           .match(where)
@@ -135,9 +145,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
   Future<Either<RemoteDatabaseExceptions, void>> delete({
     required String table,
     required Map<String, Object> where,
+    String? schema,
   }) async {
     try {
       await _client
+          .schema(schema ?? 'public')
           .from(table)
           .delete()
           .match(where)
