@@ -160,4 +160,13 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
       return Left(RemoteDatabaseExceptions.deleteFailure(e));
     }
   }
+
+  @override
+  QueryBuilder query(String table, {String? schema}) {
+    return QueryBuilder(
+      client: _client,
+      table: table,
+      schema: schema,
+    );
+  }
 }

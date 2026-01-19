@@ -50,4 +50,18 @@ abstract interface class IRemoteDatabase {
     required Map<String, Object> where,
     String? schema,
   });
+
+  /// Crea un QueryBuilder para consultas avanzadas.
+  ///
+  /// Permite construir consultas con filtros, ordenamiento y paginación.
+  ///
+  /// Ejemplo:
+  /// ```dart
+  /// final result = await db.query('users')
+  ///     .select('id, name')
+  ///     .order('name')
+  ///     .limit(10)
+  ///     .execute();
+  /// ```
+  QueryBuilder query(String table, {String? schema});
 }
