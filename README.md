@@ -338,6 +338,115 @@ result.fold(
 > **Nuevo en v1.2.0:** Método `query()` para consultas avanzadas con
 > Query Builder.
 
+## Autenticación (Nuevo en v1.3.0)
+
+El módulo de autenticación provee un wrapper sobre `GoTrueClient` con el patrón
+Either para manejo de errores.
+
+### Configuración
+
+```dart
+final auth = RemoteAuth(goTrueClient: supabase.auth);
+```
+
+### Sign In / Sign Up / Sign Out
+
+```dart
+// Sign in con email/password
+final result = await auth.signInWithPassword(
+  email: 'user@example.com',
+  password: 'password123',
+);
+
+result.fold(
+  (error) => error.map(
+    invalidCredentials: (_) => print('Credenciales inválidas'),
+    emailNotConfirmed: (_) => print('Confirma tu email'),
+    signInFailure: (e) => print('Error: ${e.message}'),
+    // ... otros casos
+    orElse: () => print('Error desconocido'),
+  ),
+  (user) => print('Bienvenido ${user.email}'),
+);
+
+// Sign up con metadata opcional
+final signUpResult = await auth.signUp(
+  email: 'new@example.com',
+  password: 'password123',
+  metadata: {'name': 'John Doe', 'avatar_url': 'https://...'},
+);
+
+// Sign out
+final signOutResult = await auth.signOut();
+```
+
+### OAuth (Google, Apple, GitHub, etc.)
+
+```dart
+final result = await auth.signInWithOAuth(
+  provider: OAuthProvider.google,
+  redirectTo: 'myapp://callback',
+  scopes: ['email', 'profile'],
+);
+```
+
+### Password Recovery
+
+```dart
+// Enviar email de recuperación
+await auth.sendPasswordResetEmail(
+  email: 'user@example.com',
+  redirectTo: 'myapp://reset',
+);
+
+// Verificar OTP
+final result = await auth.verifyOtp(
+  token: '123456',
+  type: OtpType.recovery,
+  email: 'user@example.com',
+);
+
+// Actualizar contraseña
+await auth.updatePassword(newPassword: 'newPassword123');
+```
+
+### Session Management
+
+```dart
+// Stream de cambios de estado
+auth.onAuthStateChange.listen((authState) {
+  print('Auth event: ${authState.event}');
+});
+
+// Getters síncronos
+final user = auth.currentUser;
+final session = auth.currentSession;
+final isLoggedIn = auth.isSignedIn;
+final userId = auth.currentUserId;
+
+// Refrescar sesión
+final refreshResult = await auth.refreshSession();
+
+// Establecer sesión manualmente
+await auth.setSession(accessToken);
+```
+
+### Excepciones de Autenticación
+
+| Excepción | Descripción |
+|-----------|-------------|
+| `invalidCredentials` | Email o password incorrectos |
+| `emailNotConfirmed` | El usuario no confirmó su email |
+| `userAlreadyExists` | El email ya está registrado |
+| `sessionExpired` | La sesión expiró |
+| `signInFailure` | Error genérico al iniciar sesión |
+| `signUpFailure` | Error genérico al registrarse |
+| `signOutFailure` | Error al cerrar sesión |
+| `passwordResetFailure` | Error al enviar email de recuperación |
+| `otpVerificationFailure` | Error al verificar OTP |
+| `updateUserFailure` | Error al actualizar usuario |
+| `unknown` | Error no categorizado |
+
 ## Dependencias 📦
 
 - [supabase_flutter](https://pub.dev/packages/supabase_flutter) - Cliente de Supabase
