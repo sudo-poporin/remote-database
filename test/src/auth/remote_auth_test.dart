@@ -67,7 +67,7 @@ void main() {
           email: anyNamed('email'),
           password: anyNamed('password'),
         ),
-      ).thenAnswer((_) async => AuthResponse(user: null, session: null));
+      ).thenAnswer((_) async => AuthResponse());
 
       final result = await auth.signInWithPassword(
         email: 'test@example.com',
@@ -76,34 +76,35 @@ void main() {
 
       expect(result.isLeft(), isTrue);
       result.fold(
-        (error) =>
-            expect(error, isA<RemoteAuthInvalidCredentials>()),
+        (error) => expect(error, isA<RemoteAuthInvalidCredentials>()),
         (r) => fail('Expected Left but got Right'),
       );
     });
 
-    test('returns Left(invalidCredentials) on invalid login credentials', () async {
-      when(
-        mockClient.signInWithPassword(
-          email: anyNamed('email'),
-          password: anyNamed('password'),
-        ),
-      ).thenThrow(
-        AuthException('Invalid login credentials', statusCode: '400'),
-      );
+    test(
+      'returns Left(invalidCredentials) on invalid login credentials',
+      () async {
+        when(
+          mockClient.signInWithPassword(
+            email: anyNamed('email'),
+            password: anyNamed('password'),
+          ),
+        ).thenThrow(
+          const AuthException('Invalid login credentials', statusCode: '400'),
+        );
 
-      final result = await auth.signInWithPassword(
-        email: 'test@example.com',
-        password: 'wrong-password',
-      );
+        final result = await auth.signInWithPassword(
+          email: 'test@example.com',
+          password: 'wrong-password',
+        );
 
-      expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) =>
-            expect(error, isA<RemoteAuthInvalidCredentials>()),
-        (r) => fail('Expected Left but got Right'),
-      );
-    });
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) => expect(error, isA<RemoteAuthInvalidCredentials>()),
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
 
     test('returns Left(emailNotConfirmed) when email not confirmed', () async {
       when(
@@ -111,7 +112,9 @@ void main() {
           email: anyNamed('email'),
           password: anyNamed('password'),
         ),
-      ).thenThrow(AuthException('Email not confirmed', statusCode: '400'));
+      ).thenThrow(
+        const AuthException('Email not confirmed', statusCode: '400'),
+      );
 
       final result = await auth.signInWithPassword(
         email: 'test@example.com',
@@ -120,8 +123,7 @@ void main() {
 
       expect(result.isLeft(), isTrue);
       result.fold(
-        (error) =>
-            expect(error, isA<RemoteAuthEmailNotConfirmed>()),
+        (error) => expect(error, isA<RemoteAuthEmailNotConfirmed>()),
         (r) => fail('Expected Left but got Right'),
       );
     });
@@ -132,7 +134,7 @@ void main() {
           email: anyNamed('email'),
           password: anyNamed('password'),
         ),
-      ).thenThrow(AuthException('Some other error', statusCode: '500'));
+      ).thenThrow(const AuthException('Some other error', statusCode: '500'));
 
       final result = await auth.signInWithPassword(
         email: 'test@example.com',
@@ -197,7 +199,10 @@ void main() {
     });
 
     test('returns Right(User) with metadata', () async {
-      final metadata = {'name': 'John Doe', 'avatar': 'http://example.com/avatar.png'};
+      final metadata = {
+        'name': 'John Doe',
+        'avatar': 'http://example.com/avatar.png',
+      };
 
       when(
         mockClient.signUp(
@@ -232,7 +237,7 @@ void main() {
           password: anyNamed('password'),
           data: anyNamed('data'),
         ),
-      ).thenAnswer((_) async => AuthResponse(user: null, session: null));
+      ).thenAnswer((_) async => AuthResponse());
 
       final result = await auth.signUp(
         email: 'new@example.com',
@@ -250,29 +255,31 @@ void main() {
       );
     });
 
-    test('returns Left(userAlreadyExists) when email already registered', () async {
-      when(
-        mockClient.signUp(
-          email: anyNamed('email'),
-          password: anyNamed('password'),
-          data: anyNamed('data'),
-        ),
-      ).thenThrow(
-        AuthException('User already registered', statusCode: '400'),
-      );
+    test(
+      'returns Left(userAlreadyExists) when email already registered',
+      () async {
+        when(
+          mockClient.signUp(
+            email: anyNamed('email'),
+            password: anyNamed('password'),
+            data: anyNamed('data'),
+          ),
+        ).thenThrow(
+          const AuthException('User already registered', statusCode: '400'),
+        );
 
-      final result = await auth.signUp(
-        email: 'existing@example.com',
-        password: 'password123',
-      );
+        final result = await auth.signUp(
+          email: 'existing@example.com',
+          password: 'password123',
+        );
 
-      expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) =>
-            expect(error, isA<RemoteAuthUserAlreadyExists>()),
-        (r) => fail('Expected Left but got Right'),
-      );
-    });
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) => expect(error, isA<RemoteAuthUserAlreadyExists>()),
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
 
     test('returns Left(signUpFailure) on generic AuthException', () async {
       when(
@@ -281,7 +288,7 @@ void main() {
           password: anyNamed('password'),
           data: anyNamed('data'),
         ),
-      ).thenThrow(AuthException('Some other error', statusCode: '500'));
+      ).thenThrow(const AuthException('Some other error', statusCode: '500'));
 
       final result = await auth.signUp(
         email: 'new@example.com',
@@ -333,7 +340,7 @@ void main() {
 
     test('returns Left(signOutFailure) on AuthException', () async {
       when(mockClient.signOut()).thenThrow(
-        AuthException('Sign out failed', statusCode: '500'),
+        const AuthException('Sign out failed', statusCode: '500'),
       );
 
       final result = await auth.signOut();
@@ -396,7 +403,7 @@ void main() {
           any,
           redirectTo: anyNamed('redirectTo'),
         ),
-      ).thenThrow(AuthException('User not found', statusCode: '404'));
+      ).thenThrow(const AuthException('User not found', statusCode: '404'));
 
       final result = await auth.sendPasswordResetEmail(
         email: 'unknown@example.com',
@@ -467,7 +474,7 @@ void main() {
           email: anyNamed('email'),
           phone: anyNamed('phone'),
         ),
-      ).thenAnswer((_) async => AuthResponse(user: null, session: null));
+      ).thenAnswer((_) async => AuthResponse());
 
       final result = await auth.verifyOtp(
         token: '000000',
@@ -494,7 +501,7 @@ void main() {
           email: anyNamed('email'),
           phone: anyNamed('phone'),
         ),
-      ).thenThrow(AuthException('Invalid OTP', statusCode: '400'));
+      ).thenThrow(const AuthException('Invalid OTP', statusCode: '400'));
 
       final result = await auth.verifyOtp(
         token: 'wrong-token',
@@ -572,7 +579,7 @@ void main() {
 
     test('returns Left(updateUserFailure) on AuthException', () async {
       when(mockClient.updateUser(any)).thenThrow(
-        AuthException('Password too weak', statusCode: '400'),
+        const AuthException('Password too weak', statusCode: '400'),
       );
 
       final result = await auth.updatePassword(newPassword: '123');
@@ -638,7 +645,7 @@ void main() {
 
     test('returns Left(updateUserFailure) on AuthException', () async {
       when(mockClient.updateUser(any)).thenThrow(
-        AuthException('Update failed', statusCode: '500'),
+        const AuthException('Update failed', statusCode: '500'),
       );
 
       final result = await auth.updateUserMetadata(metadata: {'key': 'value'});
@@ -684,7 +691,7 @@ void main() {
 
     test('returns Left(sessionExpired) when session is null', () async {
       when(mockClient.refreshSession()).thenAnswer(
-        (_) async => AuthResponse(user: null, session: null),
+        (_) async => AuthResponse(),
       );
 
       final result = await auth.refreshSession();
@@ -698,7 +705,7 @@ void main() {
 
     test('returns Left(sessionExpired) on expired token', () async {
       when(mockClient.refreshSession()).thenThrow(
-        AuthException('Token expired', statusCode: '401'),
+        const AuthException('Token expired', statusCode: '401'),
       );
 
       final result = await auth.refreshSession();
@@ -712,7 +719,7 @@ void main() {
 
     test('returns Left(sessionExpired) on invalid token', () async {
       when(mockClient.refreshSession()).thenThrow(
-        AuthException('Token is invalid', statusCode: '401'),
+        const AuthException('Token is invalid', statusCode: '401'),
       );
 
       final result = await auth.refreshSession();
@@ -726,7 +733,7 @@ void main() {
 
     test('returns Left(unknown) on generic AuthException', () async {
       when(mockClient.refreshSession()).thenThrow(
-        AuthException('Server error', statusCode: '500'),
+        const AuthException('Server error', statusCode: '500'),
       );
 
       final result = await auth.refreshSession();
@@ -803,7 +810,7 @@ void main() {
 
     test('returns Left(unknown) on AuthException', () async {
       when(mockClient.setSession(any)).thenThrow(
-        AuthException('Invalid token', statusCode: '400'),
+        const AuthException('Invalid token', statusCode: '400'),
       );
 
       final result = await auth.setSession('invalid-token');
@@ -833,14 +840,14 @@ void main() {
   });
 
   group('RemoteAuth - getters', () {
-    test('onAuthStateChange returns stream from client', () {
+    test('onAuthStateChange returns stream from client', () async {
       final controller = StreamController<AuthState>.broadcast();
       when(mockClient.onAuthStateChange).thenAnswer((_) => controller.stream);
 
       final stream = auth.onAuthStateChange;
 
       expect(stream, isA<Stream<AuthState>>());
-      controller.close();
+      await controller.close();
     });
 
     test('currentUser returns user from client', () {
