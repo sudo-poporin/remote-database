@@ -50,6 +50,15 @@ abstract interface class IRemoteAuth {
     required Map<String, dynamic> metadata,
   });
 
+  /// Refresca la sesión actual.
+  Future<Either<RemoteAuthExceptions, Session>> refreshSession();
+
+  /// Recupera la sesión almacenada.
+  Future<Either<RemoteAuthExceptions, Session?>> recoverSession();
+
+  /// Establece una sesión manualmente.
+  Future<Either<RemoteAuthExceptions, void>> setSession(String accessToken);
+
   /// Stream de cambios en el estado de autenticación.
   Stream<AuthState> get onAuthStateChange;
 
