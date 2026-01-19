@@ -74,6 +74,135 @@ class RemoteAuth implements IRemoteAuth {
   }
 
   @override
+  Future<Either<RemoteAuthExceptions, void>> signInWithOAuth({
+    required OAuthProvider provider,
+    String? redirectTo,
+    List<String>? scopes,
+  }) async {
+    try {
+      await _client.signInWithOAuth(
+        provider,
+        redirectTo: redirectTo,
+        scopes: scopes?.join(' '),
+      );
+      return const Right(null);
+    } on AuthException catch (e) {
+      return Left(
+        RemoteAuthExceptions.signInFailure(
+          message: e.message,
+          statusCode: int.tryParse(e.statusCode ?? ''),
+        ),
+      );
+    } on Object catch (e) {
+      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<RemoteAuthExceptions, void>> sendPasswordResetEmail({
+    required String email,
+    String? redirectTo,
+  }) async {
+    try {
+      await _client.resetPasswordForEmail(email, redirectTo: redirectTo);
+      return const Right(null);
+    } on AuthException catch (e) {
+      return Left(
+        RemoteAuthExceptions.passwordResetFailure(message: e.message),
+      );
+    } on Object catch (e) {
+      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<RemoteAuthExceptions, User>> verifyOtp({
+    required String token,
+    required OtpType type,
+    String? email,
+    String? phone,
+  }) async {
+    try {
+      final response = await _client.verifyOTP(
+        token: token,
+        type: type,
+        email: email,
+        phone: phone,
+      );
+
+      if (response.user == null) {
+        return const Left(
+          RemoteAuthExceptions.otpVerificationFailure(
+            message: 'OTP verification failed',
+          ),
+        );
+      }
+
+      return Right(response.user!);
+    } on AuthException catch (e) {
+      return Left(
+        RemoteAuthExceptions.otpVerificationFailure(message: e.message),
+      );
+    } on Object catch (e) {
+      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<RemoteAuthExceptions, User>> updatePassword({
+    required String newPassword,
+  }) async {
+    try {
+      final response = await _client.updateUser(
+        UserAttributes(password: newPassword),
+      );
+
+      if (response.user == null) {
+        return const Left(
+          RemoteAuthExceptions.updateUserFailure(
+            message: 'Password update failed',
+          ),
+        );
+      }
+
+      return Right(response.user!);
+    } on AuthException catch (e) {
+      return Left(
+        RemoteAuthExceptions.updateUserFailure(message: e.message),
+      );
+    } on Object catch (e) {
+      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
+    }
+  }
+
+  @override
+  Future<Either<RemoteAuthExceptions, User>> updateUserMetadata({
+    required Map<String, dynamic> metadata,
+  }) async {
+    try {
+      final response = await _client.updateUser(
+        UserAttributes(data: metadata),
+      );
+
+      if (response.user == null) {
+        return const Left(
+          RemoteAuthExceptions.updateUserFailure(
+            message: 'Metadata update failed',
+          ),
+        );
+      }
+
+      return Right(response.user!);
+    } on AuthException catch (e) {
+      return Left(
+        RemoteAuthExceptions.updateUserFailure(message: e.message),
+      );
+    } on Object catch (e) {
+      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
+    }
+  }
+
+  @override
   Stream<AuthState> get onAuthStateChange => _client.onAuthStateChange;
 
   @override

@@ -19,6 +19,37 @@ abstract interface class IRemoteAuth {
   /// Cierra la sesión actual.
   Future<Either<RemoteAuthExceptions, void>> signOut();
 
+  /// Inicia sesión con OAuth provider.
+  Future<Either<RemoteAuthExceptions, void>> signInWithOAuth({
+    required OAuthProvider provider,
+    String? redirectTo,
+    List<String>? scopes,
+  });
+
+  /// Envía email para recuperar contraseña.
+  Future<Either<RemoteAuthExceptions, void>> sendPasswordResetEmail({
+    required String email,
+    String? redirectTo,
+  });
+
+  /// Verifica un código OTP.
+  Future<Either<RemoteAuthExceptions, User>> verifyOtp({
+    required String token,
+    required OtpType type,
+    String? email,
+    String? phone,
+  });
+
+  /// Actualiza la contraseña del usuario.
+  Future<Either<RemoteAuthExceptions, User>> updatePassword({
+    required String newPassword,
+  });
+
+  /// Actualiza los metadatos del usuario.
+  Future<Either<RemoteAuthExceptions, User>> updateUserMetadata({
+    required Map<String, dynamic> metadata,
+  });
+
   /// Stream de cambios en el estado de autenticación.
   Stream<AuthState> get onAuthStateChange;
 
