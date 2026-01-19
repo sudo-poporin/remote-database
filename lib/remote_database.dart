@@ -5,5 +5,6 @@ export 'package:supabase_flutter/supabase_flutter.dart';
 
 export 'src/exceptions/exceptions.dart';
 export 'src/i_remote_database.dart';
+export 'src/query/query.dart';
 export 'src/remote_database.dart' show RemoteDatabase;
 export 'src/services/services.dart';

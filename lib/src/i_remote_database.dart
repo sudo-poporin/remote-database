@@ -9,6 +9,7 @@ abstract interface class IRemoteDatabase {
     required String table,
     required Map<String, Object> data,
     String columns = '*',
+    String? schema,
   });
 
   /// Realiza una consulta a la base de datos y devuelve un solo registro.
@@ -16,6 +17,7 @@ abstract interface class IRemoteDatabase {
     required String table,
     required Map<String, Object> data,
     String columns = '*',
+    String? schema,
   });
 
   /// Inserta o actualiza un registro en la base de datos.
@@ -23,6 +25,7 @@ abstract interface class IRemoteDatabase {
     required String table,
     required Map<String, dynamic> data,
     String? onConflict,
+    String? schema,
   });
 
   /// Insterta un registro en la base de datos y devuelve el id del registro.
@@ -30,6 +33,7 @@ abstract interface class IRemoteDatabase {
     required String table,
     required Map<String, dynamic> data,
     String resultIdColumn = 'id',
+    String? schema,
   });
 
   /// Actualiza un registro en la base de datos.
@@ -44,5 +48,20 @@ abstract interface class IRemoteDatabase {
   Future<Either<RemoteDatabaseExceptions, void>> delete({
     required String table,
     required Map<String, Object> where,
+    String? schema,
   });
+
+  /// Crea un QueryBuilder para consultas avanzadas.
+  ///
+  /// Permite construir consultas con filtros, ordenamiento y paginación.
+  ///
+  /// Ejemplo:
+  /// ```dart
+  /// final result = await db.query('users')
+  ///     .select('id, name')
+  ///     .order('name')
+  ///     .limit(10)
+  ///     .execute();
+  /// ```
+  QueryBuilder query(String table, {String? schema});
 }
