@@ -9,3 +9,4 @@ export 'src/i_remote_database.dart';
 export 'src/query/query.dart';
 export 'src/remote_database.dart' show RemoteDatabase;
 export 'src/services/services.dart';
+export 'src/storage/storage.dart';
