@@ -13,6 +13,7 @@ mixin ExecutionMixin on QueryBuilderBase {
   /// Retorna [Left] con [RemoteDatabaseExceptions] si ocurre un error.
   ///
   /// Si no se encuentran registros, retorna [Right] con lista vacía.
+  @override
   Future<Either<RemoteDatabaseExceptions, List<Map<String, dynamic>>>>
   execute() async {
     try {
@@ -41,6 +42,7 @@ mixin ExecutionMixin on QueryBuilderBase {
   ///     .eq('id', 123)
   ///     .executeSingle();
   /// ```
+  @override
   Future<Either<RemoteDatabaseExceptions, Map<String, dynamic>>>
   executeSingle() async {
     try {
@@ -74,6 +76,7 @@ mixin ExecutionMixin on QueryBuilderBase {
   ///       : print('Usuario: ${data['name']}'),
   /// );
   /// ```
+  @override
   Future<Either<RemoteDatabaseExceptions, Map<String, dynamic>?>>
   executeMaybeSingle() async {
     try {
@@ -105,6 +108,7 @@ mixin ExecutionMixin on QueryBuilderBase {
   ///   (count) => print('Órdenes pendientes: $count'),
   /// );
   /// ```
+  @override
   Future<Either<RemoteDatabaseExceptions, int>> executeCount() async {
     try {
       // Construir query base

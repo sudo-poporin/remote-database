@@ -1,6 +1,3 @@
-// Query builders require fluent API pattern which returns 'this'.
-// ignore_for_file: avoid_returning_this
-
 import 'package:remote_database/src/query/order_operation.dart';
 import 'package:remote_database/src/query/query_builder_base.dart';
 
@@ -15,7 +12,8 @@ mixin OrderingMixin on QueryBuilderBase {
   /// ```dart
   /// query.order('category').order('name', ascending: false)
   /// ```
-  OrderingMixin order(String column, {bool ascending = true}) {
+  @override
+  QueryBuilderBase order(String column, {bool ascending = true}) {
     orders.add(OrderOperation(column: column, ascending: ascending));
     return this;
   }

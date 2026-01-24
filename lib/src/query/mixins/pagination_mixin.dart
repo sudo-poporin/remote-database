@@ -1,6 +1,3 @@
-// Query builders require fluent API pattern which returns 'this'.
-// ignore_for_file: avoid_returning_this
-
 import 'package:remote_database/src/query/query_builder_base.dart';
 
 /// Mixin que provee métodos de paginación para QueryBuilder.
@@ -11,7 +8,8 @@ mixin PaginationMixin on QueryBuilderBase {
   /// ```dart
   /// query.limit(10) // Retorna máximo 10 registros
   /// ```
-  PaginationMixin limit(int count) {
+  @override
+  QueryBuilderBase limit(int count) {
     limitCount = count;
     return this;
   }
@@ -26,7 +24,8 @@ mixin PaginationMixin on QueryBuilderBase {
   /// query.range(0, 9)   // Primeros 10 registros
   /// query.range(10, 19) // Siguientes 10 registros
   /// ```
-  PaginationMixin range(int from, int to) {
+  @override
+  QueryBuilderBase range(int from, int to) {
     rangeFrom = from;
     rangeTo = to;
     return this;
