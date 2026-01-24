@@ -3,10 +3,13 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i3;
+import 'dart:async' as _i4;
+import 'dart:io' as _i6;
+import 'dart:typed_data' as _i7;
 
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:mockito/src/dummies.dart' as _i4;
+import 'package:mockito/src/dummies.dart' as _i5;
+import 'package:storage_client/src/fetch.dart' as _i3;
 import 'package:supabase/supabase.dart' as _i2;
 
 // ignore_for_file: type=lint
@@ -123,6 +126,33 @@ class _FakeObject_16 extends _i1.SmartFake implements Object {
 class _FakeGetClaimsResponse_17 extends _i1.SmartFake
     implements _i2.GetClaimsResponse {
   _FakeGetClaimsResponse_17(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeFetch_18 extends _i1.SmartFake implements _i3.Fetch {
+  _FakeFetch_18(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeStorageFileApi_19 extends _i1.SmartFake
+    implements _i2.StorageFileApi {
+  _FakeStorageFileApi_19(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeBucket_20 extends _i1.SmartFake implements _i2.Bucket {
+  _FakeBucket_20(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeSignedUploadURLResponse_21 extends _i1.SmartFake
+    implements _i2.SignedUploadURLResponse {
+  _FakeSignedUploadURLResponse_21(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
+}
+
+class _FakeFileObjectV2_22 extends _i1.SmartFake implements _i2.FileObjectV2 {
+  _FakeFileObjectV2_22(Object parent, Invocation parentInvocation)
     : super(parent, parentInvocation);
 }
 
@@ -315,43 +345,43 @@ class MockSupabaseClient extends _i1.Mock implements _i2.SupabaseClient {
           as List<_i2.RealtimeChannel>);
 
   @override
-  _i3.Future<String> removeChannel(_i2.RealtimeChannel? channel) =>
+  _i4.Future<String> removeChannel(_i2.RealtimeChannel? channel) =>
       (super.noSuchMethod(
             Invocation.method(#removeChannel, [channel]),
-            returnValue: _i3.Future<String>.value(
-              _i4.dummyValue<String>(
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
                 this,
                 Invocation.method(#removeChannel, [channel]),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<String>.value(
-              _i4.dummyValue<String>(
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
                 this,
                 Invocation.method(#removeChannel, [channel]),
               ),
             ),
           )
-          as _i3.Future<String>);
+          as _i4.Future<String>);
 
   @override
-  _i3.Future<List<String>> removeAllChannels() =>
+  _i4.Future<List<String>> removeAllChannels() =>
       (super.noSuchMethod(
             Invocation.method(#removeAllChannels, []),
-            returnValue: _i3.Future<List<String>>.value(<String>[]),
-            returnValueForMissingStub: _i3.Future<List<String>>.value(
+            returnValue: _i4.Future<List<String>>.value(<String>[]),
+            returnValueForMissingStub: _i4.Future<List<String>>.value(
               <String>[],
             ),
           )
-          as _i3.Future<List<String>>);
+          as _i4.Future<List<String>>);
 
   @override
-  _i3.Future<void> dispose() =>
+  _i4.Future<void> dispose() =>
       (super.noSuchMethod(
             Invocation.method(#dispose, []),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 }
 
 /// A class which mocks [GoTrueClient].
@@ -383,22 +413,22 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
           as _i2.GoTrueMFAApi);
 
   @override
-  _i3.Stream<_i2.AuthState> get onAuthStateChange =>
+  _i4.Stream<_i2.AuthState> get onAuthStateChange =>
       (super.noSuchMethod(
             Invocation.getter(#onAuthStateChange),
-            returnValue: _i3.Stream<_i2.AuthState>.empty(),
-            returnValueForMissingStub: _i3.Stream<_i2.AuthState>.empty(),
+            returnValue: _i4.Stream<_i2.AuthState>.empty(),
+            returnValueForMissingStub: _i4.Stream<_i2.AuthState>.empty(),
           )
-          as _i3.Stream<_i2.AuthState>);
+          as _i4.Stream<_i2.AuthState>);
 
   @override
-  _i3.Stream<_i2.AuthState> get onAuthStateChangeSync =>
+  _i4.Stream<_i2.AuthState> get onAuthStateChangeSync =>
       (super.noSuchMethod(
             Invocation.getter(#onAuthStateChangeSync),
-            returnValue: _i3.Stream<_i2.AuthState>.empty(),
-            returnValueForMissingStub: _i3.Stream<_i2.AuthState>.empty(),
+            returnValue: _i4.Stream<_i2.AuthState>.empty(),
+            returnValueForMissingStub: _i4.Stream<_i2.AuthState>.empty(),
           )
-          as _i3.Stream<_i2.AuthState>);
+          as _i4.Stream<_i2.AuthState>);
 
   @override
   Map<String, String> get headers =>
@@ -422,7 +452,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
   );
 
   @override
-  _i3.Future<_i2.AuthResponse> signInAnonymously({
+  _i4.Future<_i2.AuthResponse> signInAnonymously({
     Map<String, dynamic>? data,
     String? captchaToken,
   }) =>
@@ -431,7 +461,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #data: data,
               #captchaToken: captchaToken,
             }),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signInAnonymously, [], {
@@ -440,7 +470,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signInAnonymously, [], {
@@ -450,10 +480,10 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<_i2.AuthResponse> signUp({
+  _i4.Future<_i2.AuthResponse> signUp({
     String? email,
     String? phone,
     required String? password,
@@ -472,7 +502,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #captchaToken: captchaToken,
               #channel: channel,
             }),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signUp, [], {
@@ -486,7 +516,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signUp, [], {
@@ -501,10 +531,10 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<_i2.AuthResponse> signInWithPassword({
+  _i4.Future<_i2.AuthResponse> signInWithPassword({
     String? email,
     String? phone,
     required String? password,
@@ -517,7 +547,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #password: password,
               #captchaToken: captchaToken,
             }),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signInWithPassword, [], {
@@ -528,7 +558,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signInWithPassword, [], {
@@ -540,10 +570,10 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<_i2.OAuthResponse> getOAuthSignInUrl({
+  _i4.Future<_i2.OAuthResponse> getOAuthSignInUrl({
     required _i2.OAuthProvider? provider,
     String? redirectTo,
     String? scopes,
@@ -556,7 +586,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #scopes: scopes,
               #queryParams: queryParams,
             }),
-            returnValue: _i3.Future<_i2.OAuthResponse>.value(
+            returnValue: _i4.Future<_i2.OAuthResponse>.value(
               _FakeOAuthResponse_12(
                 this,
                 Invocation.method(#getOAuthSignInUrl, [], {
@@ -567,7 +597,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.OAuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.OAuthResponse>.value(
               _FakeOAuthResponse_12(
                 this,
                 Invocation.method(#getOAuthSignInUrl, [], {
@@ -579,32 +609,32 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.OAuthResponse>);
+          as _i4.Future<_i2.OAuthResponse>);
 
   @override
-  _i3.Future<_i2.AuthSessionUrlResponse> exchangeCodeForSession(
+  _i4.Future<_i2.AuthSessionUrlResponse> exchangeCodeForSession(
     String? authCode,
   ) =>
       (super.noSuchMethod(
             Invocation.method(#exchangeCodeForSession, [authCode]),
-            returnValue: _i3.Future<_i2.AuthSessionUrlResponse>.value(
+            returnValue: _i4.Future<_i2.AuthSessionUrlResponse>.value(
               _FakeAuthSessionUrlResponse_13(
                 this,
                 Invocation.method(#exchangeCodeForSession, [authCode]),
               ),
             ),
             returnValueForMissingStub:
-                _i3.Future<_i2.AuthSessionUrlResponse>.value(
+                _i4.Future<_i2.AuthSessionUrlResponse>.value(
                   _FakeAuthSessionUrlResponse_13(
                     this,
                     Invocation.method(#exchangeCodeForSession, [authCode]),
                   ),
                 ),
           )
-          as _i3.Future<_i2.AuthSessionUrlResponse>);
+          as _i4.Future<_i2.AuthSessionUrlResponse>);
 
   @override
-  _i3.Future<_i2.AuthResponse> signInWithIdToken({
+  _i4.Future<_i2.AuthResponse> signInWithIdToken({
     required _i2.OAuthProvider? provider,
     required String? idToken,
     String? accessToken,
@@ -619,7 +649,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #nonce: nonce,
               #captchaToken: captchaToken,
             }),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signInWithIdToken, [], {
@@ -631,7 +661,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#signInWithIdToken, [], {
@@ -644,10 +674,10 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<void> signInWithOtp({
+  _i4.Future<void> signInWithOtp({
     String? email,
     String? phone,
     String? emailRedirectTo,
@@ -666,13 +696,13 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #captchaToken: captchaToken,
               #channel: channel,
             }),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 
   @override
-  _i3.Future<_i2.AuthResponse> verifyOTP({
+  _i4.Future<_i2.AuthResponse> verifyOTP({
     String? email,
     String? phone,
     String? token,
@@ -691,7 +721,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #captchaToken: captchaToken,
               #tokenHash: tokenHash,
             }),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#verifyOTP, [], {
@@ -705,7 +735,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#verifyOTP, [], {
@@ -720,10 +750,10 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<String> getSSOSignInUrl({
+  _i4.Future<String> getSSOSignInUrl({
     String? providerId,
     String? domain,
     String? redirectTo,
@@ -736,8 +766,8 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #redirectTo: redirectTo,
               #captchaToken: captchaToken,
             }),
-            returnValue: _i3.Future<String>.value(
-              _i4.dummyValue<String>(
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
                 this,
                 Invocation.method(#getSSOSignInUrl, [], {
                   #providerId: providerId,
@@ -747,8 +777,8 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<String>.value(
-              _i4.dummyValue<String>(
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
                 this,
                 Invocation.method(#getSSOSignInUrl, [], {
                   #providerId: providerId,
@@ -759,38 +789,38 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<String>);
+          as _i4.Future<String>);
 
   @override
-  _i3.Future<_i2.AuthResponse> refreshSession([String? refreshToken]) =>
+  _i4.Future<_i2.AuthResponse> refreshSession([String? refreshToken]) =>
       (super.noSuchMethod(
             Invocation.method(#refreshSession, [refreshToken]),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#refreshSession, [refreshToken]),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#refreshSession, [refreshToken]),
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<void> reauthenticate() =>
+  _i4.Future<void> reauthenticate() =>
       (super.noSuchMethod(
             Invocation.method(#reauthenticate, []),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 
   @override
-  _i3.Future<_i2.ResendResponse> resend({
+  _i4.Future<_i2.ResendResponse> resend({
     String? email,
     String? phone,
     required _i2.OtpType? type,
@@ -805,7 +835,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #emailRedirectTo: emailRedirectTo,
               #captchaToken: captchaToken,
             }),
-            returnValue: _i3.Future<_i2.ResendResponse>.value(
+            returnValue: _i4.Future<_i2.ResendResponse>.value(
               _FakeResendResponse_14(
                 this,
                 Invocation.method(#resend, [], {
@@ -817,7 +847,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.ResendResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.ResendResponse>.value(
               _FakeResendResponse_14(
                 this,
                 Invocation.method(#resend, [], {
@@ -830,23 +860,23 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.ResendResponse>);
+          as _i4.Future<_i2.ResendResponse>);
 
   @override
-  _i3.Future<_i2.UserResponse> getUser([String? jwt]) =>
+  _i4.Future<_i2.UserResponse> getUser([String? jwt]) =>
       (super.noSuchMethod(
             Invocation.method(#getUser, [jwt]),
-            returnValue: _i3.Future<_i2.UserResponse>.value(
+            returnValue: _i4.Future<_i2.UserResponse>.value(
               _FakeUserResponse_15(this, Invocation.method(#getUser, [jwt])),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.UserResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.UserResponse>.value(
               _FakeUserResponse_15(this, Invocation.method(#getUser, [jwt])),
             ),
           )
-          as _i3.Future<_i2.UserResponse>);
+          as _i4.Future<_i2.UserResponse>);
 
   @override
-  _i3.Future<_i2.UserResponse> updateUser(
+  _i4.Future<_i2.UserResponse> updateUser(
     _i2.UserAttributes? attributes, {
     String? emailRedirectTo,
   }) =>
@@ -856,7 +886,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               [attributes],
               {#emailRedirectTo: emailRedirectTo},
             ),
-            returnValue: _i3.Future<_i2.UserResponse>.value(
+            returnValue: _i4.Future<_i2.UserResponse>.value(
               _FakeUserResponse_15(
                 this,
                 Invocation.method(
@@ -866,7 +896,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 ),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.UserResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.UserResponse>.value(
               _FakeUserResponse_15(
                 this,
                 Invocation.method(
@@ -877,29 +907,29 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.UserResponse>);
+          as _i4.Future<_i2.UserResponse>);
 
   @override
-  _i3.Future<_i2.AuthResponse> setSession(String? refreshToken) =>
+  _i4.Future<_i2.AuthResponse> setSession(String? refreshToken) =>
       (super.noSuchMethod(
             Invocation.method(#setSession, [refreshToken]),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#setSession, [refreshToken]),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#setSession, [refreshToken]),
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<_i2.AuthSessionUrlResponse> getSessionFromUrl(
+  _i4.Future<_i2.AuthSessionUrlResponse> getSessionFromUrl(
     Uri? originUrl, {
     bool? storeSession = true,
   }) =>
@@ -909,7 +939,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               [originUrl],
               {#storeSession: storeSession},
             ),
-            returnValue: _i3.Future<_i2.AuthSessionUrlResponse>.value(
+            returnValue: _i4.Future<_i2.AuthSessionUrlResponse>.value(
               _FakeAuthSessionUrlResponse_13(
                 this,
                 Invocation.method(
@@ -920,7 +950,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
             returnValueForMissingStub:
-                _i3.Future<_i2.AuthSessionUrlResponse>.value(
+                _i4.Future<_i2.AuthSessionUrlResponse>.value(
                   _FakeAuthSessionUrlResponse_13(
                     this,
                     Invocation.method(
@@ -931,21 +961,21 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                   ),
                 ),
           )
-          as _i3.Future<_i2.AuthSessionUrlResponse>);
+          as _i4.Future<_i2.AuthSessionUrlResponse>);
 
   @override
-  _i3.Future<void> signOut({
+  _i4.Future<void> signOut({
     _i2.SignOutScope? scope = _i2.SignOutScope.local,
   }) =>
       (super.noSuchMethod(
             Invocation.method(#signOut, [], {#scope: scope}),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 
   @override
-  _i3.Future<void> resetPasswordForEmail(
+  _i4.Future<void> resetPasswordForEmail(
     String? email, {
     String? redirectTo,
     String? captchaToken,
@@ -956,26 +986,26 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               [email],
               {#redirectTo: redirectTo, #captchaToken: captchaToken},
             ),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 
   @override
-  _i3.Future<List<_i2.UserIdentity>> getUserIdentities() =>
+  _i4.Future<List<_i2.UserIdentity>> getUserIdentities() =>
       (super.noSuchMethod(
             Invocation.method(#getUserIdentities, []),
-            returnValue: _i3.Future<List<_i2.UserIdentity>>.value(
+            returnValue: _i4.Future<List<_i2.UserIdentity>>.value(
               <_i2.UserIdentity>[],
             ),
-            returnValueForMissingStub: _i3.Future<List<_i2.UserIdentity>>.value(
+            returnValueForMissingStub: _i4.Future<List<_i2.UserIdentity>>.value(
               <_i2.UserIdentity>[],
             ),
           )
-          as _i3.Future<List<_i2.UserIdentity>>);
+          as _i4.Future<List<_i2.UserIdentity>>);
 
   @override
-  _i3.Future<_i2.AuthResponse> linkIdentityWithIdToken({
+  _i4.Future<_i2.AuthResponse> linkIdentityWithIdToken({
     required _i2.OAuthProvider? provider,
     required String? idToken,
     String? accessToken,
@@ -990,7 +1020,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               #nonce: nonce,
               #captchaToken: captchaToken,
             }),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#linkIdentityWithIdToken, [], {
@@ -1002,7 +1032,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 }),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#linkIdentityWithIdToken, [], {
@@ -1015,10 +1045,10 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
-  _i3.Future<_i2.OAuthResponse> getLinkIdentityUrl(
+  _i4.Future<_i2.OAuthResponse> getLinkIdentityUrl(
     _i2.OAuthProvider? provider, {
     String? redirectTo,
     String? scopes,
@@ -1034,7 +1064,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 #queryParams: queryParams,
               },
             ),
-            returnValue: _i3.Future<_i2.OAuthResponse>.value(
+            returnValue: _i4.Future<_i2.OAuthResponse>.value(
               _FakeOAuthResponse_12(
                 this,
                 Invocation.method(
@@ -1048,7 +1078,7 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
                 ),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.OAuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.OAuthResponse>.value(
               _FakeOAuthResponse_12(
                 this,
                 Invocation.method(
@@ -1063,44 +1093,44 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
               ),
             ),
           )
-          as _i3.Future<_i2.OAuthResponse>);
+          as _i4.Future<_i2.OAuthResponse>);
 
   @override
-  _i3.Future<void> unlinkIdentity(_i2.UserIdentity? identity) =>
+  _i4.Future<void> unlinkIdentity(_i2.UserIdentity? identity) =>
       (super.noSuchMethod(
             Invocation.method(#unlinkIdentity, [identity]),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 
   @override
-  _i3.Future<void> setInitialSession(String? jsonStr) =>
+  _i4.Future<void> setInitialSession(String? jsonStr) =>
       (super.noSuchMethod(
             Invocation.method(#setInitialSession, [jsonStr]),
-            returnValue: _i3.Future<void>.value(),
-            returnValueForMissingStub: _i3.Future<void>.value(),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
           )
-          as _i3.Future<void>);
+          as _i4.Future<void>);
 
   @override
-  _i3.Future<_i2.AuthResponse> recoverSession(String? jsonStr) =>
+  _i4.Future<_i2.AuthResponse> recoverSession(String? jsonStr) =>
       (super.noSuchMethod(
             Invocation.method(#recoverSession, [jsonStr]),
-            returnValue: _i3.Future<_i2.AuthResponse>.value(
+            returnValue: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#recoverSession, [jsonStr]),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.AuthResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.AuthResponse>.value(
               _FakeAuthResponse_11(
                 this,
                 Invocation.method(#recoverSession, [jsonStr]),
               ),
             ),
           )
-          as _i3.Future<_i2.AuthResponse>);
+          as _i4.Future<_i2.AuthResponse>);
 
   @override
   void startAutoRefresh() => super.noSuchMethod(
@@ -1150,24 +1180,736 @@ class MockGoTrueClient extends _i1.Mock implements _i2.GoTrueClient {
           as Object);
 
   @override
-  _i3.Future<_i2.GetClaimsResponse> getClaims([
+  _i4.Future<_i2.GetClaimsResponse> getClaims([
     String? jwt,
     _i2.GetClaimsOptions? options,
   ]) =>
       (super.noSuchMethod(
             Invocation.method(#getClaims, [jwt, options]),
-            returnValue: _i3.Future<_i2.GetClaimsResponse>.value(
+            returnValue: _i4.Future<_i2.GetClaimsResponse>.value(
               _FakeGetClaimsResponse_17(
                 this,
                 Invocation.method(#getClaims, [jwt, options]),
               ),
             ),
-            returnValueForMissingStub: _i3.Future<_i2.GetClaimsResponse>.value(
+            returnValueForMissingStub: _i4.Future<_i2.GetClaimsResponse>.value(
               _FakeGetClaimsResponse_17(
                 this,
                 Invocation.method(#getClaims, [jwt, options]),
               ),
             ),
           )
-          as _i3.Future<_i2.GetClaimsResponse>);
+          as _i4.Future<_i2.GetClaimsResponse>);
+}
+
+/// A class which mocks [SupabaseStorageClient].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockSupabaseStorageClient extends _i1.Mock
+    implements _i2.SupabaseStorageClient {
+  @override
+  String get url =>
+      (super.noSuchMethod(
+            Invocation.getter(#url),
+            returnValue: _i5.dummyValue<String>(this, Invocation.getter(#url)),
+            returnValueForMissingStub: _i5.dummyValue<String>(
+              this,
+              Invocation.getter(#url),
+            ),
+          )
+          as String);
+
+  @override
+  Map<String, String> get headers =>
+      (super.noSuchMethod(
+            Invocation.getter(#headers),
+            returnValue: <String, String>{},
+            returnValueForMissingStub: <String, String>{},
+          )
+          as Map<String, String>);
+
+  @override
+  _i3.Fetch get storageFetch =>
+      (super.noSuchMethod(
+            Invocation.getter(#storageFetch),
+            returnValue: _FakeFetch_18(this, Invocation.getter(#storageFetch)),
+            returnValueForMissingStub: _FakeFetch_18(
+              this,
+              Invocation.getter(#storageFetch),
+            ),
+          )
+          as _i3.Fetch);
+
+  @override
+  set storageFetch(_i3.Fetch? value) => super.noSuchMethod(
+    Invocation.setter(#storageFetch, value),
+    returnValueForMissingStub: null,
+  );
+
+  @override
+  _i2.StorageFileApi from(String? id) =>
+      (super.noSuchMethod(
+            Invocation.method(#from, [id]),
+            returnValue: _FakeStorageFileApi_19(
+              this,
+              Invocation.method(#from, [id]),
+            ),
+            returnValueForMissingStub: _FakeStorageFileApi_19(
+              this,
+              Invocation.method(#from, [id]),
+            ),
+          )
+          as _i2.StorageFileApi);
+
+  @override
+  void setAuth(String? jwt) => super.noSuchMethod(
+    Invocation.method(#setAuth, [jwt]),
+    returnValueForMissingStub: null,
+  );
+
+  @override
+  _i4.Future<List<_i2.Bucket>> listBuckets() =>
+      (super.noSuchMethod(
+            Invocation.method(#listBuckets, []),
+            returnValue: _i4.Future<List<_i2.Bucket>>.value(<_i2.Bucket>[]),
+            returnValueForMissingStub: _i4.Future<List<_i2.Bucket>>.value(
+              <_i2.Bucket>[],
+            ),
+          )
+          as _i4.Future<List<_i2.Bucket>>);
+
+  @override
+  _i4.Future<_i2.Bucket> getBucket(String? id) =>
+      (super.noSuchMethod(
+            Invocation.method(#getBucket, [id]),
+            returnValue: _i4.Future<_i2.Bucket>.value(
+              _FakeBucket_20(this, Invocation.method(#getBucket, [id])),
+            ),
+            returnValueForMissingStub: _i4.Future<_i2.Bucket>.value(
+              _FakeBucket_20(this, Invocation.method(#getBucket, [id])),
+            ),
+          )
+          as _i4.Future<_i2.Bucket>);
+
+  @override
+  _i4.Future<String> createBucket(
+    String? id, [
+    _i2.BucketOptions? bucketOptions = const _i2.BucketOptions(public: false),
+  ]) =>
+      (super.noSuchMethod(
+            Invocation.method(#createBucket, [id, bucketOptions]),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#createBucket, [id, bucketOptions]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#createBucket, [id, bucketOptions]),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> updateBucket(
+    String? id,
+    _i2.BucketOptions? bucketOptions,
+  ) =>
+      (super.noSuchMethod(
+            Invocation.method(#updateBucket, [id, bucketOptions]),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#updateBucket, [id, bucketOptions]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#updateBucket, [id, bucketOptions]),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> emptyBucket(String? id) =>
+      (super.noSuchMethod(
+            Invocation.method(#emptyBucket, [id]),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#emptyBucket, [id]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#emptyBucket, [id]),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> deleteBucket(String? id) =>
+      (super.noSuchMethod(
+            Invocation.method(#deleteBucket, [id]),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#deleteBucket, [id]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#deleteBucket, [id]),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+}
+
+/// A class which mocks [StorageFileApi].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
+  @override
+  String get url =>
+      (super.noSuchMethod(
+            Invocation.getter(#url),
+            returnValue: _i5.dummyValue<String>(this, Invocation.getter(#url)),
+            returnValueForMissingStub: _i5.dummyValue<String>(
+              this,
+              Invocation.getter(#url),
+            ),
+          )
+          as String);
+
+  @override
+  Map<String, String> get headers =>
+      (super.noSuchMethod(
+            Invocation.getter(#headers),
+            returnValue: <String, String>{},
+            returnValueForMissingStub: <String, String>{},
+          )
+          as Map<String, String>);
+
+  @override
+  _i4.Future<String> upload(
+    String? path,
+    _i6.File? file, {
+    _i2.FileOptions? fileOptions = const _i2.FileOptions(),
+    int? retryAttempts,
+    _i2.StorageRetryController? retryController,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #upload,
+              [path, file],
+              {
+                #fileOptions: fileOptions,
+                #retryAttempts: retryAttempts,
+                #retryController: retryController,
+              },
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #upload,
+                  [path, file],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #upload,
+                  [path, file],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> uploadBinary(
+    String? path,
+    _i7.Uint8List? data, {
+    _i2.FileOptions? fileOptions = const _i2.FileOptions(),
+    int? retryAttempts,
+    _i2.StorageRetryController? retryController,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #uploadBinary,
+              [path, data],
+              {
+                #fileOptions: fileOptions,
+                #retryAttempts: retryAttempts,
+                #retryController: retryController,
+              },
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #uploadBinary,
+                  [path, data],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #uploadBinary,
+                  [path, data],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> uploadToSignedUrl(
+    String? path,
+    String? token,
+    _i6.File? file, [
+    _i2.FileOptions? fileOptions = const _i2.FileOptions(),
+    int? retryAttempts,
+    _i2.StorageRetryController? retryController,
+  ]) =>
+      (super.noSuchMethod(
+            Invocation.method(#uploadToSignedUrl, [
+              path,
+              token,
+              file,
+              fileOptions,
+              retryAttempts,
+              retryController,
+            ]),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#uploadToSignedUrl, [
+                  path,
+                  token,
+                  file,
+                  fileOptions,
+                  retryAttempts,
+                  retryController,
+                ]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#uploadToSignedUrl, [
+                  path,
+                  token,
+                  file,
+                  fileOptions,
+                  retryAttempts,
+                  retryController,
+                ]),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> uploadBinaryToSignedUrl(
+    String? path,
+    String? token,
+    _i7.Uint8List? data, [
+    _i2.FileOptions? fileOptions = const _i2.FileOptions(),
+    int? retryAttempts,
+    _i2.StorageRetryController? retryController,
+  ]) =>
+      (super.noSuchMethod(
+            Invocation.method(#uploadBinaryToSignedUrl, [
+              path,
+              token,
+              data,
+              fileOptions,
+              retryAttempts,
+              retryController,
+            ]),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#uploadBinaryToSignedUrl, [
+                  path,
+                  token,
+                  data,
+                  fileOptions,
+                  retryAttempts,
+                  retryController,
+                ]),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(#uploadBinaryToSignedUrl, [
+                  path,
+                  token,
+                  data,
+                  fileOptions,
+                  retryAttempts,
+                  retryController,
+                ]),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<_i2.SignedUploadURLResponse> createSignedUploadUrl(String? path) =>
+      (super.noSuchMethod(
+            Invocation.method(#createSignedUploadUrl, [path]),
+            returnValue: _i4.Future<_i2.SignedUploadURLResponse>.value(
+              _FakeSignedUploadURLResponse_21(
+                this,
+                Invocation.method(#createSignedUploadUrl, [path]),
+              ),
+            ),
+            returnValueForMissingStub:
+                _i4.Future<_i2.SignedUploadURLResponse>.value(
+                  _FakeSignedUploadURLResponse_21(
+                    this,
+                    Invocation.method(#createSignedUploadUrl, [path]),
+                  ),
+                ),
+          )
+          as _i4.Future<_i2.SignedUploadURLResponse>);
+
+  @override
+  _i4.Future<String> update(
+    String? path,
+    _i6.File? file, {
+    _i2.FileOptions? fileOptions = const _i2.FileOptions(),
+    int? retryAttempts,
+    _i2.StorageRetryController? retryController,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #update,
+              [path, file],
+              {
+                #fileOptions: fileOptions,
+                #retryAttempts: retryAttempts,
+                #retryController: retryController,
+              },
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #update,
+                  [path, file],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #update,
+                  [path, file],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> updateBinary(
+    String? path,
+    _i7.Uint8List? data, {
+    _i2.FileOptions? fileOptions = const _i2.FileOptions(),
+    int? retryAttempts,
+    _i2.StorageRetryController? retryController,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #updateBinary,
+              [path, data],
+              {
+                #fileOptions: fileOptions,
+                #retryAttempts: retryAttempts,
+                #retryController: retryController,
+              },
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #updateBinary,
+                  [path, data],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #updateBinary,
+                  [path, data],
+                  {
+                    #fileOptions: fileOptions,
+                    #retryAttempts: retryAttempts,
+                    #retryController: retryController,
+                  },
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> move(
+    String? fromPath,
+    String? toPath, {
+    String? destinationBucket,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #move,
+              [fromPath, toPath],
+              {#destinationBucket: destinationBucket},
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #move,
+                  [fromPath, toPath],
+                  {#destinationBucket: destinationBucket},
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #move,
+                  [fromPath, toPath],
+                  {#destinationBucket: destinationBucket},
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> copy(
+    String? fromPath,
+    String? toPath, {
+    String? destinationBucket,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #copy,
+              [fromPath, toPath],
+              {#destinationBucket: destinationBucket},
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #copy,
+                  [fromPath, toPath],
+                  {#destinationBucket: destinationBucket},
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #copy,
+                  [fromPath, toPath],
+                  {#destinationBucket: destinationBucket},
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<String> createSignedUrl(
+    String? path,
+    int? expiresIn, {
+    _i2.TransformOptions? transform,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(
+              #createSignedUrl,
+              [path, expiresIn],
+              {#transform: transform},
+            ),
+            returnValue: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #createSignedUrl,
+                  [path, expiresIn],
+                  {#transform: transform},
+                ),
+              ),
+            ),
+            returnValueForMissingStub: _i4.Future<String>.value(
+              _i5.dummyValue<String>(
+                this,
+                Invocation.method(
+                  #createSignedUrl,
+                  [path, expiresIn],
+                  {#transform: transform},
+                ),
+              ),
+            ),
+          )
+          as _i4.Future<String>);
+
+  @override
+  _i4.Future<List<_i2.SignedUrl>> createSignedUrls(
+    List<String>? paths,
+    int? expiresIn,
+  ) =>
+      (super.noSuchMethod(
+            Invocation.method(#createSignedUrls, [paths, expiresIn]),
+            returnValue: _i4.Future<List<_i2.SignedUrl>>.value(
+              <_i2.SignedUrl>[],
+            ),
+            returnValueForMissingStub: _i4.Future<List<_i2.SignedUrl>>.value(
+              <_i2.SignedUrl>[],
+            ),
+          )
+          as _i4.Future<List<_i2.SignedUrl>>);
+
+  @override
+  _i4.Future<_i7.Uint8List> download(
+    String? path, {
+    _i2.TransformOptions? transform,
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#download, [path], {#transform: transform}),
+            returnValue: _i4.Future<_i7.Uint8List>.value(_i7.Uint8List(0)),
+            returnValueForMissingStub: _i4.Future<_i7.Uint8List>.value(
+              _i7.Uint8List(0),
+            ),
+          )
+          as _i4.Future<_i7.Uint8List>);
+
+  @override
+  _i4.Future<_i2.FileObjectV2> info(String? path) =>
+      (super.noSuchMethod(
+            Invocation.method(#info, [path]),
+            returnValue: _i4.Future<_i2.FileObjectV2>.value(
+              _FakeFileObjectV2_22(this, Invocation.method(#info, [path])),
+            ),
+            returnValueForMissingStub: _i4.Future<_i2.FileObjectV2>.value(
+              _FakeFileObjectV2_22(this, Invocation.method(#info, [path])),
+            ),
+          )
+          as _i4.Future<_i2.FileObjectV2>);
+
+  @override
+  _i4.Future<bool> exists(String? path) =>
+      (super.noSuchMethod(
+            Invocation.method(#exists, [path]),
+            returnValue: _i4.Future<bool>.value(false),
+            returnValueForMissingStub: _i4.Future<bool>.value(false),
+          )
+          as _i4.Future<bool>);
+
+  @override
+  String getPublicUrl(String? path, {_i2.TransformOptions? transform}) =>
+      (super.noSuchMethod(
+            Invocation.method(#getPublicUrl, [path], {#transform: transform}),
+            returnValue: _i5.dummyValue<String>(
+              this,
+              Invocation.method(#getPublicUrl, [path], {#transform: transform}),
+            ),
+            returnValueForMissingStub: _i5.dummyValue<String>(
+              this,
+              Invocation.method(#getPublicUrl, [path], {#transform: transform}),
+            ),
+          )
+          as String);
+
+  @override
+  _i4.Future<List<_i2.FileObject>> remove(List<String>? paths) =>
+      (super.noSuchMethod(
+            Invocation.method(#remove, [paths]),
+            returnValue: _i4.Future<List<_i2.FileObject>>.value(
+              <_i2.FileObject>[],
+            ),
+            returnValueForMissingStub: _i4.Future<List<_i2.FileObject>>.value(
+              <_i2.FileObject>[],
+            ),
+          )
+          as _i4.Future<List<_i2.FileObject>>);
+
+  @override
+  _i4.Future<List<_i2.FileObject>> list({
+    String? path,
+    _i2.SearchOptions? searchOptions = const _i2.SearchOptions(),
+  }) =>
+      (super.noSuchMethod(
+            Invocation.method(#list, [], {
+              #path: path,
+              #searchOptions: searchOptions,
+            }),
+            returnValue: _i4.Future<List<_i2.FileObject>>.value(
+              <_i2.FileObject>[],
+            ),
+            returnValueForMissingStub: _i4.Future<List<_i2.FileObject>>.value(
+              <_i2.FileObject>[],
+            ),
+          )
+          as _i4.Future<List<_i2.FileObject>>);
 }

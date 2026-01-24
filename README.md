@@ -447,6 +447,137 @@ await auth.setSession(accessToken);
 | `updateUserFailure` | Error al actualizar usuario |
 | `unknown` | Error no categorizado |
 
+## Storage (Nuevo en v1.4.0)
+
+El módulo de almacenamiento provee un wrapper sobre `SupabaseStorageClient` con
+el patrón Either para manejo de errores.
+
+### Configuración
+
+```dart
+final storage = RemoteStorage(client: supabase.storage);
+```
+
+### Operaciones Básicas
+
+```dart
+// Upload desde bytes
+final uploadResult = await storage.uploadBytes(
+  bucket: 'avatars',
+  path: 'user123.png',
+  data: imageBytes,
+  contentType: 'image/png',
+  upsert: true, // Sobrescribir si existe
+);
+
+uploadResult.fold(
+  (error) => print('Error: $error'),
+  (path) => print('Subido a: $path'),
+);
+
+// Download
+final downloadResult = await storage.download(
+  bucket: 'avatars',
+  path: 'user123.png',
+);
+
+downloadResult.fold(
+  (error) => print('Error: $error'),
+  (bytes) => print('Descargados ${bytes.length} bytes'),
+);
+
+// Delete (uno o varios archivos)
+await storage.delete(
+  bucket: 'avatars',
+  paths: ['user123.png', 'user456.png'],
+);
+
+// Obtener URL pública (síncrono)
+final urlResult = storage.getPublicUrl(
+  bucket: 'avatars',
+  path: 'user123.png',
+);
+```
+
+### URLs Firmadas
+
+```dart
+// Crear URL con expiración (para archivos privados)
+final signedResult = await storage.createSignedUrl(
+  bucket: 'private-docs',
+  path: 'contract.pdf',
+  expiresInSeconds: 3600, // 1 hora
+);
+
+signedResult.fold(
+  (error) => print('Error: $error'),
+  (url) => print('URL firmada: $url'),
+);
+```
+
+### Listado de Archivos
+
+```dart
+final listResult = await storage.list(
+  bucket: 'avatars',
+  path: 'users/', // Opcional: directorio
+  limit: 100,     // Opcional: límite
+  offset: 0,      // Opcional: paginación
+  sortBy: StorageSortBy.createdAt, // Opcional: ordenamiento
+);
+
+listResult.fold(
+  (error) => print('Error: $error'),
+  (files) {
+    for (final file in files) {
+      print('${file.name} - ${file.createdAt}');
+    }
+  },
+);
+```
+
+### Mover y Copiar
+
+```dart
+// Mover archivo
+await storage.move(
+  bucket: 'avatars',
+  fromPath: 'temp/photo.png',
+  toPath: 'users/user123/photo.png',
+);
+
+// Copiar archivo
+await storage.copy(
+  bucket: 'avatars',
+  fromPath: 'templates/default.png',
+  toPath: 'users/user456/avatar.png',
+);
+```
+
+### Excepciones de Storage
+
+| Excepción | Descripción |
+|-----------|-------------|
+| `uploadFailure` | Error al subir archivo |
+| `downloadFailure` | Error al descargar archivo |
+| `deleteFailure` | Error al eliminar archivo |
+| `urlFailure` | Error al generar URL |
+| `listFailure` | Error al listar archivos |
+| `moveFailure` | Error al mover/copiar archivo |
+| `fileNotFound` | Archivo no encontrado |
+| `bucketNotFound` | Bucket no existe |
+| `permissionDenied` | Sin permisos para la operación |
+| `unknown` | Error no categorizado |
+
+### Opciones de Ordenamiento
+
+| StorageSortBy | Descripción |
+|---------------|-------------|
+| `name` | Ordenar por nombre |
+| `createdAt` | Ordenar por fecha de creación |
+| `updatedAt` | Ordenar por fecha de actualización |
+| `lastAccessedAt` | Ordenar por último acceso |
+
 ## Dependencias 📦
 
 - [supabase_flutter](https://pub.dev/packages/supabase_flutter) - Cliente de Supabase
