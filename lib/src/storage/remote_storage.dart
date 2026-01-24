@@ -117,8 +117,22 @@ class RemoteStorage implements IRemoteStorage {
     required String path,
     required int expiresInSeconds,
   }) async {
-    // TODO(session2): Implementar en Sesión 2
-    throw UnimplementedError();
+    try {
+      final result = await _client.from(bucket).createSignedUrl(
+            path,
+            expiresInSeconds,
+          );
+      return Right(result);
+    } on StorageException catch (e) {
+      return Left(
+        RemoteStorageException.urlFailure(
+          message: e.message,
+          path: path,
+        ),
+      );
+    } on Exception catch (e) {
+      return Left(RemoteStorageException.unknown(message: e.toString()));
+    }
   }
 
   @override
@@ -129,8 +143,44 @@ class RemoteStorage implements IRemoteStorage {
     int? offset,
     StorageSortBy? sortBy,
   }) async {
-    // TODO(session2): Implementar en Sesión 2
-    throw UnimplementedError();
+    try {
+      final searchOptions = SearchOptions(
+        limit: limit,
+        offset: offset,
+        sortBy: sortBy != null
+            ? SortBy(column: _mapSortBy(sortBy), order: 'asc')
+            : null,
+      );
+
+      final result = await _client.from(bucket).list(
+            path: path,
+            searchOptions: searchOptions,
+          );
+
+      return Right(result);
+    } on StorageException catch (e) {
+      return Left(
+        RemoteStorageException.listFailure(
+          message: e.message,
+          bucket: bucket,
+        ),
+      );
+    } on Exception catch (e) {
+      return Left(RemoteStorageException.unknown(message: e.toString()));
+    }
+  }
+
+  String _mapSortBy(StorageSortBy sortBy) {
+    switch (sortBy) {
+      case StorageSortBy.name:
+        return 'name';
+      case StorageSortBy.createdAt:
+        return 'created_at';
+      case StorageSortBy.updatedAt:
+        return 'updated_at';
+      case StorageSortBy.lastAccessedAt:
+        return 'last_accessed_at';
+    }
   }
 
   @override
@@ -139,8 +189,20 @@ class RemoteStorage implements IRemoteStorage {
     required String fromPath,
     required String toPath,
   }) async {
-    // TODO(session2): Implementar en Sesión 2
-    throw UnimplementedError();
+    try {
+      await _client.from(bucket).move(fromPath, toPath);
+      return const Right(null);
+    } on StorageException catch (e) {
+      return Left(
+        RemoteStorageException.moveFailure(
+          message: e.message,
+          fromPath: fromPath,
+          toPath: toPath,
+        ),
+      );
+    } on Exception catch (e) {
+      return Left(RemoteStorageException.unknown(message: e.toString()));
+    }
   }
 
   @override
@@ -149,8 +211,20 @@ class RemoteStorage implements IRemoteStorage {
     required String fromPath,
     required String toPath,
   }) async {
-    // TODO(session2): Implementar en Sesión 2
-    throw UnimplementedError();
+    try {
+      await _client.from(bucket).copy(fromPath, toPath);
+      return const Right(null);
+    } on StorageException catch (e) {
+      return Left(
+        RemoteStorageException.moveFailure(
+          message: e.message,
+          fromPath: fromPath,
+          toPath: toPath,
+        ),
+      );
+    } on Exception catch (e) {
+      return Left(RemoteStorageException.unknown(message: e.toString()));
+    }
   }
 
   RemoteStorageException _mapStorageException(
