@@ -42,6 +42,7 @@ abstract interface class IRemoteDatabase {
     required Map<dynamic, dynamic> values,
     required Map<String, Object> where,
     String resultIdColumn = 'id',
+    String? schema,
   });
 
   /// Elimina un registro en la base de datos.

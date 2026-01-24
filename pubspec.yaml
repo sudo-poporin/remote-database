@@ -1,6 +1,6 @@
 name: remote_database
 description: "Paquete para el manejo de bases de datos remotas."
-version: 2.0.1
+version: 2.0.2
 homepage:
 
 environment:
