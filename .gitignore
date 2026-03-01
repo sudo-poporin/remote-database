@@ -31,3 +31,7 @@ migrate_working_dir/
 build/
 /docs/
 /coverage/
+
+# Claude related
+.claude/
+CLAUDE.md
