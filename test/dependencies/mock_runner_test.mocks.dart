@@ -1268,6 +1268,21 @@ class MockSupabaseStorageClient extends _i1.Mock
   );
 
   @override
+  _i2.SupabaseStorageClient setHeader(String? key, String? value) =>
+      (super.noSuchMethod(
+            Invocation.method(#setHeader, [key, value]),
+            returnValue: _FakeSupabaseStorageClient_1(
+              this,
+              Invocation.method(#setHeader, [key, value]),
+            ),
+            returnValueForMissingStub: _FakeSupabaseStorageClient_1(
+              this,
+              Invocation.method(#setHeader, [key, value]),
+            ),
+          )
+          as _i2.SupabaseStorageClient);
+
+  @override
   _i4.Future<List<_i2.Bucket>> listBuckets() =>
       (super.noSuchMethod(
             Invocation.method(#listBuckets, []),
@@ -1398,6 +1413,21 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
             returnValueForMissingStub: <String, String>{},
           )
           as Map<String, String>);
+
+  @override
+  _i2.StorageFileApi setHeader(String? key, String? value) =>
+      (super.noSuchMethod(
+            Invocation.method(#setHeader, [key, value]),
+            returnValue: _FakeStorageFileApi_19(
+              this,
+              Invocation.method(#setHeader, [key, value]),
+            ),
+            returnValueForMissingStub: _FakeStorageFileApi_19(
+              this,
+              Invocation.method(#setHeader, [key, value]),
+            ),
+          )
+          as _i2.StorageFileApi);
 
   @override
   _i4.Future<String> upload(
@@ -1834,9 +1864,14 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
   _i4.Future<_i7.Uint8List> download(
     String? path, {
     _i2.TransformOptions? transform,
+    Map<String, String>? queryParams,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(#download, [path], {#transform: transform}),
+            Invocation.method(
+              #download,
+              [path],
+              {#transform: transform, #queryParams: queryParams},
+            ),
             returnValue: _i4.Future<_i7.Uint8List>.value(_i7.Uint8List(0)),
             returnValueForMissingStub: _i4.Future<_i7.Uint8List>.value(
               _i7.Uint8List(0),
