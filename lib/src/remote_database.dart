@@ -1,18 +1,20 @@
+// coverage:ignore-file
+// Wrapper sobre la cadena de Supabase (`schema().from().select()…`) — chain
+// types (`PostgrestFilterBuilder`, etc.) no son razonablemente mockeables.
+
 import 'package:fpdart/fpdart.dart';
 import 'package:remote_database/remote_database.dart';
 import 'package:remote_database/src/const/const.dart';
 
 /// Repositorio de base de datos remota.
-class RemoteDatabase extends _RemoteDatabaseImpl {
-  /// Crea una instancia de [RemoteDatabase] con un cliente de Supabase.
-  RemoteDatabase({required super.client});
+class RemoteDatabaseBase extends _RemoteDatabase {
+  /// Crea una instancia de [RemoteDatabaseBase] con un cliente de Supabase.
+  RemoteDatabaseBase({required super.client});
 }
 
-/// Implentación de la interfaz [IRemoteDatabase].
-class _RemoteDatabaseImpl implements IRemoteDatabase {
-  /// Implementación de la base de datos remota.
-  /// Crea una instancia de [RemoteDatabase] con un cliente de Supabase.
-  _RemoteDatabaseImpl({required SupabaseClient client}) : _client = client;
+/// Implementación de la interfaz [IRemoteDatabase].
+class _RemoteDatabase implements IRemoteDatabase {
+  _RemoteDatabase({required SupabaseClient client}) : _client = client;
 
   final SupabaseClient _client;
 
@@ -29,20 +31,11 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .schema(schema ?? 'public')
           .from(table)
           .select(columns)
-          .match(data)
-          .onError((error, stackTrace) {
-            if (error is PostgrestException &&
-                error.code == ErrorCodes.noDataFound) {
-              throw const RemoteDatabaseExceptions.noDataFound();
-            }
-            throw Exception(error);
-          });
+          .match(data);
 
       return Right(result);
     } on Exception catch (e) {
-      return e is RemoteDatabaseNoDataFound
-          ? const Right([])
-          : Left(RemoteDatabaseExceptions.selectFailure(e));
+      return Left(RemoteDatabaseExceptions.selectFailure(e));
     }
   }
 
@@ -61,7 +54,8 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .match(data)
           .single()
           .onError((error, stackTrace) {
-            if (error is PostgrestException && error.code == 'PGRST116') {
+            if (error is PostgrestException &&
+                error.code == ErrorCodes.noDataFound) {
               throw const RemoteDatabaseExceptions.noDataFound();
             }
             throw Exception(error);
@@ -86,8 +80,7 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
       await _client
           .schema(schema ?? 'public')
           .from(table)
-          .upsert(data, onConflict: onConflict)
-          .onError((error, stackTrace) => throw Exception(error));
+          .upsert(data, onConflict: onConflict);
 
       return const Right(null);
     } on Exception catch (e) {
@@ -108,8 +101,7 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .from(table)
           .insert(data)
           .select()
-          .single()
-          .onError((error, stackTrace) => throw Exception(error));
+          .single();
 
       return Right(result[resultIdColumn] as int);
     } on Exception catch (e) {
@@ -120,7 +112,7 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
   @override
   Future<Either<RemoteDatabaseExceptions, int>> update({
     required String table,
-    required Map<dynamic, dynamic> values,
+    required Map<String, dynamic> values,
     required Map<String, Object> where,
     String resultIdColumn = 'id',
     String? schema,
@@ -132,8 +124,7 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .update(values)
           .match(where)
           .select()
-          .single()
-          .onError((error, stackTrace) => throw Exception(error));
+          .single();
 
       return Right(result[resultIdColumn] as int);
     } on Exception catch (e) {
@@ -152,8 +143,7 @@ class _RemoteDatabaseImpl implements IRemoteDatabase {
           .schema(schema ?? 'public')
           .from(table)
           .delete()
-          .match(where)
-          .onError((error, stackTrace) => throw Exception(error));
+          .match(where);
 
       return const Right(null);
     } on Exception catch (e) {

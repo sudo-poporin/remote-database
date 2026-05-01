@@ -55,7 +55,7 @@ extension RemoteStorageExceptionPatterns on RemoteStorageException {
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( RemoteStorageUploadFailure value)?  uploadFailure,TResult Function( RemoteStorageDownloadFailure value)?  downloadFailure,TResult Function( RemoteStorageDeleteFailure value)?  deleteFailure,TResult Function( RemoteStorageUrlFailure value)?  urlFailure,TResult Function( RemoteStorageListFailure value)?  listFailure,TResult Function( RemoteStorageMoveFailure value)?  moveFailure,TResult Function( RemoteStorageFileNotFound value)?  fileNotFound,TResult Function( RemoteStorageBucketNotFound value)?  bucketNotFound,TResult Function( RemoteStoragePermissionDenied value)?  permissionDenied,TResult Function( RemoteStorageUnknown value)?  unknown,required TResult orElse(),}){
+@optionalTypeArgs TResult maybeMap<TResult extends Object?>({TResult Function( RemoteStorageUploadFailure value)?  uploadFailure,TResult Function( RemoteStorageDownloadFailure value)?  downloadFailure,TResult Function( RemoteStorageDeleteFailure value)?  deleteFailure,TResult Function( RemoteStorageUrlFailure value)?  urlFailure,TResult Function( RemoteStorageListFailure value)?  listFailure,TResult Function( RemoteStorageMoveFailure value)?  moveFailure,TResult Function( RemoteStorageCopyFailure value)?  copyFailure,TResult Function( RemoteStorageFileNotFound value)?  fileNotFound,TResult Function( RemoteStorageBucketNotFound value)?  bucketNotFound,TResult Function( RemoteStoragePermissionDenied value)?  permissionDenied,TResult Function( RemoteStorageUnknown value)?  unknown,required TResult orElse(),}){
 final _that = this;
 switch (_that) {
 case RemoteStorageUploadFailure() when uploadFailure != null:
@@ -64,7 +64,8 @@ return downloadFailure(_that);case RemoteStorageDeleteFailure() when deleteFailu
 return deleteFailure(_that);case RemoteStorageUrlFailure() when urlFailure != null:
 return urlFailure(_that);case RemoteStorageListFailure() when listFailure != null:
 return listFailure(_that);case RemoteStorageMoveFailure() when moveFailure != null:
-return moveFailure(_that);case RemoteStorageFileNotFound() when fileNotFound != null:
+return moveFailure(_that);case RemoteStorageCopyFailure() when copyFailure != null:
+return copyFailure(_that);case RemoteStorageFileNotFound() when fileNotFound != null:
 return fileNotFound(_that);case RemoteStorageBucketNotFound() when bucketNotFound != null:
 return bucketNotFound(_that);case RemoteStoragePermissionDenied() when permissionDenied != null:
 return permissionDenied(_that);case RemoteStorageUnknown() when unknown != null:
@@ -86,7 +87,7 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( RemoteStorageUploadFailure value)  uploadFailure,required TResult Function( RemoteStorageDownloadFailure value)  downloadFailure,required TResult Function( RemoteStorageDeleteFailure value)  deleteFailure,required TResult Function( RemoteStorageUrlFailure value)  urlFailure,required TResult Function( RemoteStorageListFailure value)  listFailure,required TResult Function( RemoteStorageMoveFailure value)  moveFailure,required TResult Function( RemoteStorageFileNotFound value)  fileNotFound,required TResult Function( RemoteStorageBucketNotFound value)  bucketNotFound,required TResult Function( RemoteStoragePermissionDenied value)  permissionDenied,required TResult Function( RemoteStorageUnknown value)  unknown,}){
+@optionalTypeArgs TResult map<TResult extends Object?>({required TResult Function( RemoteStorageUploadFailure value)  uploadFailure,required TResult Function( RemoteStorageDownloadFailure value)  downloadFailure,required TResult Function( RemoteStorageDeleteFailure value)  deleteFailure,required TResult Function( RemoteStorageUrlFailure value)  urlFailure,required TResult Function( RemoteStorageListFailure value)  listFailure,required TResult Function( RemoteStorageMoveFailure value)  moveFailure,required TResult Function( RemoteStorageCopyFailure value)  copyFailure,required TResult Function( RemoteStorageFileNotFound value)  fileNotFound,required TResult Function( RemoteStorageBucketNotFound value)  bucketNotFound,required TResult Function( RemoteStoragePermissionDenied value)  permissionDenied,required TResult Function( RemoteStorageUnknown value)  unknown,}){
 final _that = this;
 switch (_that) {
 case RemoteStorageUploadFailure():
@@ -95,7 +96,8 @@ return downloadFailure(_that);case RemoteStorageDeleteFailure():
 return deleteFailure(_that);case RemoteStorageUrlFailure():
 return urlFailure(_that);case RemoteStorageListFailure():
 return listFailure(_that);case RemoteStorageMoveFailure():
-return moveFailure(_that);case RemoteStorageFileNotFound():
+return moveFailure(_that);case RemoteStorageCopyFailure():
+return copyFailure(_that);case RemoteStorageFileNotFound():
 return fileNotFound(_that);case RemoteStorageBucketNotFound():
 return bucketNotFound(_that);case RemoteStoragePermissionDenied():
 return permissionDenied(_that);case RemoteStorageUnknown():
@@ -116,7 +118,7 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( RemoteStorageUploadFailure value)?  uploadFailure,TResult? Function( RemoteStorageDownloadFailure value)?  downloadFailure,TResult? Function( RemoteStorageDeleteFailure value)?  deleteFailure,TResult? Function( RemoteStorageUrlFailure value)?  urlFailure,TResult? Function( RemoteStorageListFailure value)?  listFailure,TResult? Function( RemoteStorageMoveFailure value)?  moveFailure,TResult? Function( RemoteStorageFileNotFound value)?  fileNotFound,TResult? Function( RemoteStorageBucketNotFound value)?  bucketNotFound,TResult? Function( RemoteStoragePermissionDenied value)?  permissionDenied,TResult? Function( RemoteStorageUnknown value)?  unknown,}){
+@optionalTypeArgs TResult? mapOrNull<TResult extends Object?>({TResult? Function( RemoteStorageUploadFailure value)?  uploadFailure,TResult? Function( RemoteStorageDownloadFailure value)?  downloadFailure,TResult? Function( RemoteStorageDeleteFailure value)?  deleteFailure,TResult? Function( RemoteStorageUrlFailure value)?  urlFailure,TResult? Function( RemoteStorageListFailure value)?  listFailure,TResult? Function( RemoteStorageMoveFailure value)?  moveFailure,TResult? Function( RemoteStorageCopyFailure value)?  copyFailure,TResult? Function( RemoteStorageFileNotFound value)?  fileNotFound,TResult? Function( RemoteStorageBucketNotFound value)?  bucketNotFound,TResult? Function( RemoteStoragePermissionDenied value)?  permissionDenied,TResult? Function( RemoteStorageUnknown value)?  unknown,}){
 final _that = this;
 switch (_that) {
 case RemoteStorageUploadFailure() when uploadFailure != null:
@@ -125,7 +127,8 @@ return downloadFailure(_that);case RemoteStorageDeleteFailure() when deleteFailu
 return deleteFailure(_that);case RemoteStorageUrlFailure() when urlFailure != null:
 return urlFailure(_that);case RemoteStorageListFailure() when listFailure != null:
 return listFailure(_that);case RemoteStorageMoveFailure() when moveFailure != null:
-return moveFailure(_that);case RemoteStorageFileNotFound() when fileNotFound != null:
+return moveFailure(_that);case RemoteStorageCopyFailure() when copyFailure != null:
+return copyFailure(_that);case RemoteStorageFileNotFound() when fileNotFound != null:
 return fileNotFound(_that);case RemoteStorageBucketNotFound() when bucketNotFound != null:
 return bucketNotFound(_that);case RemoteStoragePermissionDenied() when permissionDenied != null:
 return permissionDenied(_that);case RemoteStorageUnknown() when unknown != null:
@@ -146,7 +149,7 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message,  String? path)?  uploadFailure,TResult Function( String message,  String? path)?  downloadFailure,TResult Function( String message,  String? path)?  deleteFailure,TResult Function( String message,  String? path)?  urlFailure,TResult Function( String message,  String? bucket)?  listFailure,TResult Function( String message,  String? fromPath,  String? toPath)?  moveFailure,TResult Function( String path)?  fileNotFound,TResult Function( String bucket)?  bucketNotFound,TResult Function( String message)?  permissionDenied,TResult Function( String message)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message,  String? path)?  uploadFailure,TResult Function( String message,  String? path)?  downloadFailure,TResult Function( String message,  String? path)?  deleteFailure,TResult Function( String message,  String? path)?  urlFailure,TResult Function( String message,  String? bucket)?  listFailure,TResult Function( String message,  String? fromPath,  String? toPath)?  moveFailure,TResult Function( String message,  String? fromPath,  String? toPath)?  copyFailure,TResult Function( String path)?  fileNotFound,TResult Function( String bucket)?  bucketNotFound,TResult Function( String message)?  permissionDenied,TResult Function( String message)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case RemoteStorageUploadFailure() when uploadFailure != null:
 return uploadFailure(_that.message,_that.path);case RemoteStorageDownloadFailure() when downloadFailure != null:
@@ -154,7 +157,8 @@ return downloadFailure(_that.message,_that.path);case RemoteStorageDeleteFailure
 return deleteFailure(_that.message,_that.path);case RemoteStorageUrlFailure() when urlFailure != null:
 return urlFailure(_that.message,_that.path);case RemoteStorageListFailure() when listFailure != null:
 return listFailure(_that.message,_that.bucket);case RemoteStorageMoveFailure() when moveFailure != null:
-return moveFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageFileNotFound() when fileNotFound != null:
+return moveFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageCopyFailure() when copyFailure != null:
+return copyFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageFileNotFound() when fileNotFound != null:
 return fileNotFound(_that.path);case RemoteStorageBucketNotFound() when bucketNotFound != null:
 return bucketNotFound(_that.bucket);case RemoteStoragePermissionDenied() when permissionDenied != null:
 return permissionDenied(_that.message);case RemoteStorageUnknown() when unknown != null:
@@ -176,7 +180,7 @@ return unknown(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message,  String? path)  uploadFailure,required TResult Function( String message,  String? path)  downloadFailure,required TResult Function( String message,  String? path)  deleteFailure,required TResult Function( String message,  String? path)  urlFailure,required TResult Function( String message,  String? bucket)  listFailure,required TResult Function( String message,  String? fromPath,  String? toPath)  moveFailure,required TResult Function( String path)  fileNotFound,required TResult Function( String bucket)  bucketNotFound,required TResult Function( String message)  permissionDenied,required TResult Function( String message)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message,  String? path)  uploadFailure,required TResult Function( String message,  String? path)  downloadFailure,required TResult Function( String message,  String? path)  deleteFailure,required TResult Function( String message,  String? path)  urlFailure,required TResult Function( String message,  String? bucket)  listFailure,required TResult Function( String message,  String? fromPath,  String? toPath)  moveFailure,required TResult Function( String message,  String? fromPath,  String? toPath)  copyFailure,required TResult Function( String path)  fileNotFound,required TResult Function( String bucket)  bucketNotFound,required TResult Function( String message)  permissionDenied,required TResult Function( String message)  unknown,}) {final _that = this;
 switch (_that) {
 case RemoteStorageUploadFailure():
 return uploadFailure(_that.message,_that.path);case RemoteStorageDownloadFailure():
@@ -184,7 +188,8 @@ return downloadFailure(_that.message,_that.path);case RemoteStorageDeleteFailure
 return deleteFailure(_that.message,_that.path);case RemoteStorageUrlFailure():
 return urlFailure(_that.message,_that.path);case RemoteStorageListFailure():
 return listFailure(_that.message,_that.bucket);case RemoteStorageMoveFailure():
-return moveFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageFileNotFound():
+return moveFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageCopyFailure():
+return copyFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageFileNotFound():
 return fileNotFound(_that.path);case RemoteStorageBucketNotFound():
 return bucketNotFound(_that.bucket);case RemoteStoragePermissionDenied():
 return permissionDenied(_that.message);case RemoteStorageUnknown():
@@ -205,7 +210,7 @@ return unknown(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message,  String? path)?  uploadFailure,TResult? Function( String message,  String? path)?  downloadFailure,TResult? Function( String message,  String? path)?  deleteFailure,TResult? Function( String message,  String? path)?  urlFailure,TResult? Function( String message,  String? bucket)?  listFailure,TResult? Function( String message,  String? fromPath,  String? toPath)?  moveFailure,TResult? Function( String path)?  fileNotFound,TResult? Function( String bucket)?  bucketNotFound,TResult? Function( String message)?  permissionDenied,TResult? Function( String message)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message,  String? path)?  uploadFailure,TResult? Function( String message,  String? path)?  downloadFailure,TResult? Function( String message,  String? path)?  deleteFailure,TResult? Function( String message,  String? path)?  urlFailure,TResult? Function( String message,  String? bucket)?  listFailure,TResult? Function( String message,  String? fromPath,  String? toPath)?  moveFailure,TResult? Function( String message,  String? fromPath,  String? toPath)?  copyFailure,TResult? Function( String path)?  fileNotFound,TResult? Function( String bucket)?  bucketNotFound,TResult? Function( String message)?  permissionDenied,TResult? Function( String message)?  unknown,}) {final _that = this;
 switch (_that) {
 case RemoteStorageUploadFailure() when uploadFailure != null:
 return uploadFailure(_that.message,_that.path);case RemoteStorageDownloadFailure() when downloadFailure != null:
@@ -213,7 +218,8 @@ return downloadFailure(_that.message,_that.path);case RemoteStorageDeleteFailure
 return deleteFailure(_that.message,_that.path);case RemoteStorageUrlFailure() when urlFailure != null:
 return urlFailure(_that.message,_that.path);case RemoteStorageListFailure() when listFailure != null:
 return listFailure(_that.message,_that.bucket);case RemoteStorageMoveFailure() when moveFailure != null:
-return moveFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageFileNotFound() when fileNotFound != null:
+return moveFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageCopyFailure() when copyFailure != null:
+return copyFailure(_that.message,_that.fromPath,_that.toPath);case RemoteStorageFileNotFound() when fileNotFound != null:
 return fileNotFound(_that.path);case RemoteStorageBucketNotFound() when bucketNotFound != null:
 return bucketNotFound(_that.bucket);case RemoteStoragePermissionDenied() when permissionDenied != null:
 return permissionDenied(_that.message);case RemoteStorageUnknown() when unknown != null:
@@ -625,6 +631,76 @@ class _$RemoteStorageMoveFailureCopyWithImpl<$Res>
 /// with the given fields replaced by the non-null parameter values.
 @pragma('vm:prefer-inline') $Res call({Object? message = null,Object? fromPath = freezed,Object? toPath = freezed,}) {
   return _then(RemoteStorageMoveFailure(
+message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
+as String,fromPath: freezed == fromPath ? _self.fromPath : fromPath // ignore: cast_nullable_to_non_nullable
+as String?,toPath: freezed == toPath ? _self.toPath : toPath // ignore: cast_nullable_to_non_nullable
+as String?,
+  ));
+}
+
+
+}
+
+/// @nodoc
+
+
+class RemoteStorageCopyFailure implements RemoteStorageException {
+  const RemoteStorageCopyFailure({required this.message, this.fromPath, this.toPath});
+  
+
+ final  String message;
+ final  String? fromPath;
+ final  String? toPath;
+
+/// Create a copy of RemoteStorageException
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$RemoteStorageCopyFailureCopyWith<RemoteStorageCopyFailure> get copyWith => _$RemoteStorageCopyFailureCopyWithImpl<RemoteStorageCopyFailure>(this, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageCopyFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.fromPath, fromPath) || other.fromPath == fromPath)&&(identical(other.toPath, toPath) || other.toPath == toPath));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,message,fromPath,toPath);
+
+@override
+String toString() {
+  return 'RemoteStorageException.copyFailure(message: $message, fromPath: $fromPath, toPath: $toPath)';
+}
+
+
+}
+
+/// @nodoc
+abstract mixin class $RemoteStorageCopyFailureCopyWith<$Res> implements $RemoteStorageExceptionCopyWith<$Res> {
+  factory $RemoteStorageCopyFailureCopyWith(RemoteStorageCopyFailure value, $Res Function(RemoteStorageCopyFailure) _then) = _$RemoteStorageCopyFailureCopyWithImpl;
+@useResult
+$Res call({
+ String message, String? fromPath, String? toPath
+});
+
+
+
+
+}
+/// @nodoc
+class _$RemoteStorageCopyFailureCopyWithImpl<$Res>
+    implements $RemoteStorageCopyFailureCopyWith<$Res> {
+  _$RemoteStorageCopyFailureCopyWithImpl(this._self, this._then);
+
+  final RemoteStorageCopyFailure _self;
+  final $Res Function(RemoteStorageCopyFailure) _then;
+
+/// Create a copy of RemoteStorageException
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') $Res call({Object? message = null,Object? fromPath = freezed,Object? toPath = freezed,}) {
+  return _then(RemoteStorageCopyFailure(
 message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
 as String,fromPath: freezed == fromPath ? _self.fromPath : fromPath // ignore: cast_nullable_to_non_nullable
 as String?,toPath: freezed == toPath ? _self.toPath : toPath // ignore: cast_nullable_to_non_nullable

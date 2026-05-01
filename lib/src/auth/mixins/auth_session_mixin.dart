@@ -26,12 +26,7 @@ mixin AuthSessionMixin on RemoteAuthBase {
 
   /// Recupera la sesión almacenada.
   Future<Either<RemoteAuthExceptions, Session?>> recoverSession() async {
-    try {
-      final session = client.currentSession;
-      return Right(session);
-    } on Object catch (e) {
-      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
-    }
+    return Right(client.currentSession);
   }
 
   /// Establece una sesión manualmente.

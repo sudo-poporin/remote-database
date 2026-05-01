@@ -39,7 +39,7 @@ abstract interface class IRemoteDatabase {
   /// Actualiza un registro en la base de datos.
   Future<Either<RemoteDatabaseExceptions, int>> update({
     required String table,
-    required Map<dynamic, dynamic> values,
+    required Map<String, dynamic> values,
     required Map<String, Object> where,
     String resultIdColumn = 'id',
     String? schema,

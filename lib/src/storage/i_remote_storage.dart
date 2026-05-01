@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:fpdart/fpdart.dart';
@@ -34,7 +35,7 @@ abstract interface class IRemoteStorage {
   Future<Either<RemoteStorageException, String>> uploadFile({
     required String bucket,
     required String path,
-    required dynamic file,
+    required File file,
     String? contentType,
     bool upsert = false,
   });

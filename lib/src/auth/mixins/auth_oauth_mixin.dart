@@ -1,3 +1,7 @@
+// coverage:ignore-file
+// `GoTrueClient.signInWithOAuth` es extension method que internamente llama
+// `launchUrl` (url_launcher) — no es razonablemente mockeable en unit tests.
+
 import 'package:fpdart/fpdart.dart';
 import 'package:remote_database/remote_database.dart';
 import 'package:remote_database/src/auth/remote_auth_base.dart';

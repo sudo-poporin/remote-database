@@ -398,4 +398,15 @@ void main() {
       expect(queryBuilder.filters[2].column, equals('c'));
     });
   });
+
+  group('QueryBuilder - getters/setters de QueryBuilderBase', () {
+    test('client getter retorna el cliente inyectado', () {
+      expect(queryBuilder.client, same(mockClient));
+    });
+
+    test('columns setter actualiza el valor expuesto', () {
+      queryBuilder.columns = 'id, name';
+      expect(queryBuilder.columns, equals('id, name'));
+    });
+  });
 }

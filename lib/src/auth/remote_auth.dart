@@ -17,7 +17,7 @@ import 'package:remote_database/src/auth/remote_auth_base.dart';
 ///
 /// Ejemplo de uso:
 /// ```dart
-/// final auth = RemoteAuth(client: supabase.auth);
+/// final auth = RemoteAuth(goTrueClient: supabase.auth);
 ///
 /// // Sign in
 /// final result = await auth.signInWithPassword(

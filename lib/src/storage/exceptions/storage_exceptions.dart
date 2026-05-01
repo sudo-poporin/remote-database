@@ -37,12 +37,19 @@ abstract class RemoteStorageException
     String? bucket,
   }) = RemoteStorageListFailure;
 
-  /// Error al mover/copiar archivo.
+  /// Error al mover archivo.
   const factory RemoteStorageException.moveFailure({
     required String message,
     String? fromPath,
     String? toPath,
   }) = RemoteStorageMoveFailure;
+
+  /// Error al copiar archivo.
+  const factory RemoteStorageException.copyFailure({
+    required String message,
+    String? fromPath,
+    String? toPath,
+  }) = RemoteStorageCopyFailure;
 
   /// Archivo no encontrado.
   const factory RemoteStorageException.fileNotFound({

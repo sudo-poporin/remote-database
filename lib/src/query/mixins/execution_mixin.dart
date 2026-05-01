@@ -1,3 +1,8 @@
+// coverage:ignore-file
+// Ejecuta la cadena de Supabase (`schema().from().select()…`) — chain types
+// (`PostgrestFilterBuilder`, `PostgrestTransformBuilder`) no son
+// razonablemente mockeables.
+
 import 'package:fpdart/fpdart.dart';
 import 'package:remote_database/remote_database.dart';
 import 'package:remote_database/src/const/const.dart';

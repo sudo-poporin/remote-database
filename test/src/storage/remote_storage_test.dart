@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -158,13 +159,87 @@ void main() {
     });
   });
 
-  // Note: uploadFile tests are limited because:
-  // 1. The method casts dynamic to File, requiring a real File object
-  // 2. File operations are platform-specific and hard to mock
-  // 3. uploadBytes provides equivalent coverage for upload logic
-  //
-  // The uploadFile method is tested indirectly through integration tests
-  // and shares the same error handling logic as uploadBytes.;
+  group('RemoteStorage - uploadFile', () {
+    final tempFile = File('${Directory.systemTemp.path}/upload_test_input.bin');
+
+    setUpAll(() {
+      tempFile.writeAsBytesSync([1, 2, 3]);
+    });
+
+    tearDownAll(() {
+      if (tempFile.existsSync()) {
+        tempFile.deleteSync();
+      }
+    });
+
+    test('returns Right(path) on successful upload', () async {
+      when(
+        mockFileApi.upload(
+          any,
+          any,
+          fileOptions: anyNamed('fileOptions'),
+        ),
+      ).thenAnswer((_) async => 'docs/manual.pdf');
+
+      final result = await storage.uploadFile(
+        bucket: 'docs',
+        path: 'manual.pdf',
+        file: tempFile,
+        contentType: 'application/pdf',
+        upsert: true,
+      );
+
+      expect(result.isRight(), isTrue);
+      result.fold(
+        (l) => fail('Expected Right but got Left'),
+        (path) => expect(path, equals('docs/manual.pdf')),
+      );
+    });
+
+    test('returns Left(uploadFailure) on StorageException', () async {
+      when(
+        mockFileApi.upload(
+          any,
+          any,
+          fileOptions: anyNamed('fileOptions'),
+        ),
+      ).thenThrow(const StorageException('Upload failed'));
+
+      final result = await storage.uploadFile(
+        bucket: 'docs',
+        path: 'manual.pdf',
+        file: tempFile,
+      );
+
+      expect(result.isLeft(), isTrue);
+      result.fold(
+        (error) => expect(error, isA<RemoteStorageUploadFailure>()),
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+
+    test('returns Left(unknown) on unexpected exception', () async {
+      when(
+        mockFileApi.upload(
+          any,
+          any,
+          fileOptions: anyNamed('fileOptions'),
+        ),
+      ).thenThrow(Exception('Network error'));
+
+      final result = await storage.uploadFile(
+        bucket: 'docs',
+        path: 'manual.pdf',
+        file: tempFile,
+      );
+
+      expect(result.isLeft(), isTrue);
+      result.fold(
+        (error) => expect(error, isA<RemoteStorageUnknown>()),
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+  });
 
   group('RemoteStorage - download', () {
     test('returns Right(Uint8List) on successful download', () async {
@@ -542,6 +617,21 @@ void main() {
       ).called(1);
     });
 
+    for (final sortBy in StorageSortBy.values) {
+      test('mapea sortBy=${sortBy.name} sin error', () async {
+        when(
+          mockFileApi.list(
+            path: anyNamed('path'),
+            searchOptions: anyNamed('searchOptions'),
+          ),
+        ).thenAnswer((_) async => []);
+
+        final result = await storage.list(bucket: 'avatars', sortBy: sortBy);
+
+        expect(result.isRight(), isTrue);
+      });
+    }
+
     test('returns Left(listFailure) on StorageException', () async {
       when(
         mockFileApi.list(
@@ -655,7 +745,7 @@ void main() {
           .called(1);
     });
 
-    test('returns Left(moveFailure) on StorageException', () async {
+    test('returns Left(copyFailure) on StorageException', () async {
       when(mockFileApi.copy(any, any))
           .thenThrow(const StorageException('Copy failed'));
 
@@ -668,8 +758,8 @@ void main() {
       expect(result.isLeft(), isTrue);
       result.fold(
         (error) {
-          expect(error, isA<RemoteStorageMoveFailure>());
-          final failure = error as RemoteStorageMoveFailure;
+          expect(error, isA<RemoteStorageCopyFailure>());
+          final failure = error as RemoteStorageCopyFailure;
           expect(failure.message, equals('Copy failed'));
           expect(failure.fromPath, equals('original/user123.png'));
           expect(failure.toPath, equals('backup/user123.png'));

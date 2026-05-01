@@ -48,9 +48,6 @@ mixin AuthCredentialsMixin on RemoteAuthBase {
 
       return Right(response.user!);
     } on AuthException catch (e) {
-      if (e.message.contains('already registered')) {
-        return const Left(RemoteAuthExceptions.userAlreadyExists());
-      }
       return Left(mapAuthException(e, AuthOperation.signUp));
     } on Object catch (e) {
       return Left(RemoteAuthExceptions.unknown(message: e.toString()));

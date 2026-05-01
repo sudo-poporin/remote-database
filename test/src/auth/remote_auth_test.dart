@@ -783,17 +783,6 @@ void main() {
       );
     });
 
-    test('returns Left(unknown) on unexpected exception', () async {
-      when(mockClient.currentSession).thenThrow(Exception('Storage error'));
-
-      final result = await auth.recoverSession();
-
-      expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) => expect(error, isA<RemoteAuthUnknown>()),
-        (r) => fail('Expected Left but got Right'),
-      );
-    });
   });
 
   group('RemoteAuth - setSession', () {
@@ -916,4 +905,5 @@ void main() {
       expect(userId, isNull);
     });
   });
+
 }

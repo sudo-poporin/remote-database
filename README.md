@@ -1,5 +1,11 @@
 # Remote Database 📡
 
+[![Tests](https://github.com/sudo-poporin/remote-database/actions/workflows/test.yml/badge.svg)](https://github.com/sudo-poporin/remote-database/actions/workflows/test.yml)
+[![coverage: 100%](https://img.shields.io/badge/coverage-100%25-brightgreen)](https://github.com/sudo-poporin/remote-database/actions/workflows/test.yml)
+[![style: very good analysis](https://img.shields.io/badge/style-very_good_analysis-B22C89.svg)](https://pub.dev/packages/very_good_analysis)
+[![Flutter](https://img.shields.io/badge/Flutter-%2302569B.svg?logo=Flutter&logoColor=white)](https://flutter.dev)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?logo=supabase&logoColor=white)](https://supabase.com)
+
 Paquete para el manejo de bases de datos remotas con Supabase, utilizando
 programación funcional con el patrón Either para manejo de errores.
 
@@ -21,7 +27,7 @@ dependencies:
   remote_database:
     git:
       url: https://github.com/sudo-poporin/remote-database
-      ref: v1.1.0  # Usar versión específica
+      ref: v2.0.6  # Usar versión específica
 ```
 
 ## Configuración 🔧
@@ -35,11 +41,11 @@ Future<void> main() async {
   // Inicializar Supabase
   final supabase = await RemoteDatabaseService.init(
     supabaseUrl: 'https://your-project.supabase.co',
-    supabaseAnnonKey: 'your-anon-key',
+    supabaseAnonKey: 'your-anon-key',
   );
 
   // Crear instancia del repositorio
-  final db = RemoteDatabase(client: supabase.client);
+  final db = RemoteDatabaseBase(client: supabase.client);
 }
 ```
 
@@ -158,19 +164,22 @@ El Query Builder permite construir consultas avanzadas con una API fluida.
 
 ```dart
 final result = await db.query('transactions')
-    ..select('id, amount, date')
-    ..eq('status', 'completed')
-    ..gte('date', '2024-01-01')
-    ..lte('date', '2024-12-31')
-    ..order('date', ascending: false)
-    ..limit(20)
-    ..execute();
+    .select('id, amount, date')
+    .eq('status', 'completed')
+    .gte('date', '2024-01-01')
+    .lte('date', '2024-12-31')
+    .order('date', ascending: false)
+    .limit(20)
+    .execute();
 
 result.fold(
   (error) => print('Error: $error'),
   (transactions) => print('Transacciones: $transactions'),
 );
 ```
+
+> **Nota:** Encadená métodos con `.` (no con `..`). El cascade combinado
+> con `await` no retorna el `Future` de `execute()` y rompe el flujo.
 
 ### Filtros disponibles
 
@@ -192,19 +201,19 @@ result.fold(
 ```dart
 // Ordenar por múltiples columnas
 final result = await db.query('products')
-    ..order('category')
-    ..order('name', ascending: false)
-    ..execute();
+    .order('category')
+    .order('name', ascending: false)
+    .execute();
 
 // Paginación con limit
 final page1 = await db.query('products')
-    ..limit(10)
-    ..execute();
+    .limit(10)
+    .execute();
 
 // Paginación con range (offset-based)
 final page2 = await db.query('products')
-    ..range(10, 19) // Registros 10-19 (segunda página de 10)
-    ..execute();
+    .range(10, 19) // Registros 10-19 (segunda página de 10)
+    .execute();
 ```
 
 ### Métodos de ejecución
@@ -220,8 +229,8 @@ final page2 = await db.query('products')
 
 ```dart
 final result = await db.query('users')
-    ..eq('email', 'test@example.com')
-    ..executeMaybeSingle();
+    .eq('email', 'test@example.com')
+    .executeMaybeSingle();
 
 result.fold(
   (error) => print('Error: $error'),
@@ -235,8 +244,8 @@ result.fold(
 
 ```dart
 final result = await db.query('orders')
-    ..eq('status', 'pending')
-    ..executeCount();
+    .eq('status', 'pending')
+    .executeCount();
 
 result.fold(
   (error) => print('Error: $error'),
@@ -318,9 +327,9 @@ result.fold(
 
 | Método | Retorno | Descripción |
 |--------|---------|-------------|
-| `init(supabaseUrl, supabaseAnnonKey)` | `Future<Supabase>` | Inicializa conexión con Supabase |
+| `init(supabaseUrl, supabaseAnonKey)` | `Future<Supabase>` | Inicializa conexión con Supabase |
 
-### RemoteDatabase
+### RemoteDatabaseBase
 
 | Método | Retorno | Descripción |
 |--------|---------|-------------|
@@ -583,3 +592,29 @@ await storage.copy(
 - [supabase_flutter](https://pub.dev/packages/supabase_flutter) - Cliente de Supabase
 - [fpdart](https://pub.dev/packages/fpdart) - Programación funcional (Either, Option)
 - [freezed](https://pub.dev/packages/freezed) - Clases inmutables y sealed unions
+
+## Coverage 📊
+
+El paquete mantiene **100% de cobertura** sobre los archivos testeables.
+El workflow de CI corre `flutter test --coverage` en cada push/PR y verifica
+el umbral con `min_coverage: 100`.
+
+Generar el reporte localmente:
+
+```bash
+flutter test --coverage
+lcov --summary coverage/lcov.info
+```
+
+### Archivos excluidos del coverage
+
+Los siguientes archivos están marcados con `// coverage:ignore-file` por ser
+wrappers de I/O o extension methods no mockeables en unit tests:
+
+- `lib/src/services/remote_database_service.dart` — `Supabase.initialize`
+  estático con I/O real.
+- `lib/src/remote_database.dart` — encadena `PostgrestFilterBuilder` que
+  implementa `Future` (no mockeable razonablemente).
+- `lib/src/query/mixins/execution_mixin.dart` — mismo motivo.
+- `lib/src/auth/mixins/auth_oauth_mixin.dart` — `signInWithOAuth` es
+  extension que invoca `launchUrl` (`url_launcher`).

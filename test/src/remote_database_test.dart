@@ -6,9 +6,9 @@ import '../dependencies/mock_runner_test.mocks.dart';
 void main() {
   final client = MockSupabaseClient();
 
-  group('Repository: RemoteDatabase', () {
-    test('Se crea una instancia de RemoteDatabase', () {
-      expect(RemoteDatabase(client: client), isNotNull);
+  group('Repository: RemoteDatabaseBase', () {
+    test('Se crea una instancia de RemoteDatabaseBase', () {
+      expect(RemoteDatabaseBase(client: client), isNotNull);
     });
   });
 }

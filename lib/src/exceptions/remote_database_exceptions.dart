@@ -2,7 +2,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'remote_database_exceptions.freezed.dart';
 
-/// Excepciones de la biblioteca de juegos.
+/// Excepciones del módulo de base de datos remota.
 @freezed
 abstract class RemoteDatabaseExceptions
     with _$RemoteDatabaseExceptions

@@ -32,7 +32,9 @@ class RemoteStorage implements IRemoteStorage {
           );
       return Right(result);
     } on StorageException catch (e) {
-      return Left(_mapStorageException(e, 'upload', path: path));
+      return Left(
+        _mapStorageException(e, _StorageOp.upload, bucket: bucket, path: path),
+      );
     } on Exception catch (e) {
       return Left(RemoteStorageException.unknown(message: e.toString()));
     }
@@ -42,14 +44,14 @@ class RemoteStorage implements IRemoteStorage {
   Future<Either<RemoteStorageException, String>> uploadFile({
     required String bucket,
     required String path,
-    required dynamic file,
+    required File file,
     String? contentType,
     bool upsert = false,
   }) async {
     try {
       final result = await _client.from(bucket).upload(
             path,
-            file as File,
+            file,
             fileOptions: FileOptions(
               contentType: contentType,
               upsert: upsert,
@@ -57,7 +59,9 @@ class RemoteStorage implements IRemoteStorage {
           );
       return Right(result);
     } on StorageException catch (e) {
-      return Left(_mapStorageException(e, 'upload', path: path));
+      return Left(
+        _mapStorageException(e, _StorageOp.upload, bucket: bucket, path: path),
+      );
     } on Exception catch (e) {
       return Left(RemoteStorageException.unknown(message: e.toString()));
     }
@@ -72,7 +76,14 @@ class RemoteStorage implements IRemoteStorage {
       final result = await _client.from(bucket).download(path);
       return Right(result);
     } on StorageException catch (e) {
-      return Left(_mapStorageException(e, 'download', path: path));
+      return Left(
+        _mapStorageException(
+          e,
+          _StorageOp.download,
+          bucket: bucket,
+          path: path,
+        ),
+      );
     } on Exception catch (e) {
       return Left(RemoteStorageException.unknown(message: e.toString()));
     }
@@ -87,7 +98,14 @@ class RemoteStorage implements IRemoteStorage {
       await _client.from(bucket).remove(paths);
       return const Right(null);
     } on StorageException catch (e) {
-      return Left(_mapStorageException(e, 'delete', path: paths.join(', ')));
+      return Left(
+        _mapStorageException(
+          e,
+          _StorageOp.delete,
+          bucket: bucket,
+          path: paths.join(', '),
+        ),
+      );
     } on Exception catch (e) {
       return Left(RemoteStorageException.unknown(message: e.toString()));
     }
@@ -216,7 +234,7 @@ class RemoteStorage implements IRemoteStorage {
       return const Right(null);
     } on StorageException catch (e) {
       return Left(
-        RemoteStorageException.moveFailure(
+        RemoteStorageException.copyFailure(
           message: e.message,
           fromPath: fromPath,
           toPath: toPath,
@@ -229,7 +247,8 @@ class RemoteStorage implements IRemoteStorage {
 
   RemoteStorageException _mapStorageException(
     StorageException e,
-    String operation, {
+    _StorageOp operation, {
+    required String bucket,
     String? path,
   }) {
     final message = e.message;
@@ -241,27 +260,27 @@ class RemoteStorage implements IRemoteStorage {
       return RemoteStorageException.permissionDenied(message: message);
     }
     if (message.contains('bucket')) {
-      return RemoteStorageException.bucketNotFound(bucket: path ?? 'unknown');
+      return RemoteStorageException.bucketNotFound(bucket: bucket);
     }
 
     switch (operation) {
-      case 'upload':
+      case _StorageOp.upload:
         return RemoteStorageException.uploadFailure(
           message: message,
           path: path,
         );
-      case 'download':
+      case _StorageOp.download:
         return RemoteStorageException.downloadFailure(
           message: message,
           path: path,
         );
-      case 'delete':
+      case _StorageOp.delete:
         return RemoteStorageException.deleteFailure(
           message: message,
           path: path,
         );
-      default:
-        return RemoteStorageException.unknown(message: message);
     }
   }
 }
+
+enum _StorageOp { upload, download, delete }
