@@ -709,6 +709,7 @@ void main() {
           expect(error, isA<RemoteAuthUpdateUserFailure>());
           final failure = error as RemoteAuthUpdateUserFailure;
           expect(failure.message, equals('Password too weak'));
+          expect(failure.statusCode, equals(400));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -725,6 +726,29 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(updateUserFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(mockClient.updateUser(any)).thenThrow(
+          const AuthException('Too many requests', statusCode: '429'),
+        );
+
+        final result = await auth.updatePassword(newPassword: 'new123');
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthUpdateUserFailure>());
+            final failure = error as RemoteAuthUpdateUserFailure;
+            expect(failure.message, equals('Too many requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - updateUserMetadata', () {
@@ -775,6 +799,7 @@ void main() {
           expect(error, isA<RemoteAuthUpdateUserFailure>());
           final failure = error as RemoteAuthUpdateUserFailure;
           expect(failure.message, equals('Update failed'));
+          expect(failure.statusCode, equals(500));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -791,6 +816,31 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(updateUserFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(mockClient.updateUser(any)).thenThrow(
+          const AuthException('Too many requests', statusCode: '429'),
+        );
+
+        final result = await auth.updateUserMetadata(
+          metadata: {'key': 'value'},
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthUpdateUserFailure>());
+            final failure = error as RemoteAuthUpdateUserFailure;
+            expect(failure.message, equals('Too many requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - refreshSession', () {

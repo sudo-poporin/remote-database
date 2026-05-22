@@ -40,6 +40,7 @@ abstract class RemoteAuthExceptions
   /// Error al actualizar usuario.
   const factory RemoteAuthExceptions.updateUserFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthUpdateUserFailure;
 
   /// Credenciales inválidas.
