@@ -27,6 +27,7 @@ abstract class RemoteAuthExceptions
   /// Error al enviar email de recuperación.
   const factory RemoteAuthExceptions.passwordResetFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthPasswordResetFailure;
 
   /// Error al verificar OTP.

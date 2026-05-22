@@ -415,6 +415,7 @@ void main() {
           expect(error, isA<RemoteAuthPasswordResetFailure>());
           final failure = error as RemoteAuthPasswordResetFailure;
           expect(failure.message, equals('User not found'));
+          expect(failure.statusCode, equals(404));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -438,6 +439,65 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(passwordResetFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(
+          mockClient.resetPasswordForEmail(
+            any,
+            redirectTo: anyNamed('redirectTo'),
+          ),
+        ).thenThrow(
+          const AuthException('Email rate limit exceeded', statusCode: '429'),
+        );
+
+        final result = await auth.sendPasswordResetEmail(
+          email: 'test@example.com',
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthPasswordResetFailure>());
+            final failure = error as RemoteAuthPasswordResetFailure;
+            expect(failure.message, equals('Email rate limit exceeded'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
+
+    test(
+      'returns Left(passwordResetFailure) with null statusCode '
+      'when AuthException.statusCode is not parseable',
+      () async {
+        when(
+          mockClient.resetPasswordForEmail(
+            any,
+            redirectTo: anyNamed('redirectTo'),
+          ),
+        ).thenThrow(
+          const AuthException('Server unreachable', statusCode: 'unknown'),
+        );
+
+        final result = await auth.sendPasswordResetEmail(
+          email: 'test@example.com',
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthPasswordResetFailure>());
+            final failure = error as RemoteAuthPasswordResetFailure;
+            expect(failure.statusCode, isNull);
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - verifyOtp', () {
