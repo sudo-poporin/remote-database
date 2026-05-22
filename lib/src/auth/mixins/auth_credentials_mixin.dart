@@ -60,7 +60,12 @@ mixin AuthCredentialsMixin on RemoteAuthBase {
       await client.signOut();
       return const Right(null);
     } on AuthException catch (e) {
-      return Left(RemoteAuthExceptions.signOutFailure(message: e.message));
+      return Left(
+        RemoteAuthExceptions.signOutFailure(
+          message: e.message,
+          statusCode: parseAuthStatusCode(e),
+        ),
+      );
     } on Object catch (e) {
       return Left(RemoteAuthExceptions.unknown(message: e.toString()));
     }

@@ -351,6 +351,7 @@ void main() {
           expect(error, isA<RemoteAuthSignOutFailure>());
           final failure = error as RemoteAuthSignOutFailure;
           expect(failure.message, equals('Sign out failed'));
+          expect(failure.statusCode, equals(500));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -367,6 +368,29 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(signOutFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(mockClient.signOut()).thenThrow(
+          const AuthException('Too many sign-out requests', statusCode: '429'),
+        );
+
+        final result = await auth.signOut();
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthSignOutFailure>());
+            final failure = error as RemoteAuthSignOutFailure;
+            expect(failure.message, equals('Too many sign-out requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   // Note: signInWithOAuth tests omitted because the method is an extension

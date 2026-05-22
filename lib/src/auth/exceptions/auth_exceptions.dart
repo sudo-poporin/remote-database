@@ -22,6 +22,7 @@ abstract class RemoteAuthExceptions
   /// Error al cerrar sesión.
   const factory RemoteAuthExceptions.signOutFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthSignOutFailure;
 
   /// Error al enviar email de recuperación.
