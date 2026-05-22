@@ -575,6 +575,7 @@ void main() {
           expect(error, isA<RemoteAuthOtpVerificationFailure>());
           final failure = error as RemoteAuthOtpVerificationFailure;
           expect(failure.message, equals('Invalid OTP'));
+          expect(failure.statusCode, equals(400));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -602,6 +603,40 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(otpVerificationFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(
+          mockClient.verifyOTP(
+            token: anyNamed('token'),
+            type: anyNamed('type'),
+            email: anyNamed('email'),
+            phone: anyNamed('phone'),
+          ),
+        ).thenThrow(
+          const AuthException('Too many requests', statusCode: '429'),
+        );
+
+        final result = await auth.verifyOtp(
+          token: '123456',
+          type: OtpType.email,
+          email: 'test@example.com',
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthOtpVerificationFailure>());
+            final failure = error as RemoteAuthOtpVerificationFailure;
+            expect(failure.message, equals('Too many requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - updatePassword', () {

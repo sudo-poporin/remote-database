@@ -33,6 +33,7 @@ abstract class RemoteAuthExceptions
   /// Error al verificar OTP.
   const factory RemoteAuthExceptions.otpVerificationFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthOtpVerificationFailure;
 
   /// Error al actualizar usuario.

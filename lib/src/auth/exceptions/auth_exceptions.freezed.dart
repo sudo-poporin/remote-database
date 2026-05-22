@@ -149,14 +149,14 @@ return unknown(_that);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message,  int? statusCode)?  signInFailure,TResult Function( String message,  int? statusCode)?  signUpFailure,TResult Function( String message)?  signOutFailure,TResult Function( String message,  int? statusCode)?  passwordResetFailure,TResult Function( String message)?  otpVerificationFailure,TResult Function( String message)?  updateUserFailure,TResult Function()?  invalidCredentials,TResult Function()?  emailNotConfirmed,TResult Function()?  userAlreadyExists,TResult Function()?  sessionExpired,TResult Function( String message)?  unknown,required TResult orElse(),}) {final _that = this;
+@optionalTypeArgs TResult maybeWhen<TResult extends Object?>({TResult Function( String message,  int? statusCode)?  signInFailure,TResult Function( String message,  int? statusCode)?  signUpFailure,TResult Function( String message)?  signOutFailure,TResult Function( String message,  int? statusCode)?  passwordResetFailure,TResult Function( String message,  int? statusCode)?  otpVerificationFailure,TResult Function( String message)?  updateUserFailure,TResult Function()?  invalidCredentials,TResult Function()?  emailNotConfirmed,TResult Function()?  userAlreadyExists,TResult Function()?  sessionExpired,TResult Function( String message)?  unknown,required TResult orElse(),}) {final _that = this;
 switch (_that) {
 case RemoteAuthSignInFailure() when signInFailure != null:
 return signInFailure(_that.message,_that.statusCode);case RemoteAuthSignUpFailure() when signUpFailure != null:
 return signUpFailure(_that.message,_that.statusCode);case RemoteAuthSignOutFailure() when signOutFailure != null:
 return signOutFailure(_that.message);case RemoteAuthPasswordResetFailure() when passwordResetFailure != null:
 return passwordResetFailure(_that.message,_that.statusCode);case RemoteAuthOtpVerificationFailure() when otpVerificationFailure != null:
-return otpVerificationFailure(_that.message);case RemoteAuthUpdateUserFailure() when updateUserFailure != null:
+return otpVerificationFailure(_that.message,_that.statusCode);case RemoteAuthUpdateUserFailure() when updateUserFailure != null:
 return updateUserFailure(_that.message);case RemoteAuthInvalidCredentials() when invalidCredentials != null:
 return invalidCredentials();case RemoteAuthEmailNotConfirmed() when emailNotConfirmed != null:
 return emailNotConfirmed();case RemoteAuthUserAlreadyExists() when userAlreadyExists != null:
@@ -180,14 +180,14 @@ return unknown(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message,  int? statusCode)  signInFailure,required TResult Function( String message,  int? statusCode)  signUpFailure,required TResult Function( String message)  signOutFailure,required TResult Function( String message,  int? statusCode)  passwordResetFailure,required TResult Function( String message)  otpVerificationFailure,required TResult Function( String message)  updateUserFailure,required TResult Function()  invalidCredentials,required TResult Function()  emailNotConfirmed,required TResult Function()  userAlreadyExists,required TResult Function()  sessionExpired,required TResult Function( String message)  unknown,}) {final _that = this;
+@optionalTypeArgs TResult when<TResult extends Object?>({required TResult Function( String message,  int? statusCode)  signInFailure,required TResult Function( String message,  int? statusCode)  signUpFailure,required TResult Function( String message)  signOutFailure,required TResult Function( String message,  int? statusCode)  passwordResetFailure,required TResult Function( String message,  int? statusCode)  otpVerificationFailure,required TResult Function( String message)  updateUserFailure,required TResult Function()  invalidCredentials,required TResult Function()  emailNotConfirmed,required TResult Function()  userAlreadyExists,required TResult Function()  sessionExpired,required TResult Function( String message)  unknown,}) {final _that = this;
 switch (_that) {
 case RemoteAuthSignInFailure():
 return signInFailure(_that.message,_that.statusCode);case RemoteAuthSignUpFailure():
 return signUpFailure(_that.message,_that.statusCode);case RemoteAuthSignOutFailure():
 return signOutFailure(_that.message);case RemoteAuthPasswordResetFailure():
 return passwordResetFailure(_that.message,_that.statusCode);case RemoteAuthOtpVerificationFailure():
-return otpVerificationFailure(_that.message);case RemoteAuthUpdateUserFailure():
+return otpVerificationFailure(_that.message,_that.statusCode);case RemoteAuthUpdateUserFailure():
 return updateUserFailure(_that.message);case RemoteAuthInvalidCredentials():
 return invalidCredentials();case RemoteAuthEmailNotConfirmed():
 return emailNotConfirmed();case RemoteAuthUserAlreadyExists():
@@ -210,14 +210,14 @@ return unknown(_that.message);case _:
 /// }
 /// ```
 
-@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message,  int? statusCode)?  signInFailure,TResult? Function( String message,  int? statusCode)?  signUpFailure,TResult? Function( String message)?  signOutFailure,TResult? Function( String message,  int? statusCode)?  passwordResetFailure,TResult? Function( String message)?  otpVerificationFailure,TResult? Function( String message)?  updateUserFailure,TResult? Function()?  invalidCredentials,TResult? Function()?  emailNotConfirmed,TResult? Function()?  userAlreadyExists,TResult? Function()?  sessionExpired,TResult? Function( String message)?  unknown,}) {final _that = this;
+@optionalTypeArgs TResult? whenOrNull<TResult extends Object?>({TResult? Function( String message,  int? statusCode)?  signInFailure,TResult? Function( String message,  int? statusCode)?  signUpFailure,TResult? Function( String message)?  signOutFailure,TResult? Function( String message,  int? statusCode)?  passwordResetFailure,TResult? Function( String message,  int? statusCode)?  otpVerificationFailure,TResult? Function( String message)?  updateUserFailure,TResult? Function()?  invalidCredentials,TResult? Function()?  emailNotConfirmed,TResult? Function()?  userAlreadyExists,TResult? Function()?  sessionExpired,TResult? Function( String message)?  unknown,}) {final _that = this;
 switch (_that) {
 case RemoteAuthSignInFailure() when signInFailure != null:
 return signInFailure(_that.message,_that.statusCode);case RemoteAuthSignUpFailure() when signUpFailure != null:
 return signUpFailure(_that.message,_that.statusCode);case RemoteAuthSignOutFailure() when signOutFailure != null:
 return signOutFailure(_that.message);case RemoteAuthPasswordResetFailure() when passwordResetFailure != null:
 return passwordResetFailure(_that.message,_that.statusCode);case RemoteAuthOtpVerificationFailure() when otpVerificationFailure != null:
-return otpVerificationFailure(_that.message);case RemoteAuthUpdateUserFailure() when updateUserFailure != null:
+return otpVerificationFailure(_that.message,_that.statusCode);case RemoteAuthUpdateUserFailure() when updateUserFailure != null:
 return updateUserFailure(_that.message);case RemoteAuthInvalidCredentials() when invalidCredentials != null:
 return invalidCredentials();case RemoteAuthEmailNotConfirmed() when emailNotConfirmed != null:
 return emailNotConfirmed();case RemoteAuthUserAlreadyExists() when userAlreadyExists != null:
@@ -505,10 +505,11 @@ as int?,
 
 
 class RemoteAuthOtpVerificationFailure implements RemoteAuthExceptions {
-  const RemoteAuthOtpVerificationFailure({required this.message});
+  const RemoteAuthOtpVerificationFailure({required this.message, this.statusCode});
   
 
  final  String message;
+ final  int? statusCode;
 
 /// Create a copy of RemoteAuthExceptions
 /// with the given fields replaced by the non-null parameter values.
@@ -520,16 +521,16 @@ $RemoteAuthOtpVerificationFailureCopyWith<RemoteAuthOtpVerificationFailure> get 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthOtpVerificationFailure&&(identical(other.message, message) || other.message == message));
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthOtpVerificationFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message);
+int get hashCode => Object.hash(runtimeType,message,statusCode);
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.otpVerificationFailure(message: $message)';
+  return 'RemoteAuthExceptions.otpVerificationFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -540,7 +541,7 @@ abstract mixin class $RemoteAuthOtpVerificationFailureCopyWith<$Res> implements 
   factory $RemoteAuthOtpVerificationFailureCopyWith(RemoteAuthOtpVerificationFailure value, $Res Function(RemoteAuthOtpVerificationFailure) _then) = _$RemoteAuthOtpVerificationFailureCopyWithImpl;
 @useResult
 $Res call({
- String message
+ String message, int? statusCode
 });
 
 
@@ -557,10 +558,11 @@ class _$RemoteAuthOtpVerificationFailureCopyWithImpl<$Res>
 
 /// Create a copy of RemoteAuthExceptions
 /// with the given fields replaced by the non-null parameter values.
-@pragma('vm:prefer-inline') $Res call({Object? message = null,}) {
+@pragma('vm:prefer-inline') $Res call({Object? message = null,Object? statusCode = freezed,}) {
   return _then(RemoteAuthOtpVerificationFailure(
 message: null == message ? _self.message : message // ignore: cast_nullable_to_non_nullable
-as String,
+as String,statusCode: freezed == statusCode ? _self.statusCode : statusCode // ignore: cast_nullable_to_non_nullable
+as int?,
   ));
 }
 
