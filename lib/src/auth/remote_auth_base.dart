@@ -22,3 +22,10 @@ enum AuthOperation {
   /// Registro.
   signUp,
 }
+
+/// Parsea el statusCode (String?) de un AuthException a int?.
+///
+/// Helper compartido por los mixins que envuelven AuthException en
+/// RemoteAuthExceptions. No se exporta vía la barrel pública del package.
+int? parseAuthStatusCode(AuthException e) =>
+    int.tryParse(e.statusCode ?? '');

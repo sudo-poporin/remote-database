@@ -24,7 +24,10 @@ mixin AuthUserMixin on RemoteAuthBase {
       return Right(response.user!);
     } on AuthException catch (e) {
       return Left(
-        RemoteAuthExceptions.updateUserFailure(message: e.message),
+        RemoteAuthExceptions.updateUserFailure(
+          message: e.message,
+          statusCode: parseAuthStatusCode(e),
+        ),
       );
     } on Object catch (e) {
       return Left(RemoteAuthExceptions.unknown(message: e.toString()));
@@ -51,7 +54,10 @@ mixin AuthUserMixin on RemoteAuthBase {
       return Right(response.user!);
     } on AuthException catch (e) {
       return Left(
-        RemoteAuthExceptions.updateUserFailure(message: e.message),
+        RemoteAuthExceptions.updateUserFailure(
+          message: e.message,
+          statusCode: parseAuthStatusCode(e),
+        ),
       );
     } on Object catch (e) {
       return Left(RemoteAuthExceptions.unknown(message: e.toString()));

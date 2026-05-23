@@ -14,7 +14,10 @@ mixin AuthRecoveryMixin on RemoteAuthBase {
       return const Right(null);
     } on AuthException catch (e) {
       return Left(
-        RemoteAuthExceptions.passwordResetFailure(message: e.message),
+        RemoteAuthExceptions.passwordResetFailure(
+          message: e.message,
+          statusCode: parseAuthStatusCode(e),
+        ),
       );
     } on Object catch (e) {
       return Left(RemoteAuthExceptions.unknown(message: e.toString()));
@@ -47,7 +50,10 @@ mixin AuthRecoveryMixin on RemoteAuthBase {
       return Right(response.user!);
     } on AuthException catch (e) {
       return Left(
-        RemoteAuthExceptions.otpVerificationFailure(message: e.message),
+        RemoteAuthExceptions.otpVerificationFailure(
+          message: e.message,
+          statusCode: parseAuthStatusCode(e),
+        ),
       );
     } on Object catch (e) {
       return Left(RemoteAuthExceptions.unknown(message: e.toString()));

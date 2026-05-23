@@ -351,6 +351,7 @@ void main() {
           expect(error, isA<RemoteAuthSignOutFailure>());
           final failure = error as RemoteAuthSignOutFailure;
           expect(failure.message, equals('Sign out failed'));
+          expect(failure.statusCode, equals(500));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -367,6 +368,29 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(signOutFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(mockClient.signOut()).thenThrow(
+          const AuthException('Too many sign-out requests', statusCode: '429'),
+        );
+
+        final result = await auth.signOut();
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthSignOutFailure>());
+            final failure = error as RemoteAuthSignOutFailure;
+            expect(failure.message, equals('Too many sign-out requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   // Note: signInWithOAuth tests omitted because the method is an extension
@@ -415,6 +439,7 @@ void main() {
           expect(error, isA<RemoteAuthPasswordResetFailure>());
           final failure = error as RemoteAuthPasswordResetFailure;
           expect(failure.message, equals('User not found'));
+          expect(failure.statusCode, equals(404));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -438,6 +463,65 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(passwordResetFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(
+          mockClient.resetPasswordForEmail(
+            any,
+            redirectTo: anyNamed('redirectTo'),
+          ),
+        ).thenThrow(
+          const AuthException('Email rate limit exceeded', statusCode: '429'),
+        );
+
+        final result = await auth.sendPasswordResetEmail(
+          email: 'test@example.com',
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthPasswordResetFailure>());
+            final failure = error as RemoteAuthPasswordResetFailure;
+            expect(failure.message, equals('Email rate limit exceeded'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
+
+    test(
+      'returns Left(passwordResetFailure) with null statusCode '
+      'when AuthException.statusCode is not parseable',
+      () async {
+        when(
+          mockClient.resetPasswordForEmail(
+            any,
+            redirectTo: anyNamed('redirectTo'),
+          ),
+        ).thenThrow(
+          const AuthException('Server unreachable', statusCode: 'unknown'),
+        );
+
+        final result = await auth.sendPasswordResetEmail(
+          email: 'test@example.com',
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthPasswordResetFailure>());
+            final failure = error as RemoteAuthPasswordResetFailure;
+            expect(failure.statusCode, isNull);
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - verifyOtp', () {
@@ -515,6 +599,7 @@ void main() {
           expect(error, isA<RemoteAuthOtpVerificationFailure>());
           final failure = error as RemoteAuthOtpVerificationFailure;
           expect(failure.message, equals('Invalid OTP'));
+          expect(failure.statusCode, equals(400));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -542,6 +627,40 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(otpVerificationFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(
+          mockClient.verifyOTP(
+            token: anyNamed('token'),
+            type: anyNamed('type'),
+            email: anyNamed('email'),
+            phone: anyNamed('phone'),
+          ),
+        ).thenThrow(
+          const AuthException('Too many requests', statusCode: '429'),
+        );
+
+        final result = await auth.verifyOtp(
+          token: '123456',
+          type: OtpType.email,
+          email: 'test@example.com',
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthOtpVerificationFailure>());
+            final failure = error as RemoteAuthOtpVerificationFailure;
+            expect(failure.message, equals('Too many requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - updatePassword', () {
@@ -590,6 +709,7 @@ void main() {
           expect(error, isA<RemoteAuthUpdateUserFailure>());
           final failure = error as RemoteAuthUpdateUserFailure;
           expect(failure.message, equals('Password too weak'));
+          expect(failure.statusCode, equals(400));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -606,6 +726,29 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(updateUserFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(mockClient.updateUser(any)).thenThrow(
+          const AuthException('Too many requests', statusCode: '429'),
+        );
+
+        final result = await auth.updatePassword(newPassword: 'new123');
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthUpdateUserFailure>());
+            final failure = error as RemoteAuthUpdateUserFailure;
+            expect(failure.message, equals('Too many requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - updateUserMetadata', () {
@@ -656,6 +799,7 @@ void main() {
           expect(error, isA<RemoteAuthUpdateUserFailure>());
           final failure = error as RemoteAuthUpdateUserFailure;
           expect(failure.message, equals('Update failed'));
+          expect(failure.statusCode, equals(500));
         },
         (r) => fail('Expected Left but got Right'),
       );
@@ -672,6 +816,31 @@ void main() {
         (r) => fail('Expected Left but got Right'),
       );
     });
+
+    test(
+      'returns Left(updateUserFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(mockClient.updateUser(any)).thenThrow(
+          const AuthException('Too many requests', statusCode: '429'),
+        );
+
+        final result = await auth.updateUserMetadata(
+          metadata: {'key': 'value'},
+        );
+
+        expect(result.isLeft(), isTrue);
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthUpdateUserFailure>());
+            final failure = error as RemoteAuthUpdateUserFailure;
+            expect(failure.message, equals('Too many requests'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
   });
 
   group('RemoteAuth - refreshSession', () {

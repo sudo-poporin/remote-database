@@ -22,21 +22,25 @@ abstract class RemoteAuthExceptions
   /// Error al cerrar sesión.
   const factory RemoteAuthExceptions.signOutFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthSignOutFailure;
 
   /// Error al enviar email de recuperación.
   const factory RemoteAuthExceptions.passwordResetFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthPasswordResetFailure;
 
   /// Error al verificar OTP.
   const factory RemoteAuthExceptions.otpVerificationFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthOtpVerificationFailure;
 
   /// Error al actualizar usuario.
   const factory RemoteAuthExceptions.updateUserFailure({
     required String message,
+    int? statusCode,
   }) = RemoteAuthUpdateUserFailure;
 
   /// Credenciales inválidas.

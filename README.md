@@ -389,6 +389,20 @@ final signUpResult = await auth.signUp(
 final signOutResult = await auth.signOut();
 ```
 
+Las excepciones que envuelven errores del SDK exponen `statusCode` para
+detectar casos como rate-limit (HTTP 429) sin parsear strings:
+
+```dart
+result.fold(
+  (error) => switch (error) {
+    RemoteAuthPasswordResetFailure(:final statusCode) when statusCode == 429 =>
+      showRateLimitWarning(),
+    _ => showGenericError(error),
+  },
+  (_) => onSuccess(),
+);
+```
+
 ### OAuth (Google, Apple, GitHub, etc.)
 
 ```dart
@@ -442,19 +456,16 @@ await auth.setSession(accessToken);
 
 ### Excepciones de Autenticación
 
-| Excepción | Descripción |
-|-----------|-------------|
-| `invalidCredentials` | Email o password incorrectos |
-| `emailNotConfirmed` | El usuario no confirmó su email |
-| `userAlreadyExists` | El email ya está registrado |
-| `sessionExpired` | La sesión expiró |
-| `signInFailure` | Error genérico al iniciar sesión |
-| `signUpFailure` | Error genérico al registrarse |
-| `signOutFailure` | Error al cerrar sesión |
-| `passwordResetFailure` | Error al enviar email de recuperación |
-| `otpVerificationFailure` | Error al verificar OTP |
-| `updateUserFailure` | Error al actualizar usuario |
-| `unknown` | Error no categorizado |
+| Excepción | Descripción | statusCode |
+| --- | --- | --- |
+| `signInFailure` | Error genérico al iniciar sesión | ✓ |
+| `signUpFailure` | Error genérico al registrarse | ✓ |
+| `signOutFailure` | Error al cerrar sesión | ✓ |
+| `passwordResetFailure` | Error al enviar email de recuperación | ✓ |
+| `otpVerificationFailure` | Error al verificar OTP | ✓ |
+| `updateUserFailure` | Error al actualizar usuario | ✓ |
+| `invalidCredentials` / `emailNotConfirmed` / `userAlreadyExists` / `sessionExpired` | Casos semánticos | — |
+| `unknown` | Error no categorizado | — |
 
 ## Storage (Nuevo en v1.4.0)
 
@@ -592,29 +603,3 @@ await storage.copy(
 - [supabase_flutter](https://pub.dev/packages/supabase_flutter) - Cliente de Supabase
 - [fpdart](https://pub.dev/packages/fpdart) - Programación funcional (Either, Option)
 - [freezed](https://pub.dev/packages/freezed) - Clases inmutables y sealed unions
-
-## Coverage 📊
-
-El paquete mantiene **100% de cobertura** sobre los archivos testeables.
-El workflow de CI corre `flutter test --coverage` en cada push/PR y verifica
-el umbral con `min_coverage: 100`.
-
-Generar el reporte localmente:
-
-```bash
-flutter test --coverage
-lcov --summary coverage/lcov.info
-```
-
-### Archivos excluidos del coverage
-
-Los siguientes archivos están marcados con `// coverage:ignore-file` por ser
-wrappers de I/O o extension methods no mockeables en unit tests:
-
-- `lib/src/services/remote_database_service.dart` — `Supabase.initialize`
-  estático con I/O real.
-- `lib/src/remote_database.dart` — encadena `PostgrestFilterBuilder` que
-  implementa `Future` (no mockeable razonablemente).
-- `lib/src/query/mixins/execution_mixin.dart` — mismo motivo.
-- `lib/src/auth/mixins/auth_oauth_mixin.dart` — `signInWithOAuth` es
-  extension que invoca `launchUrl` (`url_launcher`).
