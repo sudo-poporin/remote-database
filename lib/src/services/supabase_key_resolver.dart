@@ -9,7 +9,8 @@ String resolveSupabaseKey({
   final key = publishableKey ?? anonKey;
   if (key == null) {
     throw ArgumentError(
-      'Se debe proveer supabasePublishableKey o supabaseAnonKey.',
+      'Se debe proveer una key: publishableKey/supabasePublishableKey '
+      'o anonKey/supabaseAnonKey.',
     );
   }
   return key;
