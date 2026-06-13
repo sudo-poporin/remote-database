@@ -27,7 +27,7 @@ dependencies:
   remote_database:
     git:
       url: https://github.com/sudo-poporin/remote-database
-      ref: v2.0.6  # Usar versión específica
+      ref: v3.1.0  # Usar versión específica
 ```
 
 ## Configuración 🔧
@@ -41,7 +41,7 @@ Future<void> main() async {
   // Inicializar Supabase
   final supabase = await RemoteDatabaseService.init(
     supabaseUrl: 'https://your-project.supabase.co',
-    supabaseAnonKey: 'your-anon-key',
+    supabasePublishableKey: 'your-publishable-key',
   );
 
   // Crear instancia del repositorio
@@ -327,7 +327,10 @@ result.fold(
 
 | Método | Retorno | Descripción |
 |--------|---------|-------------|
-| `init(supabaseUrl, supabaseAnonKey)` | `Future<Supabase>` | Inicializa conexión con Supabase |
+| `init(supabaseUrl, supabasePublishableKey)` | `Future<Supabase>` | Inicializa conexión con Supabase |
+
+> **Nuevo en v3.1.0:** `init` usa `supabasePublishableKey`. El parámetro
+> `supabaseAnonKey` queda deprecado y se removerá en v4.0.0.
 
 ### RemoteDatabaseBase
 
