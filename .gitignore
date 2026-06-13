@@ -35,3 +35,6 @@ build/
 # Claude related
 .claude/
 CLAUDE.md
+
+# Codegraph
+.codegraph/

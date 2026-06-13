@@ -13,6 +13,9 @@ class RemoteDatabaseService {
   }) async {
     final supabase = await Supabase.initialize(
       url: supabaseUrl,
+      // TODO: migrar a `publishableKey` (anonKey deprecado en supabase 2.14,
+      // requiere que los consumers provean el nuevo formato de key).
+      // ignore: deprecated_member_use
       anonKey: supabaseAnonKey,
     );
 
