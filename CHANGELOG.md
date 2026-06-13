@@ -5,6 +5,22 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [3.1.0] - 2026-06-13
+
+### Added
+
+- Parámetro `supabasePublishableKey` en `RemoteDatabaseService.init`.
+
+### Deprecated
+
+- `supabaseAnonKey` en `RemoteDatabaseService.init` — usar
+  `supabasePublishableKey`. Se removerá en 4.0.0.
+
+### Fixed
+
+- Se elimina el warning de deprecación de `anonKey` (supabase 2.14) y el
+  `// ignore` asociado en `RemoteDatabaseService.init`.
+
 ## [3.0.1] - 2026-06-13
 
 ### Changed
