@@ -1924,6 +1924,23 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
           as _i4.Future<List<_i2.SignedUrl>>);
 
   @override
+  _i4.Future<List<_i2.SignedUrlResult>> createSignedUrlsResult(
+    List<String>? paths,
+    int? expiresIn,
+  ) =>
+      (super.noSuchMethod(
+            Invocation.method(#createSignedUrlsResult, [paths, expiresIn]),
+            returnValue: _i4.Future<List<_i2.SignedUrlResult>>.value(
+              <_i2.SignedUrlResult>[],
+            ),
+            returnValueForMissingStub:
+                _i4.Future<List<_i2.SignedUrlResult>>.value(
+                  <_i2.SignedUrlResult>[],
+                ),
+          )
+          as _i4.Future<List<_i2.SignedUrlResult>>);
+
+  @override
   _i4.Future<_i7.Uint8List> download(
     String? path, {
     _i2.TransformOptions? transform,
@@ -2018,16 +2035,28 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
 class MockSupabaseQueryBuilder extends _i1.Mock
     implements _i2.SupabaseQueryBuilder {
   @override
-  _i2.SupabaseStreamFilterBuilder stream({required List<String>? primaryKey}) =>
+  _i2.SupabaseStreamFilterBuilder stream({
+    required List<String>? primaryKey,
+    bool? private = false,
+  }) =>
       (super.noSuchMethod(
-            Invocation.method(#stream, [], {#primaryKey: primaryKey}),
+            Invocation.method(#stream, [], {
+              #primaryKey: primaryKey,
+              #private: private,
+            }),
             returnValue: _FakeSupabaseStreamFilterBuilder_23(
               this,
-              Invocation.method(#stream, [], {#primaryKey: primaryKey}),
+              Invocation.method(#stream, [], {
+                #primaryKey: primaryKey,
+                #private: private,
+              }),
             ),
             returnValueForMissingStub: _FakeSupabaseStreamFilterBuilder_23(
               this,
-              Invocation.method(#stream, [], {#primaryKey: primaryKey}),
+              Invocation.method(#stream, [], {
+                #primaryKey: primaryKey,
+                #private: private,
+              }),
             ),
           )
           as _i2.SupabaseStreamFilterBuilder);
