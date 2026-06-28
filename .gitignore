@@ -35,6 +35,10 @@ build/
 # Claude related
 .claude/
 CLAUDE.md
+AGENTS.md
+
+# Graphify related
+graphify-out/
 
 # Codegraph
 .codegraph/

@@ -5,6 +5,18 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [3.1.1] - 2026-06-28
+
+### Interno
+
+- Bump `supabase_flutter` de `^2.14.2` a `^2.15.0`.
+- Bump `very_good_analysis` de `^10.2.0` a `^10.3.0`.
+- `.gitignore`: ignorar `AGENTS.md` y `graphify-out/`.
+
+> Nota: `mockito` no se actualiza a `5.7.0` porque requiere `analyzer
+> ^13.0.0`, incompatible con `freezed 3.2.5` (limita `analyzer <11.0.0`).
+> Queda como seguimiento para cuando `freezed 4` sea estable.
+
 ## [3.1.0] - 2026-06-13
 
 ### Added
