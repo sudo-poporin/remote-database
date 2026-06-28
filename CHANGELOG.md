@@ -12,6 +12,9 @@ y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 - Bump `supabase_flutter` de `^2.14.2` a `^2.15.0`.
 - Bump `very_good_analysis` de `^10.2.0` a `^10.3.0`.
 - `.gitignore`: ignorar `AGENTS.md` y `graphify-out/`.
+- `analysis_options.yaml`: excluir los mocks generados (`test/**.mocks.dart`)
+  del análisis para evitar warnings `experimental_member_use` de la API de
+  passkeys de `gotrue`.
 
 > Nota: `mockito` no se actualiza a `5.7.0` porque requiere `analyzer
 > ^13.0.0`, incompatible con `freezed 3.2.5` (limita `analyzer <11.0.0`).
