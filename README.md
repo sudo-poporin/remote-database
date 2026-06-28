@@ -27,7 +27,7 @@ dependencies:
   remote_database:
     git:
       url: https://github.com/sudo-poporin/remote-database
-      ref: v3.1.0  # Usar versión específica
+      ref: v3.1.1  # Usar versión específica
 ```
 
 ## Configuración 🔧
