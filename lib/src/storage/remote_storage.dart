@@ -166,7 +166,7 @@ class RemoteStorage implements IRemoteStorage {
         limit: limit,
         offset: offset,
         sortBy: sortBy != null
-            ? SortBy(column: _mapSortBy(sortBy), order: 'asc')
+            ? SortBy(column: _mapSortBy(sortBy))
             : null,
       );
 
