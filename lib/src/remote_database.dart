@@ -152,6 +152,48 @@ class _RemoteDatabase implements IRemoteDatabase {
   }
 
   @override
+  Future<Either<RemoteDatabaseExceptions, void>> deleteWhereIn({
+    required String table,
+    required String column,
+    required List<Object> values,
+    required Map<String, Object> where,
+    String? schema,
+  }) async {
+    // Las dos guardas van antes del try y antes de tocar el cliente. Ninguna
+    // de las dos listas vacías es un no-op inofensivo: `values` vacío deja el
+    // borrado sin acotar, y `where` vacío lo deja sin dueño, o sea cruzando
+    // entre usuarios si alguna policy de RLS no está bien cerrada.
+    if (values.isEmpty) {
+      return const Left(
+        RemoteDatabaseExceptions.deleteFailure(
+          'deleteWhereIn requiere al menos un valor en `values`.',
+        ),
+      );
+    }
+
+    if (where.isEmpty) {
+      return const Left(
+        RemoteDatabaseExceptions.deleteFailure(
+          'deleteWhereIn requiere al menos una condición en `where`.',
+        ),
+      );
+    }
+
+    try {
+      await _client
+          .schema(schema ?? 'public')
+          .from(table)
+          .delete()
+          .inFilter(column, values)
+          .match(where);
+
+      return const Right(null);
+    } on Exception catch (e) {
+      return Left(RemoteDatabaseExceptions.deleteFailure(e));
+    }
+  }
+
+  @override
   QueryBuilder query(String table, {String? schema}) {
     return QueryBuilder(
       client: _client,

@@ -27,7 +27,7 @@ dependencies:
   remote_database:
     git:
       url: https://github.com/sudo-poporin/remote-database
-      ref: v3.1.2  # Usar versión específica
+      ref: v4.0.0  # Usar versión específica
 ```
 
 ## Configuración 🔧
@@ -155,6 +155,46 @@ result.fold(
   (_) => print('Eliminado exitosamente'),
 );
 ```
+
+### Eliminar varios registros por lista de valores (Nuevo en v4.0.0)
+
+`delete` resuelve su `where` con `.match(...)`, que solo admite igualdad, así
+que borrar N registros identificados por su id cuesta N llamadas.
+`deleteWhereIn` los borra en una sola:
+
+```dart
+final result = await db.deleteWhereIn(
+  table: 'order_item',
+  column: 'order_id',
+  values: [12, 34, 56],
+  where: {'user_id': userId},
+  schema: 'public', // Opcional, default: 'public'
+);
+
+result.fold(
+  (error) => print('Error al eliminar: $error'),
+  (_) => print('Eliminados exitosamente'),
+);
+```
+
+`values` y `where` son **obligatorios y no pueden venir vacíos**. Cualquiera de
+los dos vacío devuelve `Left(deleteFailure)` sin emitir el request, y cada uno
+acota una cosa distinta:
+
+- `values` vacío dejaría el borrado **sin acotar**: un `IN ()` sin valores
+  afecta a toda la tabla dentro de lo que permita RLS.
+- `where` vacío dejaría el borrado **sin dueño**: `IN` acota *qué* filas, no
+  *de quién*, así que sin condiciones de pertenencia el borrado cruza entre
+  usuarios. La consecuencia de una policy de RLS mal cerrada no debería ser el
+  borrado de datos ajenos.
+
+Por eso borrar filas por su propia clave primaria —donde el `IN` ya acota del
+todo y no hay nada más que filtrar— no tiene camino por acá: para eso está
+`delete`, por valor.
+
+Un `values` con valores inexistentes resuelve `Right`, sin error, igual que
+`delete`: el borrado no lleva `.select()`, así que no distingue cuántas filas
+matcheó. Eso lo hace **idempotente**, y por lo tanto reintentable.
 
 ## Query Builder (Nuevo en v1.2.0)
 
@@ -329,8 +369,9 @@ result.fold(
 |--------|---------|-------------|
 | `init(supabaseUrl, supabasePublishableKey)` | `Future<Supabase>` | Inicializa conexión con Supabase |
 
-> **Nuevo en v3.1.0:** `init` usa `supabasePublishableKey`. El parámetro
-> `supabaseAnonKey` queda deprecado y se removerá en v4.0.0.
+> **Removido en v4.0.0:** el parámetro `supabaseAnonKey`, deprecado desde
+> v3.1.0. Pasar la key por `supabasePublishableKey`; el valor es el mismo, solo
+> cambia el nombre del parámetro.
 
 ### RemoteDatabaseBase
 
@@ -342,6 +383,7 @@ result.fold(
 | `update(table, values, where, [resultIdColumn], [schema])` | `Either<..., int>` | Actualiza y retorna ID |
 | `upsert(table, data, [onConflict], [schema])` | `Either<..., void>` | Insert o update |
 | `delete(table, where, [schema])` | `Either<..., void>` | Elimina registros |
+| `deleteWhereIn(table, column, values, where, [schema])` | `Either<..., void>` | Elimina registros cuya columna está en una lista |
 | `query(table, [schema])` | `QueryBuilder` | Crea Query Builder |
 
 > **Nuevo en v1.1.0:** Todos los métodos ahora aceptan el parámetro opcional

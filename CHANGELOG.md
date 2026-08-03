@@ -5,6 +5,78 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [4.0.0] - 2026-08-03
+
+### Modificado
+
+- **Breaking:** `IRemoteDatabase` gana un miembro, así que **toda clase que
+  implemente la interfaz a mano deja de compilar** con
+  `non_abstract_class_inherits_abstract_member`. Los mocks de `mockito` **no**
+  están afectados: `Mock` define `noSuchMethod` y el analizador no exige
+  declarar los miembros faltantes.
+
+  **Migración.** Si tenés un fake escrito a mano, agregale el método:
+
+  ```dart
+  @override
+  Future<Either<RemoteDatabaseExceptions, void>> deleteWhereIn({
+    required String table,
+    required String column,
+    required List<Object> values,
+    required Map<String, Object> where,
+    String? schema,
+  }) async {
+    return Left(
+      RemoteDatabaseExceptions.deleteFailure(Exception('Network unavailable')),
+    );
+  }
+  ```
+
+  Si el fake solo existe para simular fallos, `extends Mock implements
+  IRemoteDatabase` evita tener que volver a tocarlo en la próxima adición.
+
+### Eliminado
+
+- **Breaking:** `RemoteDatabaseService.init` pierde el parámetro
+  `supabaseAnonKey`, y `resolveSupabaseKey` pierde `anonKey`. Estaban deprecados
+  desde `3.1.0` con el aviso *"se removerá en 4.0.0"*, y esta es esa versión.
+
+  **Migración:** pasar la key por `supabasePublishableKey`. Si venías usando
+  `supabaseAnonKey`, el valor es el mismo, solo cambia el nombre del parámetro.
+
+  ```dart
+  // Antes
+  await RemoteDatabaseService.init(
+    supabaseUrl: url,
+    supabaseAnonKey: key,
+  );
+
+  // Ahora
+  await RemoteDatabaseService.init(
+    supabaseUrl: url,
+    supabasePublishableKey: key,
+  );
+  ```
+
+  Verificado que ningún consumidor pasaba el parámetro deprecado.
+
+### Añadido
+
+- `IRemoteDatabase.deleteWhereIn`: elimina en una sola llamada los registros
+  cuya columna está dentro de una lista de valores. `delete` resuelve su
+  `where` con `.match(...)`, que solo admite igualdad, así que borrar N
+  registros identificados por su id costaba N requests.
+- `values` y `where` son obligatorios y no pueden venir vacíos: cualquiera de
+  los dos vacío devuelve `Left(deleteFailure)` sin emitir el request. `values`
+  vacío dejaría el borrado sin acotar, y `where` vacío lo dejaría sin
+  condiciones de pertenencia, cruzando entre usuarios si alguna policy de RLS
+  no está bien cerrada.
+- README: sección de uso y fila en la tabla de la API pública.
+
+> Nota: borrar filas por su propia clave primaria no tiene camino por
+> `deleteWhereIn`, porque exige `where`. Para eso sigue estando `delete`, por
+> valor.
+
 ## [3.1.2] - 2026-07-26
 
 ### Interno
