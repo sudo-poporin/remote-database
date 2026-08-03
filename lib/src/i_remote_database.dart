@@ -52,6 +52,49 @@ abstract interface class IRemoteDatabase {
     String? schema,
   });
 
+  /// Elimina los registros cuya columna [column] está en [values].
+  ///
+  /// [delete] resuelve su `where` con `.match(...)`, que solo admite igualdad,
+  /// así que borrar N registros identificados por su id cuesta N llamadas.
+  /// Este método los borra en una sola, traduciendo [column] y [values] a un
+  /// filtro `IN`.
+  ///
+  /// [where] se combina con el `IN` como condiciones de igualdad adicionales,
+  /// igual que en [delete].
+  ///
+  /// **Los dos mapas son obligatorios y no pueden venir vacíos.** Cualquiera de
+  /// los dos vacío devuelve `Left(deleteFailure)` **sin emitir el request**, y
+  /// cada uno acota una cosa distinta:
+  ///
+  /// - Un [values] vacío dejaría el borrado **sin acotar**: un `IN ()` sin
+  ///   valores afecta a toda la tabla dentro de lo que permita RLS.
+  /// - Un [where] vacío dejaría el borrado **sin dueño**: `IN` acota *qué*
+  ///   filas, no *de quién*, así que sin condiciones de pertenencia el borrado
+  ///   cruza entre usuarios. La consecuencia de una policy de RLS mal cerrada
+  ///   no debería ser el borrado de datos ajenos, así que la condición se exige
+  ///   también del lado del cliente.
+  ///
+  /// El precio de exigir [where] es que borrar filas por su propia clave
+  /// primaria —donde el `IN` ya acota del todo y no hay nada más que
+  /// filtrar— no tiene camino por acá: usar [delete] por valor.
+  ///
+  /// Ejemplo:
+  /// ```dart
+  /// final result = await db.deleteWhereIn(
+  ///   table: 'order_item',
+  ///   column: 'order_id',
+  ///   values: [12, 34, 56],
+  ///   where: {'user_id': userId},
+  /// );
+  /// ```
+  Future<Either<RemoteDatabaseExceptions, void>> deleteWhereIn({
+    required String table,
+    required String column,
+    required List<Object> values,
+    required Map<String, Object> where,
+    String? schema,
+  });
+
   /// Crea un QueryBuilder para consultas avanzadas.
   ///
   /// Permite construir consultas con filtros, ordenamiento y paginación.

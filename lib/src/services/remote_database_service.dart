@@ -9,19 +9,13 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 class RemoteDatabaseService {
   /// Inicializa el servicio de la base de datos remota.
   ///
-  /// Se debe proveer [supabasePublishableKey] (o el deprecado
-  /// [supabaseAnonKey]). Si se proveen ambos, gana [supabasePublishableKey].
+  /// Se debe proveer [supabasePublishableKey].
   static Future<Supabase> init({
     required String supabaseUrl,
     String? supabasePublishableKey,
-    @Deprecated(
-      'Usá supabasePublishableKey. supabaseAnonKey se removerá en 4.0.0.',
-    )
-    String? supabaseAnonKey,
   }) async {
     final key = resolveSupabaseKey(
       publishableKey: supabasePublishableKey,
-      anonKey: supabaseAnonKey,
     );
 
     final supabase = await Supabase.initialize(
