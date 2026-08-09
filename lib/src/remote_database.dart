@@ -110,6 +110,33 @@ class _RemoteDatabase implements IRemoteDatabase {
   }
 
   @override
+  Future<Either<RemoteDatabaseExceptions, int?>> insertIfAbsent({
+    required String table,
+    required Map<String, dynamic> data,
+    required String onConflict,
+    String resultIdColumn = 'id',
+    String? schema,
+  }) async {
+    try {
+      // `ignoreDuplicates: true` es el `ON CONFLICT DO NOTHING` de PostgREST.
+      // El `select()` devuelve la lista vacia cuando el conflicto ya estaba, y
+      // por eso el retorno es nullable: no hay fila que reportar porque esta
+      // llamada no escribio ninguna.
+      final result = await _client
+          .schema(schema ?? 'public')
+          .from(table)
+          .upsert(data, onConflict: onConflict, ignoreDuplicates: true)
+          .select();
+
+      if (result.isEmpty) return const Right(null);
+
+      return Right(result.first[resultIdColumn] as int);
+    } on Exception catch (e) {
+      return Left(RemoteDatabaseExceptions.insertFailure(e));
+    }
+  }
+
+  @override
   Future<Either<RemoteDatabaseExceptions, int>> update({
     required String table,
     required Map<String, dynamic> values,
