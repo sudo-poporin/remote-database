@@ -36,6 +36,42 @@ abstract interface class IRemoteDatabase {
     String? schema,
   });
 
+  /// Inserta un registro y no falla si la fila ya existe.
+  ///
+  /// Devuelve el id del registro insertado, o `null` si ya estaba: ese `null`
+  /// es la respuesta a "no lo inserte yo", no un error.
+  ///
+  /// Es la version atomica de "insertar si no esta". Consultar primero y
+  /// escribir despues deja una ventana entre las dos llamadas por la que cabe
+  /// otra escritura concurrente; aca la decision la toma la base en una sola
+  /// sentencia.
+  ///
+  /// [onConflict] son las columnas del indice unico que define el conflicto,
+  /// separadas por coma. **Tiene que existir un indice unico sobre esas
+  /// columnas**: sin el, PostgreSQL rechaza la sentencia con
+  /// `there is no unique or exclusion constraint matching the ON CONFLICT
+  /// specification` y este metodo devuelve un
+  /// `Left(RemoteDatabaseExceptions.insertFailure)`.
+  ///
+  /// O sea que el indice va **antes** de desplegar el codigo que llama a este
+  /// metodo, no despues.
+  ///
+  /// Ejemplo:
+  /// ```dart
+  /// final result = await db.insertIfAbsent(
+  ///   table: 'game_user',
+  ///   data: {'user_id': userId, 'game_id': gameId},
+  ///   onConflict: 'user_id,game_id',
+  /// );
+  /// ```
+  Future<Either<RemoteDatabaseExceptions, int?>> insertIfAbsent({
+    required String table,
+    required Map<String, dynamic> data,
+    required String onConflict,
+    String resultIdColumn = 'id',
+    String? schema,
+  });
+
   /// Actualiza un registro en la base de datos.
   Future<Either<RemoteDatabaseExceptions, int>> update({
     required String table,

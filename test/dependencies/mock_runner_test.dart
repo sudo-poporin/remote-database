@@ -6,6 +6,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
   MockSpec<GoTrueClient>(),
   MockSpec<SupabaseStorageClient>(),
   MockSpec<StorageFileApi>(),
+  MockSpec<SupabaseQuerySchema>(),
   MockSpec<SupabaseQueryBuilder>(),
   MockSpec<PostgrestFilterBuilder<List<Map<String, dynamic>>>>(
     as: #MockPostgrestListFilterBuilder,

@@ -5,6 +5,67 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [5.0.0] - 2026-08-09
+
+### Agregado
+
+- `IRemoteDatabase.insertIfAbsent`: inserta un registro y no falla si la fila ya
+  existe. Devuelve el id del registro insertado, o `null` si ya estaba —ese
+  `null` es la respuesta a «no lo inserté yo», no un error—.
+
+  Es la versión atómica de «insertar si no está». Consultar primero y escribir
+  después deja una ventana entre las dos llamadas por la que cabe otra escritura
+  concurrente; acá la decisión la toma la base en una sola sentencia.
+
+  ```dart
+  final result = await db.insertIfAbsent(
+    table: 'membership',
+    data: {'user_id': userId, 'item_id': itemId},
+    onConflict: 'user_id,item_id',
+  );
+  ```
+
+  `onConflict` son las columnas del índice único que define el conflicto,
+  separadas por coma. **Tiene que existir un índice único sobre esas columnas**:
+  sin él PostgreSQL rechaza la sentencia —`there is no unique or exclusion
+  constraint matching the ON CONFLICT specification`— y el método devuelve un
+  `Left(RemoteDatabaseExceptions.insertFailure)`. El índice va **antes** de
+  desplegar el código que llama a este método.
+
+  Va como método aparte y no como parámetros de `insert`: agregarle `onConflict`
+  a `insert` obligaría a que devuelva `int?` en vez de `int`, y eso rompe a
+  todos los que ya lo usan.
+
+### Modificado
+
+- `supabase_flutter` sube de `^2.16.0` a `^2.17.1`. Cambian firmas río abajo
+  —`StorageBucketApi.listBuckets` gana un posicional opcional y
+  `StorageFileApi.createSignedUrl` gana nombrados—, así que los mocks se
+  regeneran en este mismo cambio.
+
+- **Breaking:** `IRemoteDatabase` gana un miembro, así que **toda clase que
+  implemente la interfaz a mano deja de compilar** con
+  `non_abstract_class_inherits_abstract_member`. Los mocks de `mockito` **no**
+  están afectados: `Mock` define `noSuchMethod` y el analizador no exige
+  declarar los miembros faltantes.
+
+  **Migración.** Si tenés un fake escrito a mano, agregale el método:
+
+  ```dart
+  @override
+  Future<Either<RemoteDatabaseExceptions, int?>> insertIfAbsent({
+    required String table,
+    required Map<String, dynamic> data,
+    required String onConflict,
+    String resultIdColumn = 'id',
+    String? schema,
+  }) async {
+    return Left(
+      RemoteDatabaseExceptions.insertFailure(Exception('Network unavailable')),
+    );
+  }
+  ```
+
 ## [4.0.0] - 2026-08-03
 
 ### Modificado
