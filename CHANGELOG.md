@@ -27,8 +27,10 @@ y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
   `onConflict` son las columnas del índice único que define el conflicto,
   separadas por coma. **Tiene que existir un índice único sobre esas columnas**:
-  sin él la base no tiene contra qué detectar el conflicto y la inserción se
-  comporta como una normal.
+  sin él PostgreSQL rechaza la sentencia —`there is no unique or exclusion
+  constraint matching the ON CONFLICT specification`— y el método devuelve un
+  `Left(RemoteDatabaseExceptions.insertFailure)`. El índice va **antes** de
+  desplegar el código que llama a este método.
 
   Va como método aparte y no como parámetros de `insert`: agregarle `onConflict`
   a `insert` obligaría a que devuelva `int?` en vez de `int`, y eso rompe a

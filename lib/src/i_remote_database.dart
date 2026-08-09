@@ -48,8 +48,13 @@ abstract interface class IRemoteDatabase {
   ///
   /// [onConflict] son las columnas del indice unico que define el conflicto,
   /// separadas por coma. **Tiene que existir un indice unico sobre esas
-  /// columnas**: sin el, la base no tiene contra que detectar el conflicto y la
-  /// insercion se comporta como una normal.
+  /// columnas**: sin el, PostgreSQL rechaza la sentencia con
+  /// `there is no unique or exclusion constraint matching the ON CONFLICT
+  /// specification` y este metodo devuelve un
+  /// `Left(RemoteDatabaseExceptions.insertFailure)`.
+  ///
+  /// O sea que el indice va **antes** de desplegar el codigo que llama a este
+  /// metodo, no despues.
   ///
   /// Ejemplo:
   /// ```dart
