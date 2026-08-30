@@ -262,8 +262,9 @@ void main() {
     });
 
     test('returns Left(fileNotFound) when file does not exist', () async {
-      when(mockFileApi.download(any))
-          .thenThrow(const StorageException('Object not found'));
+      when(
+        mockFileApi.download(any),
+      ).thenThrow(const StorageException('Object not found'));
 
       final result = await storage.download(
         bucket: 'avatars',
@@ -282,8 +283,9 @@ void main() {
     });
 
     test('returns Left(fileNotFound) on 404 error', () async {
-      when(mockFileApi.download(any))
-          .thenThrow(const StorageException('404 not found'));
+      when(
+        mockFileApi.download(any),
+      ).thenThrow(const StorageException('404 not found'));
 
       final result = await storage.download(
         bucket: 'avatars',
@@ -298,8 +300,9 @@ void main() {
     });
 
     test('returns Left(permissionDenied) on permission error', () async {
-      when(mockFileApi.download(any))
-          .thenThrow(const StorageException('permission denied'));
+      when(
+        mockFileApi.download(any),
+      ).thenThrow(const StorageException('permission denied'));
 
       final result = await storage.download(
         bucket: 'private',
@@ -314,8 +317,9 @@ void main() {
     });
 
     test('returns Left(downloadFailure) on generic StorageException', () async {
-      when(mockFileApi.download(any))
-          .thenThrow(const StorageException('Server error'));
+      when(
+        mockFileApi.download(any),
+      ).thenThrow(const StorageException('Server error'));
 
       final result = await storage.download(
         bucket: 'avatars',
@@ -372,13 +376,15 @@ void main() {
       );
 
       expect(result.isRight(), isTrue);
-      verify(mockFileApi.remove(['file1.png', 'file2.png', 'file3.png']))
-          .called(1);
+      verify(
+        mockFileApi.remove(['file1.png', 'file2.png', 'file3.png']),
+      ).called(1);
     });
 
     test('returns Left(deleteFailure) on StorageException', () async {
-      when(mockFileApi.remove(any))
-          .thenThrow(const StorageException('Delete failed'));
+      when(
+        mockFileApi.remove(any),
+      ).thenThrow(const StorageException('Delete failed'));
 
       final result = await storage.delete(
         bucket: 'avatars',
@@ -414,8 +420,9 @@ void main() {
 
   group('RemoteStorage - getPublicUrl', () {
     test('returns Right(url) on success', () {
-      when(mockFileApi.getPublicUrl(any))
-          .thenReturn('https://storage.supabase.co/avatars/user123.png');
+      when(
+        mockFileApi.getPublicUrl(any),
+      ).thenReturn('https://storage.supabase.co/avatars/user123.png');
 
       final result = storage.getPublicUrl(
         bucket: 'avatars',
@@ -474,8 +481,9 @@ void main() {
     });
 
     test('returns Left(urlFailure) on StorageException', () async {
-      when(mockFileApi.createSignedUrl(any, any))
-          .thenThrow(const StorageException('Signed URL failed'));
+      when(
+        mockFileApi.createSignedUrl(any, any),
+      ).thenThrow(const StorageException('Signed URL failed'));
 
       final result = await storage.createSignedUrl(
         bucket: 'avatars',
@@ -496,8 +504,9 @@ void main() {
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
-      when(mockFileApi.createSignedUrl(any, any))
-          .thenThrow(Exception('Network error'));
+      when(
+        mockFileApi.createSignedUrl(any, any),
+      ).thenThrow(Exception('Network error'));
 
       final result = await storage.createSignedUrl(
         bucket: 'avatars',
@@ -691,8 +700,9 @@ void main() {
     });
 
     test('returns Left(moveFailure) on StorageException', () async {
-      when(mockFileApi.move(any, any))
-          .thenThrow(const StorageException('Move failed'));
+      when(
+        mockFileApi.move(any, any),
+      ).thenThrow(const StorageException('Move failed'));
 
       final result = await storage.move(
         bucket: 'avatars',
@@ -741,13 +751,15 @@ void main() {
       );
 
       expect(result.isRight(), isTrue);
-      verify(mockFileApi.copy('original/user123.png', 'backup/user123.png'))
-          .called(1);
+      verify(
+        mockFileApi.copy('original/user123.png', 'backup/user123.png'),
+      ).called(1);
     });
 
     test('returns Left(copyFailure) on StorageException', () async {
-      when(mockFileApi.copy(any, any))
-          .thenThrow(const StorageException('Copy failed'));
+      when(
+        mockFileApi.copy(any, any),
+      ).thenThrow(const StorageException('Copy failed'));
 
       final result = await storage.copy(
         bucket: 'avatars',
@@ -789,8 +801,9 @@ void main() {
     test('maps bucket error to bucketNotFound', () async {
       // Message must contain "bucket" but NOT "not found" or "404"
       // because those patterns have higher priority
-      when(mockFileApi.download(any))
-          .thenThrow(const StorageException('Invalid bucket specified'));
+      when(
+        mockFileApi.download(any),
+      ).thenThrow(const StorageException('Invalid bucket specified'));
 
       final result = await storage.download(
         bucket: 'nonexistent',

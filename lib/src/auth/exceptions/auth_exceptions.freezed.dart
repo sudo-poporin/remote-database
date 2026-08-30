@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'auth_exceptions.dart';
@@ -9,6 +9,7 @@ part of 'auth_exceptions.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$RemoteAuthExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthExceptions);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthExceptions);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions()';
+    return 'RemoteAuthExceptions()';
 }
 
 
@@ -251,16 +252,18 @@ $RemoteAuthSignInFailureCopyWith<RemoteAuthSignInFailure> get copyWith => _$Remo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSignInFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSignInFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,statusCode);
+int get hashCode {
+    return Object.hash(runtimeType,message,statusCode);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.signInFailure(message: $message, statusCode: $statusCode)';
+    return 'RemoteAuthExceptions.signInFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -319,16 +322,18 @@ $RemoteAuthSignUpFailureCopyWith<RemoteAuthSignUpFailure> get copyWith => _$Remo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSignUpFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSignUpFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,statusCode);
+int get hashCode {
+    return Object.hash(runtimeType,message,statusCode);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.signUpFailure(message: $message, statusCode: $statusCode)';
+    return 'RemoteAuthExceptions.signUpFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -387,16 +392,18 @@ $RemoteAuthSignOutFailureCopyWith<RemoteAuthSignOutFailure> get copyWith => _$Re
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSignOutFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSignOutFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,statusCode);
+int get hashCode {
+    return Object.hash(runtimeType,message,statusCode);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.signOutFailure(message: $message, statusCode: $statusCode)';
+    return 'RemoteAuthExceptions.signOutFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -455,16 +462,18 @@ $RemoteAuthPasswordResetFailureCopyWith<RemoteAuthPasswordResetFailure> get copy
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthPasswordResetFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthPasswordResetFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,statusCode);
+int get hashCode {
+    return Object.hash(runtimeType,message,statusCode);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.passwordResetFailure(message: $message, statusCode: $statusCode)';
+    return 'RemoteAuthExceptions.passwordResetFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -523,16 +532,18 @@ $RemoteAuthOtpVerificationFailureCopyWith<RemoteAuthOtpVerificationFailure> get 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthOtpVerificationFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthOtpVerificationFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,statusCode);
+int get hashCode {
+    return Object.hash(runtimeType,message,statusCode);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.otpVerificationFailure(message: $message, statusCode: $statusCode)';
+    return 'RemoteAuthExceptions.otpVerificationFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -591,16 +602,18 @@ $RemoteAuthUpdateUserFailureCopyWith<RemoteAuthUpdateUserFailure> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthUpdateUserFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthUpdateUserFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.statusCode, statusCode) || other.statusCode == statusCode));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,statusCode);
+int get hashCode {
+    return Object.hash(runtimeType,message,statusCode);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.updateUserFailure(message: $message, statusCode: $statusCode)';
+    return 'RemoteAuthExceptions.updateUserFailure(message: $message, statusCode: $statusCode)';
 }
 
 
@@ -653,7 +666,7 @@ class RemoteAuthInvalidCredentials implements RemoteAuthExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthInvalidCredentials);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthInvalidCredentials);
 }
 
 
@@ -662,7 +675,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.invalidCredentials()';
+    return 'RemoteAuthExceptions.invalidCredentials()';
 }
 
 
@@ -685,7 +698,7 @@ class RemoteAuthEmailNotConfirmed implements RemoteAuthExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthEmailNotConfirmed);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthEmailNotConfirmed);
 }
 
 
@@ -694,7 +707,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.emailNotConfirmed()';
+    return 'RemoteAuthExceptions.emailNotConfirmed()';
 }
 
 
@@ -717,7 +730,7 @@ class RemoteAuthUserAlreadyExists implements RemoteAuthExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthUserAlreadyExists);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthUserAlreadyExists);
 }
 
 
@@ -726,7 +739,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.userAlreadyExists()';
+    return 'RemoteAuthExceptions.userAlreadyExists()';
 }
 
 
@@ -749,7 +762,7 @@ class RemoteAuthSessionExpired implements RemoteAuthExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSessionExpired);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthSessionExpired);
 }
 
 
@@ -758,7 +771,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.sessionExpired()';
+    return 'RemoteAuthExceptions.sessionExpired()';
 }
 
 
@@ -786,16 +799,18 @@ $RemoteAuthUnknownCopyWith<RemoteAuthUnknown> get copyWith => _$RemoteAuthUnknow
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthUnknown&&(identical(other.message, message) || other.message == message));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteAuthUnknown&&(identical(other.message, message) || other.message == message));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message);
+int get hashCode {
+    return Object.hash(runtimeType,message);
+}
 
 @override
 String toString() {
-  return 'RemoteAuthExceptions.unknown(message: $message)';
+    return 'RemoteAuthExceptions.unknown(message: $message)';
 }
 
 

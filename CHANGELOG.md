@@ -5,6 +5,25 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [5.1.0] - 2026-08-30
+
+### Agregado
+
+- `IRemoteDatabase.upsertReturning`: inserta o actualiza y devuelve el id de la
+  fila escrita. `upsert` devuelve `void`, así que quien inserta una fila cuya
+  clave primaria genera la base no puede enterarse de cuál le tocó — y esa es
+  justo la fila que después se referencia como clave foránea.
+
+  Aditivo: `upsert` no cambia. Cambiarle el tipo de retorno rompería a
+  cualquier consumidor que tipee la variable, y eso sería MAJOR.
+
+### Interno
+
+- Bump de dependencias: `freezed` 3.2.5 → 4.0.1, `mockito` 5.6.4 → 5.8.1,
+  `build_runner` 2.15.1 → 2.16.0, `json_serializable` 6.14.0 → 6.14.1 y
+  `supabase_flutter` 2.17.1 → 2.17.2. El major de `freezed` cambia lo que emite,
+  así que los tres `.freezed.dart` y el `.mocks.dart` se regeneraron.
+
 ## [5.0.0] - 2026-08-09
 
 ### Agregado

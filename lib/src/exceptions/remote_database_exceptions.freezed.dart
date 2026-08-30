@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'remote_database_exceptions.dart';
@@ -9,6 +9,7 @@ part of 'remote_database_exceptions.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$RemoteDatabaseExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseExceptions);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseExceptions);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions()';
+    return 'RemoteDatabaseExceptions()';
 }
 
 
@@ -226,16 +227,18 @@ _$RemoteDatabaseInsertFailureCopyWith<_RemoteDatabaseInsertFailure> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseInsertFailure&&const DeepCollectionEquality().equals(other.error, error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseInsertFailure&&const DeepCollectionEquality().equals(other.error, error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+}
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.insertFailure(error: $error)';
+    return 'RemoteDatabaseExceptions.insertFailure(error: $error)';
 }
 
 
@@ -292,16 +295,18 @@ _$RemoteDatabaseUpdateFailureCopyWith<_RemoteDatabaseUpdateFailure> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseUpdateFailure&&const DeepCollectionEquality().equals(other.error, error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseUpdateFailure&&const DeepCollectionEquality().equals(other.error, error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+}
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.updateFailure(error: $error)';
+    return 'RemoteDatabaseExceptions.updateFailure(error: $error)';
 }
 
 
@@ -358,16 +363,18 @@ _$RemoteDatabaseUpsertFailureCopyWith<_RemoteDatabaseUpsertFailure> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseUpsertFailure&&const DeepCollectionEquality().equals(other.error, error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseUpsertFailure&&const DeepCollectionEquality().equals(other.error, error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+}
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.upsertFailure(error: $error)';
+    return 'RemoteDatabaseExceptions.upsertFailure(error: $error)';
 }
 
 
@@ -424,16 +431,18 @@ _$RemoteDatabaseDeleteFailureCopyWith<_RemoteDatabaseDeleteFailure> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseDeleteFailure&&const DeepCollectionEquality().equals(other.error, error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseDeleteFailure&&const DeepCollectionEquality().equals(other.error, error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+}
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.deleteFailure(error: $error)';
+    return 'RemoteDatabaseExceptions.deleteFailure(error: $error)';
 }
 
 
@@ -490,16 +499,18 @@ _$RemoteDatabaseSelectFailureCopyWith<_RemoteDatabaseSelectFailure> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseSelectFailure&&const DeepCollectionEquality().equals(other.error, error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseSelectFailure&&const DeepCollectionEquality().equals(other.error, error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+}
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.selectFailure(error: $error)';
+    return 'RemoteDatabaseExceptions.selectFailure(error: $error)';
 }
 
 
@@ -556,16 +567,18 @@ _$RemoteDatabaseSelectSingleFailureCopyWith<_RemoteDatabaseSelectSingleFailure> 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseSelectSingleFailure&&const DeepCollectionEquality().equals(other.error, error));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is _RemoteDatabaseSelectSingleFailure&&const DeepCollectionEquality().equals(other.error, error));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+int get hashCode {
+    return Object.hash(runtimeType,const DeepCollectionEquality().hash(error));
+}
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.selectSingleFailure(error: $error)';
+    return 'RemoteDatabaseExceptions.selectSingleFailure(error: $error)';
 }
 
 
@@ -617,7 +630,7 @@ class RemoteDatabaseNoDataFound implements RemoteDatabaseExceptions {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseNoDataFound);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteDatabaseNoDataFound);
 }
 
 
@@ -626,7 +639,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteDatabaseExceptions.noDataFound()';
+    return 'RemoteDatabaseExceptions.noDataFound()';
 }
 
 

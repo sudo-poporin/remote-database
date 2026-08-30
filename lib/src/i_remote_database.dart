@@ -28,6 +28,30 @@ abstract interface class IRemoteDatabase {
     String? schema,
   });
 
+  /// Inserta o actualiza un registro y devuelve el id de la fila escrita.
+  ///
+  /// Es [upsert] mas el id. Existe porque [upsert] devuelve `void`, asi que
+  /// quien inserta una fila cuya clave primaria genera la base no tiene forma
+  /// de enterarse de cual le toco, y esa es justo la fila que despues se
+  /// referencia como clave foranea.
+  ///
+  /// [onConflict] son las columnas del indice unico que arbitran el conflicto.
+  /// **Postgres resuelve `ON CONFLICT` contra un solo indice arbitro**: si el
+  /// payload puede chocar tambien por otra restriccion unica, ese segundo
+  /// choque llega como error crudo y no lo atrapa el `ON CONFLICT`. En la
+  /// practica eso significa no mandar la clave primaria en [data] cuando el
+  /// arbitro es otra columna.
+  ///
+  /// A diferencia de [insertIfAbsent], **no ignora duplicados**: una fila que
+  /// ya existe se actualiza con [data] y su id es el que vuelve.
+  Future<Either<RemoteDatabaseExceptions, int>> upsertReturning({
+    required String table,
+    required Map<String, dynamic> data,
+    String? onConflict,
+    String resultIdColumn = 'id',
+    String? schema,
+  });
+
   /// Insterta un registro en la base de datos y devuelve el id del registro.
   Future<Either<RemoteDatabaseExceptions, int>> insert({
     required String table,
