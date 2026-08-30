@@ -19,7 +19,6 @@ void main() {
     late MockSupabaseClient mockClient;
     late RemoteDatabaseBase database;
 
-
     setUp(() {
       mockClient = MockSupabaseClient();
       database = RemoteDatabaseBase(client: mockClient);
@@ -84,7 +83,6 @@ void main() {
     late MockSupabaseQueryBuilder mockQueryBuilder;
     late MockPostgrestListFilterBuilder mockFilterBuilder;
     late RemoteDatabaseBase database;
-
 
     setUp(() {
       mockClient = MockSupabaseClient();
@@ -191,6 +189,124 @@ void main() {
         table: 'membership',
         data: {'user_id': 'abc'},
         onConflict: 'user_id,item_id',
+      );
+
+      expect(result.isLeft(), isTrue);
+      result.fold(
+        (exception) => expect(exception, isA<RemoteDatabaseExceptions>()),
+        (_) => fail('Se esperaba un Left'),
+      );
+    });
+  });
+
+  group('RemoteDatabaseBase.upsertReturning', () {
+    late MockSupabaseClient mockClient;
+    late MockSupabaseQuerySchema mockSchema;
+    late MockSupabaseQueryBuilder mockQueryBuilder;
+    late MockPostgrestListFilterBuilder mockFilterBuilder;
+    late RemoteDatabaseBase database;
+
+    setUp(() {
+      mockClient = MockSupabaseClient();
+      mockSchema = MockSupabaseQuerySchema();
+      mockQueryBuilder = MockSupabaseQueryBuilder();
+      mockFilterBuilder = MockPostgrestListFilterBuilder();
+      database = RemoteDatabaseBase(client: mockClient);
+
+      when(mockClient.schema(any)).thenReturn(mockSchema);
+      when(mockSchema.from(any)).thenAnswer((_) => mockQueryBuilder);
+      when(
+        mockQueryBuilder.upsert(
+          any,
+          onConflict: anyNamed('onConflict'),
+          ignoreDuplicates: anyNamed('ignoreDuplicates'),
+        ),
+      ).thenAnswer((_) => mockFilterBuilder);
+    });
+
+    void stubSelect(List<Map<String, dynamic>> filas) {
+      when(
+        mockFilterBuilder.select(),
+      ).thenAnswer((_) => _FakeTransformBuilder(filas));
+    }
+
+    test('devuelve el id de la fila escrita', () async {
+      stubSelect([
+        {'id': 42},
+      ]);
+
+      final result = await database.upsertReturning(
+        table: 'game',
+        data: {'name': 'Hollow Knight', 'rawg_id': 9767},
+        onConflict: 'rawg_id',
+      );
+
+      expect(result.getOrElse((_) => -1), 42);
+    });
+
+    test('pasa onConflict al cliente y no ignora duplicados', () async {
+      stubSelect([
+        {'id': 42},
+      ]);
+
+      await database.upsertReturning(
+        table: 'game',
+        data: {'name': 'Hollow Knight', 'rawg_id': 9767},
+        onConflict: 'rawg_id',
+      );
+
+      // `ignoreDuplicates` tiene que quedar en false: con true el upsert no
+      // pisaria la fila existente y el select volveria vacio, que es
+      // exactamente lo contrario de lo que este metodo promete.
+      //
+      // Se captura en vez de pasarlo como matcher literal porque `false` es el
+      // default del parametro y `avoid_redundant_argument_values` lo rechaza.
+      final ignoraDuplicados = verify(
+        mockQueryBuilder.upsert(
+          any,
+          onConflict: 'rawg_id',
+          ignoreDuplicates: captureAnyNamed('ignoreDuplicates'),
+        ),
+      ).captured.single;
+
+      expect(ignoraDuplicados, isFalse);
+    });
+
+    test('respeta resultIdColumn', () async {
+      stubSelect([
+        {'game_id': 7},
+      ]);
+
+      final result = await database.upsertReturning(
+        table: 'game',
+        data: {'name': 'Celeste'},
+        resultIdColumn: 'game_id',
+      );
+
+      expect(result.getOrElse((_) => -1), 7);
+    });
+
+    test('sin filas devuelve Left de upsertFailure', () async {
+      stubSelect([]);
+
+      final result = await database.upsertReturning(
+        table: 'game',
+        data: {'name': 'Celeste'},
+      );
+
+      expect(result.isLeft(), isTrue);
+      result.fold(
+        (exception) => expect(exception, isA<RemoteDatabaseExceptions>()),
+        (_) => fail('Se esperaba un Left'),
+      );
+    });
+
+    test('ante una excepción devuelve Left de upsertFailure', () async {
+      when(mockFilterBuilder.select()).thenThrow(Exception('boom'));
+
+      final result = await database.upsertReturning(
+        table: 'game',
+        data: {'name': 'Celeste'},
       );
 
       expect(result.isLeft(), isTrue);

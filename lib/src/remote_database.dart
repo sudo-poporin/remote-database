@@ -89,6 +89,40 @@ class _RemoteDatabase implements IRemoteDatabase {
   }
 
   @override
+  Future<Either<RemoteDatabaseExceptions, int>> upsertReturning({
+    required String table,
+    required Map<String, dynamic> data,
+    String? onConflict,
+    String resultIdColumn = 'id',
+    String? schema,
+  }) async {
+    try {
+      final result = await _client
+          .schema(schema ?? 'public')
+          .from(table)
+          .upsert(data, onConflict: onConflict)
+          .select();
+
+      // `.select()` y no `.single()`: `single()` tira `PostgrestException`
+      // cuando no hay exactamente una fila, y `.first` sobre una lista vacia
+      // tira `StateError`, que es un `Error` y se escaparia del
+      // `on Exception catch`. Con la lista a la vista el caso vacio se contesta
+      // como `Left`, que es lo que el llamador sabe manejar.
+      if (result.isEmpty) {
+        return Left(
+          RemoteDatabaseExceptions.upsertFailure(
+            Exception('El upsert no devolvio ninguna fila'),
+          ),
+        );
+      }
+
+      return Right(result.first[resultIdColumn] as int);
+    } on Exception catch (e) {
+      return Left(RemoteDatabaseExceptions.upsertFailure(e));
+    }
+  }
+
+  @override
   Future<Either<RemoteDatabaseExceptions, int>> insert({
     required String table,
     required Map<String, dynamic> data,
