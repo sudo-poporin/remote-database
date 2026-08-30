@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // coverage:ignore-file
-// ignore_for_file: type=lint
+// ignore_for_file: type=lint, type=warning, deprecated_member_use, deprecated_member_use_from_same_package
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'storage_exceptions.dart';
@@ -9,6 +9,7 @@ part of 'storage_exceptions.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// GENERATED CODE - DO NOT MODIFY BY HAND
 // dart format off
 T _$identity<T>(T value) => value;
 /// @nodoc
@@ -20,7 +21,7 @@ mixin _$RemoteStorageException {
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageException);
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageException);
 }
 
 
@@ -29,7 +30,7 @@ int get hashCode => runtimeType.hashCode;
 
 @override
 String toString() {
-  return 'RemoteStorageException()';
+    return 'RemoteStorageException()';
 }
 
 
@@ -251,16 +252,18 @@ $RemoteStorageUploadFailureCopyWith<RemoteStorageUploadFailure> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageUploadFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageUploadFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,path);
+int get hashCode {
+    return Object.hash(runtimeType,message,path);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.uploadFailure(message: $message, path: $path)';
+    return 'RemoteStorageException.uploadFailure(message: $message, path: $path)';
 }
 
 
@@ -319,16 +322,18 @@ $RemoteStorageDownloadFailureCopyWith<RemoteStorageDownloadFailure> get copyWith
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageDownloadFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageDownloadFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,path);
+int get hashCode {
+    return Object.hash(runtimeType,message,path);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.downloadFailure(message: $message, path: $path)';
+    return 'RemoteStorageException.downloadFailure(message: $message, path: $path)';
 }
 
 
@@ -387,16 +392,18 @@ $RemoteStorageDeleteFailureCopyWith<RemoteStorageDeleteFailure> get copyWith => 
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageDeleteFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageDeleteFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,path);
+int get hashCode {
+    return Object.hash(runtimeType,message,path);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.deleteFailure(message: $message, path: $path)';
+    return 'RemoteStorageException.deleteFailure(message: $message, path: $path)';
 }
 
 
@@ -455,16 +462,18 @@ $RemoteStorageUrlFailureCopyWith<RemoteStorageUrlFailure> get copyWith => _$Remo
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageUrlFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageUrlFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.path, path) || other.path == path));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,path);
+int get hashCode {
+    return Object.hash(runtimeType,message,path);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.urlFailure(message: $message, path: $path)';
+    return 'RemoteStorageException.urlFailure(message: $message, path: $path)';
 }
 
 
@@ -523,16 +532,18 @@ $RemoteStorageListFailureCopyWith<RemoteStorageListFailure> get copyWith => _$Re
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageListFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.bucket, bucket) || other.bucket == bucket));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageListFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.bucket, bucket) || other.bucket == bucket));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,bucket);
+int get hashCode {
+    return Object.hash(runtimeType,message,bucket);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.listFailure(message: $message, bucket: $bucket)';
+    return 'RemoteStorageException.listFailure(message: $message, bucket: $bucket)';
 }
 
 
@@ -592,16 +603,18 @@ $RemoteStorageMoveFailureCopyWith<RemoteStorageMoveFailure> get copyWith => _$Re
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageMoveFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.fromPath, fromPath) || other.fromPath == fromPath)&&(identical(other.toPath, toPath) || other.toPath == toPath));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageMoveFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.fromPath, fromPath) || other.fromPath == fromPath)&&(identical(other.toPath, toPath) || other.toPath == toPath));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,fromPath,toPath);
+int get hashCode {
+    return Object.hash(runtimeType,message,fromPath,toPath);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.moveFailure(message: $message, fromPath: $fromPath, toPath: $toPath)';
+    return 'RemoteStorageException.moveFailure(message: $message, fromPath: $fromPath, toPath: $toPath)';
 }
 
 
@@ -662,16 +675,18 @@ $RemoteStorageCopyFailureCopyWith<RemoteStorageCopyFailure> get copyWith => _$Re
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageCopyFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.fromPath, fromPath) || other.fromPath == fromPath)&&(identical(other.toPath, toPath) || other.toPath == toPath));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageCopyFailure&&(identical(other.message, message) || other.message == message)&&(identical(other.fromPath, fromPath) || other.fromPath == fromPath)&&(identical(other.toPath, toPath) || other.toPath == toPath));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message,fromPath,toPath);
+int get hashCode {
+    return Object.hash(runtimeType,message,fromPath,toPath);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.copyFailure(message: $message, fromPath: $fromPath, toPath: $toPath)';
+    return 'RemoteStorageException.copyFailure(message: $message, fromPath: $fromPath, toPath: $toPath)';
 }
 
 
@@ -730,16 +745,18 @@ $RemoteStorageFileNotFoundCopyWith<RemoteStorageFileNotFound> get copyWith => _$
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageFileNotFound&&(identical(other.path, path) || other.path == path));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageFileNotFound&&(identical(other.path, path) || other.path == path));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,path);
+int get hashCode {
+    return Object.hash(runtimeType,path);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.fileNotFound(path: $path)';
+    return 'RemoteStorageException.fileNotFound(path: $path)';
 }
 
 
@@ -796,16 +813,18 @@ $RemoteStorageBucketNotFoundCopyWith<RemoteStorageBucketNotFound> get copyWith =
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageBucketNotFound&&(identical(other.bucket, bucket) || other.bucket == bucket));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageBucketNotFound&&(identical(other.bucket, bucket) || other.bucket == bucket));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,bucket);
+int get hashCode {
+    return Object.hash(runtimeType,bucket);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.bucketNotFound(bucket: $bucket)';
+    return 'RemoteStorageException.bucketNotFound(bucket: $bucket)';
 }
 
 
@@ -862,16 +881,18 @@ $RemoteStoragePermissionDeniedCopyWith<RemoteStoragePermissionDenied> get copyWi
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStoragePermissionDenied&&(identical(other.message, message) || other.message == message));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStoragePermissionDenied&&(identical(other.message, message) || other.message == message));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message);
+int get hashCode {
+    return Object.hash(runtimeType,message);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.permissionDenied(message: $message)';
+    return 'RemoteStorageException.permissionDenied(message: $message)';
 }
 
 
@@ -928,16 +949,18 @@ $RemoteStorageUnknownCopyWith<RemoteStorageUnknown> get copyWith => _$RemoteStor
 
 @override
 bool operator ==(Object other) {
-  return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageUnknown&&(identical(other.message, message) || other.message == message));
+    return identical(this, other) || (other.runtimeType == runtimeType&&other is RemoteStorageUnknown&&(identical(other.message, message) || other.message == message));
 }
 
 
 @override
-int get hashCode => Object.hash(runtimeType,message);
+int get hashCode {
+    return Object.hash(runtimeType,message);
+}
 
 @override
 String toString() {
-  return 'RemoteStorageException.unknown(message: $message)';
+    return 'RemoteStorageException.unknown(message: $message)';
 }
 
 
