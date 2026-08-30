@@ -951,7 +951,6 @@ void main() {
         (session) => expect(session, isNull),
       );
     });
-
   });
 
   group('RemoteAuth - setSession', () {
@@ -1074,5 +1073,4 @@ void main() {
       expect(userId, isNull);
     });
   });
-
 }

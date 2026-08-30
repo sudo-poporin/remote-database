@@ -34,9 +34,9 @@ class QueryBuilder extends QueryBuilderBase
     required SupabaseClient client,
     required String table,
     String? schema,
-  })  : _client = client,
-        _table = table,
-        _schema = schema ?? 'public';
+  }) : _client = client,
+       _table = table,
+       _schema = schema ?? 'public';
 
   final SupabaseClient _client;
   final String _table;

@@ -22,7 +22,9 @@ class RemoteStorage implements IRemoteStorage {
     bool upsert = false,
   }) async {
     try {
-      final result = await _client.from(bucket).uploadBinary(
+      final result = await _client
+          .from(bucket)
+          .uploadBinary(
             path,
             data,
             fileOptions: FileOptions(
@@ -49,7 +51,9 @@ class RemoteStorage implements IRemoteStorage {
     bool upsert = false,
   }) async {
     try {
-      final result = await _client.from(bucket).upload(
+      final result = await _client
+          .from(bucket)
+          .upload(
             path,
             file,
             fileOptions: FileOptions(
@@ -136,7 +140,9 @@ class RemoteStorage implements IRemoteStorage {
     required int expiresInSeconds,
   }) async {
     try {
-      final result = await _client.from(bucket).createSignedUrl(
+      final result = await _client
+          .from(bucket)
+          .createSignedUrl(
             path,
             expiresInSeconds,
           );
@@ -165,12 +171,12 @@ class RemoteStorage implements IRemoteStorage {
       final searchOptions = SearchOptions(
         limit: limit,
         offset: offset,
-        sortBy: sortBy != null
-            ? SortBy(column: _mapSortBy(sortBy))
-            : null,
+        sortBy: sortBy != null ? SortBy(column: _mapSortBy(sortBy)) : null,
       );
 
-      final result = await _client.from(bucket).list(
+      final result = await _client
+          .from(bucket)
+          .list(
             path: path,
             searchOptions: searchOptions,
           );

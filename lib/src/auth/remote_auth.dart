@@ -70,13 +70,13 @@ class RemoteAuth extends RemoteAuthBase
 
     return switch (operation) {
       AuthOperation.signIn => RemoteAuthExceptions.signInFailure(
-          message: message,
-          statusCode: int.tryParse(statusCode ?? ''),
-        ),
+        message: message,
+        statusCode: int.tryParse(statusCode ?? ''),
+      ),
       AuthOperation.signUp => RemoteAuthExceptions.signUpFailure(
-          message: message,
-          statusCode: int.tryParse(statusCode ?? ''),
-        ),
+        message: message,
+        statusCode: int.tryParse(statusCode ?? ''),
+      ),
     };
   }
 }

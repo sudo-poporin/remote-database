@@ -27,5 +27,4 @@ enum AuthOperation {
 ///
 /// Helper compartido por los mixins que envuelven AuthException en
 /// RemoteAuthExceptions. No se exporta vía la barrel pública del package.
-int? parseAuthStatusCode(AuthException e) =>
-    int.tryParse(e.statusCode ?? '');
+int? parseAuthStatusCode(AuthException e) => int.tryParse(e.statusCode ?? '');

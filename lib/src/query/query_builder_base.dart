@@ -105,15 +105,15 @@ abstract class QueryBuilderBase {
 
   /// Ejecuta la consulta y retorna una lista de resultados.
   Future<Either<RemoteDatabaseExceptions, List<Map<String, dynamic>>>>
-      execute();
+  execute();
 
   /// Ejecuta la consulta y retorna un solo resultado.
   Future<Either<RemoteDatabaseExceptions, Map<String, dynamic>>>
-      executeSingle();
+  executeSingle();
 
   /// Ejecuta la consulta y retorna un resultado opcional.
   Future<Either<RemoteDatabaseExceptions, Map<String, dynamic>?>>
-      executeMaybeSingle();
+  executeMaybeSingle();
 
   /// Ejecuta la consulta y retorna el conteo de resultados.
   Future<Either<RemoteDatabaseExceptions, int>> executeCount();
