@@ -455,8 +455,16 @@ final result = await auth.signInWithOAuth(
   provider: OAuthProvider.google,
   redirectTo: 'myapp://callback',
   scopes: ['email', 'profile'],
+  // Opcional: parámetros propios para el proveedor.
+  queryParams: {'prompt': 'select_account'},
 );
 ```
+
+`queryParams` se agrega tal cual a la URL de autorización. Con
+`{'prompt': 'select_account'}` Google muestra el selector de cuenta aunque ya
+haya una sesión abierta en el navegador; con
+`{'access_type': 'offline', 'prompt': 'consent'}` devuelve además un refresh
+token.
 
 ### Password Recovery
 

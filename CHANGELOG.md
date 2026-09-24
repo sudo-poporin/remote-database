@@ -5,6 +5,25 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [5.2.0] - 2026-09-23
+
+### Agregado
+
+- `IRemoteAuth.signInWithOAuth` acepta `queryParams` y los reenvía a la URL de
+  autorización del proveedor. Hasta ahora el cliente de Supabase los aceptaba
+  pero el package nunca se los pasaba, así que no había forma de mandar, por
+  ejemplo, `prompt=select_account` para que Google deje elegir cuenta, o
+  `access_type=offline` para pedir un refresh token.
+
+  Aditivo: es un parámetro con nombre y opcional, quien ya llama al método
+  sigue compilando igual.
+
+### Interno
+
+- `signInWithOAuth` ahora tiene tests unitarios: se mockea `getOAuthSignInUrl`,
+  que la extension de `supabase_flutter` llama antes de abrir el navegador, y el
+  canal de `url_launcher`. Se quita el `coverage:ignore-file` del mixin.
+
 ## [5.1.0] - 2026-08-30
 
 ### Agregado

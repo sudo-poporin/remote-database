@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:remote_database/remote_database.dart';
@@ -393,10 +394,116 @@ void main() {
     );
   });
 
-  // Note: signInWithOAuth tests omitted because the method is an extension
-  // from supabase_flutter, not a direct GoTrueClient method. Extensions cannot
-  // be mocked with mockito. OAuth flows require browser interaction and are
-  // better tested via integration tests.
+  // `signInWithOAuth` de supabase_flutter es un extension method: no se mockea,
+  // pero por dentro llama a `getOAuthSignInUrl` (que sí) y después a
+  // `launchUrl`, que se resuelve mockeando el canal de url_launcher.
+  group('RemoteAuth - signInWithOAuth', () {
+    const urlLauncherChannel = MethodChannel('plugins.flutter.io/url_launcher');
+
+    void stubSignInUrl() {
+      when(
+        mockClient.getOAuthSignInUrl(
+          provider: anyNamed('provider'),
+          redirectTo: anyNamed('redirectTo'),
+          scopes: anyNamed('scopes'),
+          queryParams: anyNamed('queryParams'),
+        ),
+      ).thenAnswer(
+        (_) async => const OAuthResponse(
+          provider: OAuthProvider.google,
+          url: 'https://auth.example.com/authorize',
+        ),
+      );
+    }
+
+    setUp(() {
+      TestWidgetsFlutterBinding.ensureInitialized();
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(urlLauncherChannel, (_) async => true);
+    });
+
+    tearDown(() {
+      TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+          .setMockMethodCallHandler(urlLauncherChannel, null);
+    });
+
+    test('forwards queryParams to the provider URL', () async {
+      stubSignInUrl();
+
+      final result = await auth.signInWithOAuth(
+        provider: OAuthProvider.google,
+        queryParams: {'prompt': 'select_account'},
+      );
+
+      expect(result.isRight(), isTrue);
+      verify(
+        mockClient.getOAuthSignInUrl(
+          provider: OAuthProvider.google,
+          queryParams: {'prompt': 'select_account'},
+        ),
+      ).called(1);
+    });
+
+    test('joins scopes with spaces and sends null queryParams', () async {
+      stubSignInUrl();
+
+      final result = await auth.signInWithOAuth(
+        provider: OAuthProvider.google,
+        redirectTo: 'myapp://callback',
+        scopes: ['email', 'profile'],
+      );
+
+      expect(result.isRight(), isTrue);
+      verify(
+        mockClient.getOAuthSignInUrl(
+          provider: OAuthProvider.google,
+          redirectTo: 'myapp://callback',
+          scopes: 'email profile',
+        ),
+      ).called(1);
+    });
+
+    test('returns Left(signInFailure) on AuthException', () async {
+      when(
+        mockClient.getOAuthSignInUrl(
+          provider: anyNamed('provider'),
+          redirectTo: anyNamed('redirectTo'),
+          scopes: anyNamed('scopes'),
+          queryParams: anyNamed('queryParams'),
+        ),
+      ).thenThrow(const AuthException('Provider disabled', statusCode: '400'));
+
+      final result = await auth.signInWithOAuth(provider: OAuthProvider.google);
+
+      result.fold(
+        (error) {
+          expect(error, isA<RemoteAuthSignInFailure>());
+          final failure = error as RemoteAuthSignInFailure;
+          expect(failure.message, equals('Provider disabled'));
+          expect(failure.statusCode, equals(400));
+        },
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+
+    test('returns Left(unknown) on unexpected exception', () async {
+      when(
+        mockClient.getOAuthSignInUrl(
+          provider: anyNamed('provider'),
+          redirectTo: anyNamed('redirectTo'),
+          scopes: anyNamed('scopes'),
+          queryParams: anyNamed('queryParams'),
+        ),
+      ).thenThrow(Exception('boom'));
+
+      final result = await auth.signInWithOAuth(provider: OAuthProvider.google);
+
+      result.fold(
+        (error) => expect(error, isA<RemoteAuthUnknown>()),
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+  });
 
   group('RemoteAuth - sendPasswordResetEmail', () {
     test('returns Right(null) on success', () async {
