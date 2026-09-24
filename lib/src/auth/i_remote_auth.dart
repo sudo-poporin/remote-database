@@ -20,10 +20,16 @@ abstract interface class IRemoteAuth {
   Future<Either<RemoteAuthExceptions, void>> signOut();
 
   /// Inicia sesión con OAuth provider.
+  ///
+  /// [queryParams] se agregan tal cual a la URL de autorización del
+  /// proveedor. Sirven para pedirle lo que el flujo por defecto no hace; por
+  /// ejemplo, `{'prompt': 'select_account'}` hace que Google muestre el
+  /// selector de cuenta aunque ya haya una sesión abierta en el navegador.
   Future<Either<RemoteAuthExceptions, void>> signInWithOAuth({
     required OAuthProvider provider,
     String? redirectTo,
     List<String>? scopes,
+    Map<String, String>? queryParams,
   });
 
   /// Envía email para recuperar contraseña.
