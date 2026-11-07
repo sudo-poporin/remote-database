@@ -14,11 +14,12 @@ y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
   `sendPasswordResetEmail`, que manda un mail de recuperación cuyo código no
   sirve para verificar la cuenta.
 
-  Un fallo vuelve como `signUpFailure` con su `statusCode` (429 cuando se pasa
-  el límite de envíos), sin variante nueva en `RemoteAuthExceptions`: los
-  `map` y `when` exhaustivos de quien consume siguen compilando. Quien
-  implemente `IRemoteAuth` por su cuenta (un fake de tests) tiene que sumar el
-  método; los mocks generados se regeneran.
+  Un fallo se mapea igual que en `signUp`: en general `signUpFailure` con su
+  `statusCode` (429 cuando se pasa el límite de envíos). No hay variante nueva
+  en `RemoteAuthExceptions`, así que los `map` y `when` exhaustivos de quien
+  consume siguen compilando. Una implementación propia de `IRemoteAuth` que no
+  extienda `Mock` ni `Fake` tiene que sumar el método; los mocks compilan sin
+  regenerar, aunque conviene regenerarlos para stubbearlo con tipos.
 
 ## [5.2.0] - 2026-09-23
 

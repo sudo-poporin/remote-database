@@ -56,9 +56,10 @@ mixin AuthCredentialsMixin on RemoteAuthBase {
 
   /// Reenvía el mail de confirmación del alta a [email].
   ///
-  /// Un fallo vuelve como `signUpFailure` con su `statusCode` (429 si se
-  /// pasó el límite de envíos), sin variante propia: una variante nueva
-  /// rompería los `map` exhaustivos de quien consume.
+  /// Un fallo se mapea igual que en [signUp]: en general `signUpFailure` con
+  /// su `statusCode` (429 si se pasó el límite de envíos). Sin variante
+  /// propia: una variante nueva rompería los `map` exhaustivos de quien
+  /// consume.
   Future<Either<RemoteAuthExceptions, void>> resendSignUpEmail({
     required String email,
   }) async {
