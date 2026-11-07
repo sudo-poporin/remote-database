@@ -430,6 +430,9 @@ final signUpResult = await auth.signUp(
   metadata: {'name': 'John Doe', 'avatar_url': 'https://...'},
 );
 
+// Reenviar el mail de confirmación del alta
+final resendResult = await auth.resendSignUpEmail(email: 'new@example.com');
+
 // Sign out
 final signOutResult = await auth.signOut();
 ```
@@ -512,7 +515,7 @@ await auth.setSession(accessToken);
 | Excepción | Descripción | statusCode |
 | --- | --- | --- |
 | `signInFailure` | Error genérico al iniciar sesión | ✓ |
-| `signUpFailure` | Error genérico al registrarse | ✓ |
+| `signUpFailure` | Error genérico al registrarse o al reenviar el mail de confirmación del alta (429 si se pasó el límite de envíos) | ✓ |
 | `signOutFailure` | Error al cerrar sesión | ✓ |
 | `passwordResetFailure` | Error al enviar email de recuperación | ✓ |
 | `otpVerificationFailure` | Error al verificar OTP | ✓ |
