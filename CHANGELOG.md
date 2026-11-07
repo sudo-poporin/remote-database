@@ -5,6 +5,22 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [5.3.0] - 2026-11-07
+
+### Agregado
+
+- `IRemoteAuth.resendSignUpEmail` reenvía el mail de confirmación del alta
+  (`OtpType.signup`). Hasta ahora el único reenvío expuesto era
+  `sendPasswordResetEmail`, que manda un mail de recuperación cuyo código no
+  sirve para verificar la cuenta.
+
+  Un fallo se mapea igual que en `signUp`: en general `signUpFailure` con su
+  `statusCode` (429 cuando se pasa el límite de envíos). No hay variante nueva
+  en `RemoteAuthExceptions`, así que los `map` y `when` exhaustivos de quien
+  consume siguen compilando. Una implementación propia de `IRemoteAuth` que no
+  extienda `Mock` ni `Fake` tiene que sumar el método; los mocks compilan sin
+  regenerar, aunque conviene regenerarlos para stubbearlo con tipos.
+
 ## [5.2.0] - 2026-09-23
 
 ### Agregado
