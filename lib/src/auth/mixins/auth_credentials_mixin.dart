@@ -54,6 +54,24 @@ mixin AuthCredentialsMixin on RemoteAuthBase {
     }
   }
 
+  /// Reenvía el mail de confirmación del alta a [email].
+  ///
+  /// Un fallo vuelve como `signUpFailure` con su `statusCode` (429 si se
+  /// pasó el límite de envíos), sin variante propia: una variante nueva
+  /// rompería los `map` exhaustivos de quien consume.
+  Future<Either<RemoteAuthExceptions, void>> resendSignUpEmail({
+    required String email,
+  }) async {
+    try {
+      await client.resend(email: email, type: OtpType.signup);
+      return const Right(null);
+    } on AuthException catch (e) {
+      return Left(mapAuthException(e, AuthOperation.signUp));
+    } on Object catch (e) {
+      return Left(RemoteAuthExceptions.unknown(message: e.toString()));
+    }
+  }
+
   /// Cierra la sesión actual.
   Future<Either<RemoteAuthExceptions, void>> signOut() async {
     try {

@@ -505,6 +505,73 @@ void main() {
     });
   });
 
+  group('RemoteAuth - resendSignUpEmail', () {
+    test('returns Right(null) and resends the signup email', () async {
+      when(
+        mockClient.resend(
+          email: anyNamed('email'),
+          type: anyNamed('type'),
+        ),
+      ).thenAnswer((_) async => ResendResponse());
+
+      final result = await auth.resendSignUpEmail(email: 'test@example.com');
+
+      expect(result.isRight(), isTrue);
+      verify(
+        mockClient.resend(email: 'test@example.com', type: OtpType.signup),
+      ).called(1);
+      verifyNever(
+        mockClient.resetPasswordForEmail(
+          any,
+          redirectTo: anyNamed('redirectTo'),
+        ),
+      );
+    });
+
+    test(
+      'returns Left(signUpFailure) with statusCode 429 '
+      'on rate-limit AuthException',
+      () async {
+        when(
+          mockClient.resend(
+            email: anyNamed('email'),
+            type: anyNamed('type'),
+          ),
+        ).thenThrow(
+          const AuthException('Email rate limit exceeded', statusCode: '429'),
+        );
+
+        final result = await auth.resendSignUpEmail(email: 'test@example.com');
+
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthSignUpFailure>());
+            final failure = error as RemoteAuthSignUpFailure;
+            expect(failure.message, equals('Email rate limit exceeded'));
+            expect(failure.statusCode, equals(429));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
+
+    test('returns Left(unknown) on unexpected exception', () async {
+      when(
+        mockClient.resend(
+          email: anyNamed('email'),
+          type: anyNamed('type'),
+        ),
+      ).thenThrow(Exception('Network error'));
+
+      final result = await auth.resendSignUpEmail(email: 'test@example.com');
+
+      result.fold(
+        (error) => expect(error, isA<RemoteAuthUnknown>()),
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+  });
+
   group('RemoteAuth - sendPasswordResetEmail', () {
     test('returns Right(null) on success', () async {
       when(

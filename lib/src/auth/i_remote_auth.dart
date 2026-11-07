@@ -16,6 +16,11 @@ abstract interface class IRemoteAuth {
     Map<String, dynamic>? metadata,
   });
 
+  /// Reenvía el mail de confirmación del alta.
+  Future<Either<RemoteAuthExceptions, void>> resendSignUpEmail({
+    required String email,
+  });
+
   /// Cierra la sesión actual.
   Future<Either<RemoteAuthExceptions, void>> signOut();
 
