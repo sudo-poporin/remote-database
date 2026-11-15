@@ -5,6 +5,21 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [5.4.0] - 2026-11-14
+
+### Agregado
+
+- `IRemoteAuth.signInWithIdToken` cambia por una sesión el `idToken` que
+  entrega el SDK nativo de un proveedor (por ejemplo, el selector de cuentas de
+  Google del sistema). Hasta ahora el único login con proveedores era
+  `signInWithOAuth`, que pasa por el navegador.
+
+  Devuelve el `User` de la sesión. Una `AuthException` o una respuesta sin
+  usuario se mapean a `signInFailure` (con su `statusCode`), igual que en
+  `signInWithOAuth`; cualquier otro error, a `unknown`. Una implementación
+  propia de `IRemoteAuth` que no extienda `Mock` ni `Fake` tiene que sumar el
+  método.
+
 ## [5.3.0] - 2026-11-07
 
 ### Agregado

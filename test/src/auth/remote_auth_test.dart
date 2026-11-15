@@ -505,6 +505,117 @@ void main() {
     });
   });
 
+  group('RemoteAuth - signInWithIdToken', () {
+    void stubIdToken(AuthResponse response) {
+      when(
+        mockClient.signInWithIdToken(
+          provider: anyNamed('provider'),
+          idToken: anyNamed('idToken'),
+          accessToken: anyNamed('accessToken'),
+          nonce: anyNamed('nonce'),
+        ),
+      ).thenAnswer((_) async => response);
+    }
+
+    test('returns Right(user) with the session user', () async {
+      stubIdToken(AuthResponse(session: testSession, user: testUser));
+
+      final result = await auth.signInWithIdToken(
+        provider: OAuthProvider.google,
+        idToken: 'id-token',
+      );
+
+      result.fold(
+        (error) => fail('Expected Right but got $error'),
+        (user) => expect(user, equals(testUser)),
+      );
+    });
+
+    test('forwards provider, idToken, accessToken and nonce', () async {
+      stubIdToken(AuthResponse(session: testSession, user: testUser));
+
+      await auth.signInWithIdToken(
+        provider: OAuthProvider.google,
+        idToken: 'id-token',
+        accessToken: 'access-token',
+        nonce: 'raw-nonce',
+      );
+
+      verify(
+        mockClient.signInWithIdToken(
+          provider: OAuthProvider.google,
+          idToken: 'id-token',
+          accessToken: 'access-token',
+          nonce: 'raw-nonce',
+        ),
+      ).called(1);
+    });
+
+    test('returns Left(signInFailure) when the response has no user', () async {
+      stubIdToken(AuthResponse());
+
+      final result = await auth.signInWithIdToken(
+        provider: OAuthProvider.google,
+        idToken: 'id-token',
+      );
+
+      result.fold(
+        (error) => expect(error, isA<RemoteAuthSignInFailure>()),
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+
+    test(
+      'returns Left(signInFailure) with statusCode on AuthException',
+      () async {
+        when(
+          mockClient.signInWithIdToken(
+            provider: anyNamed('provider'),
+            idToken: anyNamed('idToken'),
+            accessToken: anyNamed('accessToken'),
+            nonce: anyNamed('nonce'),
+          ),
+        ).thenThrow(const AuthException('Bad ID token', statusCode: '400'));
+
+        final result = await auth.signInWithIdToken(
+          provider: OAuthProvider.google,
+          idToken: 'id-token',
+        );
+
+        result.fold(
+          (error) {
+            expect(error, isA<RemoteAuthSignInFailure>());
+            final failure = error as RemoteAuthSignInFailure;
+            expect(failure.message, equals('Bad ID token'));
+            expect(failure.statusCode, equals(400));
+          },
+          (r) => fail('Expected Left but got Right'),
+        );
+      },
+    );
+
+    test('returns Left(unknown) on unexpected exception', () async {
+      when(
+        mockClient.signInWithIdToken(
+          provider: anyNamed('provider'),
+          idToken: anyNamed('idToken'),
+          accessToken: anyNamed('accessToken'),
+          nonce: anyNamed('nonce'),
+        ),
+      ).thenThrow(Exception('boom'));
+
+      final result = await auth.signInWithIdToken(
+        provider: OAuthProvider.google,
+        idToken: 'id-token',
+      );
+
+      result.fold(
+        (error) => expect(error, isA<RemoteAuthUnknown>()),
+        (r) => fail('Expected Left but got Right'),
+      );
+    });
+  });
+
   group('RemoteAuth - resendSignUpEmail', () {
     test('returns Right(null) and resends the signup email', () async {
       when(
