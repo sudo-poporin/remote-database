@@ -469,6 +469,19 @@ haya una sesión abierta en el navegador; con
 `{'access_type': 'offline', 'prompt': 'consent'}` devuelve además un refresh
 token.
 
+### Login nativo con idToken
+
+```dart
+// El idToken lo entrega el SDK nativo del proveedor (google_sign_in, etc.).
+final result = await auth.signInWithIdToken(
+  provider: OAuthProvider.google,
+  idToken: idToken,
+);
+```
+
+Devuelve `Either<RemoteAuthExceptions, User>`. `accessToken` y `nonce` son
+opcionales y se pasan sólo si el proveedor los emitió.
+
 ### Password Recovery
 
 ```dart

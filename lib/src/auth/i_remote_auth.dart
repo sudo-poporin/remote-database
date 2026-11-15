@@ -37,6 +37,17 @@ abstract interface class IRemoteAuth {
     Map<String, String>? queryParams,
   });
 
+  /// Inicia sesión con el `idToken` que entregó el SDK nativo del proveedor.
+  ///
+  /// [accessToken] y [nonce] son opcionales: se pasan sólo si el proveedor los
+  /// emitió. Una respuesta sin usuario es un `signInFailure`.
+  Future<Either<RemoteAuthExceptions, User>> signInWithIdToken({
+    required OAuthProvider provider,
+    required String idToken,
+    String? accessToken,
+    String? nonce,
+  });
+
   /// Envía email para recuperar contraseña.
   Future<Either<RemoteAuthExceptions, void>> sendPasswordResetEmail({
     required String email,
