@@ -10,10 +10,7 @@ void main() {
 
   setUp(() {
     mockClient = MockSupabaseClient();
-    queryBuilder = QueryBuilder(
-      client: mockClient,
-      table: 'test_table',
-    );
+    queryBuilder = QueryBuilder(client: mockClient, table: 'test_table');
   });
 
   group('QueryBuilder - Inicialización', () {

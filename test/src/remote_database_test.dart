@@ -112,9 +112,8 @@ void main() {
     /// devolver un Future desde un `thenAnswer` anidado, y termina en
     /// `Cannot call when within a stub response`.
     void stubSelect(List<Map<String, dynamic>> filas) {
-      when(
-        mockFilterBuilder.select(),
-      ).thenAnswer((_) => _FakeTransformBuilder(filas));
+      when(mockFilterBuilder.select())
+          .thenAnswer((_) => _FakeTransformBuilder(filas));
     }
 
     test('devuelve el id cuando la fila se insertó', () async {
@@ -225,9 +224,8 @@ void main() {
     });
 
     void stubSelect(List<Map<String, dynamic>> filas) {
-      when(
-        mockFilterBuilder.select(),
-      ).thenAnswer((_) => _FakeTransformBuilder(filas));
+      when(mockFilterBuilder.select())
+          .thenAnswer((_) => _FakeTransformBuilder(filas));
     }
 
     test('devuelve el id de la fila escrita', () async {
@@ -325,7 +323,7 @@ void main() {
 /// prueba funcione.
 class _FakeTransformBuilder extends Fake
     implements PostgrestTransformBuilder<List<Map<String, dynamic>>> {
-  _FakeTransformBuilder(this._filas);
+  new(this._filas);
 
   final List<Map<String, dynamic>> _filas;
 
@@ -333,5 +331,5 @@ class _FakeTransformBuilder extends Fake
   Future<U> then<U>(
     FutureOr<U> Function(List<Map<String, dynamic>>) onValue, {
     Function? onError,
-  }) async => onValue(_filas);
+  }) async => await onValue(_filas);
 }

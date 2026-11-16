@@ -39,9 +39,7 @@ mixin AuthUserMixin on RemoteAuthBase {
     required Map<String, dynamic> metadata,
   }) async {
     try {
-      final response = await client.updateUser(
-        UserAttributes(data: metadata),
-      );
+      final response = await client.updateUser(UserAttributes(data: metadata));
 
       if (response.user == null) {
         return const Left(

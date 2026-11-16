@@ -39,7 +39,7 @@ class RemoteAuth extends RemoteAuthBase
         AuthSessionMixin
     implements IRemoteAuth {
   /// Crea una instancia de [RemoteAuth].
-  RemoteAuth({required GoTrueClient goTrueClient}) : _client = goTrueClient;
+  new({required GoTrueClient goTrueClient}) : _client = goTrueClient;
 
   final GoTrueClient _client;
 

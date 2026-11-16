@@ -30,13 +30,8 @@ import 'package:remote_database/src/query/query_builder_base.dart';
 class QueryBuilder extends QueryBuilderBase
     with FilterMixin, PaginationMixin, OrderingMixin, ExecutionMixin {
   /// Crea un QueryBuilder para la tabla especificada.
-  QueryBuilder({
-    required SupabaseClient client,
-    required String table,
-    String? schema,
-  }) : _client = client,
-       _table = table,
-       _schema = schema ?? 'public';
+  new({required this._client, required this._table, String? schema})
+    : _schema = schema ?? 'public';
 
   final SupabaseClient _client;
   final String _table;
