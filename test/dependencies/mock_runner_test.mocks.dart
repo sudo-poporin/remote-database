@@ -3,6 +3,7 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
+
 import 'dart:async' as _i6;
 import 'dart:typed_data' as _i8;
 
@@ -247,82 +248,64 @@ class _FakePostgrestResponse_36<T> extends _i1.SmartFake
 /// See the documentation for Mockito's code generation for more information.
 class MockSupabaseClient extends _i1.Mock implements _i2.SupabaseClient {
   @override
-  _i2.FunctionsClient get functions =>
-      (super.noSuchMethod(
-            Invocation.getter(#functions),
-            returnValue: _FakeFunctionsClient_0(
-              this,
-              Invocation.getter(#functions),
-            ),
-            returnValueForMissingStub: _FakeFunctionsClient_0(
-              this,
-              Invocation.getter(#functions),
-            ),
-          )
-          as _i2.FunctionsClient);
+  _i2.FunctionsClient get functions => (super.noSuchMethod(
+    Invocation.getter(#functions),
+    returnValue: _FakeFunctionsClient_0(this, Invocation.getter(#functions)),
+    returnValueForMissingStub: _FakeFunctionsClient_0(
+      this,
+      Invocation.getter(#functions),
+    ),
+  ) as _i2.FunctionsClient);
 
   @override
-  _i2.SupabaseStorageClient get storage =>
-      (super.noSuchMethod(
-            Invocation.getter(#storage),
-            returnValue: _FakeSupabaseStorageClient_1(
-              this,
-              Invocation.getter(#storage),
-            ),
-            returnValueForMissingStub: _FakeSupabaseStorageClient_1(
-              this,
-              Invocation.getter(#storage),
-            ),
-          )
-          as _i2.SupabaseStorageClient);
+  _i2.SupabaseStorageClient get storage => (super.noSuchMethod(
+    Invocation.getter(#storage),
+    returnValue: _FakeSupabaseStorageClient_1(
+      this,
+      Invocation.getter(#storage),
+    ),
+    returnValueForMissingStub: _FakeSupabaseStorageClient_1(
+      this,
+      Invocation.getter(#storage),
+    ),
+  ) as _i2.SupabaseStorageClient);
 
   @override
-  _i2.RealtimeClient get realtime =>
-      (super.noSuchMethod(
-            Invocation.getter(#realtime),
-            returnValue: _FakeRealtimeClient_2(
-              this,
-              Invocation.getter(#realtime),
-            ),
-            returnValueForMissingStub: _FakeRealtimeClient_2(
-              this,
-              Invocation.getter(#realtime),
-            ),
-          )
-          as _i2.RealtimeClient);
+  _i2.RealtimeClient get realtime => (super.noSuchMethod(
+    Invocation.getter(#realtime),
+    returnValue: _FakeRealtimeClient_2(this, Invocation.getter(#realtime)),
+    returnValueForMissingStub: _FakeRealtimeClient_2(
+      this,
+      Invocation.getter(#realtime),
+    ),
+  ) as _i2.RealtimeClient);
 
   @override
-  _i3.PostgrestClient get rest =>
-      (super.noSuchMethod(
-            Invocation.getter(#rest),
-            returnValue: _FakePostgrestClient_3(this, Invocation.getter(#rest)),
-            returnValueForMissingStub: _FakePostgrestClient_3(
-              this,
-              Invocation.getter(#rest),
-            ),
-          )
-          as _i3.PostgrestClient);
+  _i3.PostgrestClient get rest => (super.noSuchMethod(
+    Invocation.getter(#rest),
+    returnValue: _FakePostgrestClient_3(this, Invocation.getter(#rest)),
+    returnValueForMissingStub: _FakePostgrestClient_3(
+      this,
+      Invocation.getter(#rest),
+    ),
+  ) as _i3.PostgrestClient);
 
   @override
-  Map<String, String> get headers =>
-      (super.noSuchMethod(
-            Invocation.getter(#headers),
-            returnValue: <String, String>{},
-            returnValueForMissingStub: <String, String>{},
-          )
-          as Map<String, String>);
+  Map<String, String> get headers => (super.noSuchMethod(
+    Invocation.getter(#headers),
+    returnValue: <String, String>{},
+    returnValueForMissingStub: <String, String>{},
+  ) as Map<String, String>);
 
   @override
-  _i4.GoTrueClient get auth =>
-      (super.noSuchMethod(
-            Invocation.getter(#auth),
-            returnValue: _FakeGoTrueClient_4(this, Invocation.getter(#auth)),
-            returnValueForMissingStub: _FakeGoTrueClient_4(
-              this,
-              Invocation.getter(#auth),
-            ),
-          )
-          as _i4.GoTrueClient);
+  _i4.GoTrueClient get auth => (super.noSuchMethod(
+    Invocation.getter(#auth),
+    returnValue: _FakeGoTrueClient_4(this, Invocation.getter(#auth)),
+    returnValueForMissingStub: _FakeGoTrueClient_4(
+      this,
+      Invocation.getter(#auth),
+    ),
+  ) as _i4.GoTrueClient);
 
   @override
   set functions(_i2.FunctionsClient? value) => super.noSuchMethod(
@@ -355,119 +338,102 @@ class MockSupabaseClient extends _i1.Mock implements _i2.SupabaseClient {
   );
 
   @override
-  _i2.SupabaseQueryBuilder from(String? table) =>
-      (super.noSuchMethod(
-            Invocation.method(#from, [table]),
-            returnValue: _FakeSupabaseQueryBuilder_5(
-              this,
-              Invocation.method(#from, [table]),
-            ),
-            returnValueForMissingStub: _FakeSupabaseQueryBuilder_5(
-              this,
-              Invocation.method(#from, [table]),
-            ),
-          )
-          as _i2.SupabaseQueryBuilder);
+  _i2.SupabaseQueryBuilder from(String? table) => (super.noSuchMethod(
+    Invocation.method(#from, [table]),
+    returnValue: _FakeSupabaseQueryBuilder_5(
+      this,
+      Invocation.method(#from, [table]),
+    ),
+    returnValueForMissingStub: _FakeSupabaseQueryBuilder_5(
+      this,
+      Invocation.method(#from, [table]),
+    ),
+  ) as _i2.SupabaseQueryBuilder);
 
   @override
-  _i2.SupabaseQuerySchema schema(String? schema) =>
-      (super.noSuchMethod(
-            Invocation.method(#schema, [schema]),
-            returnValue: _FakeSupabaseQuerySchema_6(
-              this,
-              Invocation.method(#schema, [schema]),
-            ),
-            returnValueForMissingStub: _FakeSupabaseQuerySchema_6(
-              this,
-              Invocation.method(#schema, [schema]),
-            ),
-          )
-          as _i2.SupabaseQuerySchema);
+  _i2.SupabaseQuerySchema schema(String? schema) => (super.noSuchMethod(
+    Invocation.method(#schema, [schema]),
+    returnValue: _FakeSupabaseQuerySchema_6(
+      this,
+      Invocation.method(#schema, [schema]),
+    ),
+    returnValueForMissingStub: _FakeSupabaseQuerySchema_6(
+      this,
+      Invocation.method(#schema, [schema]),
+    ),
+  ) as _i2.SupabaseQuerySchema);
 
   @override
   _i3.PostgrestFilterBuilder<T> rpc<T>(
     String? fn, {
     Map<String, dynamic>? params,
     dynamic get = false,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#rpc, [fn], {#params: params, #get: get}),
-            returnValue: _FakePostgrestFilterBuilder_7<T>(
-              this,
-              Invocation.method(#rpc, [fn], {#params: params, #get: get}),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<T>(
-              this,
-              Invocation.method(#rpc, [fn], {#params: params, #get: get}),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<T>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#rpc, [fn], {#params: params, #get: get}),
+    returnValue: _FakePostgrestFilterBuilder_7<T>(
+      this,
+      Invocation.method(#rpc, [fn], {#params: params, #get: get}),
+    ),
+    returnValueForMissingStub: _FakePostgrestFilterBuilder_7<T>(
+      this,
+      Invocation.method(#rpc, [fn], {#params: params, #get: get}),
+    ),
+  ) as _i3.PostgrestFilterBuilder<T>);
 
   @override
   _i2.RealtimeChannel channel(
     String? name, {
     _i2.RealtimeChannelConfig? opts = const _i2.RealtimeChannelConfig(),
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#channel, [name], {#opts: opts}),
-            returnValue: _FakeRealtimeChannel_8(
-              this,
-              Invocation.method(#channel, [name], {#opts: opts}),
-            ),
-            returnValueForMissingStub: _FakeRealtimeChannel_8(
-              this,
-              Invocation.method(#channel, [name], {#opts: opts}),
-            ),
-          )
-          as _i2.RealtimeChannel);
+  }) => (super.noSuchMethod(
+    Invocation.method(#channel, [name], {#opts: opts}),
+    returnValue: _FakeRealtimeChannel_8(
+      this,
+      Invocation.method(#channel, [name], {#opts: opts}),
+    ),
+    returnValueForMissingStub: _FakeRealtimeChannel_8(
+      this,
+      Invocation.method(#channel, [name], {#opts: opts}),
+    ),
+  ) as _i2.RealtimeChannel);
 
   @override
-  List<_i2.RealtimeChannel> getChannels() =>
-      (super.noSuchMethod(
-            Invocation.method(#getChannels, []),
-            returnValue: <_i2.RealtimeChannel>[],
-            returnValueForMissingStub: <_i2.RealtimeChannel>[],
-          )
-          as List<_i2.RealtimeChannel>);
+  List<_i2.RealtimeChannel> getChannels() => (super.noSuchMethod(
+    Invocation.method(#getChannels, []),
+    returnValue: <_i2.RealtimeChannel>[],
+    returnValueForMissingStub: <_i2.RealtimeChannel>[],
+  ) as List<_i2.RealtimeChannel>);
 
   @override
   _i6.Future<String> removeChannel(_i2.RealtimeChannel? channel) =>
       (super.noSuchMethod(
+        Invocation.method(#removeChannel, [channel]),
+        returnValue: _i6.Future<String>.value(
+          _i7.dummyValue<String>(
+            this,
             Invocation.method(#removeChannel, [channel]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#removeChannel, [channel]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#removeChannel, [channel]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+          ),
+        ),
+        returnValueForMissingStub: _i6.Future<String>.value(
+          _i7.dummyValue<String>(
+            this,
+            Invocation.method(#removeChannel, [channel]),
+          ),
+        ),
+      ) as _i6.Future<String>);
 
   @override
-  _i6.Future<List<String>> removeAllChannels() =>
-      (super.noSuchMethod(
-            Invocation.method(#removeAllChannels, []),
-            returnValue: _i6.Future<List<String>>.value(<String>[]),
-            returnValueForMissingStub: _i6.Future<List<String>>.value(
-              <String>[],
-            ),
-          )
-          as _i6.Future<List<String>>);
+  _i6.Future<List<String>> removeAllChannels() => (super.noSuchMethod(
+    Invocation.method(#removeAllChannels, []),
+    returnValue: _i6.Future<List<String>>.value(<String>[]),
+    returnValueForMissingStub: _i6.Future<List<String>>.value(<String>[]),
+  ) as _i6.Future<List<String>>);
 
   @override
-  _i6.Future<void> dispose() =>
-      (super.noSuchMethod(
-            Invocation.method(#dispose, []),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+  _i6.Future<void> dispose() => (super.noSuchMethod(
+    Invocation.method(#dispose, []),
+    returnValue: _i6.Future<void>.value(),
+    returnValueForMissingStub: _i6.Future<void>.value(),
+  ) as _i6.Future<void>);
 }
 
 /// A class which mocks [GoTrueClient].
@@ -475,85 +441,65 @@ class MockSupabaseClient extends _i1.Mock implements _i2.SupabaseClient {
 /// See the documentation for Mockito's code generation for more information.
 class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
   @override
-  _i4.GoTrueAdminApi get admin =>
-      (super.noSuchMethod(
-            Invocation.getter(#admin),
-            returnValue: _FakeGoTrueAdminApi_9(this, Invocation.getter(#admin)),
-            returnValueForMissingStub: _FakeGoTrueAdminApi_9(
-              this,
-              Invocation.getter(#admin),
-            ),
-          )
-          as _i4.GoTrueAdminApi);
+  _i4.GoTrueAdminApi get admin => (super.noSuchMethod(
+    Invocation.getter(#admin),
+    returnValue: _FakeGoTrueAdminApi_9(this, Invocation.getter(#admin)),
+    returnValueForMissingStub: _FakeGoTrueAdminApi_9(
+      this,
+      Invocation.getter(#admin),
+    ),
+  ) as _i4.GoTrueAdminApi);
 
   @override
-  _i4.GoTrueMFAApi get mfa =>
-      (super.noSuchMethod(
-            Invocation.getter(#mfa),
-            returnValue: _FakeGoTrueMFAApi_10(this, Invocation.getter(#mfa)),
-            returnValueForMissingStub: _FakeGoTrueMFAApi_10(
-              this,
-              Invocation.getter(#mfa),
-            ),
-          )
-          as _i4.GoTrueMFAApi);
+  _i4.GoTrueMFAApi get mfa => (super.noSuchMethod(
+    Invocation.getter(#mfa),
+    returnValue: _FakeGoTrueMFAApi_10(this, Invocation.getter(#mfa)),
+    returnValueForMissingStub: _FakeGoTrueMFAApi_10(
+      this,
+      Invocation.getter(#mfa),
+    ),
+  ) as _i4.GoTrueMFAApi);
 
   @override
-  _i4.GoTrueOAuthApi get oauth =>
-      (super.noSuchMethod(
-            Invocation.getter(#oauth),
-            returnValue: _FakeGoTrueOAuthApi_11(
-              this,
-              Invocation.getter(#oauth),
-            ),
-            returnValueForMissingStub: _FakeGoTrueOAuthApi_11(
-              this,
-              Invocation.getter(#oauth),
-            ),
-          )
-          as _i4.GoTrueOAuthApi);
+  _i4.GoTrueOAuthApi get oauth => (super.noSuchMethod(
+    Invocation.getter(#oauth),
+    returnValue: _FakeGoTrueOAuthApi_11(this, Invocation.getter(#oauth)),
+    returnValueForMissingStub: _FakeGoTrueOAuthApi_11(
+      this,
+      Invocation.getter(#oauth),
+    ),
+  ) as _i4.GoTrueOAuthApi);
 
   @override
-  _i4.GoTruePasskeyApi get passkey =>
-      (super.noSuchMethod(
-            Invocation.getter(#passkey),
-            returnValue: _FakeGoTruePasskeyApi_12(
-              this,
-              Invocation.getter(#passkey),
-            ),
-            returnValueForMissingStub: _FakeGoTruePasskeyApi_12(
-              this,
-              Invocation.getter(#passkey),
-            ),
-          )
-          as _i4.GoTruePasskeyApi);
+  _i4.GoTruePasskeyApi get passkey => (super.noSuchMethod(
+    Invocation.getter(#passkey),
+    returnValue: _FakeGoTruePasskeyApi_12(this, Invocation.getter(#passkey)),
+    returnValueForMissingStub: _FakeGoTruePasskeyApi_12(
+      this,
+      Invocation.getter(#passkey),
+    ),
+  ) as _i4.GoTruePasskeyApi);
 
   @override
-  _i6.Stream<_i4.AuthState> get onAuthStateChange =>
-      (super.noSuchMethod(
-            Invocation.getter(#onAuthStateChange),
-            returnValue: _i6.Stream<_i4.AuthState>.empty(),
-            returnValueForMissingStub: _i6.Stream<_i4.AuthState>.empty(),
-          )
-          as _i6.Stream<_i4.AuthState>);
+  _i6.Stream<_i4.AuthState> get onAuthStateChange => (super.noSuchMethod(
+    Invocation.getter(#onAuthStateChange),
+    returnValue: _i6.Stream<_i4.AuthState>.empty(),
+    returnValueForMissingStub: _i6.Stream<_i4.AuthState>.empty(),
+  ) as _i6.Stream<_i4.AuthState>);
 
   @override
-  _i6.Stream<_i4.AuthState> get onAuthStateChangeSync =>
-      (super.noSuchMethod(
-            Invocation.getter(#onAuthStateChangeSync),
-            returnValue: _i6.Stream<_i4.AuthState>.empty(),
-            returnValueForMissingStub: _i6.Stream<_i4.AuthState>.empty(),
-          )
-          as _i6.Stream<_i4.AuthState>);
+  _i6.Stream<_i4.AuthState> get onAuthStateChangeSync => (super.noSuchMethod(
+    Invocation.getter(#onAuthStateChangeSync),
+    returnValue: _i6.Stream<_i4.AuthState>.empty(),
+    returnValueForMissingStub: _i6.Stream<_i4.AuthState>.empty(),
+  ) as _i6.Stream<_i4.AuthState>);
 
   @override
-  Map<String, String> get headers =>
-      (super.noSuchMethod(
-            Invocation.getter(#headers),
-            returnValue: <String, String>{},
-            returnValueForMissingStub: <String, String>{},
-          )
-          as Map<String, String>);
+  Map<String, String> get headers => (super.noSuchMethod(
+    Invocation.getter(#headers),
+    returnValue: <String, String>{},
+    returnValueForMissingStub: <String, String>{},
+  ) as Map<String, String>);
 
   @override
   set admin(_i4.GoTrueAdminApi? value) => super.noSuchMethod(
@@ -580,44 +526,40 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
   );
 
   @override
-  _i6.Future<_i4.Session?> getSession() =>
-      (super.noSuchMethod(
-            Invocation.method(#getSession, []),
-            returnValue: _i6.Future<_i4.Session?>.value(),
-            returnValueForMissingStub: _i6.Future<_i4.Session?>.value(),
-          )
-          as _i6.Future<_i4.Session?>);
+  _i6.Future<_i4.Session?> getSession() => (super.noSuchMethod(
+    Invocation.method(#getSession, []),
+    returnValue: _i6.Future<_i4.Session?>.value(),
+    returnValueForMissingStub: _i6.Future<_i4.Session?>.value(),
+  ) as _i6.Future<_i4.Session?>);
 
   @override
   _i6.Future<_i4.AuthResponse> signInAnonymously({
     Map<String, dynamic>? data,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signInAnonymously, [], {
-              #data: data,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInAnonymously, [], {
-                  #data: data,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInAnonymously, [], {
-                  #data: data,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signInAnonymously, [], {
+      #data: data,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInAnonymously, [], {
+          #data: data,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInAnonymously, [], {
+          #data: data,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<_i4.AuthResponse> signUp({
@@ -628,47 +570,45 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     Map<String, dynamic>? data,
     String? captchaToken,
     _i4.OtpChannel? channel = _i4.OtpChannel.sms,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signUp, [], {
-              #email: email,
-              #phone: phone,
-              #password: password,
-              #emailRedirectTo: emailRedirectTo,
-              #data: data,
-              #captchaToken: captchaToken,
-              #channel: channel,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signUp, [], {
-                  #email: email,
-                  #phone: phone,
-                  #password: password,
-                  #emailRedirectTo: emailRedirectTo,
-                  #data: data,
-                  #captchaToken: captchaToken,
-                  #channel: channel,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signUp, [], {
-                  #email: email,
-                  #phone: phone,
-                  #password: password,
-                  #emailRedirectTo: emailRedirectTo,
-                  #data: data,
-                  #captchaToken: captchaToken,
-                  #channel: channel,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signUp, [], {
+      #email: email,
+      #phone: phone,
+      #password: password,
+      #emailRedirectTo: emailRedirectTo,
+      #data: data,
+      #captchaToken: captchaToken,
+      #channel: channel,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signUp, [], {
+          #email: email,
+          #phone: phone,
+          #password: password,
+          #emailRedirectTo: emailRedirectTo,
+          #data: data,
+          #captchaToken: captchaToken,
+          #channel: channel,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signUp, [], {
+          #email: email,
+          #phone: phone,
+          #password: password,
+          #emailRedirectTo: emailRedirectTo,
+          #data: data,
+          #captchaToken: captchaToken,
+          #channel: channel,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<_i4.AuthResponse> signInWithPassword({
@@ -676,38 +616,36 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? phone,
     required String? password,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signInWithPassword, [], {
-              #email: email,
-              #phone: phone,
-              #password: password,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInWithPassword, [], {
-                  #email: email,
-                  #phone: phone,
-                  #password: password,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInWithPassword, [], {
-                  #email: email,
-                  #phone: phone,
-                  #password: password,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signInWithPassword, [], {
+      #email: email,
+      #phone: phone,
+      #password: password,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInWithPassword, [], {
+          #email: email,
+          #phone: phone,
+          #password: password,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInWithPassword, [], {
+          #email: email,
+          #phone: phone,
+          #password: password,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<_i4.OAuthResponse> getOAuthSignInUrl({
@@ -715,60 +653,55 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? redirectTo,
     String? scopes,
     Map<String, String>? queryParams,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#getOAuthSignInUrl, [], {
-              #provider: provider,
-              #redirectTo: redirectTo,
-              #scopes: scopes,
-              #queryParams: queryParams,
-            }),
-            returnValue: _i6.Future<_i4.OAuthResponse>.value(
-              _FakeOAuthResponse_14(
-                this,
-                Invocation.method(#getOAuthSignInUrl, [], {
-                  #provider: provider,
-                  #redirectTo: redirectTo,
-                  #scopes: scopes,
-                  #queryParams: queryParams,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.OAuthResponse>.value(
-              _FakeOAuthResponse_14(
-                this,
-                Invocation.method(#getOAuthSignInUrl, [], {
-                  #provider: provider,
-                  #redirectTo: redirectTo,
-                  #scopes: scopes,
-                  #queryParams: queryParams,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.OAuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#getOAuthSignInUrl, [], {
+      #provider: provider,
+      #redirectTo: redirectTo,
+      #scopes: scopes,
+      #queryParams: queryParams,
+    }),
+    returnValue: _i6.Future<_i4.OAuthResponse>.value(
+      _FakeOAuthResponse_14(
+        this,
+        Invocation.method(#getOAuthSignInUrl, [], {
+          #provider: provider,
+          #redirectTo: redirectTo,
+          #scopes: scopes,
+          #queryParams: queryParams,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.OAuthResponse>.value(
+      _FakeOAuthResponse_14(
+        this,
+        Invocation.method(#getOAuthSignInUrl, [], {
+          #provider: provider,
+          #redirectTo: redirectTo,
+          #scopes: scopes,
+          #queryParams: queryParams,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.OAuthResponse>);
 
   @override
   _i6.Future<_i4.AuthSessionUrlResponse> exchangeCodeForSession(
     String? authCode,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#exchangeCodeForSession, [authCode]),
-            returnValue: _i6.Future<_i4.AuthSessionUrlResponse>.value(
-              _FakeAuthSessionUrlResponse_15(
-                this,
-                Invocation.method(#exchangeCodeForSession, [authCode]),
-              ),
-            ),
-            returnValueForMissingStub:
-                _i6.Future<_i4.AuthSessionUrlResponse>.value(
-                  _FakeAuthSessionUrlResponse_15(
-                    this,
-                    Invocation.method(#exchangeCodeForSession, [authCode]),
-                  ),
-                ),
-          )
-          as _i6.Future<_i4.AuthSessionUrlResponse>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#exchangeCodeForSession, [authCode]),
+    returnValue: _i6.Future<_i4.AuthSessionUrlResponse>.value(
+      _FakeAuthSessionUrlResponse_15(
+        this,
+        Invocation.method(#exchangeCodeForSession, [authCode]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthSessionUrlResponse>.value(
+      _FakeAuthSessionUrlResponse_15(
+        this,
+        Invocation.method(#exchangeCodeForSession, [authCode]),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthSessionUrlResponse>);
 
   @override
   _i6.Future<_i4.AuthResponse> signInWithIdToken({
@@ -777,41 +710,39 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? accessToken,
     String? nonce,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signInWithIdToken, [], {
-              #provider: provider,
-              #idToken: idToken,
-              #accessToken: accessToken,
-              #nonce: nonce,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInWithIdToken, [], {
-                  #provider: provider,
-                  #idToken: idToken,
-                  #accessToken: accessToken,
-                  #nonce: nonce,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInWithIdToken, [], {
-                  #provider: provider,
-                  #idToken: idToken,
-                  #accessToken: accessToken,
-                  #nonce: nonce,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signInWithIdToken, [], {
+      #provider: provider,
+      #idToken: idToken,
+      #accessToken: accessToken,
+      #nonce: nonce,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInWithIdToken, [], {
+          #provider: provider,
+          #idToken: idToken,
+          #accessToken: accessToken,
+          #nonce: nonce,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInWithIdToken, [], {
+          #provider: provider,
+          #idToken: idToken,
+          #accessToken: accessToken,
+          #nonce: nonce,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<_i4.AuthResponse> signInWithWeb3({
@@ -819,38 +750,36 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     required String? message,
     required String? signature,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signInWithWeb3, [], {
-              #chain: chain,
-              #message: message,
-              #signature: signature,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInWithWeb3, [], {
-                  #chain: chain,
-                  #message: message,
-                  #signature: signature,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#signInWithWeb3, [], {
-                  #chain: chain,
-                  #message: message,
-                  #signature: signature,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signInWithWeb3, [], {
+      #chain: chain,
+      #message: message,
+      #signature: signature,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInWithWeb3, [], {
+          #chain: chain,
+          #message: message,
+          #signature: signature,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#signInWithWeb3, [], {
+          #chain: chain,
+          #message: message,
+          #signature: signature,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<void> signInWithOtp({
@@ -861,21 +790,19 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     Map<String, dynamic>? data,
     String? captchaToken,
     _i4.OtpChannel? channel = _i4.OtpChannel.sms,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signInWithOtp, [], {
-              #email: email,
-              #phone: phone,
-              #emailRedirectTo: emailRedirectTo,
-              #shouldCreateUser: shouldCreateUser,
-              #data: data,
-              #captchaToken: captchaToken,
-              #channel: channel,
-            }),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signInWithOtp, [], {
+      #email: email,
+      #phone: phone,
+      #emailRedirectTo: emailRedirectTo,
+      #shouldCreateUser: shouldCreateUser,
+      #data: data,
+      #captchaToken: captchaToken,
+      #channel: channel,
+    }),
+    returnValue: _i6.Future<void>.value(),
+    returnValueForMissingStub: _i6.Future<void>.value(),
+  ) as _i6.Future<void>);
 
   @override
   _i6.Future<_i4.AuthResponse> verifyOTP({
@@ -886,47 +813,45 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? redirectTo,
     String? captchaToken,
     String? tokenHash,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#verifyOTP, [], {
-              #email: email,
-              #phone: phone,
-              #token: token,
-              #type: type,
-              #redirectTo: redirectTo,
-              #captchaToken: captchaToken,
-              #tokenHash: tokenHash,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#verifyOTP, [], {
-                  #email: email,
-                  #phone: phone,
-                  #token: token,
-                  #type: type,
-                  #redirectTo: redirectTo,
-                  #captchaToken: captchaToken,
-                  #tokenHash: tokenHash,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#verifyOTP, [], {
-                  #email: email,
-                  #phone: phone,
-                  #token: token,
-                  #type: type,
-                  #redirectTo: redirectTo,
-                  #captchaToken: captchaToken,
-                  #tokenHash: tokenHash,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#verifyOTP, [], {
+      #email: email,
+      #phone: phone,
+      #token: token,
+      #type: type,
+      #redirectTo: redirectTo,
+      #captchaToken: captchaToken,
+      #tokenHash: tokenHash,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#verifyOTP, [], {
+          #email: email,
+          #phone: phone,
+          #token: token,
+          #type: type,
+          #redirectTo: redirectTo,
+          #captchaToken: captchaToken,
+          #tokenHash: tokenHash,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#verifyOTP, [], {
+          #email: email,
+          #phone: phone,
+          #token: token,
+          #type: type,
+          #redirectTo: redirectTo,
+          #captchaToken: captchaToken,
+          #tokenHash: tokenHash,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<String> getSSOSignInUrl({
@@ -934,66 +859,61 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? domain,
     String? redirectTo,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#getSSOSignInUrl, [], {
-              #providerId: providerId,
-              #domain: domain,
-              #redirectTo: redirectTo,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#getSSOSignInUrl, [], {
-                  #providerId: providerId,
-                  #domain: domain,
-                  #redirectTo: redirectTo,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#getSSOSignInUrl, [], {
-                  #providerId: providerId,
-                  #domain: domain,
-                  #redirectTo: redirectTo,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#getSSOSignInUrl, [], {
+      #providerId: providerId,
+      #domain: domain,
+      #redirectTo: redirectTo,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#getSSOSignInUrl, [], {
+          #providerId: providerId,
+          #domain: domain,
+          #redirectTo: redirectTo,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#getSSOSignInUrl, [], {
+          #providerId: providerId,
+          #domain: domain,
+          #redirectTo: redirectTo,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<_i4.AuthResponse> refreshSession([String? refreshToken]) =>
       (super.noSuchMethod(
+        Invocation.method(#refreshSession, [refreshToken]),
+        returnValue: _i6.Future<_i4.AuthResponse>.value(
+          _FakeAuthResponse_13(
+            this,
             Invocation.method(#refreshSession, [refreshToken]),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#refreshSession, [refreshToken]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#refreshSession, [refreshToken]),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+          ),
+        ),
+        returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+          _FakeAuthResponse_13(
+            this,
+            Invocation.method(#refreshSession, [refreshToken]),
+          ),
+        ),
+      ) as _i6.Future<_i4.AuthResponse>);
 
   @override
-  _i6.Future<void> reauthenticate() =>
-      (super.noSuchMethod(
-            Invocation.method(#reauthenticate, []),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+  _i6.Future<void> reauthenticate() => (super.noSuchMethod(
+    Invocation.method(#reauthenticate, []),
+    returnValue: _i6.Future<void>.value(),
+    returnValueForMissingStub: _i6.Future<void>.value(),
+  ) as _i6.Future<void>);
 
   @override
   _i6.Future<_i4.ResendResponse> resend({
@@ -1002,198 +922,175 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     required _i4.OtpType? type,
     String? emailRedirectTo,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#resend, [], {
-              #email: email,
-              #phone: phone,
-              #type: type,
-              #emailRedirectTo: emailRedirectTo,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<_i4.ResendResponse>.value(
-              _FakeResendResponse_16(
-                this,
-                Invocation.method(#resend, [], {
-                  #email: email,
-                  #phone: phone,
-                  #type: type,
-                  #emailRedirectTo: emailRedirectTo,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.ResendResponse>.value(
-              _FakeResendResponse_16(
-                this,
-                Invocation.method(#resend, [], {
-                  #email: email,
-                  #phone: phone,
-                  #type: type,
-                  #emailRedirectTo: emailRedirectTo,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.ResendResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#resend, [], {
+      #email: email,
+      #phone: phone,
+      #type: type,
+      #emailRedirectTo: emailRedirectTo,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<_i4.ResendResponse>.value(
+      _FakeResendResponse_16(
+        this,
+        Invocation.method(#resend, [], {
+          #email: email,
+          #phone: phone,
+          #type: type,
+          #emailRedirectTo: emailRedirectTo,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.ResendResponse>.value(
+      _FakeResendResponse_16(
+        this,
+        Invocation.method(#resend, [], {
+          #email: email,
+          #phone: phone,
+          #type: type,
+          #emailRedirectTo: emailRedirectTo,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.ResendResponse>);
 
   @override
-  _i6.Future<_i4.UserResponse> getUser([String? jwt]) =>
-      (super.noSuchMethod(
-            Invocation.method(#getUser, [jwt]),
-            returnValue: _i6.Future<_i4.UserResponse>.value(
-              _FakeUserResponse_17(this, Invocation.method(#getUser, [jwt])),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.UserResponse>.value(
-              _FakeUserResponse_17(this, Invocation.method(#getUser, [jwt])),
-            ),
-          )
-          as _i6.Future<_i4.UserResponse>);
+  _i6.Future<_i4.UserResponse> getUser([String? jwt]) => (super.noSuchMethod(
+    Invocation.method(#getUser, [jwt]),
+    returnValue: _i6.Future<_i4.UserResponse>.value(
+      _FakeUserResponse_17(this, Invocation.method(#getUser, [jwt])),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.UserResponse>.value(
+      _FakeUserResponse_17(this, Invocation.method(#getUser, [jwt])),
+    ),
+  ) as _i6.Future<_i4.UserResponse>);
 
   @override
   _i6.Future<_i4.UserResponse> updateUser(
     _i4.UserAttributes? attributes, {
     String? emailRedirectTo,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #updateUser,
-              [attributes],
-              {#emailRedirectTo: emailRedirectTo},
-            ),
-            returnValue: _i6.Future<_i4.UserResponse>.value(
-              _FakeUserResponse_17(
-                this,
-                Invocation.method(
-                  #updateUser,
-                  [attributes],
-                  {#emailRedirectTo: emailRedirectTo},
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.UserResponse>.value(
-              _FakeUserResponse_17(
-                this,
-                Invocation.method(
-                  #updateUser,
-                  [attributes],
-                  {#emailRedirectTo: emailRedirectTo},
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.UserResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #updateUser,
+      [attributes],
+      {#emailRedirectTo: emailRedirectTo},
+    ),
+    returnValue: _i6.Future<_i4.UserResponse>.value(
+      _FakeUserResponse_17(
+        this,
+        Invocation.method(
+          #updateUser,
+          [attributes],
+          {#emailRedirectTo: emailRedirectTo},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.UserResponse>.value(
+      _FakeUserResponse_17(
+        this,
+        Invocation.method(
+          #updateUser,
+          [attributes],
+          {#emailRedirectTo: emailRedirectTo},
+        ),
+      ),
+    ),
+  ) as _i6.Future<_i4.UserResponse>);
 
   @override
   _i6.Future<_i4.AuthResponse> setSession(
     String? refreshToken, {
     String? accessToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #setSession,
-              [refreshToken],
-              {#accessToken: accessToken},
-            ),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(
-                  #setSession,
-                  [refreshToken],
-                  {#accessToken: accessToken},
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(
-                  #setSession,
-                  [refreshToken],
-                  {#accessToken: accessToken},
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#setSession, [refreshToken], {#accessToken: accessToken}),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(
+          #setSession,
+          [refreshToken],
+          {#accessToken: accessToken},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(
+          #setSession,
+          [refreshToken],
+          {#accessToken: accessToken},
+        ),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<_i4.AuthSessionUrlResponse> getSessionFromUrl(
     Uri? originUrl, {
     bool? storeSession = true,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #getSessionFromUrl,
-              [originUrl],
-              {#storeSession: storeSession},
-            ),
-            returnValue: _i6.Future<_i4.AuthSessionUrlResponse>.value(
-              _FakeAuthSessionUrlResponse_15(
-                this,
-                Invocation.method(
-                  #getSessionFromUrl,
-                  [originUrl],
-                  {#storeSession: storeSession},
-                ),
-              ),
-            ),
-            returnValueForMissingStub:
-                _i6.Future<_i4.AuthSessionUrlResponse>.value(
-                  _FakeAuthSessionUrlResponse_15(
-                    this,
-                    Invocation.method(
-                      #getSessionFromUrl,
-                      [originUrl],
-                      {#storeSession: storeSession},
-                    ),
-                  ),
-                ),
-          )
-          as _i6.Future<_i4.AuthSessionUrlResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #getSessionFromUrl,
+      [originUrl],
+      {#storeSession: storeSession},
+    ),
+    returnValue: _i6.Future<_i4.AuthSessionUrlResponse>.value(
+      _FakeAuthSessionUrlResponse_15(
+        this,
+        Invocation.method(
+          #getSessionFromUrl,
+          [originUrl],
+          {#storeSession: storeSession},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthSessionUrlResponse>.value(
+      _FakeAuthSessionUrlResponse_15(
+        this,
+        Invocation.method(
+          #getSessionFromUrl,
+          [originUrl],
+          {#storeSession: storeSession},
+        ),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthSessionUrlResponse>);
 
   @override
   _i6.Future<void> signOut({
     _i4.SignOutScope? scope = _i4.SignOutScope.local,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#signOut, [], {#scope: scope}),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#signOut, [], {#scope: scope}),
+    returnValue: _i6.Future<void>.value(),
+    returnValueForMissingStub: _i6.Future<void>.value(),
+  ) as _i6.Future<void>);
 
   @override
   _i6.Future<void> resetPasswordForEmail(
     String? email, {
     String? redirectTo,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #resetPasswordForEmail,
-              [email],
-              {#redirectTo: redirectTo, #captchaToken: captchaToken},
-            ),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #resetPasswordForEmail,
+      [email],
+      {#redirectTo: redirectTo, #captchaToken: captchaToken},
+    ),
+    returnValue: _i6.Future<void>.value(),
+    returnValueForMissingStub: _i6.Future<void>.value(),
+  ) as _i6.Future<void>);
 
   @override
-  _i6.Future<List<_i4.UserIdentity>> getUserIdentities() =>
-      (super.noSuchMethod(
-            Invocation.method(#getUserIdentities, []),
-            returnValue: _i6.Future<List<_i4.UserIdentity>>.value(
-              <_i4.UserIdentity>[],
-            ),
-            returnValueForMissingStub: _i6.Future<List<_i4.UserIdentity>>.value(
-              <_i4.UserIdentity>[],
-            ),
-          )
-          as _i6.Future<List<_i4.UserIdentity>>);
+  _i6.Future<List<_i4.UserIdentity>> getUserIdentities() => (super.noSuchMethod(
+    Invocation.method(#getUserIdentities, []),
+    returnValue: _i6.Future<List<_i4.UserIdentity>>.value(<_i4.UserIdentity>[]),
+    returnValueForMissingStub: _i6.Future<List<_i4.UserIdentity>>.value(
+      <_i4.UserIdentity>[],
+    ),
+  ) as _i6.Future<List<_i4.UserIdentity>>);
 
   @override
   _i6.Future<_i4.AuthResponse> linkIdentityWithIdToken({
@@ -1202,41 +1099,39 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? accessToken,
     String? nonce,
     String? captchaToken,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#linkIdentityWithIdToken, [], {
-              #provider: provider,
-              #idToken: idToken,
-              #accessToken: accessToken,
-              #nonce: nonce,
-              #captchaToken: captchaToken,
-            }),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#linkIdentityWithIdToken, [], {
-                  #provider: provider,
-                  #idToken: idToken,
-                  #accessToken: accessToken,
-                  #nonce: nonce,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#linkIdentityWithIdToken, [], {
-                  #provider: provider,
-                  #idToken: idToken,
-                  #accessToken: accessToken,
-                  #nonce: nonce,
-                  #captchaToken: captchaToken,
-                }),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#linkIdentityWithIdToken, [], {
+      #provider: provider,
+      #idToken: idToken,
+      #accessToken: accessToken,
+      #nonce: nonce,
+      #captchaToken: captchaToken,
+    }),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#linkIdentityWithIdToken, [], {
+          #provider: provider,
+          #idToken: idToken,
+          #accessToken: accessToken,
+          #nonce: nonce,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(
+        this,
+        Invocation.method(#linkIdentityWithIdToken, [], {
+          #provider: provider,
+          #idToken: idToken,
+          #accessToken: accessToken,
+          #nonce: nonce,
+          #captchaToken: captchaToken,
+        }),
+      ),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   _i6.Future<_i4.OAuthResponse> getLinkIdentityUrl(
@@ -1244,84 +1139,61 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
     String? redirectTo,
     String? scopes,
     Map<String, String>? queryParams,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #getLinkIdentityUrl,
-              [provider],
-              {
-                #redirectTo: redirectTo,
-                #scopes: scopes,
-                #queryParams: queryParams,
-              },
-            ),
-            returnValue: _i6.Future<_i4.OAuthResponse>.value(
-              _FakeOAuthResponse_14(
-                this,
-                Invocation.method(
-                  #getLinkIdentityUrl,
-                  [provider],
-                  {
-                    #redirectTo: redirectTo,
-                    #scopes: scopes,
-                    #queryParams: queryParams,
-                  },
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.OAuthResponse>.value(
-              _FakeOAuthResponse_14(
-                this,
-                Invocation.method(
-                  #getLinkIdentityUrl,
-                  [provider],
-                  {
-                    #redirectTo: redirectTo,
-                    #scopes: scopes,
-                    #queryParams: queryParams,
-                  },
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.OAuthResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #getLinkIdentityUrl,
+      [provider],
+      {#redirectTo: redirectTo, #scopes: scopes, #queryParams: queryParams},
+    ),
+    returnValue: _i6.Future<_i4.OAuthResponse>.value(
+      _FakeOAuthResponse_14(
+        this,
+        Invocation.method(
+          #getLinkIdentityUrl,
+          [provider],
+          {#redirectTo: redirectTo, #scopes: scopes, #queryParams: queryParams},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.OAuthResponse>.value(
+      _FakeOAuthResponse_14(
+        this,
+        Invocation.method(
+          #getLinkIdentityUrl,
+          [provider],
+          {#redirectTo: redirectTo, #scopes: scopes, #queryParams: queryParams},
+        ),
+      ),
+    ),
+  ) as _i6.Future<_i4.OAuthResponse>);
 
   @override
   _i6.Future<void> unlinkIdentity(_i4.UserIdentity? identity) =>
       (super.noSuchMethod(
-            Invocation.method(#unlinkIdentity, [identity]),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+        Invocation.method(#unlinkIdentity, [identity]),
+        returnValue: _i6.Future<void>.value(),
+        returnValueForMissingStub: _i6.Future<void>.value(),
+      ) as _i6.Future<void>);
 
   @override
-  _i6.Future<void> setInitialSession(String? jsonStr) =>
-      (super.noSuchMethod(
-            Invocation.method(#setInitialSession, [jsonStr]),
-            returnValue: _i6.Future<void>.value(),
-            returnValueForMissingStub: _i6.Future<void>.value(),
-          )
-          as _i6.Future<void>);
+  _i6.Future<void> setInitialSession(String? jsonStr) => (super.noSuchMethod(
+    Invocation.method(#setInitialSession, [jsonStr]),
+    returnValue: _i6.Future<void>.value(),
+    returnValueForMissingStub: _i6.Future<void>.value(),
+  ) as _i6.Future<void>);
 
   @override
-  _i6.Future<_i4.AuthResponse> recoverSession(String? jsonStr) =>
-      (super.noSuchMethod(
-            Invocation.method(#recoverSession, [jsonStr]),
-            returnValue: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#recoverSession, [jsonStr]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
-              _FakeAuthResponse_13(
-                this,
-                Invocation.method(#recoverSession, [jsonStr]),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.AuthResponse>);
+  _i6.Future<_i4.AuthResponse> recoverSession(
+    String? jsonStr,
+  ) => (super.noSuchMethod(
+    Invocation.method(#recoverSession, [jsonStr]),
+    returnValue: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(this, Invocation.method(#recoverSession, [jsonStr])),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.AuthResponse>.value(
+      _FakeAuthResponse_13(this, Invocation.method(#recoverSession, [jsonStr])),
+    ),
+  ) as _i6.Future<_i4.AuthResponse>);
 
   @override
   void startAutoRefresh() => super.noSuchMethod(
@@ -1359,39 +1231,36 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
   @override
   Object notifyException(Object? exception, [StackTrace? stackTrace]) =>
       (super.noSuchMethod(
-            Invocation.method(#notifyException, [exception, stackTrace]),
-            returnValue: _FakeObject_18(
-              this,
-              Invocation.method(#notifyException, [exception, stackTrace]),
-            ),
-            returnValueForMissingStub: _FakeObject_18(
-              this,
-              Invocation.method(#notifyException, [exception, stackTrace]),
-            ),
-          )
-          as Object);
+        Invocation.method(#notifyException, [exception, stackTrace]),
+        returnValue: _FakeObject_18(
+          this,
+          Invocation.method(#notifyException, [exception, stackTrace]),
+        ),
+        returnValueForMissingStub: _FakeObject_18(
+          this,
+          Invocation.method(#notifyException, [exception, stackTrace]),
+        ),
+      ) as Object);
 
   @override
   _i6.Future<_i4.GetClaimsResponse> getClaims([
     String? jwt,
     _i4.GetClaimsOptions? options,
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#getClaims, [jwt, options]),
-            returnValue: _i6.Future<_i4.GetClaimsResponse>.value(
-              _FakeGetClaimsResponse_19(
-                this,
-                Invocation.method(#getClaims, [jwt, options]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i4.GetClaimsResponse>.value(
-              _FakeGetClaimsResponse_19(
-                this,
-                Invocation.method(#getClaims, [jwt, options]),
-              ),
-            ),
-          )
-          as _i6.Future<_i4.GetClaimsResponse>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#getClaims, [jwt, options]),
+    returnValue: _i6.Future<_i4.GetClaimsResponse>.value(
+      _FakeGetClaimsResponse_19(
+        this,
+        Invocation.method(#getClaims, [jwt, options]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i4.GetClaimsResponse>.value(
+      _FakeGetClaimsResponse_19(
+        this,
+        Invocation.method(#getClaims, [jwt, options]),
+      ),
+    ),
+  ) as _i6.Future<_i4.GetClaimsResponse>);
 }
 
 /// A class which mocks [SupabaseStorageClient].
@@ -1400,52 +1269,44 @@ class MockGoTrueClient extends _i1.Mock implements _i4.GoTrueClient {
 class MockSupabaseStorageClient extends _i1.Mock
     implements _i2.SupabaseStorageClient {
   @override
-  _i2.SupabaseVectorsClient get vectors =>
-      (super.noSuchMethod(
-            Invocation.getter(#vectors),
-            returnValue: _FakeSupabaseVectorsClient_20(
-              this,
-              Invocation.getter(#vectors),
-            ),
-            returnValueForMissingStub: _FakeSupabaseVectorsClient_20(
-              this,
-              Invocation.getter(#vectors),
-            ),
-          )
-          as _i2.SupabaseVectorsClient);
+  _i2.SupabaseVectorsClient get vectors => (super.noSuchMethod(
+    Invocation.getter(#vectors),
+    returnValue: _FakeSupabaseVectorsClient_20(
+      this,
+      Invocation.getter(#vectors),
+    ),
+    returnValueForMissingStub: _FakeSupabaseVectorsClient_20(
+      this,
+      Invocation.getter(#vectors),
+    ),
+  ) as _i2.SupabaseVectorsClient);
 
   @override
-  String get url =>
-      (super.noSuchMethod(
-            Invocation.getter(#url),
-            returnValue: _i7.dummyValue<String>(this, Invocation.getter(#url)),
-            returnValueForMissingStub: _i7.dummyValue<String>(
-              this,
-              Invocation.getter(#url),
-            ),
-          )
-          as String);
+  String get url => (super.noSuchMethod(
+    Invocation.getter(#url),
+    returnValue: _i7.dummyValue<String>(this, Invocation.getter(#url)),
+    returnValueForMissingStub: _i7.dummyValue<String>(
+      this,
+      Invocation.getter(#url),
+    ),
+  ) as String);
 
   @override
-  Map<String, String> get headers =>
-      (super.noSuchMethod(
-            Invocation.getter(#headers),
-            returnValue: <String, String>{},
-            returnValueForMissingStub: <String, String>{},
-          )
-          as Map<String, String>);
+  Map<String, String> get headers => (super.noSuchMethod(
+    Invocation.getter(#headers),
+    returnValue: <String, String>{},
+    returnValueForMissingStub: <String, String>{},
+  ) as Map<String, String>);
 
   @override
-  _i5.Fetch get storageFetch =>
-      (super.noSuchMethod(
-            Invocation.getter(#storageFetch),
-            returnValue: _FakeFetch_21(this, Invocation.getter(#storageFetch)),
-            returnValueForMissingStub: _FakeFetch_21(
-              this,
-              Invocation.getter(#storageFetch),
-            ),
-          )
-          as _i5.Fetch);
+  _i5.Fetch get storageFetch => (super.noSuchMethod(
+    Invocation.getter(#storageFetch),
+    returnValue: _FakeFetch_21(this, Invocation.getter(#storageFetch)),
+    returnValueForMissingStub: _FakeFetch_21(
+      this,
+      Invocation.getter(#storageFetch),
+    ),
+  ) as _i5.Fetch);
 
   @override
   set storageFetch(_i5.Fetch? value) => super.noSuchMethod(
@@ -1454,49 +1315,42 @@ class MockSupabaseStorageClient extends _i1.Mock
   );
 
   @override
-  _i2.StorageFileApi from(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#from, [id]),
-            returnValue: _FakeStorageFileApi_22(
-              this,
-              Invocation.method(#from, [id]),
-            ),
-            returnValueForMissingStub: _FakeStorageFileApi_22(
-              this,
-              Invocation.method(#from, [id]),
-            ),
-          )
-          as _i2.StorageFileApi);
+  _i2.StorageFileApi from(String? id) => (super.noSuchMethod(
+    Invocation.method(#from, [id]),
+    returnValue: _FakeStorageFileApi_22(this, Invocation.method(#from, [id])),
+    returnValueForMissingStub: _FakeStorageFileApi_22(
+      this,
+      Invocation.method(#from, [id]),
+    ),
+  ) as _i2.StorageFileApi);
 
   @override
   _i2.IcebergRestCatalog analyticsCatalog(
     String? bucketId, {
     List<_i2.AccessDelegation>? accessDelegation,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #analyticsCatalog,
-              [bucketId],
-              {#accessDelegation: accessDelegation},
-            ),
-            returnValue: _FakeIcebergRestCatalog_23(
-              this,
-              Invocation.method(
-                #analyticsCatalog,
-                [bucketId],
-                {#accessDelegation: accessDelegation},
-              ),
-            ),
-            returnValueForMissingStub: _FakeIcebergRestCatalog_23(
-              this,
-              Invocation.method(
-                #analyticsCatalog,
-                [bucketId],
-                {#accessDelegation: accessDelegation},
-              ),
-            ),
-          )
-          as _i2.IcebergRestCatalog);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #analyticsCatalog,
+      [bucketId],
+      {#accessDelegation: accessDelegation},
+    ),
+    returnValue: _FakeIcebergRestCatalog_23(
+      this,
+      Invocation.method(
+        #analyticsCatalog,
+        [bucketId],
+        {#accessDelegation: accessDelegation},
+      ),
+    ),
+    returnValueForMissingStub: _FakeIcebergRestCatalog_23(
+      this,
+      Invocation.method(
+        #analyticsCatalog,
+        [bucketId],
+        {#accessDelegation: accessDelegation},
+      ),
+    ),
+  ) as _i2.IcebergRestCatalog);
 
   @override
   void setAuth(String? jwt) => super.noSuchMethod(
@@ -1507,211 +1361,179 @@ class MockSupabaseStorageClient extends _i1.Mock
   @override
   _i2.SupabaseStorageClient setHeader(String? key, String? value) =>
       (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue: _FakeSupabaseStorageClient_1(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-            returnValueForMissingStub: _FakeSupabaseStorageClient_1(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-          )
-          as _i2.SupabaseStorageClient);
+        Invocation.method(#setHeader, [key, value]),
+        returnValue: _FakeSupabaseStorageClient_1(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+        returnValueForMissingStub: _FakeSupabaseStorageClient_1(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+      ) as _i2.SupabaseStorageClient);
 
   @override
   _i6.Future<List<_i2.Bucket>> listBuckets([_i2.ListBucketsOptions? options]) =>
       (super.noSuchMethod(
-            Invocation.method(#listBuckets, [options]),
-            returnValue: _i6.Future<List<_i2.Bucket>>.value(<_i2.Bucket>[]),
-            returnValueForMissingStub: _i6.Future<List<_i2.Bucket>>.value(
-              <_i2.Bucket>[],
-            ),
-          )
-          as _i6.Future<List<_i2.Bucket>>);
+        Invocation.method(#listBuckets, [options]),
+        returnValue: _i6.Future<List<_i2.Bucket>>.value(<_i2.Bucket>[]),
+        returnValueForMissingStub: _i6.Future<List<_i2.Bucket>>.value(
+          <_i2.Bucket>[],
+        ),
+      ) as _i6.Future<List<_i2.Bucket>>);
 
   @override
-  _i6.Future<_i2.Bucket> getBucket(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#getBucket, [id]),
-            returnValue: _i6.Future<_i2.Bucket>.value(
-              _FakeBucket_24(this, Invocation.method(#getBucket, [id])),
-            ),
-            returnValueForMissingStub: _i6.Future<_i2.Bucket>.value(
-              _FakeBucket_24(this, Invocation.method(#getBucket, [id])),
-            ),
-          )
-          as _i6.Future<_i2.Bucket>);
+  _i6.Future<_i2.Bucket> getBucket(String? id) => (super.noSuchMethod(
+    Invocation.method(#getBucket, [id]),
+    returnValue: _i6.Future<_i2.Bucket>.value(
+      _FakeBucket_24(this, Invocation.method(#getBucket, [id])),
+    ),
+    returnValueForMissingStub: _i6.Future<_i2.Bucket>.value(
+      _FakeBucket_24(this, Invocation.method(#getBucket, [id])),
+    ),
+  ) as _i6.Future<_i2.Bucket>);
 
   @override
   _i6.Future<String> createBucket(
     String? id, [
     _i2.BucketOptions? bucketOptions = const _i2.BucketOptions(public: false),
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#createBucket, [id, bucketOptions]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#createBucket, [id, bucketOptions]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#createBucket, [id, bucketOptions]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#createBucket, [id, bucketOptions]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#createBucket, [id, bucketOptions]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#createBucket, [id, bucketOptions]),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> updateBucket(
     String? id,
     _i2.BucketOptions? bucketOptions,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#updateBucket, [id, bucketOptions]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#updateBucket, [id, bucketOptions]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#updateBucket, [id, bucketOptions]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#updateBucket, [id, bucketOptions]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#updateBucket, [id, bucketOptions]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#updateBucket, [id, bucketOptions]),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
-  _i6.Future<String> emptyBucket(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#emptyBucket, [id]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#emptyBucket, [id]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#emptyBucket, [id]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  _i6.Future<String> emptyBucket(String? id) => (super.noSuchMethod(
+    Invocation.method(#emptyBucket, [id]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(this, Invocation.method(#emptyBucket, [id])),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(this, Invocation.method(#emptyBucket, [id])),
+    ),
+  ) as _i6.Future<String>);
 
   @override
-  _i6.Future<String> deleteBucket(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#deleteBucket, [id]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#deleteBucket, [id]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#deleteBucket, [id]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  _i6.Future<String> deleteBucket(String? id) => (super.noSuchMethod(
+    Invocation.method(#deleteBucket, [id]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(this, Invocation.method(#deleteBucket, [id])),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(this, Invocation.method(#deleteBucket, [id])),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> purgeBucketCache(
     String? id, {
     bool? transformations = false,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #purgeBucketCache,
-              [id],
-              {#transformations: transformations},
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #purgeBucketCache,
-                  [id],
-                  {#transformations: transformations},
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #purgeBucketCache,
-                  [id],
-                  {#transformations: transformations},
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #purgeBucketCache,
+      [id],
+      {#transformations: transformations},
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #purgeBucketCache,
+          [id],
+          {#transformations: transformations},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #purgeBucketCache,
+          [id],
+          {#transformations: transformations},
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<_i2.AnalyticsBucket> createAnalyticsBucket(String? id) =>
       (super.noSuchMethod(
+        Invocation.method(#createAnalyticsBucket, [id]),
+        returnValue: _i6.Future<_i2.AnalyticsBucket>.value(
+          _FakeAnalyticsBucket_25(
+            this,
             Invocation.method(#createAnalyticsBucket, [id]),
-            returnValue: _i6.Future<_i2.AnalyticsBucket>.value(
-              _FakeAnalyticsBucket_25(
-                this,
-                Invocation.method(#createAnalyticsBucket, [id]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<_i2.AnalyticsBucket>.value(
-              _FakeAnalyticsBucket_25(
-                this,
-                Invocation.method(#createAnalyticsBucket, [id]),
-              ),
-            ),
-          )
-          as _i6.Future<_i2.AnalyticsBucket>);
+          ),
+        ),
+        returnValueForMissingStub: _i6.Future<_i2.AnalyticsBucket>.value(
+          _FakeAnalyticsBucket_25(
+            this,
+            Invocation.method(#createAnalyticsBucket, [id]),
+          ),
+        ),
+      ) as _i6.Future<_i2.AnalyticsBucket>);
 
   @override
   _i6.Future<List<_i2.AnalyticsBucket>> listAnalyticsBuckets([
     _i2.ListBucketsOptions? options,
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#listAnalyticsBuckets, [options]),
-            returnValue: _i6.Future<List<_i2.AnalyticsBucket>>.value(
-              <_i2.AnalyticsBucket>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<_i2.AnalyticsBucket>>.value(
-                  <_i2.AnalyticsBucket>[],
-                ),
-          )
-          as _i6.Future<List<_i2.AnalyticsBucket>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#listAnalyticsBuckets, [options]),
+    returnValue: _i6.Future<List<_i2.AnalyticsBucket>>.value(
+      <_i2.AnalyticsBucket>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<_i2.AnalyticsBucket>>.value(
+      <_i2.AnalyticsBucket>[],
+    ),
+  ) as _i6.Future<List<_i2.AnalyticsBucket>>);
 
   @override
-  _i6.Future<String> deleteAnalyticsBucket(String? id) =>
-      (super.noSuchMethod(
-            Invocation.method(#deleteAnalyticsBucket, [id]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#deleteAnalyticsBucket, [id]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#deleteAnalyticsBucket, [id]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  _i6.Future<String> deleteAnalyticsBucket(String? id) => (super.noSuchMethod(
+    Invocation.method(#deleteAnalyticsBucket, [id]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#deleteAnalyticsBucket, [id]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#deleteAnalyticsBucket, [id]),
+      ),
+    ),
+  ) as _i6.Future<String>);
 }
 
 /// A class which mocks [StorageFileApi].
@@ -1719,40 +1541,35 @@ class MockSupabaseStorageClient extends _i1.Mock
 /// See the documentation for Mockito's code generation for more information.
 class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
   @override
-  String get url =>
-      (super.noSuchMethod(
-            Invocation.getter(#url),
-            returnValue: _i7.dummyValue<String>(this, Invocation.getter(#url)),
-            returnValueForMissingStub: _i7.dummyValue<String>(
-              this,
-              Invocation.getter(#url),
-            ),
-          )
-          as String);
+  String get url => (super.noSuchMethod(
+    Invocation.getter(#url),
+    returnValue: _i7.dummyValue<String>(this, Invocation.getter(#url)),
+    returnValueForMissingStub: _i7.dummyValue<String>(
+      this,
+      Invocation.getter(#url),
+    ),
+  ) as String);
 
   @override
-  Map<String, String> get headers =>
-      (super.noSuchMethod(
-            Invocation.getter(#headers),
-            returnValue: <String, String>{},
-            returnValueForMissingStub: <String, String>{},
-          )
-          as Map<String, String>);
+  Map<String, String> get headers => (super.noSuchMethod(
+    Invocation.getter(#headers),
+    returnValue: <String, String>{},
+    returnValueForMissingStub: <String, String>{},
+  ) as Map<String, String>);
 
   @override
   _i2.StorageFileApi setHeader(String? key, String? value) =>
       (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue: _FakeStorageFileApi_22(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-            returnValueForMissingStub: _FakeStorageFileApi_22(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-          )
-          as _i2.StorageFileApi);
+        Invocation.method(#setHeader, [key, value]),
+        returnValue: _FakeStorageFileApi_22(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+        returnValueForMissingStub: _FakeStorageFileApi_22(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+      ) as _i2.StorageFileApi);
 
   @override
   _i6.Future<String> upload(
@@ -1761,47 +1578,45 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.FileOptions? fileOptions = const _i2.FileOptions(),
     int? retryAttempts,
     _i2.StorageRetryController? retryController,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #upload,
-              [path, file],
-              {
-                #fileOptions: fileOptions,
-                #retryAttempts: retryAttempts,
-                #retryController: retryController,
-              },
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #upload,
-                  [path, file],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #upload,
-                  [path, file],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #upload,
+      [path, file],
+      {
+        #fileOptions: fileOptions,
+        #retryAttempts: retryAttempts,
+        #retryController: retryController,
+      },
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #upload,
+          [path, file],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #upload,
+          [path, file],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> uploadBinary(
@@ -1810,47 +1625,45 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.FileOptions? fileOptions = const _i2.FileOptions(),
     int? retryAttempts,
     _i2.StorageRetryController? retryController,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #uploadBinary,
-              [path, data],
-              {
-                #fileOptions: fileOptions,
-                #retryAttempts: retryAttempts,
-                #retryController: retryController,
-              },
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #uploadBinary,
-                  [path, data],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #uploadBinary,
-                  [path, data],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #uploadBinary,
+      [path, data],
+      {
+        #fileOptions: fileOptions,
+        #retryAttempts: retryAttempts,
+        #retryController: retryController,
+      },
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #uploadBinary,
+          [path, data],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #uploadBinary,
+          [path, data],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> uploadToSignedUrl(
@@ -1860,44 +1673,42 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.FileOptions? fileOptions = const _i2.FileOptions(),
     int? retryAttempts,
     _i2.StorageRetryController? retryController,
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#uploadToSignedUrl, [
-              path,
-              token,
-              file,
-              fileOptions,
-              retryAttempts,
-              retryController,
-            ]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#uploadToSignedUrl, [
-                  path,
-                  token,
-                  file,
-                  fileOptions,
-                  retryAttempts,
-                  retryController,
-                ]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#uploadToSignedUrl, [
-                  path,
-                  token,
-                  file,
-                  fileOptions,
-                  retryAttempts,
-                  retryController,
-                ]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#uploadToSignedUrl, [
+      path,
+      token,
+      file,
+      fileOptions,
+      retryAttempts,
+      retryController,
+    ]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#uploadToSignedUrl, [
+          path,
+          token,
+          file,
+          fileOptions,
+          retryAttempts,
+          retryController,
+        ]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#uploadToSignedUrl, [
+          path,
+          token,
+          file,
+          fileOptions,
+          retryAttempts,
+          retryController,
+        ]),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> uploadBinaryToSignedUrl(
@@ -1907,79 +1718,62 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.FileOptions? fileOptions = const _i2.FileOptions(),
     int? retryAttempts,
     _i2.StorageRetryController? retryController,
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#uploadBinaryToSignedUrl, [
-              path,
-              token,
-              data,
-              fileOptions,
-              retryAttempts,
-              retryController,
-            ]),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#uploadBinaryToSignedUrl, [
-                  path,
-                  token,
-                  data,
-                  fileOptions,
-                  retryAttempts,
-                  retryController,
-                ]),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(#uploadBinaryToSignedUrl, [
-                  path,
-                  token,
-                  data,
-                  fileOptions,
-                  retryAttempts,
-                  retryController,
-                ]),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#uploadBinaryToSignedUrl, [
+      path,
+      token,
+      data,
+      fileOptions,
+      retryAttempts,
+      retryController,
+    ]),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#uploadBinaryToSignedUrl, [
+          path,
+          token,
+          data,
+          fileOptions,
+          retryAttempts,
+          retryController,
+        ]),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(#uploadBinaryToSignedUrl, [
+          path,
+          token,
+          data,
+          fileOptions,
+          retryAttempts,
+          retryController,
+        ]),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<_i2.SignedUploadURLResponse> createSignedUploadUrl(
     String? path, {
     bool? upsert = false,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #createSignedUploadUrl,
-              [path],
-              {#upsert: upsert},
-            ),
-            returnValue: _i6.Future<_i2.SignedUploadURLResponse>.value(
-              _FakeSignedUploadURLResponse_26(
-                this,
-                Invocation.method(
-                  #createSignedUploadUrl,
-                  [path],
-                  {#upsert: upsert},
-                ),
-              ),
-            ),
-            returnValueForMissingStub:
-                _i6.Future<_i2.SignedUploadURLResponse>.value(
-                  _FakeSignedUploadURLResponse_26(
-                    this,
-                    Invocation.method(
-                      #createSignedUploadUrl,
-                      [path],
-                      {#upsert: upsert},
-                    ),
-                  ),
-                ),
-          )
-          as _i6.Future<_i2.SignedUploadURLResponse>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#createSignedUploadUrl, [path], {#upsert: upsert}),
+    returnValue: _i6.Future<_i2.SignedUploadURLResponse>.value(
+      _FakeSignedUploadURLResponse_26(
+        this,
+        Invocation.method(#createSignedUploadUrl, [path], {#upsert: upsert}),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i2.SignedUploadURLResponse>.value(
+      _FakeSignedUploadURLResponse_26(
+        this,
+        Invocation.method(#createSignedUploadUrl, [path], {#upsert: upsert}),
+      ),
+    ),
+  ) as _i6.Future<_i2.SignedUploadURLResponse>);
 
   @override
   _i6.Future<String> update(
@@ -1988,47 +1782,45 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.FileOptions? fileOptions = const _i2.FileOptions(),
     int? retryAttempts,
     _i2.StorageRetryController? retryController,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #update,
-              [path, file],
-              {
-                #fileOptions: fileOptions,
-                #retryAttempts: retryAttempts,
-                #retryController: retryController,
-              },
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #update,
-                  [path, file],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #update,
-                  [path, file],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #update,
+      [path, file],
+      {
+        #fileOptions: fileOptions,
+        #retryAttempts: retryAttempts,
+        #retryController: retryController,
+      },
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #update,
+          [path, file],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #update,
+          [path, file],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> updateBinary(
@@ -2037,117 +1829,111 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.FileOptions? fileOptions = const _i2.FileOptions(),
     int? retryAttempts,
     _i2.StorageRetryController? retryController,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #updateBinary,
-              [path, data],
-              {
-                #fileOptions: fileOptions,
-                #retryAttempts: retryAttempts,
-                #retryController: retryController,
-              },
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #updateBinary,
-                  [path, data],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #updateBinary,
-                  [path, data],
-                  {
-                    #fileOptions: fileOptions,
-                    #retryAttempts: retryAttempts,
-                    #retryController: retryController,
-                  },
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #updateBinary,
+      [path, data],
+      {
+        #fileOptions: fileOptions,
+        #retryAttempts: retryAttempts,
+        #retryController: retryController,
+      },
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #updateBinary,
+          [path, data],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #updateBinary,
+          [path, data],
+          {
+            #fileOptions: fileOptions,
+            #retryAttempts: retryAttempts,
+            #retryController: retryController,
+          },
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> move(
     String? fromPath,
     String? toPath, {
     String? destinationBucket,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #move,
-              [fromPath, toPath],
-              {#destinationBucket: destinationBucket},
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #move,
-                  [fromPath, toPath],
-                  {#destinationBucket: destinationBucket},
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #move,
-                  [fromPath, toPath],
-                  {#destinationBucket: destinationBucket},
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #move,
+      [fromPath, toPath],
+      {#destinationBucket: destinationBucket},
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #move,
+          [fromPath, toPath],
+          {#destinationBucket: destinationBucket},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #move,
+          [fromPath, toPath],
+          {#destinationBucket: destinationBucket},
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> copy(
     String? fromPath,
     String? toPath, {
     String? destinationBucket,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #copy,
-              [fromPath, toPath],
-              {#destinationBucket: destinationBucket},
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #copy,
-                  [fromPath, toPath],
-                  {#destinationBucket: destinationBucket},
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #copy,
-                  [fromPath, toPath],
-                  {#destinationBucket: destinationBucket},
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #copy,
+      [fromPath, toPath],
+      {#destinationBucket: destinationBucket},
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #copy,
+          [fromPath, toPath],
+          {#destinationBucket: destinationBucket},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #copy,
+          [fromPath, toPath],
+          {#destinationBucket: destinationBucket},
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<String> createSignedUrl(
@@ -2156,47 +1942,33 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.TransformOptions? transform,
     _i2.DownloadBehavior? download,
     String? cacheNonce,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #createSignedUrl,
-              [path, expiresIn],
-              {
-                #transform: transform,
-                #download: download,
-                #cacheNonce: cacheNonce,
-              },
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #createSignedUrl,
-                  [path, expiresIn],
-                  {
-                    #transform: transform,
-                    #download: download,
-                    #cacheNonce: cacheNonce,
-                  },
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #createSignedUrl,
-                  [path, expiresIn],
-                  {
-                    #transform: transform,
-                    #download: download,
-                    #cacheNonce: cacheNonce,
-                  },
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #createSignedUrl,
+      [path, expiresIn],
+      {#transform: transform, #download: download, #cacheNonce: cacheNonce},
+    ),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #createSignedUrl,
+          [path, expiresIn],
+          {#transform: transform, #download: download, #cacheNonce: cacheNonce},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #createSignedUrl,
+          [path, expiresIn],
+          {#transform: transform, #download: download, #cacheNonce: cacheNonce},
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<List<_i2.SignedUrl>> createSignedUrls(
@@ -2204,21 +1976,17 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     int? expiresIn, {
     _i2.DownloadBehavior? download,
     String? cacheNonce,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #createSignedUrls,
-              [paths, expiresIn],
-              {#download: download, #cacheNonce: cacheNonce},
-            ),
-            returnValue: _i6.Future<List<_i2.SignedUrl>>.value(
-              <_i2.SignedUrl>[],
-            ),
-            returnValueForMissingStub: _i6.Future<List<_i2.SignedUrl>>.value(
-              <_i2.SignedUrl>[],
-            ),
-          )
-          as _i6.Future<List<_i2.SignedUrl>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #createSignedUrls,
+      [paths, expiresIn],
+      {#download: download, #cacheNonce: cacheNonce},
+    ),
+    returnValue: _i6.Future<List<_i2.SignedUrl>>.value(<_i2.SignedUrl>[]),
+    returnValueForMissingStub: _i6.Future<List<_i2.SignedUrl>>.value(
+      <_i2.SignedUrl>[],
+    ),
+  ) as _i6.Future<List<_i2.SignedUrl>>);
 
   @override
   _i6.Future<List<_i2.SignedUrlResult>> createSignedUrlsResult(
@@ -2226,22 +1994,19 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     int? expiresIn, {
     _i2.DownloadBehavior? download,
     String? cacheNonce,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #createSignedUrlsResult,
-              [paths, expiresIn],
-              {#download: download, #cacheNonce: cacheNonce},
-            ),
-            returnValue: _i6.Future<List<_i2.SignedUrlResult>>.value(
-              <_i2.SignedUrlResult>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<_i2.SignedUrlResult>>.value(
-                  <_i2.SignedUrlResult>[],
-                ),
-          )
-          as _i6.Future<List<_i2.SignedUrlResult>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #createSignedUrlsResult,
+      [paths, expiresIn],
+      {#download: download, #cacheNonce: cacheNonce},
+    ),
+    returnValue: _i6.Future<List<_i2.SignedUrlResult>>.value(
+      <_i2.SignedUrlResult>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<_i2.SignedUrlResult>>.value(
+      <_i2.SignedUrlResult>[],
+    ),
+  ) as _i6.Future<List<_i2.SignedUrlResult>>);
 
   @override
   _i6.Future<_i8.Uint8List> download(
@@ -2249,23 +2014,21 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.TransformOptions? transform,
     Map<String, String>? queryParams,
     String? cacheNonce,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #download,
-              [path],
-              {
-                #transform: transform,
-                #queryParams: queryParams,
-                #cacheNonce: cacheNonce,
-              },
-            ),
-            returnValue: _i6.Future<_i8.Uint8List>.value(_i8.Uint8List(0)),
-            returnValueForMissingStub: _i6.Future<_i8.Uint8List>.value(
-              _i8.Uint8List(0),
-            ),
-          )
-          as _i6.Future<_i8.Uint8List>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #download,
+      [path],
+      {
+        #transform: transform,
+        #queryParams: queryParams,
+        #cacheNonce: cacheNonce,
+      },
+    ),
+    returnValue: _i6.Future<_i8.Uint8List>.value(_i8.Uint8List(0)),
+    returnValueForMissingStub: _i6.Future<_i8.Uint8List>.value(
+      _i8.Uint8List(0),
+    ),
+  ) as _i6.Future<_i8.Uint8List>);
 
   @override
   _i6.Stream<_i8.Uint8List> downloadStream(
@@ -2273,43 +2036,37 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.TransformOptions? transform,
     Map<String, String>? queryParams,
     String? cacheNonce,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #downloadStream,
-              [path],
-              {
-                #transform: transform,
-                #queryParams: queryParams,
-                #cacheNonce: cacheNonce,
-              },
-            ),
-            returnValue: _i6.Stream<_i8.Uint8List>.empty(),
-            returnValueForMissingStub: _i6.Stream<_i8.Uint8List>.empty(),
-          )
-          as _i6.Stream<_i8.Uint8List>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #downloadStream,
+      [path],
+      {
+        #transform: transform,
+        #queryParams: queryParams,
+        #cacheNonce: cacheNonce,
+      },
+    ),
+    returnValue: _i6.Stream<_i8.Uint8List>.empty(),
+    returnValueForMissingStub: _i6.Stream<_i8.Uint8List>.empty(),
+  ) as _i6.Stream<_i8.Uint8List>);
 
   @override
-  _i6.Future<_i2.FileObjectV2> info(String? path) =>
-      (super.noSuchMethod(
-            Invocation.method(#info, [path]),
-            returnValue: _i6.Future<_i2.FileObjectV2>.value(
-              _FakeFileObjectV2_27(this, Invocation.method(#info, [path])),
-            ),
-            returnValueForMissingStub: _i6.Future<_i2.FileObjectV2>.value(
-              _FakeFileObjectV2_27(this, Invocation.method(#info, [path])),
-            ),
-          )
-          as _i6.Future<_i2.FileObjectV2>);
+  _i6.Future<_i2.FileObjectV2> info(String? path) => (super.noSuchMethod(
+    Invocation.method(#info, [path]),
+    returnValue: _i6.Future<_i2.FileObjectV2>.value(
+      _FakeFileObjectV2_27(this, Invocation.method(#info, [path])),
+    ),
+    returnValueForMissingStub: _i6.Future<_i2.FileObjectV2>.value(
+      _FakeFileObjectV2_27(this, Invocation.method(#info, [path])),
+    ),
+  ) as _i6.Future<_i2.FileObjectV2>);
 
   @override
-  _i6.Future<bool> exists(String? path) =>
-      (super.noSuchMethod(
-            Invocation.method(#exists, [path]),
-            returnValue: _i6.Future<bool>.value(false),
-            returnValueForMissingStub: _i6.Future<bool>.value(false),
-          )
-          as _i6.Future<bool>);
+  _i6.Future<bool> exists(String? path) => (super.noSuchMethod(
+    Invocation.method(#exists, [path]),
+    returnValue: _i6.Future<bool>.value(false),
+    returnValueForMissingStub: _i6.Future<bool>.value(false),
+  ) as _i6.Future<bool>);
 
   @override
   String getPublicUrl(
@@ -2317,131 +2074,98 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
     _i2.TransformOptions? transform,
     _i2.DownloadBehavior? download,
     String? cacheNonce,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #getPublicUrl,
-              [path],
-              {
-                #transform: transform,
-                #download: download,
-                #cacheNonce: cacheNonce,
-              },
-            ),
-            returnValue: _i7.dummyValue<String>(
-              this,
-              Invocation.method(
-                #getPublicUrl,
-                [path],
-                {
-                  #transform: transform,
-                  #download: download,
-                  #cacheNonce: cacheNonce,
-                },
-              ),
-            ),
-            returnValueForMissingStub: _i7.dummyValue<String>(
-              this,
-              Invocation.method(
-                #getPublicUrl,
-                [path],
-                {
-                  #transform: transform,
-                  #download: download,
-                  #cacheNonce: cacheNonce,
-                },
-              ),
-            ),
-          )
-          as String);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #getPublicUrl,
+      [path],
+      {#transform: transform, #download: download, #cacheNonce: cacheNonce},
+    ),
+    returnValue: _i7.dummyValue<String>(
+      this,
+      Invocation.method(
+        #getPublicUrl,
+        [path],
+        {#transform: transform, #download: download, #cacheNonce: cacheNonce},
+      ),
+    ),
+    returnValueForMissingStub: _i7.dummyValue<String>(
+      this,
+      Invocation.method(
+        #getPublicUrl,
+        [path],
+        {#transform: transform, #download: download, #cacheNonce: cacheNonce},
+      ),
+    ),
+  ) as String);
 
   @override
   _i6.Future<List<_i2.FileObject>> remove(List<String>? paths) =>
       (super.noSuchMethod(
-            Invocation.method(#remove, [paths]),
-            returnValue: _i6.Future<List<_i2.FileObject>>.value(
-              <_i2.FileObject>[],
-            ),
-            returnValueForMissingStub: _i6.Future<List<_i2.FileObject>>.value(
-              <_i2.FileObject>[],
-            ),
-          )
-          as _i6.Future<List<_i2.FileObject>>);
+        Invocation.method(#remove, [paths]),
+        returnValue: _i6.Future<List<_i2.FileObject>>.value(<_i2.FileObject>[]),
+        returnValueForMissingStub: _i6.Future<List<_i2.FileObject>>.value(
+          <_i2.FileObject>[],
+        ),
+      ) as _i6.Future<List<_i2.FileObject>>);
 
   @override
   _i6.Future<String> purgeCache(
     String? path, {
     bool? transformations = false,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #purgeCache,
-              [path],
-              {#transformations: transformations},
-            ),
-            returnValue: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #purgeCache,
-                  [path],
-                  {#transformations: transformations},
-                ),
-              ),
-            ),
-            returnValueForMissingStub: _i6.Future<String>.value(
-              _i7.dummyValue<String>(
-                this,
-                Invocation.method(
-                  #purgeCache,
-                  [path],
-                  {#transformations: transformations},
-                ),
-              ),
-            ),
-          )
-          as _i6.Future<String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#purgeCache, [path], {#transformations: transformations}),
+    returnValue: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #purgeCache,
+          [path],
+          {#transformations: transformations},
+        ),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<String>.value(
+      _i7.dummyValue<String>(
+        this,
+        Invocation.method(
+          #purgeCache,
+          [path],
+          {#transformations: transformations},
+        ),
+      ),
+    ),
+  ) as _i6.Future<String>);
 
   @override
   _i6.Future<List<_i2.FileObject>> list({
     String? path,
     _i2.SearchOptions? searchOptions = const _i2.SearchOptions(),
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#list, [], {
-              #path: path,
-              #searchOptions: searchOptions,
-            }),
-            returnValue: _i6.Future<List<_i2.FileObject>>.value(
-              <_i2.FileObject>[],
-            ),
-            returnValueForMissingStub: _i6.Future<List<_i2.FileObject>>.value(
-              <_i2.FileObject>[],
-            ),
-          )
-          as _i6.Future<List<_i2.FileObject>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#list, [], {#path: path, #searchOptions: searchOptions}),
+    returnValue: _i6.Future<List<_i2.FileObject>>.value(<_i2.FileObject>[]),
+    returnValueForMissingStub: _i6.Future<List<_i2.FileObject>>.value(
+      <_i2.FileObject>[],
+    ),
+  ) as _i6.Future<List<_i2.FileObject>>);
 
   @override
   _i6.Future<_i2.PaginatedListResult> listPaginated({
     _i2.PaginatedSearchOptions? options = const _i2.PaginatedSearchOptions(),
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#listPaginated, [], {#options: options}),
-            returnValue: _i6.Future<_i2.PaginatedListResult>.value(
-              _FakePaginatedListResult_28(
-                this,
-                Invocation.method(#listPaginated, [], {#options: options}),
-              ),
-            ),
-            returnValueForMissingStub:
-                _i6.Future<_i2.PaginatedListResult>.value(
-                  _FakePaginatedListResult_28(
-                    this,
-                    Invocation.method(#listPaginated, [], {#options: options}),
-                  ),
-                ),
-          )
-          as _i6.Future<_i2.PaginatedListResult>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#listPaginated, [], {#options: options}),
+    returnValue: _i6.Future<_i2.PaginatedListResult>.value(
+      _FakePaginatedListResult_28(
+        this,
+        Invocation.method(#listPaginated, [], {#options: options}),
+      ),
+    ),
+    returnValueForMissingStub: _i6.Future<_i2.PaginatedListResult>.value(
+      _FakePaginatedListResult_28(
+        this,
+        Invocation.method(#listPaginated, [], {#options: options}),
+      ),
+    ),
+  ) as _i6.Future<_i2.PaginatedListResult>);
 }
 
 /// A class which mocks [SupabaseQuerySchema].
@@ -2450,53 +2174,47 @@ class MockStorageFileApi extends _i1.Mock implements _i2.StorageFileApi {
 class MockSupabaseQuerySchema extends _i1.Mock
     implements _i2.SupabaseQuerySchema {
   @override
-  _i2.SupabaseQueryBuilder from(String? table) =>
-      (super.noSuchMethod(
-            Invocation.method(#from, [table]),
-            returnValue: _FakeSupabaseQueryBuilder_5(
-              this,
-              Invocation.method(#from, [table]),
-            ),
-            returnValueForMissingStub: _FakeSupabaseQueryBuilder_5(
-              this,
-              Invocation.method(#from, [table]),
-            ),
-          )
-          as _i2.SupabaseQueryBuilder);
+  _i2.SupabaseQueryBuilder from(String? table) => (super.noSuchMethod(
+    Invocation.method(#from, [table]),
+    returnValue: _FakeSupabaseQueryBuilder_5(
+      this,
+      Invocation.method(#from, [table]),
+    ),
+    returnValueForMissingStub: _FakeSupabaseQueryBuilder_5(
+      this,
+      Invocation.method(#from, [table]),
+    ),
+  ) as _i2.SupabaseQueryBuilder);
 
   @override
   _i3.PostgrestFilterBuilder<T> rpc<T>(
     String? fn, {
     Map<String, dynamic>? params,
     bool? get = false,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#rpc, [fn], {#params: params, #get: get}),
-            returnValue: _FakePostgrestFilterBuilder_7<T>(
-              this,
-              Invocation.method(#rpc, [fn], {#params: params, #get: get}),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<T>(
-              this,
-              Invocation.method(#rpc, [fn], {#params: params, #get: get}),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<T>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#rpc, [fn], {#params: params, #get: get}),
+    returnValue: _FakePostgrestFilterBuilder_7<T>(
+      this,
+      Invocation.method(#rpc, [fn], {#params: params, #get: get}),
+    ),
+    returnValueForMissingStub: _FakePostgrestFilterBuilder_7<T>(
+      this,
+      Invocation.method(#rpc, [fn], {#params: params, #get: get}),
+    ),
+  ) as _i3.PostgrestFilterBuilder<T>);
 
   @override
-  _i2.SupabaseQuerySchema schema(String? schema) =>
-      (super.noSuchMethod(
-            Invocation.method(#schema, [schema]),
-            returnValue: _FakeSupabaseQuerySchema_6(
-              this,
-              Invocation.method(#schema, [schema]),
-            ),
-            returnValueForMissingStub: _FakeSupabaseQuerySchema_6(
-              this,
-              Invocation.method(#schema, [schema]),
-            ),
-          )
-          as _i2.SupabaseQuerySchema);
+  _i2.SupabaseQuerySchema schema(String? schema) => (super.noSuchMethod(
+    Invocation.method(#schema, [schema]),
+    returnValue: _FakeSupabaseQuerySchema_6(
+      this,
+      Invocation.method(#schema, [schema]),
+    ),
+    returnValueForMissingStub: _FakeSupabaseQuerySchema_6(
+      this,
+      Invocation.method(#schema, [schema]),
+    ),
+  ) as _i2.SupabaseQuerySchema);
 }
 
 /// A class which mocks [SupabaseQueryBuilder].
@@ -2508,77 +2226,58 @@ class MockSupabaseQueryBuilder extends _i1.Mock
   _i2.SupabaseStreamFilterBuilder stream({
     required List<String>? primaryKey,
     bool? private = false,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#stream, [], {
-              #primaryKey: primaryKey,
-              #private: private,
-            }),
-            returnValue: _FakeSupabaseStreamFilterBuilder_29(
-              this,
-              Invocation.method(#stream, [], {
-                #primaryKey: primaryKey,
-                #private: private,
-              }),
-            ),
-            returnValueForMissingStub: _FakeSupabaseStreamFilterBuilder_29(
-              this,
-              Invocation.method(#stream, [], {
-                #primaryKey: primaryKey,
-                #private: private,
-              }),
-            ),
-          )
-          as _i2.SupabaseStreamFilterBuilder);
+  }) => (super.noSuchMethod(
+    Invocation.method(#stream, [], {
+      #primaryKey: primaryKey,
+      #private: private,
+    }),
+    returnValue: _FakeSupabaseStreamFilterBuilder_29(
+      this,
+      Invocation.method(#stream, [], {
+        #primaryKey: primaryKey,
+        #private: private,
+      }),
+    ),
+    returnValueForMissingStub: _FakeSupabaseStreamFilterBuilder_29(
+      this,
+      Invocation.method(#stream, [], {
+        #primaryKey: primaryKey,
+        #private: private,
+      }),
+    ),
+  ) as _i2.SupabaseStreamFilterBuilder);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> select([
     String? columns = '*',
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#select, [columns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#select, [columns]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#select, [columns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#select, [columns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<dynamic> insert(
     Object? values, {
     bool? defaultToNull = true,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #insert,
-              [values],
-              {#defaultToNull: defaultToNull},
-            ),
-            returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(
-                #insert,
-                [values],
-                {#defaultToNull: defaultToNull},
-              ),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(
-                #insert,
-                [values],
-                {#defaultToNull: defaultToNull},
-              ),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<dynamic>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#insert, [values], {#defaultToNull: defaultToNull}),
+    returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
+      this,
+      Invocation.method(#insert, [values], {#defaultToNull: defaultToNull}),
+    ),
+    returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
+      this,
+      Invocation.method(#insert, [values], {#defaultToNull: defaultToNull}),
+    ),
+  ) as _i3.PostgrestFilterBuilder<dynamic>);
 
   @override
   _i3.PostgrestFilterBuilder<dynamic> upsert(
@@ -2586,277 +2285,252 @@ class MockSupabaseQueryBuilder extends _i1.Mock
     String? onConflict,
     bool? ignoreDuplicates = false,
     bool? defaultToNull = true,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #upsert,
-              [values],
-              {
-                #onConflict: onConflict,
-                #ignoreDuplicates: ignoreDuplicates,
-                #defaultToNull: defaultToNull,
-              },
-            ),
-            returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(
-                #upsert,
-                [values],
-                {
-                  #onConflict: onConflict,
-                  #ignoreDuplicates: ignoreDuplicates,
-                  #defaultToNull: defaultToNull,
-                },
-              ),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(
-                #upsert,
-                [values],
-                {
-                  #onConflict: onConflict,
-                  #ignoreDuplicates: ignoreDuplicates,
-                  #defaultToNull: defaultToNull,
-                },
-              ),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<dynamic>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #upsert,
+      [values],
+      {
+        #onConflict: onConflict,
+        #ignoreDuplicates: ignoreDuplicates,
+        #defaultToNull: defaultToNull,
+      },
+    ),
+    returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
+      this,
+      Invocation.method(
+        #upsert,
+        [values],
+        {
+          #onConflict: onConflict,
+          #ignoreDuplicates: ignoreDuplicates,
+          #defaultToNull: defaultToNull,
+        },
+      ),
+    ),
+    returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
+      this,
+      Invocation.method(
+        #upsert,
+        [values],
+        {
+          #onConflict: onConflict,
+          #ignoreDuplicates: ignoreDuplicates,
+          #defaultToNull: defaultToNull,
+        },
+      ),
+    ),
+  ) as _i3.PostgrestFilterBuilder<dynamic>);
 
   @override
   _i3.PostgrestFilterBuilder<dynamic> update(Map<dynamic, dynamic>? values) =>
       (super.noSuchMethod(
-            Invocation.method(#update, [values]),
-            returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(#update, [values]),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(#update, [values]),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<dynamic>);
+        Invocation.method(#update, [values]),
+        returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
+          this,
+          Invocation.method(#update, [values]),
+        ),
+        returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
+          this,
+          Invocation.method(#update, [values]),
+        ),
+      ) as _i3.PostgrestFilterBuilder<dynamic>);
 
   @override
-  _i3.PostgrestFilterBuilder<dynamic> delete() =>
-      (super.noSuchMethod(
-            Invocation.method(#delete, []),
-            returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(#delete, []),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
-              this,
-              Invocation.method(#delete, []),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<dynamic>);
+  _i3.PostgrestFilterBuilder<dynamic> delete() => (super.noSuchMethod(
+    Invocation.method(#delete, []),
+    returnValue: _FakePostgrestFilterBuilder_7<dynamic>(
+      this,
+      Invocation.method(#delete, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestFilterBuilder_7<dynamic>(
+      this,
+      Invocation.method(#delete, []),
+    ),
+  ) as _i3.PostgrestFilterBuilder<dynamic>);
 
   @override
   _i3.PostgrestFilterBuilder<int> count([
     _i3.CountOption? option = _i3.CountOption.exact,
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#count, [option]),
-            returnValue: _FakePostgrestFilterBuilder_7<int>(
-              this,
-              Invocation.method(#count, [option]),
-            ),
-            returnValueForMissingStub: _FakePostgrestFilterBuilder_7<int>(
-              this,
-              Invocation.method(#count, [option]),
-            ),
-          )
-          as _i3.PostgrestFilterBuilder<int>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#count, [option]),
+    returnValue: _FakePostgrestFilterBuilder_7<int>(
+      this,
+      Invocation.method(#count, [option]),
+    ),
+    returnValueForMissingStub: _FakePostgrestFilterBuilder_7<int>(
+      this,
+      Invocation.method(#count, [option]),
+    ),
+  ) as _i3.PostgrestFilterBuilder<int>);
 
   @override
   _i3.PostgrestQueryBuilder<dynamic> retry({
     bool? enabled = true,
     int? count,
     Duration? requestTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#retry, [], {
-              #enabled: enabled,
-              #count: count,
-              #requestTimeout: requestTimeout,
-            }),
-            returnValue: _FakePostgrestQueryBuilder_30<dynamic>(
-              this,
-              Invocation.method(#retry, [], {
-                #enabled: enabled,
-                #count: count,
-                #requestTimeout: requestTimeout,
-              }),
-            ),
-            returnValueForMissingStub: _FakePostgrestQueryBuilder_30<dynamic>(
-              this,
-              Invocation.method(#retry, [], {
-                #enabled: enabled,
-                #count: count,
-                #requestTimeout: requestTimeout,
-              }),
-            ),
-          )
-          as _i3.PostgrestQueryBuilder<dynamic>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#retry, [], {
+      #enabled: enabled,
+      #count: count,
+      #requestTimeout: requestTimeout,
+    }),
+    returnValue: _FakePostgrestQueryBuilder_30<dynamic>(
+      this,
+      Invocation.method(#retry, [], {
+        #enabled: enabled,
+        #count: count,
+        #requestTimeout: requestTimeout,
+      }),
+    ),
+    returnValueForMissingStub: _FakePostgrestQueryBuilder_30<dynamic>(
+      this,
+      Invocation.method(#retry, [], {
+        #enabled: enabled,
+        #count: count,
+        #requestTimeout: requestTimeout,
+      }),
+    ),
+  ) as _i3.PostgrestQueryBuilder<dynamic>);
 
   @override
   _i3.PostgrestQueryBuilder<dynamic> setHeader(String? key, String? value) =>
       (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue: _FakePostgrestQueryBuilder_30<dynamic>(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-            returnValueForMissingStub: _FakePostgrestQueryBuilder_30<dynamic>(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-          )
-          as _i3.PostgrestQueryBuilder<dynamic>);
+        Invocation.method(#setHeader, [key, value]),
+        returnValue: _FakePostgrestQueryBuilder_30<dynamic>(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+        returnValueForMissingStub: _FakePostgrestQueryBuilder_30<dynamic>(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+      ) as _i3.PostgrestQueryBuilder<dynamic>);
 
   @override
   _i3.PostgrestBuilder<U, U, dynamic> withConverter<U>(
     _i3.PostgrestConverter<U, dynamic>? converter,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#withConverter, [converter]),
-            returnValue: _FakePostgrestBuilder_31<U, U, dynamic>(
-              this,
-              Invocation.method(#withConverter, [converter]),
-            ),
-            returnValueForMissingStub: _FakePostgrestBuilder_31<U, U, dynamic>(
-              this,
-              Invocation.method(#withConverter, [converter]),
-            ),
-          )
-          as _i3.PostgrestBuilder<U, U, dynamic>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#withConverter, [converter]),
+    returnValue: _FakePostgrestBuilder_31<U, U, dynamic>(
+      this,
+      Invocation.method(#withConverter, [converter]),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<U, U, dynamic>(
+      this,
+      Invocation.method(#withConverter, [converter]),
+    ),
+  ) as _i3.PostgrestBuilder<U, U, dynamic>);
 
   @override
   _i3.PostgrestBuilder<dynamic, dynamic, dynamic> abortSignal(
     _i6.Future<void>? abortSignal,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#abortSignal, [abortSignal]),
-            returnValue: _FakePostgrestBuilder_31<dynamic, dynamic, dynamic>(
-              this,
-              Invocation.method(#abortSignal, [abortSignal]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<dynamic, dynamic, dynamic>(
-                  this,
-                  Invocation.method(#abortSignal, [abortSignal]),
-                ),
-          )
-          as _i3.PostgrestBuilder<dynamic, dynamic, dynamic>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#abortSignal, [abortSignal]),
+    returnValue: _FakePostgrestBuilder_31<dynamic, dynamic, dynamic>(
+      this,
+      Invocation.method(#abortSignal, [abortSignal]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestBuilder_31<dynamic, dynamic, dynamic>(
+          this,
+          Invocation.method(#abortSignal, [abortSignal]),
+        ),
+  ) as _i3.PostgrestBuilder<dynamic, dynamic, dynamic>);
 
   @override
   Uri appendSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#appendSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#appendSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
   Uri overrideSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#overrideSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#overrideSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
-  _i6.Stream<dynamic> asStream() =>
-      (super.noSuchMethod(
-            Invocation.method(#asStream, []),
-            returnValue: _i6.Stream<dynamic>.empty(),
-            returnValueForMissingStub: _i6.Stream<dynamic>.empty(),
-          )
-          as _i6.Stream<dynamic>);
+  _i6.Stream<dynamic> asStream() => (super.noSuchMethod(
+    Invocation.method(#asStream, []),
+    returnValue: _i6.Stream<dynamic>.empty(),
+    returnValueForMissingStub: _i6.Stream<dynamic>.empty(),
+  ) as _i6.Stream<dynamic>);
 
   @override
   _i6.Future<dynamic> catchError(
     Function? onError, {
     bool Function(Object)? test,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#catchError, [onError], {#test: test}),
-            returnValue: _i6.Future<dynamic>.value(),
-            returnValueForMissingStub: _i6.Future<dynamic>.value(),
-          )
-          as _i6.Future<dynamic>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#catchError, [onError], {#test: test}),
+    returnValue: _i6.Future<dynamic>.value(),
+    returnValueForMissingStub: _i6.Future<dynamic>.value(),
+  ) as _i6.Future<dynamic>);
 
   @override
   _i6.Future<U> then<U>(
     _i6.FutureOr<U> Function(dynamic)? onValue, {
     Function? onError,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#then, [onValue], {#onError: onError}),
+    returnValue:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
             Invocation.method(#then, [onValue], {#onError: onError}),
-            returnValue:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-            returnValueForMissingStub:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-          )
-          as _i6.Future<U>);
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+    returnValueForMissingStub:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
+            Invocation.method(#then, [onValue], {#onError: onError}),
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+  ) as _i6.Future<U>);
 
   @override
   _i6.Future<dynamic> timeout(
     Duration? timeLimit, {
     _i6.FutureOr<dynamic> Function()? onTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
-            returnValue: _i6.Future<dynamic>.value(),
-            returnValueForMissingStub: _i6.Future<dynamic>.value(),
-          )
-          as _i6.Future<dynamic>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+    returnValue: _i6.Future<dynamic>.value(),
+    returnValueForMissingStub: _i6.Future<dynamic>.value(),
+  ) as _i6.Future<dynamic>);
 
   @override
   _i6.Future<dynamic> whenComplete(_i6.FutureOr<void> Function()? action) =>
       (super.noSuchMethod(
-            Invocation.method(#whenComplete, [action]),
-            returnValue: _i6.Future<dynamic>.value(),
-            returnValueForMissingStub: _i6.Future<dynamic>.value(),
-          )
-          as _i6.Future<dynamic>);
+        Invocation.method(#whenComplete, [action]),
+        returnValue: _i6.Future<dynamic>.value(),
+        returnValueForMissingStub: _i6.Future<dynamic>.value(),
+      ) as _i6.Future<dynamic>);
 }
 
 /// A class which mocks [PostgrestFilterBuilder].
@@ -2867,514 +2541,431 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> copyWithUrl(
     Uri? url,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#copyWithUrl, [url]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#copyWithUrl, [url]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#copyWithUrl, [url]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#copyWithUrl, [url]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> not(
     String? column,
     String? operator,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#not, [column, operator, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#not, [column, operator, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#not, [column, operator, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#not, [column, operator, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#not, [column, operator, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#not, [column, operator, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> or(
     String? filters, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #or,
-              [filters],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #or,
-                    [filters],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #or,
-                    [filters],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#or, [filters], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#or, [filters], {#referencedTable: referencedTable}),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #or,
+            [filters],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> eq(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#eq, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#eq, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#eq, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#eq, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#eq, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#eq, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> neq(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#neq, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#neq, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#neq, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#neq, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#neq, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#neq, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> gt(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#gt, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#gt, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#gt, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#gt, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#gt, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#gt, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> gte(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#gte, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#gte, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#gte, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#gte, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#gte, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#gte, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> lt(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#lt, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#lt, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#lt, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#lt, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#lt, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#lt, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> lte(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#lte, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#lte, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#lte, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#lte, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#lte, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#lte, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> like(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#like, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#like, [column, pattern]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#like, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#like, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#like, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#like, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> likeAllOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#likeAllOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#likeAllOf, [column, patterns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#likeAllOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#likeAllOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#likeAllOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#likeAllOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> likeAnyOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#likeAnyOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#likeAnyOf, [column, patterns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#likeAnyOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#likeAnyOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#likeAnyOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#likeAnyOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> ilike(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#ilike, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#ilike, [column, pattern]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#ilike, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#ilike, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#ilike, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#ilike, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> ilikeAllOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#ilikeAllOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#ilikeAllOf, [column, patterns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#ilikeAllOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#ilikeAllOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#ilikeAllOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#ilikeAllOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> ilikeAnyOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#ilikeAnyOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#ilikeAnyOf, [column, patterns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#ilikeAnyOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#ilikeAnyOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#ilikeAnyOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#ilikeAnyOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> isFilter(
     String? column,
     bool? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#isFilter, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#isFilter, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#isFilter, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#isFilter, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#isFilter, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#isFilter, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> inFilter(
     String? column,
     List<dynamic>? values,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#inFilter, [column, values]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#inFilter, [column, values]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#inFilter, [column, values]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#inFilter, [column, values]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#inFilter, [column, values]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#inFilter, [column, values]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> contains(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#contains, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#contains, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#contains, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#contains, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#contains, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#contains, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> containedBy(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#containedBy, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#containedBy, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#containedBy, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#containedBy, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#containedBy, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#containedBy, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> rangeLt(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeLt, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeLt, [column, range]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeLt, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeLt, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#rangeLt, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#rangeLt, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> rangeGt(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeGt, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeGt, [column, range]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeGt, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeGt, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#rangeGt, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#rangeGt, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> rangeGte(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeGte, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeGte, [column, range]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeGte, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeGte, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#rangeGte, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#rangeGte, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> rangeLte(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeLte, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeLte, [column, range]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeLte, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeLte, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#rangeLte, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#rangeLte, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> rangeAdjacent(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeAdjacent, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeAdjacent, [column, range]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#rangeAdjacent, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeAdjacent, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#rangeAdjacent, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#rangeAdjacent, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> overlaps(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#overlaps, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#overlaps, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#overlaps, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#overlaps, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#overlaps, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#overlaps, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> textSearch(
@@ -3382,205 +2973,178 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
     String? query, {
     String? config,
     _i3.TextSearchType? type,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #textSearch,
-              [column, query],
-              {#config: config, #type: type},
-            ),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #textSearch,
-                    [column, query],
-                    {#config: config, #type: type},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #textSearch,
-                    [column, query],
-                    {#config: config, #type: type},
-                  ),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #textSearch,
+      [column, query],
+      {#config: config, #type: type},
+    ),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(
+        #textSearch,
+        [column, query],
+        {#config: config, #type: type},
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #textSearch,
+            [column, query],
+            {#config: config, #type: type},
+          ),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> filter(
     String? column,
     String? operator,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#filter, [column, operator, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#filter, [column, operator, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#filter, [column, operator, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#filter, [column, operator, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#filter, [column, operator, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#filter, [column, operator, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> match(
     Map<String, Object>? query,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#match, [query]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#match, [query]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#match, [query]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#match, [query]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#match, [query]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#match, [query]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> matchRegex(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#matchRegex, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#matchRegex, [column, pattern]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#matchRegex, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#matchRegex, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#matchRegex, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#matchRegex, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> imatchRegex(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#imatchRegex, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#imatchRegex, [column, pattern]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#imatchRegex, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#imatchRegex, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#imatchRegex, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#imatchRegex, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> isDistinct(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#isDistinct, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#isDistinct, [column, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#isDistinct, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#isDistinct, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#isDistinct, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#isDistinct, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> retry({
     bool? enabled = true,
     int? count,
     Duration? requestTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#retry, [], {
-              #enabled: enabled,
-              #count: count,
-              #requestTimeout: requestTimeout,
-            }),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#retry, [], {
+      #enabled: enabled,
+      #count: count,
+      #requestTimeout: requestTimeout,
+    }),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#retry, [], {
+        #enabled: enabled,
+        #count: count,
+        #requestTimeout: requestTimeout,
+      }),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#retry, [], {
+            #enabled: enabled,
+            #count: count,
+            #requestTimeout: requestTimeout,
+          }),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>> setHeader(
     String? key,
     String? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#setHeader, [key, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#setHeader, [key, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> select([
     String? columns = '*',
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#select, [columns]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#select, [columns]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#select, [columns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#select, [columns]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> order(
@@ -3588,194 +3152,164 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
     bool? ascending = false,
     bool? nullsFirst = false,
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #order,
-              [column],
-              {
-                #ascending: ascending,
-                #nullsFirst: nullsFirst,
-                #referencedTable: referencedTable,
-              },
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #order,
+      [column],
+      {
+        #ascending: ascending,
+        #nullsFirst: nullsFirst,
+        #referencedTable: referencedTable,
+      },
+    ),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(
+        #order,
+        [column],
+        {
+          #ascending: ascending,
+          #nullsFirst: nullsFirst,
+          #referencedTable: referencedTable,
+        },
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #order,
+            [column],
+            {
+              #ascending: ascending,
+              #nullsFirst: nullsFirst,
+              #referencedTable: referencedTable,
+            },
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> limit(
     int? count, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #limit,
-              [count],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #limit,
+            [count],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> range(
     int? from,
     int? to, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #range,
-              [from, to],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#range, [from, to], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(
+        #range,
+        [from, to],
+        {#referencedTable: referencedTable},
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #range,
+            [from, to],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> single() =>
       (super.noSuchMethod(
-            Invocation.method(#single, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#single, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#single, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#single, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>?> maybeSingle() =>
       (super.noSuchMethod(
-            Invocation.method(#maybeSingle, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
+        Invocation.method(#maybeSingle, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+          this,
+          Invocation.method(#maybeSingle, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+              this,
+              Invocation.method(#maybeSingle, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> stripNulls() =>
       (super.noSuchMethod(
-            Invocation.method(#stripNulls, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+        Invocation.method(#stripNulls, []),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#stripNulls, []),
+            ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#stripNulls, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> dryRun() =>
       (super.noSuchMethod(
-            Invocation.method(#dryRun, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+        Invocation.method(#dryRun, []),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#dryRun, []),
+            ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#dryRun, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
-  _i3.PostgrestTransformBuilder<String> csv() =>
-      (super.noSuchMethod(
-            Invocation.method(#csv, []),
-            returnValue: _FakePostgrestTransformBuilder_34<String>(
-              this,
-              Invocation.method(#csv, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<String>(
-                  this,
-                  Invocation.method(#csv, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<String>);
+  _i3.PostgrestTransformBuilder<String> csv() => (super.noSuchMethod(
+    Invocation.method(#csv, []),
+    returnValue: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+  ) as _i3.PostgrestTransformBuilder<String>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -3785,41 +3319,37 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
   >
   count([_i3.CountOption? count = _i3.CountOption.exact]) =>
       (super.noSuchMethod(
-            Invocation.method(#count, [count]),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#count, [count])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#count, [count])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-            List<Map<String, dynamic>>,
-            List<Map<String, dynamic>>
-          >);
+        Invocation.method(#count, [count]),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#count, [count])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#count, [count])),
+      ) as _i3.ResponsePostgrestBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+        List<Map<String, dynamic>>,
+        List<Map<String, dynamic>>
+      >);
 
   @override
-  _i3.PostgrestBuilder<void, void, void> head() =>
-      (super.noSuchMethod(
-            Invocation.method(#head, []),
-            returnValue: _FakePostgrestBuilder_31<void, void, void>(
-              this,
-              Invocation.method(#head, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<void, void, void>(
-                  this,
-                  Invocation.method(#head, []),
-                ),
-          )
-          as _i3.PostgrestBuilder<void, void, void>);
+  _i3.PostgrestBuilder<void, void, void> head() => (super.noSuchMethod(
+    Invocation.method(#head, []),
+    returnValue: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+  ) as _i3.PostgrestBuilder<void, void, void>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -3829,44 +3359,40 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
   >
   geojson() =>
       (super.noSuchMethod(
-            Invocation.method(#geojson, []),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#geojson, []),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+      ) as _i3.ResponsePostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> maxAffected(
     int? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#maxAffected, [value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#maxAffected, [value]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#maxAffected, [value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#maxAffected, [value]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestBuilder<String, String, String> explain({
@@ -3876,60 +3402,54 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
     bool? buffers = false,
     bool? wal = false,
     _i3.ExplainFormat? format = _i3.ExplainFormat.text,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#explain, [], {
-              #analyze: analyze,
-              #verbose: verbose,
-              #settings: settings,
-              #buffers: buffers,
-              #wal: wal,
-              #format: format,
-            }),
-            returnValue: _FakePostgrestBuilder_31<String, String, String>(
-              this,
-              Invocation.method(#explain, [], {
-                #analyze: analyze,
-                #verbose: verbose,
-                #settings: settings,
-                #buffers: buffers,
-                #wal: wal,
-                #format: format,
-              }),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<String, String, String>(
-                  this,
-                  Invocation.method(#explain, [], {
-                    #analyze: analyze,
-                    #verbose: verbose,
-                    #settings: settings,
-                    #buffers: buffers,
-                    #wal: wal,
-                    #format: format,
-                  }),
-                ),
-          )
-          as _i3.PostgrestBuilder<String, String, String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#explain, [], {
+      #analyze: analyze,
+      #verbose: verbose,
+      #settings: settings,
+      #buffers: buffers,
+      #wal: wal,
+      #format: format,
+    }),
+    returnValue: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+  ) as _i3.PostgrestBuilder<String, String, String>);
 
   @override
   _i3.PostgrestBuilder<U, U, List<Map<String, dynamic>>> withConverter<U>(
     _i3.PostgrestConverter<U, List<Map<String, dynamic>>>? converter,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#withConverter, [converter]),
-            returnValue:
-                _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#withConverter, [converter]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#withConverter, [converter]),
-                ),
-          )
-          as _i3.PostgrestBuilder<U, U, List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#withConverter, [converter]),
+    returnValue: _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#withConverter, [converter]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#withConverter, [converter]),
+        ),
+  ) as _i3.PostgrestBuilder<U, U, List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestBuilder<
@@ -3939,149 +3459,132 @@ class MockPostgrestListFilterBuilder extends _i1.Mock
   >
   abortSignal(_i6.Future<void>? abortSignal) =>
       (super.noSuchMethod(
-            Invocation.method(#abortSignal, [abortSignal]),
-            returnValue:
-                _FakePostgrestBuilder_31<
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-          )
-          as _i3.PostgrestBuilder<
-            List<Map<String, dynamic>>,
-            List<Map<String, dynamic>>,
-            List<Map<String, dynamic>>
-          >);
+        Invocation.method(#abortSignal, [abortSignal]),
+        returnValue:
+            _FakePostgrestBuilder_31<
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+        returnValueForMissingStub:
+            _FakePostgrestBuilder_31<
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+      ) as _i3.PostgrestBuilder<
+        List<Map<String, dynamic>>,
+        List<Map<String, dynamic>>,
+        List<Map<String, dynamic>>
+      >);
 
   @override
   Uri appendSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#appendSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#appendSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
   Uri overrideSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#overrideSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#overrideSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
-  _i6.Stream<List<Map<String, dynamic>>> asStream() =>
-      (super.noSuchMethod(
-            Invocation.method(#asStream, []),
-            returnValue: _i6.Stream<List<Map<String, dynamic>>>.empty(),
-            returnValueForMissingStub:
-                _i6.Stream<List<Map<String, dynamic>>>.empty(),
-          )
-          as _i6.Stream<List<Map<String, dynamic>>>);
+  _i6.Stream<List<Map<String, dynamic>>> asStream() => (super.noSuchMethod(
+    Invocation.method(#asStream, []),
+    returnValue: _i6.Stream<List<Map<String, dynamic>>>.empty(),
+    returnValueForMissingStub: _i6.Stream<List<Map<String, dynamic>>>.empty(),
+  ) as _i6.Stream<List<Map<String, dynamic>>>);
 
   @override
   _i6.Future<List<Map<String, dynamic>>> catchError(
     Function? onError, {
     bool Function(Object)? test,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#catchError, [onError], {#test: test}),
-            returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
-              <Map<String, dynamic>>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<Map<String, dynamic>>>.value(
-                  <Map<String, dynamic>>[],
-                ),
-          )
-          as _i6.Future<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#catchError, [onError], {#test: test}),
+    returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+  ) as _i6.Future<List<Map<String, dynamic>>>);
 
   @override
   _i6.Future<U> then<U>(
     _i6.FutureOr<U> Function(List<Map<String, dynamic>>)? onValue, {
     Function? onError,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#then, [onValue], {#onError: onError}),
+    returnValue:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
             Invocation.method(#then, [onValue], {#onError: onError}),
-            returnValue:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-            returnValueForMissingStub:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-          )
-          as _i6.Future<U>);
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+    returnValueForMissingStub:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
+            Invocation.method(#then, [onValue], {#onError: onError}),
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+  ) as _i6.Future<U>);
 
   @override
   _i6.Future<List<Map<String, dynamic>>> timeout(
     Duration? timeLimit, {
     _i6.FutureOr<List<Map<String, dynamic>>> Function()? onTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
-            returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
-              <Map<String, dynamic>>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<Map<String, dynamic>>>.value(
-                  <Map<String, dynamic>>[],
-                ),
-          )
-          as _i6.Future<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+    returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+  ) as _i6.Future<List<Map<String, dynamic>>>);
 
   @override
   _i6.Future<List<Map<String, dynamic>>> whenComplete(
     _i6.FutureOr<void> Function()? action,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#whenComplete, [action]),
-            returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
-              <Map<String, dynamic>>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<Map<String, dynamic>>>.value(
-                  <Map<String, dynamic>>[],
-                ),
-          )
-          as _i6.Future<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#whenComplete, [action]),
+    returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+  ) as _i6.Future<List<Map<String, dynamic>>>);
 }
 
 /// A class which mocks [PostgrestFilterBuilder].
@@ -4092,487 +3595,430 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> copyWithUrl(Uri? url) =>
       (super.noSuchMethod(
-            Invocation.method(#copyWithUrl, [url]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+        Invocation.method(#copyWithUrl, [url]),
+        returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#copyWithUrl, [url]),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
               this,
               Invocation.method(#copyWithUrl, [url]),
             ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+      ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> not(
     String? column,
     String? operator,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#not, [column, operator, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#not, [column, operator, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#not, [column, operator, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#not, [column, operator, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#not, [column, operator, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#not, [column, operator, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> or(
     String? filters, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #or,
-              [filters],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(
-                #or,
-                [filters],
-                {#referencedTable: referencedTable},
-              ),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #or,
-                    [filters],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#or, [filters], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#or, [filters], {#referencedTable: referencedTable}),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #or,
+            [filters],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> eq(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#eq, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#eq, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#eq, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#eq, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#eq, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#eq, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> neq(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#neq, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#neq, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#neq, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#neq, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#neq, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#neq, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> gt(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#gt, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#gt, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#gt, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#gt, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#gt, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#gt, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> gte(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#gte, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#gte, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#gte, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#gte, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#gte, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#gte, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> lt(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#lt, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#lt, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#lt, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#lt, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#lt, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#lt, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> lte(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#lte, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#lte, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#lte, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#lte, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#lte, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#lte, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> like(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#like, [column, pattern]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#like, [column, pattern]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#like, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#like, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#like, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#like, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> likeAllOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#likeAllOf, [column, patterns]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#likeAllOf, [column, patterns]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#likeAllOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#likeAllOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#likeAllOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#likeAllOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> likeAnyOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#likeAnyOf, [column, patterns]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#likeAnyOf, [column, patterns]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#likeAnyOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#likeAnyOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#likeAnyOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#likeAnyOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> ilike(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#ilike, [column, pattern]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#ilike, [column, pattern]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#ilike, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#ilike, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#ilike, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#ilike, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> ilikeAllOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#ilikeAllOf, [column, patterns]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#ilikeAllOf, [column, patterns]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#ilikeAllOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#ilikeAllOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#ilikeAllOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#ilikeAllOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> ilikeAnyOf(
     String? column,
     List<String>? patterns,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#ilikeAnyOf, [column, patterns]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#ilikeAnyOf, [column, patterns]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#ilikeAnyOf, [column, patterns]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#ilikeAnyOf, [column, patterns]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#ilikeAnyOf, [column, patterns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#ilikeAnyOf, [column, patterns]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> isFilter(
     String? column,
     bool? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#isFilter, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#isFilter, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#isFilter, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#isFilter, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#isFilter, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#isFilter, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> inFilter(
     String? column,
     List<dynamic>? values,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#inFilter, [column, values]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#inFilter, [column, values]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#inFilter, [column, values]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#inFilter, [column, values]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#inFilter, [column, values]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#inFilter, [column, values]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> contains(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#contains, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#contains, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#contains, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#contains, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#contains, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#contains, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> containedBy(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#containedBy, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#containedBy, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#containedBy, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#containedBy, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#containedBy, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#containedBy, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> rangeLt(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeLt, [column, range]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#rangeLt, [column, range]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#rangeLt, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeLt, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#rangeLt, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#rangeLt, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> rangeGt(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeGt, [column, range]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#rangeGt, [column, range]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#rangeGt, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeGt, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#rangeGt, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#rangeGt, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> rangeGte(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeGte, [column, range]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#rangeGte, [column, range]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#rangeGte, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeGte, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#rangeGte, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#rangeGte, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> rangeLte(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeLte, [column, range]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#rangeLte, [column, range]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#rangeLte, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeLte, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#rangeLte, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#rangeLte, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> rangeAdjacent(
     String? column,
     String? range,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#rangeAdjacent, [column, range]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#rangeAdjacent, [column, range]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#rangeAdjacent, [column, range]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#rangeAdjacent, [column, range]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#rangeAdjacent, [column, range]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#rangeAdjacent, [column, range]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> overlaps(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#overlaps, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#overlaps, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#overlaps, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#overlaps, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#overlaps, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#overlaps, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> textSearch(
@@ -4580,197 +4026,178 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
     String? query, {
     String? config,
     _i3.TextSearchType? type,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #textSearch,
-              [column, query],
-              {#config: config, #type: type},
-            ),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(
-                #textSearch,
-                [column, query],
-                {#config: config, #type: type},
-              ),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #textSearch,
-                    [column, query],
-                    {#config: config, #type: type},
-                  ),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #textSearch,
+      [column, query],
+      {#config: config, #type: type},
+    ),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(
+        #textSearch,
+        [column, query],
+        {#config: config, #type: type},
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #textSearch,
+            [column, query],
+            {#config: config, #type: type},
+          ),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> filter(
     String? column,
     String? operator,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#filter, [column, operator, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#filter, [column, operator, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#filter, [column, operator, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#filter, [column, operator, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#filter, [column, operator, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#filter, [column, operator, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> match(
     Map<String, Object>? query,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#match, [query]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#match, [query]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#match, [query]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#match, [query]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#match, [query]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#match, [query]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> matchRegex(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#matchRegex, [column, pattern]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#matchRegex, [column, pattern]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#matchRegex, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#matchRegex, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#matchRegex, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#matchRegex, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> imatchRegex(
     String? column,
     String? pattern,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#imatchRegex, [column, pattern]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#imatchRegex, [column, pattern]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#imatchRegex, [column, pattern]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#imatchRegex, [column, pattern]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#imatchRegex, [column, pattern]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#imatchRegex, [column, pattern]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> isDistinct(
     String? column,
     Object? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#isDistinct, [column, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#isDistinct, [column, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#isDistinct, [column, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#isDistinct, [column, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#isDistinct, [column, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#isDistinct, [column, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> retry({
     bool? enabled = true,
     int? count,
     Duration? requestTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#retry, [], {
-              #enabled: enabled,
-              #count: count,
-              #requestTimeout: requestTimeout,
-            }),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#retry, [], {
-                #enabled: enabled,
-                #count: count,
-                #requestTimeout: requestTimeout,
-              }),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#retry, [], {
+      #enabled: enabled,
+      #count: count,
+      #requestTimeout: requestTimeout,
+    }),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#retry, [], {
+        #enabled: enabled,
+        #count: count,
+        #requestTimeout: requestTimeout,
+      }),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#retry, [], {
+            #enabled: enabled,
+            #count: count,
+            #requestTimeout: requestTimeout,
+          }),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestFilterBuilder<Map<String, dynamic>> setHeader(
     String? key,
     String? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-              this,
-              Invocation.method(#setHeader, [key, value]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#setHeader, [key, value]),
+    returnValue: _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+      this,
+      Invocation.method(#setHeader, [key, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestFilterBuilder_7<Map<String, dynamic>>(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+  ) as _i3.PostgrestFilterBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> select([
     String? columns = '*',
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#select, [columns]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#select, [columns]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#select, [columns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#select, [columns]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> order(
@@ -4778,194 +4205,162 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
     bool? ascending = false,
     bool? nullsFirst = false,
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #order,
-              [column],
-              {
-                #ascending: ascending,
-                #nullsFirst: nullsFirst,
-                #referencedTable: referencedTable,
-              },
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #order,
+      [column],
+      {
+        #ascending: ascending,
+        #nullsFirst: nullsFirst,
+        #referencedTable: referencedTable,
+      },
+    ),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(
+        #order,
+        [column],
+        {
+          #ascending: ascending,
+          #nullsFirst: nullsFirst,
+          #referencedTable: referencedTable,
+        },
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #order,
+            [column],
+            {
+              #ascending: ascending,
+              #nullsFirst: nullsFirst,
+              #referencedTable: referencedTable,
+            },
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> limit(
     int? count, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #limit,
-              [count],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #limit,
+            [count],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> range(
     int? from,
     int? to, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #range,
-              [from, to],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#range, [from, to], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(
+        #range,
+        [from, to],
+        {#referencedTable: referencedTable},
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #range,
+            [from, to],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> single() =>
       (super.noSuchMethod(
-            Invocation.method(#single, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#single, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#single, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#single, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>?> maybeSingle() =>
       (super.noSuchMethod(
-            Invocation.method(#maybeSingle, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
+        Invocation.method(#maybeSingle, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+          this,
+          Invocation.method(#maybeSingle, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+              this,
+              Invocation.method(#maybeSingle, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> stripNulls() =>
       (super.noSuchMethod(
-            Invocation.method(#stripNulls, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#stripNulls, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#stripNulls, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#stripNulls, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> dryRun() =>
       (super.noSuchMethod(
-            Invocation.method(#dryRun, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#dryRun, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#dryRun, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#dryRun, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
-  _i3.PostgrestTransformBuilder<String> csv() =>
-      (super.noSuchMethod(
-            Invocation.method(#csv, []),
-            returnValue: _FakePostgrestTransformBuilder_34<String>(
-              this,
-              Invocation.method(#csv, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<String>(
-                  this,
-                  Invocation.method(#csv, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<String>);
+  _i3.PostgrestTransformBuilder<String> csv() => (super.noSuchMethod(
+    Invocation.method(#csv, []),
+    returnValue: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+  ) as _i3.PostgrestTransformBuilder<String>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -4975,41 +4370,37 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
   >
   count([_i3.CountOption? count = _i3.CountOption.exact]) =>
       (super.noSuchMethod(
-            Invocation.method(#count, [count]),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<Map<String, dynamic>>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#count, [count])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<Map<String, dynamic>>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#count, [count])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            _i3.PostgrestResponse<Map<String, dynamic>>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#count, [count]),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<Map<String, dynamic>>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#count, [count])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<Map<String, dynamic>>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#count, [count])),
+      ) as _i3.ResponsePostgrestBuilder<
+        _i3.PostgrestResponse<Map<String, dynamic>>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
-  _i3.PostgrestBuilder<void, void, void> head() =>
-      (super.noSuchMethod(
-            Invocation.method(#head, []),
-            returnValue: _FakePostgrestBuilder_31<void, void, void>(
-              this,
-              Invocation.method(#head, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<void, void, void>(
-                  this,
-                  Invocation.method(#head, []),
-                ),
-          )
-          as _i3.PostgrestBuilder<void, void, void>);
+  _i3.PostgrestBuilder<void, void, void> head() => (super.noSuchMethod(
+    Invocation.method(#head, []),
+    returnValue: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+  ) as _i3.PostgrestBuilder<void, void, void>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -5019,42 +4410,39 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
   >
   geojson() =>
       (super.noSuchMethod(
-            Invocation.method(#geojson, []),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#geojson, []),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+      ) as _i3.ResponsePostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> maxAffected(int? value) =>
       (super.noSuchMethod(
-            Invocation.method(#maxAffected, [value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#maxAffected, [value]),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#maxAffected, [value]),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#maxAffected, [value]),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestBuilder<String, String, String> explain({
@@ -5064,59 +4452,54 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
     bool? buffers = false,
     bool? wal = false,
     _i3.ExplainFormat? format = _i3.ExplainFormat.text,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#explain, [], {
-              #analyze: analyze,
-              #verbose: verbose,
-              #settings: settings,
-              #buffers: buffers,
-              #wal: wal,
-              #format: format,
-            }),
-            returnValue: _FakePostgrestBuilder_31<String, String, String>(
-              this,
-              Invocation.method(#explain, [], {
-                #analyze: analyze,
-                #verbose: verbose,
-                #settings: settings,
-                #buffers: buffers,
-                #wal: wal,
-                #format: format,
-              }),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<String, String, String>(
-                  this,
-                  Invocation.method(#explain, [], {
-                    #analyze: analyze,
-                    #verbose: verbose,
-                    #settings: settings,
-                    #buffers: buffers,
-                    #wal: wal,
-                    #format: format,
-                  }),
-                ),
-          )
-          as _i3.PostgrestBuilder<String, String, String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#explain, [], {
+      #analyze: analyze,
+      #verbose: verbose,
+      #settings: settings,
+      #buffers: buffers,
+      #wal: wal,
+      #format: format,
+    }),
+    returnValue: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+  ) as _i3.PostgrestBuilder<String, String, String>);
 
   @override
   _i3.PostgrestBuilder<U, U, Map<String, dynamic>> withConverter<U>(
     _i3.PostgrestConverter<U, Map<String, dynamic>>? converter,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#withConverter, [converter]),
-            returnValue: _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
-              this,
-              Invocation.method(#withConverter, [converter]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#withConverter, [converter]),
-                ),
-          )
-          as _i3.PostgrestBuilder<U, U, Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#withConverter, [converter]),
+    returnValue: _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
+      this,
+      Invocation.method(#withConverter, [converter]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
+          this,
+          Invocation.method(#withConverter, [converter]),
+        ),
+  ) as _i3.PostgrestBuilder<U, U, Map<String, dynamic>>);
 
   @override
   _i3.PostgrestBuilder<
@@ -5126,145 +4509,126 @@ class MockPostgrestMapFilterBuilder extends _i1.Mock
   >
   abortSignal(_i6.Future<void>? abortSignal) =>
       (super.noSuchMethod(
-            Invocation.method(#abortSignal, [abortSignal]),
-            returnValue:
-                _FakePostgrestBuilder_31<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-          )
-          as _i3.PostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#abortSignal, [abortSignal]),
+        returnValue:
+            _FakePostgrestBuilder_31<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+        returnValueForMissingStub:
+            _FakePostgrestBuilder_31<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+      ) as _i3.PostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   Uri appendSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#appendSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#appendSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
   Uri overrideSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#overrideSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#overrideSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
-  _i6.Stream<Map<String, dynamic>> asStream() =>
-      (super.noSuchMethod(
-            Invocation.method(#asStream, []),
-            returnValue: _i6.Stream<Map<String, dynamic>>.empty(),
-            returnValueForMissingStub: _i6.Stream<Map<String, dynamic>>.empty(),
-          )
-          as _i6.Stream<Map<String, dynamic>>);
+  _i6.Stream<Map<String, dynamic>> asStream() => (super.noSuchMethod(
+    Invocation.method(#asStream, []),
+    returnValue: _i6.Stream<Map<String, dynamic>>.empty(),
+    returnValueForMissingStub: _i6.Stream<Map<String, dynamic>>.empty(),
+  ) as _i6.Stream<Map<String, dynamic>>);
 
   @override
   _i6.Future<Map<String, dynamic>> catchError(
     Function? onError, {
     bool Function(Object)? test,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#catchError, [onError], {#test: test}),
-            returnValue: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-            returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-          )
-          as _i6.Future<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#catchError, [onError], {#test: test}),
+    returnValue: _i6.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+    returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
+      <String, dynamic>{},
+    ),
+  ) as _i6.Future<Map<String, dynamic>>);
 
   @override
   _i6.Future<U> then<U>(
     _i6.FutureOr<U> Function(Map<String, dynamic>)? onValue, {
     Function? onError,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#then, [onValue], {#onError: onError}),
+    returnValue:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
             Invocation.method(#then, [onValue], {#onError: onError}),
-            returnValue:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-            returnValueForMissingStub:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-          )
-          as _i6.Future<U>);
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+    returnValueForMissingStub:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
+            Invocation.method(#then, [onValue], {#onError: onError}),
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+  ) as _i6.Future<U>);
 
   @override
   _i6.Future<Map<String, dynamic>> timeout(
     Duration? timeLimit, {
     _i6.FutureOr<Map<String, dynamic>> Function()? onTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
-            returnValue: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-            returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-          )
-          as _i6.Future<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+    returnValue: _i6.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+    returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
+      <String, dynamic>{},
+    ),
+  ) as _i6.Future<Map<String, dynamic>>);
 
   @override
   _i6.Future<Map<String, dynamic>> whenComplete(
     _i6.FutureOr<void> Function()? action,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#whenComplete, [action]),
-            returnValue: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-            returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-          )
-          as _i6.Future<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#whenComplete, [action]),
+    returnValue: _i6.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+    returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
+      <String, dynamic>{},
+    ),
+  ) as _i6.Future<Map<String, dynamic>>);
 }
 
 /// A class which mocks [PostgrestFilterBuilder].
@@ -5279,469 +4643,440 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   copyWithUrl(Uri? url) =>
       (super.noSuchMethod(
-            Invocation.method(#copyWithUrl, [url]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#copyWithUrl, [url])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#copyWithUrl, [url])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#copyWithUrl, [url]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#copyWithUrl, [url])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#copyWithUrl, [url])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   not(String? column, String? operator, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#not, [column, operator, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#not, [column, operator, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#not, [column, operator, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#not, [column, operator, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#not, [column, operator, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#not, [column, operator, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   or(String? filters, {String? referencedTable}) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #or,
-              [filters],
-              {#referencedTable: referencedTable},
+        Invocation.method(#or, [filters], {#referencedTable: referencedTable}),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #or,
+                [filters],
+                {#referencedTable: referencedTable},
+              ),
             ),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #or,
-                    [filters],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #or,
-                    [filters],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #or,
+                [filters],
+                {#referencedTable: referencedTable},
+              ),
+            ),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   eq(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#eq, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#eq, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#eq, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#eq, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#eq, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#eq, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   neq(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#neq, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#neq, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#neq, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#neq, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#neq, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#neq, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   gt(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#gt, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#gt, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#gt, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#gt, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#gt, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#gt, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   gte(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#gte, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#gte, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#gte, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#gte, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#gte, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#gte, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   lt(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#lt, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#lt, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#lt, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#lt, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#lt, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#lt, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   lte(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#lte, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#lte, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#lte, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#lte, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#lte, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#lte, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   like(String? column, String? pattern) =>
       (super.noSuchMethod(
-            Invocation.method(#like, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#like, [column, pattern])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#like, [column, pattern])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#like, [column, pattern]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#like, [column, pattern])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#like, [column, pattern])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   likeAllOf(String? column, List<String>? patterns) =>
       (super.noSuchMethod(
-            Invocation.method(#likeAllOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#likeAllOf, [column, patterns])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#likeAllOf, [column, patterns])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#likeAllOf, [column, patterns]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#likeAllOf, [column, patterns])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#likeAllOf, [column, patterns])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   likeAnyOf(String? column, List<String>? patterns) =>
       (super.noSuchMethod(
-            Invocation.method(#likeAnyOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#likeAnyOf, [column, patterns])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#likeAnyOf, [column, patterns])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#likeAnyOf, [column, patterns]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#likeAnyOf, [column, patterns])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#likeAnyOf, [column, patterns])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   ilike(String? column, String? pattern) =>
       (super.noSuchMethod(
-            Invocation.method(#ilike, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#ilike, [column, pattern])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#ilike, [column, pattern])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#ilike, [column, pattern]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#ilike, [column, pattern])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#ilike, [column, pattern])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   ilikeAllOf(String? column, List<String>? patterns) =>
       (super.noSuchMethod(
-            Invocation.method(#ilikeAllOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#ilikeAllOf, [column, patterns])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#ilikeAllOf, [column, patterns])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#ilikeAllOf, [column, patterns]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#ilikeAllOf, [column, patterns])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#ilikeAllOf, [column, patterns])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   ilikeAnyOf(String? column, List<String>? patterns) =>
       (super.noSuchMethod(
-            Invocation.method(#ilikeAnyOf, [column, patterns]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#ilikeAnyOf, [column, patterns])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#ilikeAnyOf, [column, patterns])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#ilikeAnyOf, [column, patterns]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#ilikeAnyOf, [column, patterns])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#ilikeAnyOf, [column, patterns])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   isFilter(String? column, bool? value) =>
       (super.noSuchMethod(
-            Invocation.method(#isFilter, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#isFilter, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#isFilter, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#isFilter, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#isFilter, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#isFilter, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   inFilter(String? column, List<dynamic>? values) =>
       (super.noSuchMethod(
-            Invocation.method(#inFilter, [column, values]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#inFilter, [column, values])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#inFilter, [column, values])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#inFilter, [column, values]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#inFilter, [column, values])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#inFilter, [column, values])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   contains(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#contains, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#contains, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#contains, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#contains, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#contains, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#contains, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   containedBy(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#containedBy, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#containedBy, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#containedBy, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#containedBy, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#containedBy, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#containedBy, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   rangeLt(String? column, String? range) =>
       (super.noSuchMethod(
-            Invocation.method(#rangeLt, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeLt, [column, range])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeLt, [column, range])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#rangeLt, [column, range]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeLt, [column, range])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeLt, [column, range])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   rangeGt(String? column, String? range) =>
       (super.noSuchMethod(
-            Invocation.method(#rangeGt, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeGt, [column, range])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeGt, [column, range])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#rangeGt, [column, range]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeGt, [column, range])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeGt, [column, range])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   rangeGte(String? column, String? range) =>
       (super.noSuchMethod(
-            Invocation.method(#rangeGte, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeGte, [column, range])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeGte, [column, range])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#rangeGte, [column, range]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeGte, [column, range])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeGte, [column, range])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   rangeLte(String? column, String? range) =>
       (super.noSuchMethod(
-            Invocation.method(#rangeLte, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeLte, [column, range])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeLte, [column, range])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#rangeLte, [column, range]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeLte, [column, range])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeLte, [column, range])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   rangeAdjacent(String? column, String? range) =>
       (super.noSuchMethod(
-            Invocation.method(#rangeAdjacent, [column, range]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeAdjacent, [column, range])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#rangeAdjacent, [column, range])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#rangeAdjacent, [column, range]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeAdjacent, [column, range])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#rangeAdjacent, [column, range])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   overlaps(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#overlaps, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#overlaps, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#overlaps, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#overlaps, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#overlaps, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#overlaps, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
@@ -5752,200 +5087,189 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
     _i3.TextSearchType? type,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #textSearch,
-              [column, query],
-              {#config: config, #type: type},
+        Invocation.method(
+          #textSearch,
+          [column, query],
+          {#config: config, #type: type},
+        ),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #textSearch,
+                [column, query],
+                {#config: config, #type: type},
+              ),
             ),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #textSearch,
-                    [column, query],
-                    {#config: config, #type: type},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #textSearch,
-                    [column, query],
-                    {#config: config, #type: type},
-                  ),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #textSearch,
+                [column, query],
+                {#config: config, #type: type},
+              ),
+            ),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   filter(String? column, String? operator, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#filter, [column, operator, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#filter, [column, operator, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#filter, [column, operator, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#filter, [column, operator, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#filter, [column, operator, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#filter, [column, operator, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   match(Map<String, Object>? query) =>
       (super.noSuchMethod(
-            Invocation.method(#match, [query]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#match, [query])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#match, [query])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#match, [query]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#match, [query])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#match, [query])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   matchRegex(String? column, String? pattern) =>
       (super.noSuchMethod(
-            Invocation.method(#matchRegex, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#matchRegex, [column, pattern])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#matchRegex, [column, pattern])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#matchRegex, [column, pattern]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#matchRegex, [column, pattern])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#matchRegex, [column, pattern])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   imatchRegex(String? column, String? pattern) =>
       (super.noSuchMethod(
-            Invocation.method(#imatchRegex, [column, pattern]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#imatchRegex, [column, pattern])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#imatchRegex, [column, pattern])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#imatchRegex, [column, pattern]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#imatchRegex, [column, pattern])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#imatchRegex, [column, pattern])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   isDistinct(String? column, Object? value) =>
       (super.noSuchMethod(
-            Invocation.method(#isDistinct, [column, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#isDistinct, [column, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#isDistinct, [column, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#isDistinct, [column, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#isDistinct, [column, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#isDistinct, [column, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   retry({bool? enabled = true, int? count, Duration? requestTimeout}) =>
       (super.noSuchMethod(
-            Invocation.method(#retry, [], {
-              #enabled: enabled,
-              #count: count,
-              #requestTimeout: requestTimeout,
-            }),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#retry, [], {
+          #enabled: enabled,
+          #count: count,
+          #requestTimeout: requestTimeout,
+        }),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(#retry, [], {
+                #enabled: enabled,
+                #count: count,
+                #requestTimeout: requestTimeout,
+              }),
+            ),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(#retry, [], {
+                #enabled: enabled,
+                #count: count,
+                #requestTimeout: requestTimeout,
+              }),
+            ),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestFilterBuilder<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
   setHeader(String? key, String? value) =>
       (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#setHeader, [key, value])),
-            returnValueForMissingStub:
-                _FakePostgrestFilterBuilder_7<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#setHeader, [key, value])),
-          )
-          as _i3.PostgrestFilterBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#setHeader, [key, value]),
+        returnValue:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#setHeader, [key, value])),
+        returnValueForMissingStub:
+            _FakePostgrestFilterBuilder_7<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#setHeader, [key, value])),
+      ) as _i3.PostgrestFilterBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> select([
     String? columns = '*',
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#select, [columns]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#select, [columns]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#select, [columns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#select, [columns]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<
@@ -5958,49 +5282,48 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
     String? referencedTable,
   }) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #order,
-              [column],
-              {
-                #ascending: ascending,
-                #nullsFirst: nullsFirst,
-                #referencedTable: referencedTable,
-              },
+        Invocation.method(
+          #order,
+          [column],
+          {
+            #ascending: ascending,
+            #nullsFirst: nullsFirst,
+            #referencedTable: referencedTable,
+          },
+        ),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #order,
+                [column],
+                {
+                  #ascending: ascending,
+                  #nullsFirst: nullsFirst,
+                  #referencedTable: referencedTable,
+                },
+              ),
             ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #order,
+                [column],
+                {
+                  #ascending: ascending,
+                  #nullsFirst: nullsFirst,
+                  #referencedTable: referencedTable,
+                },
+              ),
+            ),
+      ) as _i3.PostgrestTransformBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<
@@ -6008,37 +5331,32 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   limit(int? count, {String? referencedTable}) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #limit,
-              [count],
-              {#referencedTable: referencedTable},
+        Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #limit,
+                [count],
+                {#referencedTable: referencedTable},
+              ),
             ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #limit,
+                [count],
+                {#referencedTable: referencedTable},
+              ),
+            ),
+      ) as _i3.PostgrestTransformBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<
@@ -6046,71 +5364,66 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   range(int? from, int? to, {String? referencedTable}) =>
       (super.noSuchMethod(
-            Invocation.method(
-              #range,
-              [from, to],
-              {#referencedTable: referencedTable},
+        Invocation.method(
+          #range,
+          [from, to],
+          {#referencedTable: referencedTable},
+        ),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #range,
+                [from, to],
+                {#referencedTable: referencedTable},
+              ),
             ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(
+              this,
+              Invocation.method(
+                #range,
+                [from, to],
+                {#referencedTable: referencedTable},
+              ),
+            ),
+      ) as _i3.PostgrestTransformBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> single() =>
       (super.noSuchMethod(
-            Invocation.method(#single, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#single, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#single, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#single, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>?> maybeSingle() =>
       (super.noSuchMethod(
-            Invocation.method(#maybeSingle, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
+        Invocation.method(#maybeSingle, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+          this,
+          Invocation.method(#maybeSingle, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+              this,
+              Invocation.method(#maybeSingle, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
 
   @override
   _i3.PostgrestTransformBuilder<
@@ -6118,19 +5431,18 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   stripNulls() =>
       (super.noSuchMethod(
-            Invocation.method(#stripNulls, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#stripNulls, [])),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#stripNulls, [])),
-          )
-          as _i3.PostgrestTransformBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#stripNulls, []),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#stripNulls, [])),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#stripNulls, [])),
+      ) as _i3.PostgrestTransformBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<
@@ -6138,35 +5450,31 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   dryRun() =>
       (super.noSuchMethod(
-            Invocation.method(#dryRun, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#dryRun, [])),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#dryRun, [])),
-          )
-          as _i3.PostgrestTransformBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#dryRun, []),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#dryRun, [])),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#dryRun, [])),
+      ) as _i3.PostgrestTransformBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
-  _i3.PostgrestTransformBuilder<String> csv() =>
-      (super.noSuchMethod(
-            Invocation.method(#csv, []),
-            returnValue: _FakePostgrestTransformBuilder_34<String>(
-              this,
-              Invocation.method(#csv, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<String>(
-                  this,
-                  Invocation.method(#csv, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<String>);
+  _i3.PostgrestTransformBuilder<String> csv() => (super.noSuchMethod(
+    Invocation.method(#csv, []),
+    returnValue: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+  ) as _i3.PostgrestTransformBuilder<String>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -6176,47 +5484,43 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   count([_i3.CountOption? count = _i3.CountOption.exact]) =>
       (super.noSuchMethod(
-            Invocation.method(#count, [count]),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<
-                    _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                  >,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#count, [count])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<
-                    _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                  >,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#count, [count])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            _i3.PostgrestResponse<
+        Invocation.method(#count, [count]),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<
+                _i3.PostgrestResponse<List<Map<String, dynamic>>>
+              >,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
               _i3.PostgrestResponse<List<Map<String, dynamic>>>
-            >,
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+            >(this, Invocation.method(#count, [count])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<
+                _i3.PostgrestResponse<List<Map<String, dynamic>>>
+              >,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#count, [count])),
+      ) as _i3.ResponsePostgrestBuilder<
+        _i3.PostgrestResponse<
+          _i3.PostgrestResponse<List<Map<String, dynamic>>>
+        >,
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
-  _i3.PostgrestBuilder<void, void, void> head() =>
-      (super.noSuchMethod(
-            Invocation.method(#head, []),
-            returnValue: _FakePostgrestBuilder_31<void, void, void>(
-              this,
-              Invocation.method(#head, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<void, void, void>(
-                  this,
-                  Invocation.method(#head, []),
-                ),
-          )
-          as _i3.PostgrestBuilder<void, void, void>);
+  _i3.PostgrestBuilder<void, void, void> head() => (super.noSuchMethod(
+    Invocation.method(#head, []),
+    returnValue: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+  ) as _i3.PostgrestBuilder<void, void, void>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -6226,25 +5530,24 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   geojson() =>
       (super.noSuchMethod(
-            Invocation.method(#geojson, []),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#geojson, []),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+      ) as _i3.ResponsePostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<
@@ -6252,19 +5555,18 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   maxAffected(int? value) =>
       (super.noSuchMethod(
-            Invocation.method(#maxAffected, [value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#maxAffected, [value])),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#maxAffected, [value])),
-          )
-          as _i3.PostgrestTransformBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#maxAffected, [value]),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#maxAffected, [value])),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#maxAffected, [value])),
+      ) as _i3.PostgrestTransformBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestBuilder<String, String, String> explain({
@@ -6274,41 +5576,38 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
     bool? buffers = false,
     bool? wal = false,
     _i3.ExplainFormat? format = _i3.ExplainFormat.text,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#explain, [], {
-              #analyze: analyze,
-              #verbose: verbose,
-              #settings: settings,
-              #buffers: buffers,
-              #wal: wal,
-              #format: format,
-            }),
-            returnValue: _FakePostgrestBuilder_31<String, String, String>(
-              this,
-              Invocation.method(#explain, [], {
-                #analyze: analyze,
-                #verbose: verbose,
-                #settings: settings,
-                #buffers: buffers,
-                #wal: wal,
-                #format: format,
-              }),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<String, String, String>(
-                  this,
-                  Invocation.method(#explain, [], {
-                    #analyze: analyze,
-                    #verbose: verbose,
-                    #settings: settings,
-                    #buffers: buffers,
-                    #wal: wal,
-                    #format: format,
-                  }),
-                ),
-          )
-          as _i3.PostgrestBuilder<String, String, String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#explain, [], {
+      #analyze: analyze,
+      #verbose: verbose,
+      #settings: settings,
+      #buffers: buffers,
+      #wal: wal,
+      #format: format,
+    }),
+    returnValue: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+  ) as _i3.PostgrestBuilder<String, String, String>);
 
   @override
   _i3.PostgrestBuilder<U, U, _i3.PostgrestResponse<List<Map<String, dynamic>>>>
@@ -6320,25 +5619,24 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
     converter,
   ) =>
       (super.noSuchMethod(
-            Invocation.method(#withConverter, [converter]),
-            returnValue:
-                _FakePostgrestBuilder_31<
-                  U,
-                  U,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#withConverter, [converter])),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<
-                  U,
-                  U,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#withConverter, [converter])),
-          )
-          as _i3.PostgrestBuilder<
-            U,
-            U,
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#withConverter, [converter]),
+        returnValue:
+            _FakePostgrestBuilder_31<
+              U,
+              U,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#withConverter, [converter])),
+        returnValueForMissingStub:
+            _FakePostgrestBuilder_31<
+              U,
+              U,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#withConverter, [converter])),
+      ) as _i3.PostgrestBuilder<
+        U,
+        U,
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   _i3.PostgrestBuilder<
@@ -6348,197 +5646,161 @@ class MockPostgrestCountFilterBuilder extends _i1.Mock
   >
   abortSignal(_i6.Future<void>? abortSignal) =>
       (super.noSuchMethod(
-            Invocation.method(#abortSignal, [abortSignal]),
-            returnValue:
-                _FakePostgrestBuilder_31<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-          )
-          as _i3.PostgrestBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>
-          >);
+        Invocation.method(#abortSignal, [abortSignal]),
+        returnValue:
+            _FakePostgrestBuilder_31<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+        returnValueForMissingStub:
+            _FakePostgrestBuilder_31<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+      ) as _i3.PostgrestBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>
+      >);
 
   @override
   Uri appendSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#appendSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#appendSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
   Uri overrideSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#overrideSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#overrideSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
-  _i6.Stream<_i3.PostgrestResponse<List<Map<String, dynamic>>>> asStream() =>
-      (super.noSuchMethod(
-            Invocation.method(#asStream, []),
-            returnValue:
-                _i6.Stream<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.empty(),
-            returnValueForMissingStub:
-                _i6.Stream<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.empty(),
-          )
-          as _i6.Stream<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
+  _i6.Stream<_i3.PostgrestResponse<List<Map<String, dynamic>>>>
+  asStream() => (super.noSuchMethod(
+    Invocation.method(#asStream, []),
+    returnValue:
+        _i6.Stream<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.empty(),
+    returnValueForMissingStub:
+        _i6.Stream<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.empty(),
+  ) as _i6.Stream<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
 
   @override
   _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>> catchError(
     Function? onError, {
     bool Function(Object)? test,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#catchError, [onError], {#test: test}),
+    returnValue:
+        _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.value(
+          _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
+            this,
             Invocation.method(#catchError, [onError], {#test: test}),
-            returnValue:
-                _i6.Future<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.value(
-                  _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
-                    this,
-                    Invocation.method(#catchError, [onError], {#test: test}),
-                  ),
-                ),
-            returnValueForMissingStub:
-                _i6.Future<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.value(
-                  _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
-                    this,
-                    Invocation.method(#catchError, [onError], {#test: test}),
-                  ),
-                ),
-          )
-          as _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
+          ),
+        ),
+    returnValueForMissingStub:
+        _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.value(
+          _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
+            this,
+            Invocation.method(#catchError, [onError], {#test: test}),
+          ),
+        ),
+  ) as _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
 
   @override
   _i6.Future<U> then<U>(
     _i6.FutureOr<U> Function(_i3.PostgrestResponse<List<Map<String, dynamic>>>)?
     onValue, {
     Function? onError,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#then, [onValue], {#onError: onError}),
+    returnValue:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
             Invocation.method(#then, [onValue], {#onError: onError}),
-            returnValue:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-            returnValueForMissingStub:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-          )
-          as _i6.Future<U>);
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+    returnValueForMissingStub:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
+            Invocation.method(#then, [onValue], {#onError: onError}),
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+  ) as _i6.Future<U>);
 
   @override
   _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>> timeout(
     Duration? timeLimit, {
     _i6.FutureOr<_i3.PostgrestResponse<List<Map<String, dynamic>>>> Function()?
     onTimeout,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+    returnValue:
+        _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.value(
+          _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
+            this,
             Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
-            returnValue:
-                _i6.Future<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.value(
-                  _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
-                    this,
-                    Invocation.method(
-                      #timeout,
-                      [timeLimit],
-                      {#onTimeout: onTimeout},
-                    ),
-                  ),
-                ),
-            returnValueForMissingStub:
-                _i6.Future<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.value(
-                  _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
-                    this,
-                    Invocation.method(
-                      #timeout,
-                      [timeLimit],
-                      {#onTimeout: onTimeout},
-                    ),
-                  ),
-                ),
-          )
-          as _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
+          ),
+        ),
+    returnValueForMissingStub:
+        _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.value(
+          _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
+            this,
+            Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+          ),
+        ),
+  ) as _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
 
   @override
   _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>> whenComplete(
     _i6.FutureOr<void> Function()? action,
-  ) =>
-      (super.noSuchMethod(
+  ) => (super.noSuchMethod(
+    Invocation.method(#whenComplete, [action]),
+    returnValue:
+        _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.value(
+          _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
+            this,
             Invocation.method(#whenComplete, [action]),
-            returnValue:
-                _i6.Future<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.value(
-                  _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
-                    this,
-                    Invocation.method(#whenComplete, [action]),
-                  ),
-                ),
-            returnValueForMissingStub:
-                _i6.Future<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>
-                >.value(
-                  _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
-                    this,
-                    Invocation.method(#whenComplete, [action]),
-                  ),
-                ),
-          )
-          as _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
+          ),
+        ),
+    returnValueForMissingStub:
+        _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>.value(
+          _FakePostgrestResponse_36<List<Map<String, dynamic>>>(
+            this,
+            Invocation.method(#whenComplete, [action]),
+          ),
+        ),
+  ) as _i6.Future<_i3.PostgrestResponse<List<Map<String, dynamic>>>>);
 }
 
 /// A class which mocks [PostgrestTransformBuilder].
@@ -6549,93 +5811,81 @@ class MockPostgrestListTransformBuilder extends _i1.Mock
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> copyWithUrl(
     Uri? url,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#copyWithUrl, [url]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#copyWithUrl, [url]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#copyWithUrl, [url]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#copyWithUrl, [url]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> retry({
     bool? enabled = true,
     int? count,
     Duration? requestTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#retry, [], {
-              #enabled: enabled,
-              #count: count,
-              #requestTimeout: requestTimeout,
-            }),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#retry, [], {
+      #enabled: enabled,
+      #count: count,
+      #requestTimeout: requestTimeout,
+    }),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#retry, [], {
+        #enabled: enabled,
+        #count: count,
+        #requestTimeout: requestTimeout,
+      }),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#retry, [], {
+            #enabled: enabled,
+            #count: count,
+            #requestTimeout: requestTimeout,
+          }),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> setHeader(
     String? key,
     String? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#setHeader, [key, value]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#setHeader, [key, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> select([
     String? columns = '*',
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#select, [columns]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#select, [columns]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#select, [columns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#select, [columns]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> order(
@@ -6643,194 +5893,164 @@ class MockPostgrestListTransformBuilder extends _i1.Mock
     bool? ascending = false,
     bool? nullsFirst = false,
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #order,
-              [column],
-              {
-                #ascending: ascending,
-                #nullsFirst: nullsFirst,
-                #referencedTable: referencedTable,
-              },
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #order,
+      [column],
+      {
+        #ascending: ascending,
+        #nullsFirst: nullsFirst,
+        #referencedTable: referencedTable,
+      },
+    ),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(
+        #order,
+        [column],
+        {
+          #ascending: ascending,
+          #nullsFirst: nullsFirst,
+          #referencedTable: referencedTable,
+        },
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #order,
+            [column],
+            {
+              #ascending: ascending,
+              #nullsFirst: nullsFirst,
+              #referencedTable: referencedTable,
+            },
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> limit(
     int? count, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #limit,
-              [count],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #limit,
+            [count],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> range(
     int? from,
     int? to, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #range,
-              [from, to],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#range, [from, to], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(
+        #range,
+        [from, to],
+        {#referencedTable: referencedTable},
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(
+            #range,
+            [from, to],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> single() =>
       (super.noSuchMethod(
-            Invocation.method(#single, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#single, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#single, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#single, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>?> maybeSingle() =>
       (super.noSuchMethod(
-            Invocation.method(#maybeSingle, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
+        Invocation.method(#maybeSingle, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+          this,
+          Invocation.method(#maybeSingle, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+              this,
+              Invocation.method(#maybeSingle, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> stripNulls() =>
       (super.noSuchMethod(
-            Invocation.method(#stripNulls, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+        Invocation.method(#stripNulls, []),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#stripNulls, []),
+            ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#stripNulls, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> dryRun() =>
       (super.noSuchMethod(
-            Invocation.method(#dryRun, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+        Invocation.method(#dryRun, []),
+        returnValue:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#dryRun, []),
+            ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+              this,
+              Invocation.method(#dryRun, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
-  _i3.PostgrestTransformBuilder<String> csv() =>
-      (super.noSuchMethod(
-            Invocation.method(#csv, []),
-            returnValue: _FakePostgrestTransformBuilder_34<String>(
-              this,
-              Invocation.method(#csv, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<String>(
-                  this,
-                  Invocation.method(#csv, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<String>);
+  _i3.PostgrestTransformBuilder<String> csv() => (super.noSuchMethod(
+    Invocation.method(#csv, []),
+    returnValue: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+  ) as _i3.PostgrestTransformBuilder<String>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -6840,41 +6060,37 @@ class MockPostgrestListTransformBuilder extends _i1.Mock
   >
   count([_i3.CountOption? count = _i3.CountOption.exact]) =>
       (super.noSuchMethod(
-            Invocation.method(#count, [count]),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#count, [count])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#count, [count])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            _i3.PostgrestResponse<List<Map<String, dynamic>>>,
-            List<Map<String, dynamic>>,
-            List<Map<String, dynamic>>
-          >);
+        Invocation.method(#count, [count]),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#count, [count])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#count, [count])),
+      ) as _i3.ResponsePostgrestBuilder<
+        _i3.PostgrestResponse<List<Map<String, dynamic>>>,
+        List<Map<String, dynamic>>,
+        List<Map<String, dynamic>>
+      >);
 
   @override
-  _i3.PostgrestBuilder<void, void, void> head() =>
-      (super.noSuchMethod(
-            Invocation.method(#head, []),
-            returnValue: _FakePostgrestBuilder_31<void, void, void>(
-              this,
-              Invocation.method(#head, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<void, void, void>(
-                  this,
-                  Invocation.method(#head, []),
-                ),
-          )
-          as _i3.PostgrestBuilder<void, void, void>);
+  _i3.PostgrestBuilder<void, void, void> head() => (super.noSuchMethod(
+    Invocation.method(#head, []),
+    returnValue: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+  ) as _i3.PostgrestBuilder<void, void, void>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -6884,44 +6100,40 @@ class MockPostgrestListTransformBuilder extends _i1.Mock
   >
   geojson() =>
       (super.noSuchMethod(
-            Invocation.method(#geojson, []),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#geojson, []),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+      ) as _i3.ResponsePostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> maxAffected(
     int? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#maxAffected, [value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#maxAffected, [value]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#maxAffected, [value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#maxAffected, [value]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestBuilder<String, String, String> explain({
@@ -6931,60 +6143,54 @@ class MockPostgrestListTransformBuilder extends _i1.Mock
     bool? buffers = false,
     bool? wal = false,
     _i3.ExplainFormat? format = _i3.ExplainFormat.text,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#explain, [], {
-              #analyze: analyze,
-              #verbose: verbose,
-              #settings: settings,
-              #buffers: buffers,
-              #wal: wal,
-              #format: format,
-            }),
-            returnValue: _FakePostgrestBuilder_31<String, String, String>(
-              this,
-              Invocation.method(#explain, [], {
-                #analyze: analyze,
-                #verbose: verbose,
-                #settings: settings,
-                #buffers: buffers,
-                #wal: wal,
-                #format: format,
-              }),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<String, String, String>(
-                  this,
-                  Invocation.method(#explain, [], {
-                    #analyze: analyze,
-                    #verbose: verbose,
-                    #settings: settings,
-                    #buffers: buffers,
-                    #wal: wal,
-                    #format: format,
-                  }),
-                ),
-          )
-          as _i3.PostgrestBuilder<String, String, String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#explain, [], {
+      #analyze: analyze,
+      #verbose: verbose,
+      #settings: settings,
+      #buffers: buffers,
+      #wal: wal,
+      #format: format,
+    }),
+    returnValue: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+  ) as _i3.PostgrestBuilder<String, String, String>);
 
   @override
   _i3.PostgrestBuilder<U, U, List<Map<String, dynamic>>> withConverter<U>(
     _i3.PostgrestConverter<U, List<Map<String, dynamic>>>? converter,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#withConverter, [converter]),
-            returnValue:
-                _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#withConverter, [converter]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#withConverter, [converter]),
-                ),
-          )
-          as _i3.PostgrestBuilder<U, U, List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#withConverter, [converter]),
+    returnValue: _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#withConverter, [converter]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestBuilder_31<U, U, List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#withConverter, [converter]),
+        ),
+  ) as _i3.PostgrestBuilder<U, U, List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestBuilder<
@@ -6994,149 +6200,132 @@ class MockPostgrestListTransformBuilder extends _i1.Mock
   >
   abortSignal(_i6.Future<void>? abortSignal) =>
       (super.noSuchMethod(
-            Invocation.method(#abortSignal, [abortSignal]),
-            returnValue:
-                _FakePostgrestBuilder_31<
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>,
-                  List<Map<String, dynamic>>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-          )
-          as _i3.PostgrestBuilder<
-            List<Map<String, dynamic>>,
-            List<Map<String, dynamic>>,
-            List<Map<String, dynamic>>
-          >);
+        Invocation.method(#abortSignal, [abortSignal]),
+        returnValue:
+            _FakePostgrestBuilder_31<
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+        returnValueForMissingStub:
+            _FakePostgrestBuilder_31<
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>,
+              List<Map<String, dynamic>>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+      ) as _i3.PostgrestBuilder<
+        List<Map<String, dynamic>>,
+        List<Map<String, dynamic>>,
+        List<Map<String, dynamic>>
+      >);
 
   @override
   Uri appendSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#appendSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#appendSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
   Uri overrideSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#overrideSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#overrideSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
-  _i6.Stream<List<Map<String, dynamic>>> asStream() =>
-      (super.noSuchMethod(
-            Invocation.method(#asStream, []),
-            returnValue: _i6.Stream<List<Map<String, dynamic>>>.empty(),
-            returnValueForMissingStub:
-                _i6.Stream<List<Map<String, dynamic>>>.empty(),
-          )
-          as _i6.Stream<List<Map<String, dynamic>>>);
+  _i6.Stream<List<Map<String, dynamic>>> asStream() => (super.noSuchMethod(
+    Invocation.method(#asStream, []),
+    returnValue: _i6.Stream<List<Map<String, dynamic>>>.empty(),
+    returnValueForMissingStub: _i6.Stream<List<Map<String, dynamic>>>.empty(),
+  ) as _i6.Stream<List<Map<String, dynamic>>>);
 
   @override
   _i6.Future<List<Map<String, dynamic>>> catchError(
     Function? onError, {
     bool Function(Object)? test,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#catchError, [onError], {#test: test}),
-            returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
-              <Map<String, dynamic>>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<Map<String, dynamic>>>.value(
-                  <Map<String, dynamic>>[],
-                ),
-          )
-          as _i6.Future<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#catchError, [onError], {#test: test}),
+    returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+  ) as _i6.Future<List<Map<String, dynamic>>>);
 
   @override
   _i6.Future<U> then<U>(
     _i6.FutureOr<U> Function(List<Map<String, dynamic>>)? onValue, {
     Function? onError,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#then, [onValue], {#onError: onError}),
+    returnValue:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
             Invocation.method(#then, [onValue], {#onError: onError}),
-            returnValue:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-            returnValueForMissingStub:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-          )
-          as _i6.Future<U>);
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+    returnValueForMissingStub:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
+            Invocation.method(#then, [onValue], {#onError: onError}),
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+  ) as _i6.Future<U>);
 
   @override
   _i6.Future<List<Map<String, dynamic>>> timeout(
     Duration? timeLimit, {
     _i6.FutureOr<List<Map<String, dynamic>>> Function()? onTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
-            returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
-              <Map<String, dynamic>>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<Map<String, dynamic>>>.value(
-                  <Map<String, dynamic>>[],
-                ),
-          )
-          as _i6.Future<List<Map<String, dynamic>>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+    returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+  ) as _i6.Future<List<Map<String, dynamic>>>);
 
   @override
   _i6.Future<List<Map<String, dynamic>>> whenComplete(
     _i6.FutureOr<void> Function()? action,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#whenComplete, [action]),
-            returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
-              <Map<String, dynamic>>[],
-            ),
-            returnValueForMissingStub:
-                _i6.Future<List<Map<String, dynamic>>>.value(
-                  <Map<String, dynamic>>[],
-                ),
-          )
-          as _i6.Future<List<Map<String, dynamic>>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#whenComplete, [action]),
+    returnValue: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+    returnValueForMissingStub: _i6.Future<List<Map<String, dynamic>>>.value(
+      <Map<String, dynamic>>[],
+    ),
+  ) as _i6.Future<List<Map<String, dynamic>>>);
 }
 
 /// A class which mocks [PostgrestTransformBuilder].
@@ -7147,91 +6336,80 @@ class MockPostgrestMapTransformBuilder extends _i1.Mock
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> copyWithUrl(Uri? url) =>
       (super.noSuchMethod(
-            Invocation.method(#copyWithUrl, [url]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#copyWithUrl, [url]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#copyWithUrl, [url]),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#copyWithUrl, [url]),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#copyWithUrl, [url]),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> retry({
     bool? enabled = true,
     int? count,
     Duration? requestTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#retry, [], {
-              #enabled: enabled,
-              #count: count,
-              #requestTimeout: requestTimeout,
-            }),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#retry, [], {
-                    #enabled: enabled,
-                    #count: count,
-                    #requestTimeout: requestTimeout,
-                  }),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#retry, [], {
+      #enabled: enabled,
+      #count: count,
+      #requestTimeout: requestTimeout,
+    }),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(#retry, [], {
+        #enabled: enabled,
+        #count: count,
+        #requestTimeout: requestTimeout,
+      }),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#retry, [], {
+            #enabled: enabled,
+            #count: count,
+            #requestTimeout: requestTimeout,
+          }),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> setHeader(
     String? key,
     String? value,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#setHeader, [key, value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#setHeader, [key, value]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#setHeader, [key, value]),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(#setHeader, [key, value]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#setHeader, [key, value]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>> select([
     String? columns = '*',
-  ]) =>
-      (super.noSuchMethod(
-            Invocation.method(#select, [columns]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
-                  this,
-                  Invocation.method(#select, [columns]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
+  ]) => (super.noSuchMethod(
+    Invocation.method(#select, [columns]),
+    returnValue: _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+      this,
+      Invocation.method(#select, [columns]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<List<Map<String, dynamic>>>(
+          this,
+          Invocation.method(#select, [columns]),
+        ),
+  ) as _i3.PostgrestTransformBuilder<List<Map<String, dynamic>>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> order(
@@ -7239,194 +6417,162 @@ class MockPostgrestMapTransformBuilder extends _i1.Mock
     bool? ascending = false,
     bool? nullsFirst = false,
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #order,
-              [column],
-              {
-                #ascending: ascending,
-                #nullsFirst: nullsFirst,
-                #referencedTable: referencedTable,
-              },
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #order,
-                    [column],
-                    {
-                      #ascending: ascending,
-                      #nullsFirst: nullsFirst,
-                      #referencedTable: referencedTable,
-                    },
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(
+      #order,
+      [column],
+      {
+        #ascending: ascending,
+        #nullsFirst: nullsFirst,
+        #referencedTable: referencedTable,
+      },
+    ),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(
+        #order,
+        [column],
+        {
+          #ascending: ascending,
+          #nullsFirst: nullsFirst,
+          #referencedTable: referencedTable,
+        },
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #order,
+            [column],
+            {
+              #ascending: ascending,
+              #nullsFirst: nullsFirst,
+              #referencedTable: referencedTable,
+            },
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> limit(
     int? count, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #limit,
-              [count],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #limit,
-                    [count],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(#limit, [count], {#referencedTable: referencedTable}),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #limit,
+            [count],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> range(
     int? from,
     int? to, {
     String? referencedTable,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(
-              #range,
-              [from, to],
-              {#referencedTable: referencedTable},
-            ),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(
-                    #range,
-                    [from, to],
-                    {#referencedTable: referencedTable},
-                  ),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#range, [from, to], {#referencedTable: referencedTable}),
+    returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+      this,
+      Invocation.method(
+        #range,
+        [from, to],
+        {#referencedTable: referencedTable},
+      ),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(
+            #range,
+            [from, to],
+            {#referencedTable: referencedTable},
+          ),
+        ),
+  ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> single() =>
       (super.noSuchMethod(
-            Invocation.method(#single, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#single, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#single, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#single, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#single, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>?> maybeSingle() =>
       (super.noSuchMethod(
-            Invocation.method(#maybeSingle, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
-                  this,
-                  Invocation.method(#maybeSingle, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
+        Invocation.method(#maybeSingle, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+          this,
+          Invocation.method(#maybeSingle, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>?>(
+              this,
+              Invocation.method(#maybeSingle, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>?>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> stripNulls() =>
       (super.noSuchMethod(
-            Invocation.method(#stripNulls, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#stripNulls, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#stripNulls, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#stripNulls, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#stripNulls, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> dryRun() =>
       (super.noSuchMethod(
-            Invocation.method(#dryRun, []),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#dryRun, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#dryRun, []),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#dryRun, []),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#dryRun, []),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
-  _i3.PostgrestTransformBuilder<String> csv() =>
-      (super.noSuchMethod(
-            Invocation.method(#csv, []),
-            returnValue: _FakePostgrestTransformBuilder_34<String>(
-              this,
-              Invocation.method(#csv, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<String>(
-                  this,
-                  Invocation.method(#csv, []),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<String>);
+  _i3.PostgrestTransformBuilder<String> csv() => (super.noSuchMethod(
+    Invocation.method(#csv, []),
+    returnValue: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestTransformBuilder_34<String>(
+      this,
+      Invocation.method(#csv, []),
+    ),
+  ) as _i3.PostgrestTransformBuilder<String>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -7436,41 +6582,37 @@ class MockPostgrestMapTransformBuilder extends _i1.Mock
   >
   count([_i3.CountOption? count = _i3.CountOption.exact]) =>
       (super.noSuchMethod(
-            Invocation.method(#count, [count]),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<Map<String, dynamic>>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#count, [count])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  _i3.PostgrestResponse<Map<String, dynamic>>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#count, [count])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            _i3.PostgrestResponse<Map<String, dynamic>>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#count, [count]),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<Map<String, dynamic>>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#count, [count])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              _i3.PostgrestResponse<Map<String, dynamic>>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#count, [count])),
+      ) as _i3.ResponsePostgrestBuilder<
+        _i3.PostgrestResponse<Map<String, dynamic>>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
-  _i3.PostgrestBuilder<void, void, void> head() =>
-      (super.noSuchMethod(
-            Invocation.method(#head, []),
-            returnValue: _FakePostgrestBuilder_31<void, void, void>(
-              this,
-              Invocation.method(#head, []),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<void, void, void>(
-                  this,
-                  Invocation.method(#head, []),
-                ),
-          )
-          as _i3.PostgrestBuilder<void, void, void>);
+  _i3.PostgrestBuilder<void, void, void> head() => (super.noSuchMethod(
+    Invocation.method(#head, []),
+    returnValue: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<void, void, void>(
+      this,
+      Invocation.method(#head, []),
+    ),
+  ) as _i3.PostgrestBuilder<void, void, void>);
 
   @override
   _i3.ResponsePostgrestBuilder<
@@ -7480,42 +6622,39 @@ class MockPostgrestMapTransformBuilder extends _i1.Mock
   >
   geojson() =>
       (super.noSuchMethod(
-            Invocation.method(#geojson, []),
-            returnValue:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-            returnValueForMissingStub:
-                _FakeResponsePostgrestBuilder_35<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#geojson, [])),
-          )
-          as _i3.ResponsePostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#geojson, []),
+        returnValue:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+        returnValueForMissingStub:
+            _FakeResponsePostgrestBuilder_35<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#geojson, [])),
+      ) as _i3.ResponsePostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   _i3.PostgrestTransformBuilder<Map<String, dynamic>> maxAffected(int? value) =>
       (super.noSuchMethod(
-            Invocation.method(#maxAffected, [value]),
-            returnValue:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-            returnValueForMissingStub:
-                _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#maxAffected, [value]),
-                ),
-          )
-          as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
+        Invocation.method(#maxAffected, [value]),
+        returnValue: _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+          this,
+          Invocation.method(#maxAffected, [value]),
+        ),
+        returnValueForMissingStub:
+            _FakePostgrestTransformBuilder_34<Map<String, dynamic>>(
+              this,
+              Invocation.method(#maxAffected, [value]),
+            ),
+      ) as _i3.PostgrestTransformBuilder<Map<String, dynamic>>);
 
   @override
   _i3.PostgrestBuilder<String, String, String> explain({
@@ -7525,59 +6664,54 @@ class MockPostgrestMapTransformBuilder extends _i1.Mock
     bool? buffers = false,
     bool? wal = false,
     _i3.ExplainFormat? format = _i3.ExplainFormat.text,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#explain, [], {
-              #analyze: analyze,
-              #verbose: verbose,
-              #settings: settings,
-              #buffers: buffers,
-              #wal: wal,
-              #format: format,
-            }),
-            returnValue: _FakePostgrestBuilder_31<String, String, String>(
-              this,
-              Invocation.method(#explain, [], {
-                #analyze: analyze,
-                #verbose: verbose,
-                #settings: settings,
-                #buffers: buffers,
-                #wal: wal,
-                #format: format,
-              }),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<String, String, String>(
-                  this,
-                  Invocation.method(#explain, [], {
-                    #analyze: analyze,
-                    #verbose: verbose,
-                    #settings: settings,
-                    #buffers: buffers,
-                    #wal: wal,
-                    #format: format,
-                  }),
-                ),
-          )
-          as _i3.PostgrestBuilder<String, String, String>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#explain, [], {
+      #analyze: analyze,
+      #verbose: verbose,
+      #settings: settings,
+      #buffers: buffers,
+      #wal: wal,
+      #format: format,
+    }),
+    returnValue: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+    returnValueForMissingStub: _FakePostgrestBuilder_31<String, String, String>(
+      this,
+      Invocation.method(#explain, [], {
+        #analyze: analyze,
+        #verbose: verbose,
+        #settings: settings,
+        #buffers: buffers,
+        #wal: wal,
+        #format: format,
+      }),
+    ),
+  ) as _i3.PostgrestBuilder<String, String, String>);
 
   @override
   _i3.PostgrestBuilder<U, U, Map<String, dynamic>> withConverter<U>(
     _i3.PostgrestConverter<U, Map<String, dynamic>>? converter,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#withConverter, [converter]),
-            returnValue: _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
-              this,
-              Invocation.method(#withConverter, [converter]),
-            ),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
-                  this,
-                  Invocation.method(#withConverter, [converter]),
-                ),
-          )
-          as _i3.PostgrestBuilder<U, U, Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#withConverter, [converter]),
+    returnValue: _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
+      this,
+      Invocation.method(#withConverter, [converter]),
+    ),
+    returnValueForMissingStub:
+        _FakePostgrestBuilder_31<U, U, Map<String, dynamic>>(
+          this,
+          Invocation.method(#withConverter, [converter]),
+        ),
+  ) as _i3.PostgrestBuilder<U, U, Map<String, dynamic>>);
 
   @override
   _i3.PostgrestBuilder<
@@ -7587,143 +6721,124 @@ class MockPostgrestMapTransformBuilder extends _i1.Mock
   >
   abortSignal(_i6.Future<void>? abortSignal) =>
       (super.noSuchMethod(
-            Invocation.method(#abortSignal, [abortSignal]),
-            returnValue:
-                _FakePostgrestBuilder_31<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-            returnValueForMissingStub:
-                _FakePostgrestBuilder_31<
-                  Map<String, dynamic>,
-                  Map<String, dynamic>,
-                  Map<String, dynamic>
-                >(this, Invocation.method(#abortSignal, [abortSignal])),
-          )
-          as _i3.PostgrestBuilder<
-            Map<String, dynamic>,
-            Map<String, dynamic>,
-            Map<String, dynamic>
-          >);
+        Invocation.method(#abortSignal, [abortSignal]),
+        returnValue:
+            _FakePostgrestBuilder_31<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+        returnValueForMissingStub:
+            _FakePostgrestBuilder_31<
+              Map<String, dynamic>,
+              Map<String, dynamic>,
+              Map<String, dynamic>
+            >(this, Invocation.method(#abortSignal, [abortSignal])),
+      ) as _i3.PostgrestBuilder<
+        Map<String, dynamic>,
+        Map<String, dynamic>,
+        Map<String, dynamic>
+      >);
 
   @override
   Uri appendSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#appendSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#appendSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#appendSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#appendSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
   Uri overrideSearchParams(String? key, String? value, [Uri? url]) =>
       (super.noSuchMethod(
-            Invocation.method(#overrideSearchParams, [key, value, url]),
-            returnValue: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-            returnValueForMissingStub: _FakeUri_32(
-              this,
-              Invocation.method(#overrideSearchParams, [key, value, url]),
-            ),
-          )
-          as Uri);
+        Invocation.method(#overrideSearchParams, [key, value, url]),
+        returnValue: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+        returnValueForMissingStub: _FakeUri_32(
+          this,
+          Invocation.method(#overrideSearchParams, [key, value, url]),
+        ),
+      ) as Uri);
 
   @override
-  _i6.Stream<Map<String, dynamic>> asStream() =>
-      (super.noSuchMethod(
-            Invocation.method(#asStream, []),
-            returnValue: _i6.Stream<Map<String, dynamic>>.empty(),
-            returnValueForMissingStub: _i6.Stream<Map<String, dynamic>>.empty(),
-          )
-          as _i6.Stream<Map<String, dynamic>>);
+  _i6.Stream<Map<String, dynamic>> asStream() => (super.noSuchMethod(
+    Invocation.method(#asStream, []),
+    returnValue: _i6.Stream<Map<String, dynamic>>.empty(),
+    returnValueForMissingStub: _i6.Stream<Map<String, dynamic>>.empty(),
+  ) as _i6.Stream<Map<String, dynamic>>);
 
   @override
   _i6.Future<Map<String, dynamic>> catchError(
     Function? onError, {
     bool Function(Object)? test,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#catchError, [onError], {#test: test}),
-            returnValue: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-            returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-          )
-          as _i6.Future<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#catchError, [onError], {#test: test}),
+    returnValue: _i6.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+    returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
+      <String, dynamic>{},
+    ),
+  ) as _i6.Future<Map<String, dynamic>>);
 
   @override
   _i6.Future<U> then<U>(
     _i6.FutureOr<U> Function(Map<String, dynamic>)? onValue, {
     Function? onError,
-  }) =>
-      (super.noSuchMethod(
+  }) => (super.noSuchMethod(
+    Invocation.method(#then, [onValue], {#onError: onError}),
+    returnValue:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
             Invocation.method(#then, [onValue], {#onError: onError}),
-            returnValue:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-            returnValueForMissingStub:
-                _i7.ifNotNull(
-                  _i7.dummyValueOrNull<U>(
-                    this,
-                    Invocation.method(#then, [onValue], {#onError: onError}),
-                  ),
-                  (U v) => _i6.Future<U>.value(v),
-                ) ??
-                _FakeFuture_33<U>(
-                  this,
-                  Invocation.method(#then, [onValue], {#onError: onError}),
-                ),
-          )
-          as _i6.Future<U>);
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+    returnValueForMissingStub:
+        _i7.ifNotNull(
+          _i7.dummyValueOrNull<U>(
+            this,
+            Invocation.method(#then, [onValue], {#onError: onError}),
+          ),
+          (U v) => _i6.Future<U>.value(v),
+        ) ??
+        _FakeFuture_33<U>(
+          this,
+          Invocation.method(#then, [onValue], {#onError: onError}),
+        ),
+  ) as _i6.Future<U>);
 
   @override
   _i6.Future<Map<String, dynamic>> timeout(
     Duration? timeLimit, {
     _i6.FutureOr<Map<String, dynamic>> Function()? onTimeout,
-  }) =>
-      (super.noSuchMethod(
-            Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
-            returnValue: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-            returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-          )
-          as _i6.Future<Map<String, dynamic>>);
+  }) => (super.noSuchMethod(
+    Invocation.method(#timeout, [timeLimit], {#onTimeout: onTimeout}),
+    returnValue: _i6.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+    returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
+      <String, dynamic>{},
+    ),
+  ) as _i6.Future<Map<String, dynamic>>);
 
   @override
   _i6.Future<Map<String, dynamic>> whenComplete(
     _i6.FutureOr<void> Function()? action,
-  ) =>
-      (super.noSuchMethod(
-            Invocation.method(#whenComplete, [action]),
-            returnValue: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-            returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
-              <String, dynamic>{},
-            ),
-          )
-          as _i6.Future<Map<String, dynamic>>);
+  ) => (super.noSuchMethod(
+    Invocation.method(#whenComplete, [action]),
+    returnValue: _i6.Future<Map<String, dynamic>>.value(<String, dynamic>{}),
+    returnValueForMissingStub: _i6.Future<Map<String, dynamic>>.value(
+      <String, dynamic>{},
+    ),
+  ) as _i6.Future<Map<String, dynamic>>);
 }

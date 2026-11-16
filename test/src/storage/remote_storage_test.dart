@@ -4,6 +4,7 @@ import 'dart:typed_data';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:remote_database/remote_database.dart';
+
 import '../../dependencies/mock_runner_test.mocks.dart';
 
 void main() {
@@ -81,15 +82,12 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageUploadFailure>());
-          final failure = error as RemoteStorageUploadFailure;
-          expect(failure.message, equals('Upload failed'));
-          expect(failure.path, equals('user123.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageUploadFailure>());
+        final failure = error as RemoteStorageUploadFailure;
+        expect(failure.message, equals('Upload failed'));
+        expect(failure.path, equals('user123.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(fileNotFound) when path not found', () async {
@@ -173,13 +171,8 @@ void main() {
     });
 
     test('returns Right(path) on successful upload', () async {
-      when(
-        mockFileApi.upload(
-          any,
-          any,
-          fileOptions: anyNamed('fileOptions'),
-        ),
-      ).thenAnswer((_) async => 'docs/manual.pdf');
+      when(mockFileApi.upload(any, any, fileOptions: anyNamed('fileOptions')))
+          .thenAnswer((_) async => 'docs/manual.pdf');
 
       final result = await storage.uploadFile(
         bucket: 'docs',
@@ -197,13 +190,8 @@ void main() {
     });
 
     test('returns Left(uploadFailure) on StorageException', () async {
-      when(
-        mockFileApi.upload(
-          any,
-          any,
-          fileOptions: anyNamed('fileOptions'),
-        ),
-      ).thenThrow(const StorageException('Upload failed'));
+      when(mockFileApi.upload(any, any, fileOptions: anyNamed('fileOptions')))
+          .thenThrow(const StorageException('Upload failed'));
 
       final result = await storage.uploadFile(
         bucket: 'docs',
@@ -219,13 +207,8 @@ void main() {
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
-      when(
-        mockFileApi.upload(
-          any,
-          any,
-          fileOptions: anyNamed('fileOptions'),
-        ),
-      ).thenThrow(Exception('Network error'));
+      when(mockFileApi.upload(any, any, fileOptions: anyNamed('fileOptions')))
+          .thenThrow(Exception('Network error'));
 
       final result = await storage.uploadFile(
         bucket: 'docs',
@@ -252,19 +235,15 @@ void main() {
       );
 
       expect(result.isRight(), isTrue);
-      result.fold(
-        (l) => fail('Expected Right but got Left'),
-        (data) {
-          expect(data, equals(bytes));
-          expect(data.length, equals(5));
-        },
-      );
+      result.fold((l) => fail('Expected Right but got Left'), (data) {
+        expect(data, equals(bytes));
+        expect(data.length, equals(5));
+      });
     });
 
     test('returns Left(fileNotFound) when file does not exist', () async {
-      when(
-        mockFileApi.download(any),
-      ).thenThrow(const StorageException('Object not found'));
+      when(mockFileApi.download(any))
+          .thenThrow(const StorageException('Object not found'));
 
       final result = await storage.download(
         bucket: 'avatars',
@@ -272,20 +251,16 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageFileNotFound>());
-          final notFound = error as RemoteStorageFileNotFound;
-          expect(notFound.path, equals('missing.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageFileNotFound>());
+        final notFound = error as RemoteStorageFileNotFound;
+        expect(notFound.path, equals('missing.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(fileNotFound) on 404 error', () async {
-      when(
-        mockFileApi.download(any),
-      ).thenThrow(const StorageException('404 not found'));
+      when(mockFileApi.download(any))
+          .thenThrow(const StorageException('404 not found'));
 
       final result = await storage.download(
         bucket: 'avatars',
@@ -300,9 +275,8 @@ void main() {
     });
 
     test('returns Left(permissionDenied) on permission error', () async {
-      when(
-        mockFileApi.download(any),
-      ).thenThrow(const StorageException('permission denied'));
+      when(mockFileApi.download(any))
+          .thenThrow(const StorageException('permission denied'));
 
       final result = await storage.download(
         bucket: 'private',
@@ -317,9 +291,8 @@ void main() {
     });
 
     test('returns Left(downloadFailure) on generic StorageException', () async {
-      when(
-        mockFileApi.download(any),
-      ).thenThrow(const StorageException('Server error'));
+      when(mockFileApi.download(any))
+          .thenThrow(const StorageException('Server error'));
 
       final result = await storage.download(
         bucket: 'avatars',
@@ -327,15 +300,12 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageDownloadFailure>());
-          final failure = error as RemoteStorageDownloadFailure;
-          expect(failure.message, equals('Server error'));
-          expect(failure.path, equals('user123.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageDownloadFailure>());
+        final failure = error as RemoteStorageDownloadFailure;
+        expect(failure.message, equals('Server error'));
+        expect(failure.path, equals('user123.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
@@ -376,15 +346,13 @@ void main() {
       );
 
       expect(result.isRight(), isTrue);
-      verify(
-        mockFileApi.remove(['file1.png', 'file2.png', 'file3.png']),
-      ).called(1);
+      verify(mockFileApi.remove(['file1.png', 'file2.png', 'file3.png']))
+          .called(1);
     });
 
     test('returns Left(deleteFailure) on StorageException', () async {
-      when(
-        mockFileApi.remove(any),
-      ).thenThrow(const StorageException('Delete failed'));
+      when(mockFileApi.remove(any))
+          .thenThrow(const StorageException('Delete failed'));
 
       final result = await storage.delete(
         bucket: 'avatars',
@@ -392,14 +360,11 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageDeleteFailure>());
-          final failure = error as RemoteStorageDeleteFailure;
-          expect(failure.message, equals('Delete failed'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageDeleteFailure>());
+        final failure = error as RemoteStorageDeleteFailure;
+        expect(failure.message, equals('Delete failed'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
@@ -420,9 +385,8 @@ void main() {
 
   group('RemoteStorage - getPublicUrl', () {
     test('returns Right(url) on success', () {
-      when(
-        mockFileApi.getPublicUrl(any),
-      ).thenReturn('https://storage.supabase.co/avatars/user123.png');
+      when(mockFileApi.getPublicUrl(any))
+          .thenReturn('https://storage.supabase.co/avatars/user123.png');
 
       final result = storage.getPublicUrl(
         bucket: 'avatars',
@@ -448,14 +412,11 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageUrlFailure>());
-          final failure = error as RemoteStorageUrlFailure;
-          expect(failure.path, equals('user123.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageUrlFailure>());
+        final failure = error as RemoteStorageUrlFailure;
+        expect(failure.path, equals('user123.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
   });
 
@@ -481,9 +442,8 @@ void main() {
     });
 
     test('returns Left(urlFailure) on StorageException', () async {
-      when(
-        mockFileApi.createSignedUrl(any, any),
-      ).thenThrow(const StorageException('Signed URL failed'));
+      when(mockFileApi.createSignedUrl(any, any))
+          .thenThrow(const StorageException('Signed URL failed'));
 
       final result = await storage.createSignedUrl(
         bucket: 'avatars',
@@ -492,21 +452,17 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageUrlFailure>());
-          final failure = error as RemoteStorageUrlFailure;
-          expect(failure.message, equals('Signed URL failed'));
-          expect(failure.path, equals('user123.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageUrlFailure>());
+        final failure = error as RemoteStorageUrlFailure;
+        expect(failure.message, equals('Signed URL failed'));
+        expect(failure.path, equals('user123.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
-      when(
-        mockFileApi.createSignedUrl(any, any),
-      ).thenThrow(Exception('Network error'));
+      when(mockFileApi.createSignedUrl(any, any))
+          .thenThrow(Exception('Network error'));
 
       final result = await storage.createSignedUrl(
         bucket: 'avatars',
@@ -531,10 +487,7 @@ void main() {
         ),
       ).thenAnswer((_) async => []);
 
-      final result = await storage.list(
-        bucket: 'avatars',
-        path: 'users/',
-      );
+      final result = await storage.list(bucket: 'avatars', path: 'users/');
 
       expect(result.isRight(), isTrue);
       result.fold(
@@ -563,18 +516,13 @@ void main() {
         ),
       ).thenAnswer((_) async => [mockFile]);
 
-      final result = await storage.list(
-        bucket: 'avatars',
-      );
+      final result = await storage.list(bucket: 'avatars');
 
       expect(result.isRight(), isTrue);
-      result.fold(
-        (l) => fail('Expected Right but got Left'),
-        (files) {
-          expect(files.length, equals(1));
-          expect(files.first.name, equals('test.png'));
-        },
-      );
+      result.fold((l) => fail('Expected Right but got Left'), (files) {
+        expect(files.length, equals(1));
+        expect(files.first.name, equals('test.png'));
+      });
     });
 
     test('passes limit and offset to searchOptions', () async {
@@ -595,10 +543,7 @@ void main() {
       verify(
         mockFileApi.list(
           path: 'users/',
-          searchOptions: argThat(
-            isA<SearchOptions>(),
-            named: 'searchOptions',
-          ),
+          searchOptions: argThat(isA<SearchOptions>(), named: 'searchOptions'),
         ),
       ).called(1);
     });
@@ -611,17 +556,11 @@ void main() {
         ),
       ).thenAnswer((_) async => []);
 
-      await storage.list(
-        bucket: 'avatars',
-        sortBy: StorageSortBy.createdAt,
-      );
+      await storage.list(bucket: 'avatars', sortBy: StorageSortBy.createdAt);
 
       verify(
         mockFileApi.list(
-          searchOptions: argThat(
-            isA<SearchOptions>(),
-            named: 'searchOptions',
-          ),
+          searchOptions: argThat(isA<SearchOptions>(), named: 'searchOptions'),
         ),
       ).called(1);
     });
@@ -649,20 +588,15 @@ void main() {
         ),
       ).thenThrow(const StorageException('List failed'));
 
-      final result = await storage.list(
-        bucket: 'avatars',
-      );
+      final result = await storage.list(bucket: 'avatars');
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageListFailure>());
-          final failure = error as RemoteStorageListFailure;
-          expect(failure.message, equals('List failed'));
-          expect(failure.bucket, equals('avatars'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageListFailure>());
+        final failure = error as RemoteStorageListFailure;
+        expect(failure.message, equals('List failed'));
+        expect(failure.bucket, equals('avatars'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
@@ -673,9 +607,7 @@ void main() {
         ),
       ).thenThrow(Exception('Network error'));
 
-      final result = await storage.list(
-        bucket: 'avatars',
-      );
+      final result = await storage.list(bucket: 'avatars');
 
       expect(result.isLeft(), isTrue);
       result.fold(
@@ -700,9 +632,8 @@ void main() {
     });
 
     test('returns Left(moveFailure) on StorageException', () async {
-      when(
-        mockFileApi.move(any, any),
-      ).thenThrow(const StorageException('Move failed'));
+      when(mockFileApi.move(any, any))
+          .thenThrow(const StorageException('Move failed'));
 
       final result = await storage.move(
         bucket: 'avatars',
@@ -711,16 +642,13 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageMoveFailure>());
-          final failure = error as RemoteStorageMoveFailure;
-          expect(failure.message, equals('Move failed'));
-          expect(failure.fromPath, equals('old/user123.png'));
-          expect(failure.toPath, equals('new/user123.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageMoveFailure>());
+        final failure = error as RemoteStorageMoveFailure;
+        expect(failure.message, equals('Move failed'));
+        expect(failure.fromPath, equals('old/user123.png'));
+        expect(failure.toPath, equals('new/user123.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
@@ -751,15 +679,13 @@ void main() {
       );
 
       expect(result.isRight(), isTrue);
-      verify(
-        mockFileApi.copy('original/user123.png', 'backup/user123.png'),
-      ).called(1);
+      verify(mockFileApi.copy('original/user123.png', 'backup/user123.png'))
+          .called(1);
     });
 
     test('returns Left(copyFailure) on StorageException', () async {
-      when(
-        mockFileApi.copy(any, any),
-      ).thenThrow(const StorageException('Copy failed'));
+      when(mockFileApi.copy(any, any))
+          .thenThrow(const StorageException('Copy failed'));
 
       final result = await storage.copy(
         bucket: 'avatars',
@@ -768,16 +694,13 @@ void main() {
       );
 
       expect(result.isLeft(), isTrue);
-      result.fold(
-        (error) {
-          expect(error, isA<RemoteStorageCopyFailure>());
-          final failure = error as RemoteStorageCopyFailure;
-          expect(failure.message, equals('Copy failed'));
-          expect(failure.fromPath, equals('original/user123.png'));
-          expect(failure.toPath, equals('backup/user123.png'));
-        },
-        (r) => fail('Expected Left but got Right'),
-      );
+      result.fold((error) {
+        expect(error, isA<RemoteStorageCopyFailure>());
+        final failure = error as RemoteStorageCopyFailure;
+        expect(failure.message, equals('Copy failed'));
+        expect(failure.fromPath, equals('original/user123.png'));
+        expect(failure.toPath, equals('backup/user123.png'));
+      }, (r) => fail('Expected Left but got Right'));
     });
 
     test('returns Left(unknown) on unexpected exception', () async {
@@ -801,9 +724,8 @@ void main() {
     test('maps bucket error to bucketNotFound', () async {
       // Message must contain "bucket" but NOT "not found" or "404"
       // because those patterns have higher priority
-      when(
-        mockFileApi.download(any),
-      ).thenThrow(const StorageException('Invalid bucket specified'));
+      when(mockFileApi.download(any))
+          .thenThrow(const StorageException('Invalid bucket specified'));
 
       final result = await storage.download(
         bucket: 'nonexistent',

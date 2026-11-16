@@ -10,10 +10,7 @@ void main() {
     });
 
     test('lanza ArgumentError cuando no se provee ninguna key', () {
-      expect(
-        resolveSupabaseKey,
-        throwsA(isA<ArgumentError>()),
-      );
+      expect(resolveSupabaseKey, throwsA(isA<ArgumentError>()));
     });
   });
 }

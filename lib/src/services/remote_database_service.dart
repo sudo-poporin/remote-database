@@ -14,9 +14,7 @@ class RemoteDatabaseService {
     required String supabaseUrl,
     String? supabasePublishableKey,
   }) async {
-    final key = resolveSupabaseKey(
-      publishableKey: supabasePublishableKey,
-    );
+    final key = resolveSupabaseKey(publishableKey: supabasePublishableKey);
 
     final supabase = await Supabase.initialize(
       url: supabaseUrl,

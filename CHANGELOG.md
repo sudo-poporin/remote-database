@@ -5,6 +5,29 @@ Todos los cambios notables de este paquete se documentan en este archivo.
 El formato sigue [Keep a Changelog](https://keepachangelog.com/es/1.1.0/)
 y el versionado sigue [Semantic Versioning](https://semver.org/lang/es/).
 
+## [6.0.0] - 2026-11-15
+
+### Modificado
+
+- **Cambio que rompe:** el SDK mínimo pasa de Dart 3.8 a Dart 3.14
+  (Flutter 3.50). La API pública no cambia, pero un consumidor con un SDK
+  anterior deja de resolver el paquete. Para migrar, subir el SDK del
+  consumidor a Flutter 3.50 o superior antes de apuntar el `ref:` a `v6.0.0`.
+- `supabase_flutter` sube a `^2.18.3`.
+
+### Interno
+
+- Dependencias de desarrollo: `freezed ^4.0.3`, `json_serializable ^6.15.2`,
+  `very_good_analysis ^11.0.0` y `build_runner ^2.16.2`. `build_runner 2.17.1`
+  queda pendiente: requiere `build >=5.0.0` y `mockito 5.8.1` todavía exige
+  `build <5.0.0`.
+- Constructores y factories con la sintaxis de Dart 3.14 (`new(...)`,
+  factories sin el nombre del tipo y parámetros nombrados privados como
+  `this._client`, que se siguen pasando como `client:`).
+- Se quita la regla deprecada `unnecessary_await_in_return` de
+  `analysis_options.yaml`, y el código pasa a `dart format` con el estilo de
+  3.14.
+
 ## [5.4.0] - 2026-11-14
 
 ### Agregado

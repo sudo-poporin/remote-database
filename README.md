@@ -27,8 +27,10 @@ dependencies:
   remote_database:
     git:
       url: https://github.com/sudo-poporin/remote-database
-      ref: v4.0.0  # Usar versión específica
+      ref: v6.0.0  # Usar versión específica
 ```
+
+Requiere Dart 3.14 o superior (Flutter 3.50 o superior).
 
 ## Configuración 🔧
 

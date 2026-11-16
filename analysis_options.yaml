@@ -15,5 +15,4 @@ analyzer:
     - linux/**
 linter:
   rules:
-    unnecessary_await_in_return: false
     flutter_style_todos: false

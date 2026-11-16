@@ -9,12 +9,12 @@ import 'package:remote_database/src/const/const.dart';
 /// Repositorio de base de datos remota.
 class RemoteDatabaseBase extends _RemoteDatabase {
   /// Crea una instancia de [RemoteDatabaseBase] con un cliente de Supabase.
-  RemoteDatabaseBase({required super.client});
+  new({required super.client});
 }
 
 /// Implementación de la interfaz [IRemoteDatabase].
 class _RemoteDatabase implements IRemoteDatabase {
-  _RemoteDatabase({required SupabaseClient client}) : _client = client;
+  new({required this._client});
 
   final SupabaseClient _client;
 
@@ -256,10 +256,6 @@ class _RemoteDatabase implements IRemoteDatabase {
 
   @override
   QueryBuilder query(String table, {String? schema}) {
-    return QueryBuilder(
-      client: _client,
-      table: table,
-      schema: schema,
-    );
+    return QueryBuilder(client: _client, table: table, schema: schema);
   }
 }

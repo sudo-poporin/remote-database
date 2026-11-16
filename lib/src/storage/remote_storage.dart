@@ -9,7 +9,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 /// Implementación de almacenamiento remoto usando Supabase Storage.
 class RemoteStorage implements IRemoteStorage {
   /// Crea una instancia de [RemoteStorage].
-  RemoteStorage({required SupabaseStorageClient client}) : _client = client;
+  new({required this._client});
 
   final SupabaseStorageClient _client;
 
@@ -27,10 +27,7 @@ class RemoteStorage implements IRemoteStorage {
           .uploadBinary(
             path,
             data,
-            fileOptions: FileOptions(
-              contentType: contentType,
-              upsert: upsert,
-            ),
+            fileOptions: FileOptions(contentType: contentType, upsert: upsert),
           );
       return Right(result);
     } on StorageException catch (e) {
@@ -56,10 +53,7 @@ class RemoteStorage implements IRemoteStorage {
           .upload(
             path,
             file,
-            fileOptions: FileOptions(
-              contentType: contentType,
-              upsert: upsert,
-            ),
+            fileOptions: FileOptions(contentType: contentType, upsert: upsert),
           );
       return Right(result);
     } on StorageException catch (e) {
@@ -125,10 +119,7 @@ class RemoteStorage implements IRemoteStorage {
       return Right(url);
     } on Exception catch (e) {
       return Left(
-        RemoteStorageException.urlFailure(
-          message: e.toString(),
-          path: path,
-        ),
+        RemoteStorageException.urlFailure(message: e.toString(), path: path),
       );
     }
   }
@@ -142,17 +133,11 @@ class RemoteStorage implements IRemoteStorage {
     try {
       final result = await _client
           .from(bucket)
-          .createSignedUrl(
-            path,
-            expiresInSeconds,
-          );
+          .createSignedUrl(path, expiresInSeconds);
       return Right(result);
     } on StorageException catch (e) {
       return Left(
-        RemoteStorageException.urlFailure(
-          message: e.message,
-          path: path,
-        ),
+        RemoteStorageException.urlFailure(message: e.message, path: path),
       );
     } on Exception catch (e) {
       return Left(RemoteStorageException.unknown(message: e.toString()));
@@ -176,18 +161,12 @@ class RemoteStorage implements IRemoteStorage {
 
       final result = await _client
           .from(bucket)
-          .list(
-            path: path,
-            searchOptions: searchOptions,
-          );
+          .list(path: path, searchOptions: searchOptions);
 
       return Right(result);
     } on StorageException catch (e) {
       return Left(
-        RemoteStorageException.listFailure(
-          message: e.message,
-          bucket: bucket,
-        ),
+        RemoteStorageException.listFailure(message: e.message, bucket: bucket),
       );
     } on Exception catch (e) {
       return Left(RemoteStorageException.unknown(message: e.toString()));
